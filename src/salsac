@@ -1,5 +1,0 @@
-#!/bin/bash
-
-java -cp ./build/:./lib/antlr-3.2.jar:./lib/jargs.jar salsa.compiler.SalsaCompiler  $*
-
-

@@ -4,12 +4,6 @@
 package salsa.lang;
 
 import java.io.Serializable;
-import java.util.List;
-
-import salsa.lang.exceptions.ConstructorNotFoundException;
-import salsa.lang.exceptions.ContinuationPassException;
-import salsa.lang.exceptions.MessageHandlerNotFoundException;
-import salsa.lang.exceptions.TokenPassException;
 
 /**
  * @author Wei Huang

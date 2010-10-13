@@ -4,18 +4,11 @@
 package salsa.lang;
 
 import java.io.Serializable;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import salsa.lang.exceptions.ConstructorNotFoundException;
-import salsa.lang.exceptions.ContinuationPassException;
-import salsa.lang.exceptions.MessageHandlerNotFoundException;
-import salsa.lang.exceptions.TokenPassException;
-import salsa.lang.fullcopy.DeepCopy;
 import salsa.lang.services.ServiceFactory;
 
 /**
@@ -66,18 +59,18 @@ public abstract class ActorState implements Serializable {
     }
     
 
-    public void invokeConstructor(int messageId, Object[] arguments)
-            throws ConstructorNotFoundException {
-    }
-
-    public Object invokeMessage(int messageId, Object[] arguments)
-            throws ContinuationPassException, TokenPassException,
-            MessageHandlerNotFoundException {
-        Integer i = null;
-        Double d = null;
-        d = i + d;
-        return null;
-    }
+//    public void invokeConstructor(int messageId, Object[] arguments)
+//            throws ConstructorNotFoundException {
+//    }
+//
+//    public Object invokeMessage(int messageId, Object[] arguments)
+//            throws ContinuationPassException, TokenPassException,
+//            MessageHandlerNotFoundException {
+//        Integer i = null;
+//        Double d = null;
+//        d = i + d;
+//        return null;
+//    }
 
     public abstract void invokeByName(String msgName, Object[] args, ActorRef src, String assignTo);
     

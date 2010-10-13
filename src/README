@@ -1,6 +1,0 @@
-SALSA_LITE
-
-1) To complie the source code, first install Ant and execute 
-   ant compiler
-   in the source root directory to compile the salsa compiler.
-
