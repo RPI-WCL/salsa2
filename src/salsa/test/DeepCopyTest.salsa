@@ -1,0 +1,35 @@
+module salsa.test;
+import java.lang.System;
+import java.lang.Integer;
+import java.util.Date;
+import java.util.Vector;
+import java.lang.Object;
+import java.io.PrintStream;
+
+behavior DeepCopyTest {
+    
+    Vector vec;
+
+    DeepCopyTest() {
+    }
+
+    void act(String[] args) {
+        vec = new Vector();
+        vec.add((Object)(new Integer(3)));
+        Server s = new Server();
+        s!setVec(vec) @ self!getVec();
+    }
+
+    Vector getVec() {
+        System.out.println(vec.size());
+    }
+
+}
+
+behavior Server {
+    
+    void setVec(Vector v) {
+        v.add((Object)new Integer(44));
+        System.out.println(v.size());
+    }
+}

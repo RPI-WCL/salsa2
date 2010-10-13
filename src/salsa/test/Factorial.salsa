@@ -1,0 +1,33 @@
+module salsa.test;
+import java.lang.System;
+import java.lang.Integer;
+
+behavior Factorial {
+    int n;
+
+    int compute(int n) {
+        if (n == 0) {
+            return 1;
+        }
+        else {
+            return self <- multiply(n, self <- compute(n - 1));
+        }
+    }
+
+    int multiply(int a, int b) {
+        return a * b;
+    }
+
+    void act(String[] args) {
+        int n = Integer.parseInt(args[0]);
+        Factorial f = new Factorial();
+        f <- compute(n) @ f <- finish(token);
+    }
+       
+
+    void finish(int result) {
+        System.out.println(result);
+        System.exit(0);
+    }
+    
+}

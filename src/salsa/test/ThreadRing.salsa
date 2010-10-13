@@ -1,0 +1,47 @@
+module salsa.test;
+import java.lang.System;
+import java.lang.Integer;
+
+behavior ThreadRing {
+    
+    ThreadRing next;
+
+    int id;
+
+    ThreadRing(int id) {
+        self.id = id;
+    }
+
+    void setNextThread(ThreadRing next) {
+        self.next = next;
+    }
+
+    void forwardMessage(int value) {
+        if (value == 0) {
+            System.out.println(id);
+            System.exit(0);
+        } else {
+            value--;
+            next!forwardMessage(value);
+        }
+    }
+
+    void act(String[] args) {
+        if (args.length != 2) {
+            System.out.println("Usage: java ThreadRing <threadCount> <hopCount> ");
+            System.exit(0);
+        }
+        int threadCount = Integer.parseInt(args[0]);
+        int hopCount = Integer.parseInt(args[1]);
+
+        ThreadRing first = new ThreadRing(0);
+        ThreadRing previous = first;
+        join {
+            for (int i = 1; i < threadCount; i++) {
+                ThreadRing next = new ThreadRing(i);
+                previous!setNextThread(next);
+                previous = next;
+            }
+        } @ previous!setNextThread(first) @ first!forwardMessage(hopCount);
+    }
+}
