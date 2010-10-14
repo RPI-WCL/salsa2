@@ -3,7 +3,7 @@ package salsa.compiler;
 import jargs.gnu.CmdLineParser;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -133,11 +133,17 @@ public class SalsaCompiler {
                 sb.append(path).append(" ");
             System.err.println("\nCompiling...");
             Process p = Runtime.getRuntime().exec(sb.toString());
+            InputStream in = p.getErrorStream();
+            int c;
+            while ((c = in.read()) != -1) {
+                System.out.print((char)c);
+            }
+            in.close();
             p.waitFor();
             if (p.exitValue() == 0) {
                 System.err.println("  Compile Java source code successfully");
                 Boolean keepJavaValue = (Boolean) cmdParser.getOptionValue(keepJavaSrc,
-                        Boolean.FALSE);
+                        Boolean.TRUE);
                 if (!keepJavaValue) {
                     for (String path : generatedFiles) {
                         File f = new File(path);

@@ -1,0 +1,24 @@
+module salsa.lib;
+
+import java.lang.System;
+
+behavior StandardOutput {
+     void print(String s)       {  System.out.print(s);  }
+     void print(Object p)       {  System.out.print(p);  }
+     void print(boolean p)      {  System.out.print(p);  }
+     void print(char p)     {  System.out.print(p);  }
+     void print(int p)      {  System.out.print(p);  }
+     void print(long p)     {  System.out.print(p);  }
+     void print(float p)        {  System.out.print(p);  }
+     void print(double p)       {  System.out.print(p);  }
+
+     void println(String s)     {  System.out.println(s);  }
+     void println(Object p)     {  System.out.println(p);  }
+     void println(boolean p)    {  System.out.println(p);  }
+     void println(char p)       {  System.out.println(p);  }
+     void println(int p)        {  System.out.println(p);  }
+     void println(long p)       {  System.out.println(p);  }
+     void println(float p)      {  System.out.println(p);  }
+     void println(double p)     {  System.out.println(p);  }
+     void println()         {  System.out.println();  }
+}

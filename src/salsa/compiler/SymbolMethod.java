@@ -41,7 +41,7 @@ public class SymbolMethod {
         return signature;
     }
     public int getId() {
-        return id;
+        return signature.hashCode();
     }
     public void setId(int id) {
         this.id = id;

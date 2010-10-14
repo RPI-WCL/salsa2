@@ -84,6 +84,23 @@ public class SymbolType {
             isPrimitive = false;
             try {
                 Class c = Class.forName(className);
+                
+                /**
+                 * Check if it is of actor type.
+                 */
+                Class superClass = c.getSuperclass();
+                while (superClass != null) {
+                    if (superClass.getCanonicalName().contains("ActorRef")) {
+                        isActor = true;
+                        
+                        // If it is an actor from library, need to have NameState file
+                        c = Class.forName(className+"State");
+                        break;
+                    }
+                    superClass = superClass.getSuperclass();
+                }
+                
+                
                 Field[] fields = c.getFields();
                 for (Field field : fields) {
                     if (Modifier.isPublic(field.getModifiers())) {
@@ -93,6 +110,8 @@ public class SymbolType {
                     }
                 }
 
+                // If it is from actor library, need to remove the first N parameters.
+                int auxilaryParaNum = 2;
                 Method[] methods = c.getMethods();
                 for (Method method : methods) {
                     if (Modifier.isPublic(method.getModifiers())) {
@@ -100,25 +119,17 @@ public class SymbolType {
                         String returnType = method.getReturnType()
                                 .getCanonicalName();
                         List<String> parameters = new ArrayList<String>();
+                        int j = 0; 
                         for (Class pt : method.getParameterTypes()) {
-                            parameters.add(pt.getCanonicalName());
+                            if (!isActor || j >= auxilaryParaNum)
+                                parameters.add(pt.getCanonicalName());
+                            j++;
                         }
                         this.addMethod((new SymbolMethod(name, returnType,
                                 parameters.toArray((new String[0])))));
                     }
                 }
 
-                /**
-                 * Check if it is of actor type.
-                 */
-                c = c.getSuperclass();
-                while (c != null) {
-                    if (c.getCanonicalName().contains("Actor")) {
-                        isActor = true;
-                        break;
-                    }
-                    c = c.getSuperclass();
-                }
 
             } catch (ClassNotFoundException e) {
                 // e.printStackTrace();
@@ -190,7 +201,7 @@ public class SymbolType {
 
     public void addMethod(SymbolMethod sm) {
         this.methods.add(sm);
-        sm.setId(methods.size());
+//        sm.setId(methods.size());
     }
 
   

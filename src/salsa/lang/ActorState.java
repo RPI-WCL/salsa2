@@ -58,20 +58,6 @@ public abstract class ActorState implements Serializable {
         return null;
     }
     
-
-//    public void invokeConstructor(int messageId, Object[] arguments)
-//            throws ConstructorNotFoundException {
-//    }
-//
-//    public Object invokeMessage(int messageId, Object[] arguments)
-//            throws ContinuationPassException, TokenPassException,
-//            MessageHandlerNotFoundException {
-//        Integer i = null;
-//        Double d = null;
-//        d = i + d;
-//        return null;
-//    }
-
     public abstract void invokeByName(String msgName, Object[] args, ActorRef src, String assignTo);
     
     public abstract void invokeById(int msgId, Object[] args, ActorRef src, String assignTo);
@@ -88,7 +74,7 @@ public abstract class ActorState implements Serializable {
         ActorRef src = message.getSource();
         String assignTo = message.getAssignTo();
         
-        if (msgId >= 0) {
+        if (msgId != -1) {
             invokeById(msgId, args, src, assignTo);
         } else if (msgName.equals("echo")) {
             this.echo(args[0], assignTo);

@@ -220,13 +220,7 @@ import java.util.regex.Pattern;
 	    knownTypes.put("Token", new SymbolType("Token"));
 	    addImportType("java.lang.String");
 	    addImportType("java.lang.Object");
-	    
-	    // add an array type
-//	    SymbolType objectType = getKnownType("Object");
-//	    objectType.addField(new SymbolField("length", "int"));
-//	    knownTypes.remove("java.lang.Object");
-//	    knownTypes.remove("Object");
-//	    knownTypes.put("java.lang.ArrayType", objectType);
+//	    addImportType("salsa.lib.*");
     }
     public static SymbolType getKnownType(String type) {
     
@@ -366,7 +360,8 @@ import java.util.regex.Pattern;
 	                    break;
 	                }
 	            } catch (IOException e) {
-	                e.printStackTrace();
+	               System.err.println(e.getMessage());
+//	                e.printStackTrace();
 	                break;
 	            }
 	        } else {
@@ -427,7 +422,8 @@ import java.util.regex.Pattern;
                         }
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    System.err.println(e.getMessage());
+//                    e.printStackTrace();
                 }
             } else {
                 File folder = new File(path + File.separator

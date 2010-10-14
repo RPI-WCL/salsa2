@@ -21,7 +21,7 @@ public class BehaviorDeclaration extends TypeDeclaration implements SalsaNode {
     public String toJavaRefCode(String identation) {
         StringBuilder sb = new StringBuilder();
         
-        sb.append(identation).append(attributes + "class ")
+        sb.append(identation).append("public " + attributes + "class ")
                 .append(name + " extends ActorRef {\n");
         sb.append(identation + "  ").append("public ").append(name).append("(")
                 .append(name).append("State actorState) {\n");
@@ -47,7 +47,7 @@ public class BehaviorDeclaration extends TypeDeclaration implements SalsaNode {
     public String toJavaCode(String identation) {
         StringBuilder sb = new StringBuilder();
         
-        sb.append(identation).append(attributes 
+        sb.append(identation).append("public " + attributes 
                 + "class ").append(name + "State extends ActorState");
         
         

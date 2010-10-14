@@ -187,20 +187,16 @@ public class Term extends SalsaSource implements SalsaNode {
         case Term.SEND_MESSAGE:
             StringBuilder tokenPos = new StringBuilder(); // Store token's position
             tokenPos.append("new int[]{ "); 
+//            sb.append("assert " + varName + " != null;");
             sb.append("send(");
-//            sb.append("\n" + identation + "  ");
             if (parentExpression.isReturnStatement())
                 sb.append("src");
             else  
                 sb.append("self");
             sb.append("/*replyTo*/,");
-//            sb.append("\n" + identation + "  ");
             sb.append(varName).append("/*dest*/,");
-//            sb.append("\n" + identation + "  ");
             sb.append(messageId).append("/*msgId*/,");
-//            sb.append("\n" + identation + "  ");
             sb.append("\"").append(messageName).append(actualArguments.size() + "\" /*msgName*/,");
-//            sb.append("\n" + identation + "  ");
             if (parentExpression.isReturnStatement())
                 sb.append("assignTo,Message.DELEGATE_TYPE");
             else

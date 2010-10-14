@@ -11,7 +11,7 @@ public class ClassDeclaration extends TypeDeclaration {
     public String toJavaCode(String identation) {
         StringBuilder sb = new StringBuilder();
         
-        sb.append(identation).append("class ").append(name);
+        sb.append(identation).append("public class ").append(name);
         
         // Implementation
         if (implementNames.size() > 0) {

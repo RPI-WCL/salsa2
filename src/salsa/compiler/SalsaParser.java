@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g 2010-10-12 19:26:47
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g 2010-10-14 12:28:07
 
 package salsa.compiler;
 import salsa.compiler.definitions.*;
@@ -224,7 +224,7 @@ public class SalsaParser extends Parser {
         
 
     public String[] getTokenNames() { return SalsaParser.tokenNames; }
-    public String getGrammarFileName() { return "/media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g"; }
+    public String getGrammarFileName() { return "/media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g"; }
 
 
 
@@ -251,13 +251,7 @@ public class SalsaParser extends Parser {
     	    knownTypes.put("Token", new SymbolType("Token"));
     	    addImportType("java.lang.String");
     	    addImportType("java.lang.Object");
-    	    
-    	    // add an array type
-    //	    SymbolType objectType = getKnownType("Object");
-    //	    objectType.addField(new SymbolField("length", "int"));
-    //	    knownTypes.remove("java.lang.Object");
-    //	    knownTypes.remove("Object");
-    //	    knownTypes.put("java.lang.ArrayType", objectType);
+    //	    addImportType("salsa.lib.*");
         }
         public static SymbolType getKnownType(String type) {
         
@@ -397,7 +391,8 @@ public class SalsaParser extends Parser {
     	                    break;
     	                }
     	            } catch (IOException e) {
-    	                e.printStackTrace();
+    	               System.err.println(e.getMessage());
+    //	                e.printStackTrace();
     	                break;
     	            }
     	        } else {
@@ -458,7 +453,8 @@ public class SalsaParser extends Parser {
                             }
                         }
                     } catch (Exception e) {
-                        e.printStackTrace();
+                        System.err.println(e.getMessage());
+    //                    e.printStackTrace();
                     }
                 } else {
                     File folder = new File(path + File.separator
@@ -563,7 +559,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "compilationUnit"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:555:1: compilationUnit returns [CompilationUnit cu] : ( moduleDeclaration )? ( importDeclaration {...}?)* ( typeDeclaration )+ ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:551:1: compilationUnit returns [CompilationUnit cu] : ( moduleDeclaration )? ( importDeclaration {...}?)* ( typeDeclaration )+ ;
     public final CompilationUnit compilationUnit() throws RecognitionException {
         CompilationUnit cu = null;
 
@@ -579,10 +575,10 @@ public class SalsaParser extends Parser {
         //    SymbolType st = new SymbolType("primitive");
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:562:5: ( ( moduleDeclaration )? ( importDeclaration {...}?)* ( typeDeclaration )+ )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:562:9: ( moduleDeclaration )? ( importDeclaration {...}?)* ( typeDeclaration )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:558:5: ( ( moduleDeclaration )? ( importDeclaration {...}?)* ( typeDeclaration )+ )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:558:9: ( moduleDeclaration )? ( importDeclaration {...}?)* ( typeDeclaration )+
             {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:562:9: ( moduleDeclaration )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:558:9: ( moduleDeclaration )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -591,7 +587,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt1) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:562:10: moduleDeclaration
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:558:10: moduleDeclaration
                     {
                     pushFollow(FOLLOW_moduleDeclaration_in_compilationUnit4485);
                     moduleDeclaration1=moduleDeclaration();
@@ -605,7 +601,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:563:9: ( importDeclaration {...}?)*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:559:9: ( importDeclaration {...}?)*
             loop2:
             do {
                 int alt2=2;
@@ -618,7 +614,7 @@ public class SalsaParser extends Parser {
 
                 switch (alt2) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:563:10: importDeclaration {...}?
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:559:10: importDeclaration {...}?
             	    {
             	    pushFollow(FOLLOW_importDeclaration_in_compilationUnit4500);
             	    importDeclaration2=importDeclaration();
@@ -638,7 +634,7 @@ public class SalsaParser extends Parser {
                 }
             } while (true);
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:564:9: ( typeDeclaration )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:560:9: ( typeDeclaration )+
             int cnt3=0;
             loop3:
             do {
@@ -652,7 +648,7 @@ public class SalsaParser extends Parser {
 
                 switch (alt3) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:564:10: typeDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:560:10: typeDeclaration
             	    {
             	    pushFollow(FOLLOW_typeDeclaration_in_compilationUnit4518);
             	    typeDeclaration3=typeDeclaration();
@@ -689,7 +685,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "moduleDeclaration"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:567:1: moduleDeclaration returns [String value] : 'module' name ';' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:563:1: moduleDeclaration returns [String value] : 'module' name ';' ;
     public final String moduleDeclaration() throws RecognitionException {
         String value = null;
 
@@ -697,8 +693,8 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:568:5: ( 'module' name ';' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:568:9: 'module' name ';'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:564:5: ( 'module' name ';' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:564:9: 'module' name ';'
             {
             match(input,183,FOLLOW_183_in_moduleDeclaration4545); 
             pushFollow(FOLLOW_name_in_moduleDeclaration4547);
@@ -724,7 +720,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "importDeclaration"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:571:1: importDeclaration returns [String value] : 'import' name ( '.*' )? ';' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:567:1: importDeclaration returns [String value] : 'import' name ( '.*' )? ';' ;
     public final String importDeclaration() throws RecognitionException {
         String value = null;
 
@@ -732,8 +728,8 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:572:5: ( 'import' name ( '.*' )? ';' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:572:9: 'import' name ( '.*' )? ';'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:568:5: ( 'import' name ( '.*' )? ';' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:568:9: 'import' name ( '.*' )? ';'
             {
             match(input,IMPORT,FOLLOW_IMPORT_in_importDeclaration4574); 
             pushFollow(FOLLOW_name_in_importDeclaration4576);
@@ -742,7 +738,7 @@ public class SalsaParser extends Parser {
             state._fsp--;
 
             value = (name5!=null?name5.value:null);
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:573:9: ( '.*' )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:569:9: ( '.*' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -751,7 +747,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt4) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:573:10: '.*'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:569:10: '.*'
                     {
                     match(input,DOTSTAR,FOLLOW_DOTSTAR_in_importDeclaration4589); 
                     value += ".*";
@@ -781,7 +777,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "name"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:576:1: name returns [String value] : t1= IDENT ( '.' t2= IDENT )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:572:1: name returns [String value] : t1= IDENT ( '.' t2= IDENT )* ;
     public final SalsaParser.name_return name() throws RecognitionException {
         SalsaParser.name_return retval = new SalsaParser.name_return();
         retval.start = input.LT(1);
@@ -790,12 +786,12 @@ public class SalsaParser extends Parser {
         Token t2=null;
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:577:5: (t1= IDENT ( '.' t2= IDENT )* )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:577:9: t1= IDENT ( '.' t2= IDENT )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:573:5: (t1= IDENT ( '.' t2= IDENT )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:573:9: t1= IDENT ( '.' t2= IDENT )*
             {
             t1=(Token)match(input,IDENT,FOLLOW_IDENT_in_name4622); 
             retval.value = (t1!=null?t1.getText():null);
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:578:9: ( '.' t2= IDENT )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:574:9: ( '.' t2= IDENT )*
             loop5:
             do {
                 int alt5=2;
@@ -808,7 +804,7 @@ public class SalsaParser extends Parser {
 
                 switch (alt5) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:578:10: '.' t2= IDENT
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:574:10: '.' t2= IDENT
             	    {
             	    match(input,DOT,FOLLOW_DOT_in_name4635); 
             	    t2=(Token)match(input,IDENT,FOLLOW_IDENT_in_name4641); 
@@ -846,7 +842,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "typeDeclaration"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:581:1: typeDeclaration returns [TypeDeclaration td] : ( behaviorDeclaration | classDeclaration );
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:577:1: typeDeclaration returns [TypeDeclaration td] : ( behaviorDeclaration | classDeclaration );
     public final TypeDeclaration typeDeclaration() throws RecognitionException {
         typeDeclaration_stack.push(new typeDeclaration_scope());
         TypeDeclaration td = null;
@@ -860,7 +856,7 @@ public class SalsaParser extends Parser {
             ((typeDeclaration_scope)typeDeclaration_stack.peek()).fieldTypes = new HashMap<String, String>();
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:586:5: ( behaviorDeclaration | classDeclaration )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:582:5: ( behaviorDeclaration | classDeclaration )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -878,7 +874,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt6) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:586:9: behaviorDeclaration
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:582:9: behaviorDeclaration
                     {
                     pushFollow(FOLLOW_behaviorDeclaration_in_typeDeclaration4683);
                     behaviorDeclaration6=behaviorDeclaration();
@@ -890,7 +886,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:587:9: classDeclaration
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:583:9: classDeclaration
                     {
                     pushFollow(FOLLOW_classDeclaration_in_typeDeclaration4695);
                     classDeclaration7=classDeclaration();
@@ -920,7 +916,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "classDeclaration"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:590:1: classDeclaration returns [ClassDeclaration cd] : (im= 'immutable' )? 'class' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:586:1: classDeclaration returns [ClassDeclaration cd] : (im= 'immutable' )? 'class' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}' ;
     public final SalsaParser.classDeclaration_return classDeclaration() throws RecognitionException {
         SalsaParser.classDeclaration_return retval = new SalsaParser.classDeclaration_return();
         retval.start = input.LT(1);
@@ -934,10 +930,10 @@ public class SalsaParser extends Parser {
 
          retval.cd = new ClassDeclaration(); 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:592:5: ( (im= 'immutable' )? 'class' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:592:9: (im= 'immutable' )? 'class' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:588:5: ( (im= 'immutable' )? 'class' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:588:9: (im= 'immutable' )? 'class' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}'
             {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:592:9: (im= 'immutable' )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:588:9: (im= 'immutable' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -946,7 +942,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt7) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:592:10: im= 'immutable'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:588:10: im= 'immutable'
                     {
                     im=(Token)match(input,184,FOLLOW_184_in_classDeclaration4737); 
 
@@ -971,14 +967,14 @@ public class SalsaParser extends Parser {
                         ((typeDeclaration_scope)typeDeclaration_stack.peek()).fieldTypes.put("this", (IDENT8!=null?IDENT8.getText():null));
                    
             match(input,LCURLY,FOLLOW_LCURLY_in_classDeclaration4782); 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:608:13: ( stateVariableDeclaration | methodDeclaration )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:604:13: ( stateVariableDeclaration | methodDeclaration )*
             loop8:
             do {
                 int alt8=3;
                 alt8 = dfa8.predict(input);
                 switch (alt8) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:608:17: stateVariableDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:604:17: stateVariableDeclaration
             	    {
             	    pushFollow(FOLLOW_stateVariableDeclaration_in_classDeclaration4800);
             	    stateVariableDeclaration9=stateVariableDeclaration();
@@ -990,7 +986,7 @@ public class SalsaParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:609:17: methodDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:605:17: methodDeclaration
             	    {
             	    pushFollow(FOLLOW_methodDeclaration_in_classDeclaration4820);
             	    methodDeclaration10=methodDeclaration();
@@ -1029,7 +1025,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "behaviorDeclaration"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:614:1: behaviorDeclaration returns [BehaviorDeclaration bd] : 'behavior' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:610:1: behaviorDeclaration returns [BehaviorDeclaration bd] : 'behavior' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}' ;
     public final SalsaParser.behaviorDeclaration_return behaviorDeclaration() throws RecognitionException {
         SalsaParser.behaviorDeclaration_return retval = new SalsaParser.behaviorDeclaration_return();
         retval.start = input.LT(1);
@@ -1042,8 +1038,8 @@ public class SalsaParser extends Parser {
 
          retval.bd = new BehaviorDeclaration();
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:616:5: ( 'behavior' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:616:9: 'behavior' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:612:5: ( 'behavior' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:612:9: 'behavior' IDENT '{' ( stateVariableDeclaration | methodDeclaration )* '}'
             {
             match(input,185,FOLLOW_185_in_behaviorDeclaration4883); 
             IDENT11=(Token)match(input,IDENT,FOLLOW_IDENT_in_behaviorDeclaration4885); 
@@ -1062,14 +1058,14 @@ public class SalsaParser extends Parser {
                         retval.bd.setLine(getLine(input));
                     
             match(input,LCURLY,FOLLOW_LCURLY_in_behaviorDeclaration4916); 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:632:10: ( stateVariableDeclaration | methodDeclaration )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:628:10: ( stateVariableDeclaration | methodDeclaration )*
             loop9:
             do {
                 int alt9=3;
                 alt9 = dfa9.predict(input);
                 switch (alt9) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:632:14: stateVariableDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:628:14: stateVariableDeclaration
             	    {
             	    pushFollow(FOLLOW_stateVariableDeclaration_in_behaviorDeclaration4931);
             	    stateVariableDeclaration12=stateVariableDeclaration();
@@ -1081,7 +1077,7 @@ public class SalsaParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:633:14: methodDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:629:14: methodDeclaration
             	    {
             	    pushFollow(FOLLOW_methodDeclaration_in_behaviorDeclaration4948);
             	    methodDeclaration13=methodDeclaration();
@@ -1122,7 +1118,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "methodDeclaration"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:638:1: methodDeclaration returns [MethodDeclaration m] : ( constructorDeclaration | messageHandlerDeclaration ) ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:634:1: methodDeclaration returns [MethodDeclaration m] : ( constructorDeclaration | messageHandlerDeclaration ) ;
     public final MethodDeclaration methodDeclaration() throws RecognitionException {
         methodDeclaration_stack.push(new methodDeclaration_scope());
         MethodDeclaration m = null;
@@ -1134,10 +1130,10 @@ public class SalsaParser extends Parser {
 
          ((methodDeclaration_scope)methodDeclaration_stack.peek()).localTypes = new HashMap<String, String>(); 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:641:5: ( ( constructorDeclaration | messageHandlerDeclaration ) )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:641:9: ( constructorDeclaration | messageHandlerDeclaration )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:637:5: ( ( constructorDeclaration | messageHandlerDeclaration ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:637:9: ( constructorDeclaration | messageHandlerDeclaration )
             {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:641:9: ( constructorDeclaration | messageHandlerDeclaration )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:637:9: ( constructorDeclaration | messageHandlerDeclaration )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1168,7 +1164,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt10) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:641:10: constructorDeclaration
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:637:10: constructorDeclaration
                     {
                     pushFollow(FOLLOW_constructorDeclaration_in_methodDeclaration5011);
                     constructorDeclaration14=constructorDeclaration();
@@ -1180,7 +1176,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:642:9: messageHandlerDeclaration
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:638:9: messageHandlerDeclaration
                     {
                     pushFollow(FOLLOW_messageHandlerDeclaration_in_methodDeclaration5023);
                     messageHandlerDeclaration15=messageHandlerDeclaration();
@@ -1212,7 +1208,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "constructorDeclaration"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:646:1: constructorDeclaration returns [ConstructorDeclaration cd] : IDENT formalParameters block ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:642:1: constructorDeclaration returns [ConstructorDeclaration cd] : IDENT formalParameters block ;
     public final ConstructorDeclaration constructorDeclaration() throws RecognitionException {
         ConstructorDeclaration cd = null;
 
@@ -1223,8 +1219,8 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:647:5: ( IDENT formalParameters block )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:647:9: IDENT formalParameters block
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:643:5: ( IDENT formalParameters block )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:643:9: IDENT formalParameters block
             {
             IDENT16=(Token)match(input,IDENT,FOLLOW_IDENT_in_constructorDeclaration5061); 
             int ln = getLine(input);
@@ -1257,7 +1253,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "messageHandlerDeclaration"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:654:1: messageHandlerDeclaration returns [MessageHandlerDeclaration md] : type IDENT formalParameters block ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:650:1: messageHandlerDeclaration returns [MessageHandlerDeclaration md] : type IDENT formalParameters block ;
     public final MessageHandlerDeclaration messageHandlerDeclaration() throws RecognitionException {
         MessageHandlerDeclaration md = null;
 
@@ -1270,8 +1266,8 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:655:5: ( type IDENT formalParameters block )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:655:9: type IDENT formalParameters block
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:651:5: ( type IDENT formalParameters block )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:651:9: type IDENT formalParameters block
             {
             pushFollow(FOLLOW_type_in_messageHandlerDeclaration5101);
             type19=type();
@@ -1321,7 +1317,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "block"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:670:1: block returns [Block b] : '{' ( statement )* '}' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:666:1: block returns [Block b] : '{' ( statement )* '}' ;
     public final Block block() throws RecognitionException {
         block_stack.push(new block_scope());
         Block b = null;
@@ -1331,11 +1327,11 @@ public class SalsaParser extends Parser {
 
          b = new Block(); ((block_scope)block_stack.peek()).afterContinuation = false;
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:673:5: ( '{' ( statement )* '}' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:673:9: '{' ( statement )* '}'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:669:5: ( '{' ( statement )* '}' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:669:9: '{' ( statement )* '}'
             {
             match(input,LCURLY,FOLLOW_LCURLY_in_block5148); 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:673:13: ( statement )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:669:13: ( statement )*
             loop11:
             do {
                 int alt11=2;
@@ -1348,7 +1344,7 @@ public class SalsaParser extends Parser {
 
                 switch (alt11) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:673:14: statement
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:669:14: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_block5151);
             	    statement23=statement();
@@ -1386,7 +1382,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "statement"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:677:1: statement returns [Statement stat] : ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement ) ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:673:1: statement returns [Statement stat] : ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement ) ;
     public final SalsaParser.statement_return statement() throws RecognitionException {
         SalsaParser.statement_return retval = new SalsaParser.statement_return();
         retval.start = input.LT(1);
@@ -1410,23 +1406,23 @@ public class SalsaParser extends Parser {
 
         boolean isContinuation = false; 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:685:5: ( ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement ) )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:685:7: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:681:5: ( ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:681:7: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement )
             {
             int ln = getLine(input);
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:686:5: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:682:5: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement )
             int alt15=7;
             alt15 = dfa15.predict(input);
             switch (alt15) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:687:9: localVariableDeclaration ( ';' | '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:683:9: localVariableDeclaration ( ';' | '@' )
                     {
                     pushFollow(FOLLOW_localVariableDeclaration_in_statement5221);
                     localVariableDeclaration24=localVariableDeclaration();
 
                     state._fsp--;
 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:687:34: ( ';' | '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:683:34: ( ';' | '@' )
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -1444,14 +1440,14 @@ public class SalsaParser extends Parser {
                     }
                     switch (alt12) {
                         case 1 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:687:35: ';'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:683:35: ';'
                             {
                             match(input,SEMI,FOLLOW_SEMI_in_statement5224); 
 
                             }
                             break;
                         case 2 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:687:41: '@'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:683:41: '@'
                             {
                             match(input,AT,FOLLOW_AT_in_statement5228); 
                             isContinuation=true;
@@ -1466,14 +1462,14 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:688:9: e1= expression ( '=' e2= expression )? ( ';' | '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:684:9: e1= expression ( '=' e2= expression )? ( ';' | '@' )
                     {
                     pushFollow(FOLLOW_expression_in_statement5246);
                     e1=expression();
 
                     state._fsp--;
 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:688:25: ( '=' e2= expression )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:684:25: ( '=' e2= expression )?
                     int alt13=2;
                     int LA13_0 = input.LA(1);
 
@@ -1482,7 +1478,7 @@ public class SalsaParser extends Parser {
                     }
                     switch (alt13) {
                         case 1 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:688:26: '=' e2= expression
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:684:26: '=' e2= expression
                             {
                             match(input,ASSIGN,FOLLOW_ASSIGN_in_statement5249); 
                             pushFollow(FOLLOW_expression_in_statement5255);
@@ -1502,7 +1498,7 @@ public class SalsaParser extends Parser {
                                     retval.stat = new AssignmentStatement((e1!=null?e1.e:null), (e2!=null?e2.e:null));
                                  }
                             
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:695:9: ( ';' | '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:691:9: ( ';' | '@' )
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -1520,14 +1516,14 @@ public class SalsaParser extends Parser {
                     }
                     switch (alt14) {
                         case 1 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:695:10: ';'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:691:10: ';'
                             {
                             match(input,SEMI,FOLLOW_SEMI_in_statement5279); 
 
                             }
                             break;
                         case 2 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:695:16: '@'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:691:16: '@'
                             {
                             match(input,AT,FOLLOW_AT_in_statement5283); 
                             isContinuation=true;
@@ -1541,15 +1537,15 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:696:9: joinBlockStatement ( '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:692:9: joinBlockStatement ( '@' )
                     {
                     pushFollow(FOLLOW_joinBlockStatement_in_statement5296);
                     joinBlockStatement25=joinBlockStatement();
 
                     state._fsp--;
 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:696:28: ( '@' )
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:696:29: '@'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:692:28: ( '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:692:29: '@'
                     {
                     match(input,AT,FOLLOW_AT_in_statement5299); 
 
@@ -1560,7 +1556,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:697:9: blockStatement
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:693:9: blockStatement
                     {
                     pushFollow(FOLLOW_blockStatement_in_statement5313);
                     blockStatement26=blockStatement();
@@ -1572,7 +1568,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:698:9: ifStatement
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:694:9: ifStatement
                     {
                     pushFollow(FOLLOW_ifStatement_in_statement5326);
                     ifStatement27=ifStatement();
@@ -1584,7 +1580,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:699:9: returnStatement ';'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:695:9: returnStatement ';'
                     {
                     pushFollow(FOLLOW_returnStatement_in_statement5338);
                     returnStatement28=returnStatement();
@@ -1597,7 +1593,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:700:9: forStatement
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:696:9: forStatement
                     {
                     pushFollow(FOLLOW_forStatement_in_statement5352);
                     forStatement29=forStatement();
@@ -1637,7 +1633,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "forStatement"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:706:1: forStatement returns [ForStatement s] : 'for' '(' localVariableDeclaration ';' e1= expression ';' e2= expression ')' block ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:702:1: forStatement returns [ForStatement s] : 'for' '(' localVariableDeclaration ';' e1= expression ';' e2= expression ')' block ;
     public final ForStatement forStatement() throws RecognitionException {
         ForStatement s = null;
 
@@ -1651,8 +1647,8 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:707:5: ( 'for' '(' localVariableDeclaration ';' e1= expression ';' e2= expression ')' block )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:707:9: 'for' '(' localVariableDeclaration ';' e1= expression ';' e2= expression ')' block
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:703:5: ( 'for' '(' localVariableDeclaration ';' e1= expression ';' e2= expression ')' block )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:703:9: 'for' '(' localVariableDeclaration ';' e1= expression ';' e2= expression ')' block
             {
             match(input,FOR,FOLLOW_FOR_in_forStatement5403); 
             match(input,LPAREN,FOLLOW_LPAREN_in_forStatement5414); 
@@ -1698,7 +1694,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "returnStatement"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:720:1: returnStatement returns [ReturnStatement s] : 'return' ( expression )? ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:716:1: returnStatement returns [ReturnStatement s] : 'return' ( expression )? ;
     public final ReturnStatement returnStatement() throws RecognitionException {
         ReturnStatement s = null;
 
@@ -1706,11 +1702,11 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:721:5: ( 'return' ( expression )? )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:721:9: 'return' ( expression )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:717:5: ( 'return' ( expression )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:717:9: 'return' ( expression )?
             {
             match(input,RETURN,FOLLOW_RETURN_in_returnStatement5547); 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:721:18: ( expression )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:717:18: ( expression )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1719,7 +1715,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt16) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:721:19: expression
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:717:19: expression
                     {
                     pushFollow(FOLLOW_expression_in_returnStatement5550);
                     expression32=expression();
@@ -1750,7 +1746,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "ifStatement"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:738:1: ifStatement returns [IfStatement s] : 'if' '(' expression ')' block ( 'else' statement )? ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:734:1: ifStatement returns [IfStatement s] : 'if' '(' expression ')' block ( 'else' statement )? ;
     public final IfStatement ifStatement() throws RecognitionException {
         IfStatement s = null;
 
@@ -1763,8 +1759,8 @@ public class SalsaParser extends Parser {
 
         s = new IfStatement();
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:740:5: ( 'if' '(' expression ')' block ( 'else' statement )? )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:740:9: 'if' '(' expression ')' block ( 'else' statement )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:736:5: ( 'if' '(' expression ')' block ( 'else' statement )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:736:9: 'if' '(' expression ')' block ( 'else' statement )?
             {
             match(input,IF,FOLLOW_IF_in_ifStatement5602); 
             match(input,LPAREN,FOLLOW_LPAREN_in_ifStatement5604); 
@@ -1780,7 +1776,7 @@ public class SalsaParser extends Parser {
             state._fsp--;
 
             s.setExpression((expression33!=null?expression33.e:null)); s.setBlock(block34);
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:741:9: ( 'else' statement )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:737:9: ( 'else' statement )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -1789,7 +1785,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt17) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:741:10: 'else' statement
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:737:10: 'else' statement
                     {
                     match(input,ELSE,FOLLOW_ELSE_in_ifStatement5623); 
                     pushFollow(FOLLOW_statement_in_ifStatement5625);
@@ -1825,7 +1821,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "joinBlockStatement"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:744:1: joinBlockStatement returns [JoinBlockStatement s] : 'join' block ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:740:1: joinBlockStatement returns [JoinBlockStatement s] : 'join' block ;
     public final JoinBlockStatement joinBlockStatement() throws RecognitionException {
         joinBlockStatement_stack.push(new joinBlockStatement_scope());
         JoinBlockStatement s = null;
@@ -1835,8 +1831,8 @@ public class SalsaParser extends Parser {
 
          ((joinBlockStatement_scope)joinBlockStatement_stack.peek()).isInJoinBlock = true;
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:748:5: ( 'join' block )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:748:9: 'join' block
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:744:5: ( 'join' block )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:744:9: 'join' block
             {
             match(input,186,FOLLOW_186_in_joinBlockStatement5670); 
             pushFollow(FOLLOW_block_in_joinBlockStatement5672);
@@ -1863,7 +1859,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "blockStatement"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:751:1: blockStatement returns [BlockStatement s] : block ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:747:1: blockStatement returns [BlockStatement s] : block ;
     public final BlockStatement blockStatement() throws RecognitionException {
         BlockStatement s = null;
 
@@ -1871,8 +1867,8 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:752:5: ( block )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:752:9: block
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:748:5: ( block )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:748:9: block
             {
             pushFollow(FOLLOW_block_in_blockStatement5710);
             block37=block();
@@ -1896,7 +1892,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "expressionStatement"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:755:1: expressionStatement returns [ExpressionStatement s] : expression ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:751:1: expressionStatement returns [ExpressionStatement s] : expression ;
     public final ExpressionStatement expressionStatement() throws RecognitionException {
         ExpressionStatement s = null;
 
@@ -1904,8 +1900,8 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:756:5: ( expression )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:756:9: expression
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:752:5: ( expression )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:752:9: expression
             {
             pushFollow(FOLLOW_expression_in_expressionStatement5735);
             expression38=expression();
@@ -1929,7 +1925,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "formalParameters"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:760:1: formalParameters returns [List<FormalParameter> list] : '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:756:1: formalParameters returns [List<FormalParameter> list] : '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')' ;
     public final List<FormalParameter> formalParameters() throws RecognitionException {
         List<FormalParameter> list = null;
 
@@ -1940,11 +1936,11 @@ public class SalsaParser extends Parser {
 
          list = new ArrayList<FormalParameter>(); 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:762:5: ( '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:762:9: '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:758:5: ( '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:758:9: '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')'
             {
             match(input,LPAREN,FOLLOW_LPAREN_in_formalParameters5777); 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:763:9: (f1= formalParameter ( ',' f2= formalParameter )* )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:759:9: (f1= formalParameter ( ',' f2= formalParameter )* )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -1953,7 +1949,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt19) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:764:13: f1= formalParameter ( ',' f2= formalParameter )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:760:13: f1= formalParameter ( ',' f2= formalParameter )*
                     {
                     pushFollow(FOLLOW_formalParameter_in_formalParameters5805);
                     f1=formalParameter();
@@ -1961,7 +1957,7 @@ public class SalsaParser extends Parser {
                     state._fsp--;
 
                      list.add((f1!=null?f1.fp:null)); 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:765:13: ( ',' f2= formalParameter )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:761:13: ( ',' f2= formalParameter )*
                     loop18:
                     do {
                         int alt18=2;
@@ -1974,7 +1970,7 @@ public class SalsaParser extends Parser {
 
                         switch (alt18) {
                     	case 1 :
-                    	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:765:14: ',' f2= formalParameter
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:761:14: ',' f2= formalParameter
                     	    {
                     	    match(input,COMMA,FOLLOW_COMMA_in_formalParameters5822); 
                     	    pushFollow(FOLLOW_formalParameter_in_formalParameters5828);
@@ -2018,7 +2014,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "formalParameter"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:771:1: formalParameter returns [FormalParameter fp] : type IDENT ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:767:1: formalParameter returns [FormalParameter fp] : type IDENT ;
     public final SalsaParser.formalParameter_return formalParameter() throws RecognitionException {
         SalsaParser.formalParameter_return retval = new SalsaParser.formalParameter_return();
         retval.start = input.LT(1);
@@ -2029,8 +2025,8 @@ public class SalsaParser extends Parser {
 
         SymbolType st;
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:774:5: ( type IDENT )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:774:9: type IDENT
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:770:5: ( type IDENT )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:770:9: type IDENT
             {
             pushFollow(FOLLOW_type_in_formalParameter5888);
             type39=type();
@@ -2063,7 +2059,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "localVariableDeclaration"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:781:1: localVariableDeclaration returns [LocalVariableDeclaration ld, String canonicalType] : type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:777:1: localVariableDeclaration returns [LocalVariableDeclaration ld, String canonicalType] : type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )* ;
     public final SalsaParser.localVariableDeclaration_return localVariableDeclaration() throws RecognitionException {
         SalsaParser.localVariableDeclaration_return retval = new SalsaParser.localVariableDeclaration_return();
         retval.start = input.LT(1);
@@ -2077,8 +2073,8 @@ public class SalsaParser extends Parser {
 
          retval.ld = new LocalVariableDeclaration(); String rawType; SymbolType st;
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:783:5: ( type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )* )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:783:9: type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:779:5: ( type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:779:9: type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )*
             {
             pushFollow(FOLLOW_type_in_localVariableDeclaration5955);
             type41=type();
@@ -2092,7 +2088,7 @@ public class SalsaParser extends Parser {
             state._fsp--;
 
              retval.ld.addVariableDeclaration((v1!=null?v1.vd:null)); ((methodDeclaration_scope)methodDeclaration_stack.peek()).localTypes.put((v1!=null?v1.value:null), retval.canonicalType);
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:797:9: ( ',' v2= variableDeclaration[$canonicalType] )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:793:9: ( ',' v2= variableDeclaration[$canonicalType] )*
             loop20:
             do {
                 int alt20=2;
@@ -2105,7 +2101,7 @@ public class SalsaParser extends Parser {
 
                 switch (alt20) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:797:10: ',' v2= variableDeclaration[$canonicalType]
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:793:10: ',' v2= variableDeclaration[$canonicalType]
             	    {
             	    match(input,COMMA,FOLLOW_COMMA_in_localVariableDeclaration6012); 
             	    pushFollow(FOLLOW_variableDeclaration_in_localVariableDeclaration6018);
@@ -2145,7 +2141,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "stateVariableDeclaration"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:801:1: stateVariableDeclaration returns [StateVariableDeclaration sd, String canonicalType] : type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )* ';' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:797:1: stateVariableDeclaration returns [StateVariableDeclaration sd, String canonicalType] : type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )* ';' ;
     public final SalsaParser.stateVariableDeclaration_return stateVariableDeclaration() throws RecognitionException {
         SalsaParser.stateVariableDeclaration_return retval = new SalsaParser.stateVariableDeclaration_return();
         retval.start = input.LT(1);
@@ -2159,8 +2155,8 @@ public class SalsaParser extends Parser {
 
          retval.sd = new StateVariableDeclaration(); String rawType; SymbolType st;
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:803:5: ( type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )* ';' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:803:9: type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )* ';'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:799:5: ( type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )* ';' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:799:9: type v1= variableDeclaration[$canonicalType] ( ',' v2= variableDeclaration[$canonicalType] )* ';'
             {
             pushFollow(FOLLOW_type_in_stateVariableDeclaration6076);
             type42=type();
@@ -2185,7 +2181,7 @@ public class SalsaParser extends Parser {
                         ((typeDeclaration_scope)typeDeclaration_stack.peek()).fieldTypes.put((v1!=null?v1.value:null), retval.canonicalType);
                         ((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType.addField(new SymbolField((v1!=null?v1.value:null), retval.canonicalType));
                     
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:822:9: ( ',' v2= variableDeclaration[$canonicalType] )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:818:9: ( ',' v2= variableDeclaration[$canonicalType] )*
             loop21:
             do {
                 int alt21=2;
@@ -2198,7 +2194,7 @@ public class SalsaParser extends Parser {
 
                 switch (alt21) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:822:10: ',' v2= variableDeclaration[$canonicalType]
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:818:10: ',' v2= variableDeclaration[$canonicalType]
             	    {
             	    match(input,COMMA,FOLLOW_COMMA_in_stateVariableDeclaration6158); 
             	    pushFollow(FOLLOW_variableDeclaration_in_stateVariableDeclaration6164);
@@ -2243,7 +2239,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "variableDeclaration"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:832:1: variableDeclaration[String type] returns [VariableDeclaration vd, String value] : IDENT ( '=' expression )? ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:828:1: variableDeclaration[String type] returns [VariableDeclaration vd, String value] : IDENT ( '=' expression )? ;
     public final SalsaParser.variableDeclaration_return variableDeclaration(String type) throws RecognitionException {
         SalsaParser.variableDeclaration_return retval = new SalsaParser.variableDeclaration_return();
         retval.start = input.LT(1);
@@ -2254,12 +2250,12 @@ public class SalsaParser extends Parser {
 
          retval.vd = new VariableDeclaration(); retval.vd.setType(type); 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:834:5: ( IDENT ( '=' expression )? )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:834:9: IDENT ( '=' expression )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:830:5: ( IDENT ( '=' expression )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:830:9: IDENT ( '=' expression )?
             {
             IDENT43=(Token)match(input,IDENT,FOLLOW_IDENT_in_variableDeclaration6227); 
             retval.vd.setName((IDENT43!=null?IDENT43.getText():null)); retval.value =(IDENT43!=null?IDENT43.getText():null); retval.vd.setLine(getLine(input));
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:835:9: ( '=' expression )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:831:9: ( '=' expression )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -2268,7 +2264,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt22) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:835:10: '=' expression
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:831:10: '=' expression
                     {
                     match(input,ASSIGN,FOLLOW_ASSIGN_in_variableDeclaration6245); 
                     pushFollow(FOLLOW_expression_in_variableDeclaration6247);
@@ -2307,7 +2303,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "term"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:842:1: term returns [Term t, String type] : ( '(' type ')' )? ( literal | '(' e1= expression ')' | ( 'this' ) | ( 'self' ) | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= name (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )? ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:838:1: term returns [Term t, String type] : ( '(' type ')' )? ( literal | '(' e1= expression ')' | ( 'this' ) | ( 'self' ) | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= name (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )? ;
     public final SalsaParser.term_return term() throws RecognitionException {
         SalsaParser.term_return retval = new SalsaParser.term_return();
         retval.start = input.LT(1);
@@ -2333,16 +2329,16 @@ public class SalsaParser extends Parser {
 
          retval.t = new Term(); int arrayDims = 0; String type = null;
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:845:5: ( ( '(' type ')' )? ( literal | '(' e1= expression ')' | ( 'this' ) | ( 'self' ) | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= name (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )? )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:845:9: ( '(' type ')' )? ( literal | '(' e1= expression ')' | ( 'this' ) | ( 'self' ) | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= name (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:841:5: ( ( '(' type ')' )? ( literal | '(' e1= expression ')' | ( 'this' ) | ( 'self' ) | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= name (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:841:9: ( '(' type ')' )? ( literal | '(' e1= expression ')' | ( 'this' ) | ( 'self' ) | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= name (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )?
             {
             retval.t.setLine(getLine(input));
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:846:9: ( '(' type ')' )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:842:9: ( '(' type ')' )?
             int alt23=2;
             alt23 = dfa23.predict(input);
             switch (alt23) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:846:10: '(' type ')'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:842:10: '(' type ')'
                     {
                     match(input,LPAREN,FOLLOW_LPAREN_in_term6313); 
                     pushFollow(FOLLOW_type_in_term6315);
@@ -2358,7 +2354,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:847:9: ( literal | '(' e1= expression ')' | ( 'this' ) | ( 'self' ) | v1= IDENT ( '[' index= expression ']' )* | allocation )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:843:9: ( literal | '(' e1= expression ')' | ( 'this' ) | ( 'self' ) | v1= IDENT ( '[' index= expression ']' )* | allocation )
             int alt25=6;
             switch ( input.LA(1) ) {
             case FALSE:
@@ -2408,7 +2404,7 @@ public class SalsaParser extends Parser {
 
             switch (alt25) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:848:13: literal
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:844:13: literal
                     {
                     pushFollow(FOLLOW_literal_in_term6350);
                     literal46=literal();
@@ -2420,7 +2416,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:849:10: '(' e1= expression ')'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:845:10: '(' e1= expression ')'
                     {
                     match(input,LPAREN,FOLLOW_LPAREN_in_term6363); 
                     pushFollow(FOLLOW_expression_in_term6369);
@@ -2434,10 +2430,10 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:850:9: ( 'this' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:846:9: ( 'this' )
                     {
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:850:9: ( 'this' )
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:850:10: 'this'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:846:9: ( 'this' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:846:10: 'this'
                     {
                     match(input,THIS,FOLLOW_THIS_in_term6383); 
 
@@ -2451,10 +2447,10 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:855:12: ( 'self' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:851:12: ( 'self' )
                     {
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:855:12: ( 'self' )
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:855:13: 'self'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:851:12: ( 'self' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:851:13: 'self'
                     {
                     match(input,187,FOLLOW_187_in_term6419); 
 
@@ -2468,10 +2464,10 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:859:10: v1= IDENT ( '[' index= expression ']' )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:855:10: v1= IDENT ( '[' index= expression ']' )*
                     {
                     v1=(Token)match(input,IDENT,FOLLOW_IDENT_in_term6456); 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:859:21: ( '[' index= expression ']' )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:855:21: ( '[' index= expression ']' )*
                     loop24:
                     do {
                         int alt24=2;
@@ -2484,7 +2480,7 @@ public class SalsaParser extends Parser {
 
                         switch (alt24) {
                     	case 1 :
-                    	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:859:22: '[' index= expression ']'
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:855:22: '[' index= expression ']'
                     	    {
                     	    match(input,LBRACK,FOLLOW_LBRACK_in_term6459); 
                     	    pushFollow(FOLLOW_expression_in_term6465);
@@ -2536,7 +2532,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:889:10: allocation
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:885:10: allocation
                     {
                     pushFollow(FOLLOW_allocation_in_term6493);
                     allocation47=allocation();
@@ -2550,7 +2546,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:891:9: ( '.' v2= name (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:887:9: ( '.' v2= name (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )?
             int alt27=3;
             int LA27_0 = input.LA(1);
 
@@ -2562,7 +2558,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt27) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:892:13: '.' v2= name (p1= actualParameters )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:888:13: '.' v2= name (p1= actualParameters )?
                     {
                     match(input,DOT,FOLLOW_DOT_in_term6526); 
                     pushFollow(FOLLOW_name_in_term6532);
@@ -2571,7 +2567,7 @@ public class SalsaParser extends Parser {
                     state._fsp--;
 
                     retval.t.setSelector((v2!=null?input.toString(v2.start,v2.stop):null));
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:893:17: (p1= actualParameters )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:889:17: (p1= actualParameters )?
                     int alt26=2;
                     int LA26_0 = input.LA(1);
 
@@ -2580,7 +2576,7 @@ public class SalsaParser extends Parser {
                     }
                     switch (alt26) {
                         case 1 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:893:18: p1= actualParameters
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:889:18: p1= actualParameters
                             {
                             pushFollow(FOLLOW_actualParameters_in_term6558);
                             p1=actualParameters();
@@ -2598,7 +2594,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:896:13: ( '<-' | '!' ) v3= IDENT p2= actualParameters
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:892:13: ( '<-' | '!' ) v3= IDENT p2= actualParameters
                     {
                     if ( input.LA(1)==LOGICAL_NOT||input.LA(1)==188 ) {
                         input.consume();
@@ -2647,7 +2643,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "allocation"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:904:1: allocation returns [Allocation a] : ( ( 'new' type actualParameters ) | ( 'new' ( primitiveType | name ) ( '[' expression ']' )+ ) );
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:900:1: allocation returns [Allocation a] : ( ( 'new' type actualParameters ) | ( 'new' ( primitiveType | name ) ( '[' expression ']' )+ ) );
     public final SalsaParser.allocation_return allocation() throws RecognitionException {
         SalsaParser.allocation_return retval = new SalsaParser.allocation_return();
         retval.start = input.LT(1);
@@ -2665,15 +2661,15 @@ public class SalsaParser extends Parser {
 
          retval.a = new Allocation(); String temp = null; SymbolType st;
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:907:5: ( ( 'new' type actualParameters ) | ( 'new' ( primitiveType | name ) ( '[' expression ']' )+ ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:903:5: ( ( 'new' type actualParameters ) | ( 'new' ( primitiveType | name ) ( '[' expression ']' )+ ) )
             int alt30=2;
             alt30 = dfa30.predict(input);
             switch (alt30) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:908:3: ( 'new' type actualParameters )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:904:3: ( 'new' type actualParameters )
                     {
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:908:3: ( 'new' type actualParameters )
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:908:4: 'new' type actualParameters
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:904:3: ( 'new' type actualParameters )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:904:4: 'new' type actualParameters
                     {
                     match(input,NEW,FOLLOW_NEW_in_allocation6716); 
                     pushFollow(FOLLOW_type_in_allocation6718);
@@ -2694,13 +2690,13 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:917:3: ( 'new' ( primitiveType | name ) ( '[' expression ']' )+ )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:913:3: ( 'new' ( primitiveType | name ) ( '[' expression ']' )+ )
                     {
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:917:3: ( 'new' ( primitiveType | name ) ( '[' expression ']' )+ )
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:917:4: 'new' ( primitiveType | name ) ( '[' expression ']' )+
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:913:3: ( 'new' ( primitiveType | name ) ( '[' expression ']' )+ )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:913:4: 'new' ( primitiveType | name ) ( '[' expression ']' )+
                     {
                     match(input,NEW,FOLLOW_NEW_in_allocation6758); 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:918:5: ( primitiveType | name )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:914:5: ( primitiveType | name )
                     int alt28=2;
                     int LA28_0 = input.LA(1);
 
@@ -2718,7 +2714,7 @@ public class SalsaParser extends Parser {
                     }
                     switch (alt28) {
                         case 1 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:918:6: primitiveType
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:914:6: primitiveType
                             {
                             pushFollow(FOLLOW_primitiveType_in_allocation6765);
                             primitiveType50=primitiveType();
@@ -2730,7 +2726,7 @@ public class SalsaParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:918:55: name
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:914:55: name
                             {
                             pushFollow(FOLLOW_name_in_allocation6773);
                             name51=name();
@@ -2745,7 +2741,7 @@ public class SalsaParser extends Parser {
                     }
 
                     retval.a.setType(temp);
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:923:5: ( '[' expression ']' )+
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:919:5: ( '[' expression ']' )+
                     int cnt29=0;
                     loop29:
                     do {
@@ -2759,7 +2755,7 @@ public class SalsaParser extends Parser {
 
                         switch (alt29) {
                     	case 1 :
-                    	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:923:6: '[' expression ']'
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:919:6: '[' expression ']'
                     	    {
                     	    match(input,LBRACK,FOLLOW_LBRACK_in_allocation6800); 
                     	    pushFollow(FOLLOW_expression_in_allocation6802);
@@ -2806,7 +2802,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "actualParameters"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:927:1: actualParameters returns [List<Expression> list] : '(' (e1= expression ( ',' e2= expression )* )? ')' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:923:1: actualParameters returns [List<Expression> list] : '(' (e1= expression ( ',' e2= expression )* )? ')' ;
     public final List<Expression> actualParameters() throws RecognitionException {
         List<Expression> list = null;
 
@@ -2817,11 +2813,11 @@ public class SalsaParser extends Parser {
 
          list = new ArrayList<Expression>();
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:929:5: ( '(' (e1= expression ( ',' e2= expression )* )? ')' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:929:9: '(' (e1= expression ( ',' e2= expression )* )? ')'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:925:5: ( '(' (e1= expression ( ',' e2= expression )* )? ')' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:925:9: '(' (e1= expression ( ',' e2= expression )* )? ')'
             {
             match(input,LPAREN,FOLLOW_LPAREN_in_actualParameters6840); 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:930:13: (e1= expression ( ',' e2= expression )* )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:926:13: (e1= expression ( ',' e2= expression )* )?
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -2830,7 +2826,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt32) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:930:14: e1= expression ( ',' e2= expression )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:926:14: e1= expression ( ',' e2= expression )*
                     {
                     pushFollow(FOLLOW_expression_in_actualParameters6859);
                     e1=expression();
@@ -2838,7 +2834,7 @@ public class SalsaParser extends Parser {
                     state._fsp--;
 
                     list.add((e1!=null?e1.e:null));
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:931:13: ( ',' e2= expression )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:927:13: ( ',' e2= expression )*
                     loop31:
                     do {
                         int alt31=2;
@@ -2851,7 +2847,7 @@ public class SalsaParser extends Parser {
 
                         switch (alt31) {
                     	case 1 :
-                    	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:931:14: ',' e2= expression
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:927:14: ',' e2= expression
                     	    {
                     	    match(input,COMMA,FOLLOW_COMMA_in_actualParameters6876); 
                     	    pushFollow(FOLLOW_expression_in_actualParameters6882);
@@ -2892,7 +2888,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "negation"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:945:1: negation returns [NegationExpression e] : ( '~' )* term ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:941:1: negation returns [NegationExpression e] : ( '~' )* term ;
     public final NegationExpression negation() throws RecognitionException {
         NegationExpression e = null;
 
@@ -2901,10 +2897,10 @@ public class SalsaParser extends Parser {
 
          e = new NegationExpression();
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:947:5: ( ( '~' )* term )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:947:9: ( '~' )* term
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:943:5: ( ( '~' )* term )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:943:9: ( '~' )* term
             {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:947:9: ( '~' )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:943:9: ( '~' )*
             loop33:
             do {
                 int alt33=2;
@@ -2917,7 +2913,7 @@ public class SalsaParser extends Parser {
 
                 switch (alt33) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:947:10: '~'
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:943:10: '~'
             	    {
             	    match(input,NOT,FOLLOW_NOT_in_negation6940); 
             	    e.addOperator("~");
@@ -2952,7 +2948,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "unary"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:950:1: unary returns [UnaryExpression e] : ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:946:1: unary returns [UnaryExpression e] : ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?;
     public final UnaryExpression unary() throws RecognitionException {
         UnaryExpression e = null;
 
@@ -2963,10 +2959,10 @@ public class SalsaParser extends Parser {
 
          e = new UnaryExpression();
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:952:5: ( ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?)
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:952:9: ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:948:5: ( ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?)
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:948:9: ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?
             {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:952:9: ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:948:9: ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )*
             loop35:
             do {
                 int alt35=2;
@@ -2979,9 +2975,9 @@ public class SalsaParser extends Parser {
 
                 switch (alt35) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:952:10: (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' )
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:948:10: (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' )
             	    {
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:952:10: (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' )
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:948:10: (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' )
             	    int alt34=5;
             	    switch ( input.LA(1) ) {
             	    case PLUS:
@@ -3018,35 +3014,35 @@ public class SalsaParser extends Parser {
 
             	    switch (alt34) {
             	        case 1 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:952:11: op= '+'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:948:11: op= '+'
             	            {
             	            op=(Token)match(input,PLUS,FOLLOW_PLUS_in_unary6986); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:952:22: op= '-'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:948:22: op= '-'
             	            {
             	            op=(Token)match(input,MINUS,FOLLOW_MINUS_in_unary6994); 
 
             	            }
             	            break;
             	        case 3 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:952:33: op= '!'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:948:33: op= '!'
             	            {
             	            op=(Token)match(input,LOGICAL_NOT,FOLLOW_LOGICAL_NOT_in_unary7002); 
 
             	            }
             	            break;
             	        case 4 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:952:44: op= '++'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:948:44: op= '++'
             	            {
             	            op=(Token)match(input,INC,FOLLOW_INC_in_unary7010); 
 
             	            }
             	            break;
             	        case 5 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:952:56: op= '--'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:948:56: op= '--'
             	            {
             	            op=(Token)match(input,DEC,FOLLOW_DEC_in_unary7018); 
 
@@ -3071,7 +3067,7 @@ public class SalsaParser extends Parser {
             state._fsp--;
 
             e.addExpression(negation54);
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:954:9: ( (op2= '++' | op2= '--' ) )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:950:9: ( (op2= '++' | op2= '--' ) )?
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -3080,9 +3076,9 @@ public class SalsaParser extends Parser {
             }
             switch (alt37) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:954:10: (op2= '++' | op2= '--' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:950:10: (op2= '++' | op2= '--' )
                     {
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:954:10: (op2= '++' | op2= '--' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:950:10: (op2= '++' | op2= '--' )
                     int alt36=2;
                     int LA36_0 = input.LA(1);
 
@@ -3100,14 +3096,14 @@ public class SalsaParser extends Parser {
                     }
                     switch (alt36) {
                         case 1 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:954:11: op2= '++'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:950:11: op2= '++'
                             {
                             op2=(Token)match(input,INC,FOLLOW_INC_in_unary7052); 
 
                             }
                             break;
                         case 2 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:954:24: op2= '--'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:950:24: op2= '--'
                             {
                             op2=(Token)match(input,DEC,FOLLOW_DEC_in_unary7060); 
 
@@ -3142,7 +3138,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "mult"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:959:1: mult returns [MultExpression e] : e1= unary ( (op= '*' | op= '/' | op= '%' ) e2= unary )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:955:1: mult returns [MultExpression e] : e1= unary ( (op= '*' | op= '/' | op= '%' ) e2= unary )* ;
     public final MultExpression mult() throws RecognitionException {
         MultExpression e = null;
 
@@ -3154,8 +3150,8 @@ public class SalsaParser extends Parser {
 
          e = new MultExpression();
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:961:5: (e1= unary ( (op= '*' | op= '/' | op= '%' ) e2= unary )* )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:961:9: e1= unary ( (op= '*' | op= '/' | op= '%' ) e2= unary )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:957:5: (e1= unary ( (op= '*' | op= '/' | op= '%' ) e2= unary )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:957:9: e1= unary ( (op= '*' | op= '/' | op= '%' ) e2= unary )*
             {
             pushFollow(FOLLOW_unary_in_mult7107);
             e1=unary();
@@ -3163,7 +3159,7 @@ public class SalsaParser extends Parser {
             state._fsp--;
 
             e.addExpression(e1);
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:962:9: ( (op= '*' | op= '/' | op= '%' ) e2= unary )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:958:9: ( (op= '*' | op= '/' | op= '%' ) e2= unary )*
             loop39:
             do {
                 int alt39=2;
@@ -3176,9 +3172,9 @@ public class SalsaParser extends Parser {
 
                 switch (alt39) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:963:13: (op= '*' | op= '/' | op= '%' ) e2= unary
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:959:13: (op= '*' | op= '/' | op= '%' ) e2= unary
             	    {
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:963:13: (op= '*' | op= '/' | op= '%' )
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:959:13: (op= '*' | op= '/' | op= '%' )
             	    int alt38=3;
             	    switch ( input.LA(1) ) {
             	    case STAR:
@@ -3205,21 +3201,21 @@ public class SalsaParser extends Parser {
 
             	    switch (alt38) {
             	        case 1 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:963:14: op= '*'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:959:14: op= '*'
             	            {
             	            op=(Token)match(input,STAR,FOLLOW_STAR_in_mult7139); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:963:25: op= '/'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:959:25: op= '/'
             	            {
             	            op=(Token)match(input,DIV,FOLLOW_DIV_in_mult7147); 
 
             	            }
             	            break;
             	        case 3 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:963:36: op= '%'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:959:36: op= '%'
             	            {
             	            op=(Token)match(input,MOD,FOLLOW_MOD_in_mult7155); 
 
@@ -3259,7 +3255,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "add"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:968:1: add returns [AddExpression e] : e1= mult ( (op= '+' | op= '-' ) e2= mult )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:964:1: add returns [AddExpression e] : e1= mult ( (op= '+' | op= '-' ) e2= mult )* ;
     public final AddExpression add() throws RecognitionException {
         AddExpression e = null;
 
@@ -3271,8 +3267,8 @@ public class SalsaParser extends Parser {
 
          e = new AddExpression(); 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:970:5: (e1= mult ( (op= '+' | op= '-' ) e2= mult )* )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:970:9: e1= mult ( (op= '+' | op= '-' ) e2= mult )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:966:5: (e1= mult ( (op= '+' | op= '-' ) e2= mult )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:966:9: e1= mult ( (op= '+' | op= '-' ) e2= mult )*
             {
             pushFollow(FOLLOW_mult_in_add7223);
             e1=mult();
@@ -3280,7 +3276,7 @@ public class SalsaParser extends Parser {
             state._fsp--;
 
             e.addExpression(e1);
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:971:9: ( (op= '+' | op= '-' ) e2= mult )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:967:9: ( (op= '+' | op= '-' ) e2= mult )*
             loop41:
             do {
                 int alt41=2;
@@ -3293,9 +3289,9 @@ public class SalsaParser extends Parser {
 
                 switch (alt41) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:972:13: (op= '+' | op= '-' ) e2= mult
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:968:13: (op= '+' | op= '-' ) e2= mult
             	    {
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:972:13: (op= '+' | op= '-' )
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:968:13: (op= '+' | op= '-' )
             	    int alt40=2;
             	    int LA40_0 = input.LA(1);
 
@@ -3313,14 +3309,14 @@ public class SalsaParser extends Parser {
             	    }
             	    switch (alt40) {
             	        case 1 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:972:14: op= '+'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:968:14: op= '+'
             	            {
             	            op=(Token)match(input,PLUS,FOLLOW_PLUS_in_add7255); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:972:25: op= '-'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:968:25: op= '-'
             	            {
             	            op=(Token)match(input,MINUS,FOLLOW_MINUS_in_add7263); 
 
@@ -3360,7 +3356,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "relation"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:977:1: relation returns [Expression e] : e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:973:1: relation returns [Expression e] : e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )* ;
     public final Expression relation() throws RecognitionException {
         Expression e = null;
 
@@ -3372,8 +3368,8 @@ public class SalsaParser extends Parser {
 
          e = new Expression();
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:979:5: (e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )* )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:979:9: e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:975:5: (e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:975:9: e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )*
             {
             pushFollow(FOLLOW_add_in_relation7327);
             e1=add();
@@ -3381,7 +3377,7 @@ public class SalsaParser extends Parser {
             state._fsp--;
 
             e.addExpression(e1);
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:980:9: ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:976:9: ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )*
             loop43:
             do {
                 int alt43=2;
@@ -3394,9 +3390,9 @@ public class SalsaParser extends Parser {
 
                 switch (alt43) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:981:13: (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:977:13: (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add
             	    {
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:981:13: (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' )
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:977:13: (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' )
             	    int alt42=6;
             	    switch ( input.LA(1) ) {
             	    case EQUAL:
@@ -3438,42 +3434,42 @@ public class SalsaParser extends Parser {
 
             	    switch (alt42) {
             	        case 1 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:981:14: op= '=='
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:977:14: op= '=='
             	            {
             	            op=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_relation7360); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:981:26: op= '!='
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:977:26: op= '!='
             	            {
             	            op=(Token)match(input,NOT_EQUAL,FOLLOW_NOT_EQUAL_in_relation7368); 
 
             	            }
             	            break;
             	        case 3 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:981:38: op= '<'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:977:38: op= '<'
             	            {
             	            op=(Token)match(input,LESS_THAN,FOLLOW_LESS_THAN_in_relation7376); 
 
             	            }
             	            break;
             	        case 4 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:981:49: op= '<='
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:977:49: op= '<='
             	            {
             	            op=(Token)match(input,LESS_OR_EQUAL,FOLLOW_LESS_OR_EQUAL_in_relation7384); 
 
             	            }
             	            break;
             	        case 5 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:981:61: op= '>='
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:977:61: op= '>='
             	            {
             	            op=(Token)match(input,GREATER_OR_EQUAL,FOLLOW_GREATER_OR_EQUAL_in_relation7392); 
 
             	            }
             	            break;
             	        case 6 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:981:73: op= '>'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:977:73: op= '>'
             	            {
             	            op=(Token)match(input,GREATER_THAN,FOLLOW_GREATER_THAN_in_relation7400); 
 
@@ -3522,7 +3518,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:986:1: expression returns [Expression e, boolean sendMessage] : e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:982:1: expression returns [Expression e, boolean sendMessage] : e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )* ;
     public final SalsaParser.expression_return expression() throws RecognitionException {
         expression_stack.push(new expression_scope());
         SalsaParser.expression_return retval = new SalsaParser.expression_return();
@@ -3536,8 +3532,8 @@ public class SalsaParser extends Parser {
 
          retval.e = new Expression(); ((expression_scope)expression_stack.peek()).isSendMsg = false; 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:995:5: (e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )* )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:995:9: e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:991:5: (e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:991:9: e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )*
             {
             pushFollow(FOLLOW_relation_in_expression7475);
             e1=relation();
@@ -3545,7 +3541,7 @@ public class SalsaParser extends Parser {
             state._fsp--;
 
             retval.e.addExpression(e1);
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:996:9: ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:992:9: ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )*
             loop45:
             do {
                 int alt45=2;
@@ -3558,9 +3554,9 @@ public class SalsaParser extends Parser {
 
                 switch (alt45) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:997:13: (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:993:13: (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation
             	    {
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:997:13: (op= '&&' | op= '||' | op= 'instanceof' )
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:993:13: (op= '&&' | op= '||' | op= 'instanceof' )
             	    int alt44=3;
             	    switch ( input.LA(1) ) {
             	    case LOGICAL_AND:
@@ -3587,21 +3583,21 @@ public class SalsaParser extends Parser {
 
             	    switch (alt44) {
             	        case 1 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:997:14: op= '&&'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:993:14: op= '&&'
             	            {
             	            op=(Token)match(input,LOGICAL_AND,FOLLOW_LOGICAL_AND_in_expression7509); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:997:26: op= '||'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:993:26: op= '||'
             	            {
             	            op=(Token)match(input,LOGICAL_OR,FOLLOW_LOGICAL_OR_in_expression7517); 
 
             	            }
             	            break;
             	        case 3 :
-            	            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:997:38: op= 'instanceof'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:993:38: op= 'instanceof'
             	            {
             	            op=(Token)match(input,INSTANCEOF,FOLLOW_INSTANCEOF_in_expression7525); 
 
@@ -3650,7 +3646,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "literal"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1004:1: literal returns [Literal literal] : ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | FLOATING_POINT_LITERAL | (t= 'true' | t= 'false' ) | 'null' );
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1000:1: literal returns [Literal literal] : ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | FLOATING_POINT_LITERAL | (t= 'true' | t= 'false' ) | 'null' );
     public final Literal literal() throws RecognitionException {
         Literal literal = null;
 
@@ -3663,7 +3659,7 @@ public class SalsaParser extends Parser {
         Token FLOATING_POINT_LITERAL60=null;
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1005:5: ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | FLOATING_POINT_LITERAL | (t= 'true' | t= 'false' ) | 'null' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1001:5: ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | FLOATING_POINT_LITERAL | (t= 'true' | t= 'false' ) | 'null' )
             int alt47=8;
             switch ( input.LA(1) ) {
             case HEX_LITERAL:
@@ -3716,7 +3712,7 @@ public class SalsaParser extends Parser {
 
             switch (alt47) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1005:9: HEX_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1001:9: HEX_LITERAL
                     {
                     HEX_LITERAL55=(Token)match(input,HEX_LITERAL,FOLLOW_HEX_LITERAL_in_literal7595); 
                     literal = new Literal("int", (HEX_LITERAL55!=null?HEX_LITERAL55.getText():null));
@@ -3724,7 +3720,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1006:9: DECIMAL_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1002:9: DECIMAL_LITERAL
                     {
                     DECIMAL_LITERAL56=(Token)match(input,DECIMAL_LITERAL,FOLLOW_DECIMAL_LITERAL_in_literal7607); 
                     literal = new Literal("int", (DECIMAL_LITERAL56!=null?DECIMAL_LITERAL56.getText():null));
@@ -3732,7 +3728,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1007:9: OCTAL_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1003:9: OCTAL_LITERAL
                     {
                     OCTAL_LITERAL57=(Token)match(input,OCTAL_LITERAL,FOLLOW_OCTAL_LITERAL_in_literal7619); 
                     literal = new Literal("int", (OCTAL_LITERAL57!=null?OCTAL_LITERAL57.getText():null));
@@ -3740,7 +3736,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1008:9: CHARACTER_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1004:9: CHARACTER_LITERAL
                     {
                     CHARACTER_LITERAL58=(Token)match(input,CHARACTER_LITERAL,FOLLOW_CHARACTER_LITERAL_in_literal7631); 
                     literal = new Literal("char", (CHARACTER_LITERAL58!=null?CHARACTER_LITERAL58.getText():null));
@@ -3748,7 +3744,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1009:9: STRING_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1005:9: STRING_LITERAL
                     {
                     STRING_LITERAL59=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_literal7645); 
                     literal = new Literal("java.lang.String", (STRING_LITERAL59!=null?STRING_LITERAL59.getText():null));
@@ -3756,7 +3752,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1010:9: FLOATING_POINT_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1006:9: FLOATING_POINT_LITERAL
                     {
                     FLOATING_POINT_LITERAL60=(Token)match(input,FLOATING_POINT_LITERAL,FOLLOW_FLOATING_POINT_LITERAL_in_literal7658); 
                     literal = new Literal("double", (FLOATING_POINT_LITERAL60!=null?FLOATING_POINT_LITERAL60.getText():null));
@@ -3764,9 +3760,9 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1011:9: (t= 'true' | t= 'false' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1007:9: (t= 'true' | t= 'false' )
                     {
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1011:9: (t= 'true' | t= 'false' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1007:9: (t= 'true' | t= 'false' )
                     int alt46=2;
                     int LA46_0 = input.LA(1);
 
@@ -3784,14 +3780,14 @@ public class SalsaParser extends Parser {
                     }
                     switch (alt46) {
                         case 1 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1011:10: t= 'true'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1007:10: t= 'true'
                             {
                             t=(Token)match(input,TRUE,FOLLOW_TRUE_in_literal7676); 
 
                             }
                             break;
                         case 2 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1011:23: t= 'false'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1007:23: t= 'false'
                             {
                             t=(Token)match(input,FALSE,FOLLOW_FALSE_in_literal7684); 
 
@@ -3805,7 +3801,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1012:9: 'null'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1008:9: 'null'
                     {
                     match(input,NULL,FOLLOW_NULL_in_literal7697); 
                     literal = new Literal("null", "null");
@@ -3827,7 +3823,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "type"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1015:1: type returns [String value] : ( 'future' )? ( primitiveType | name ) ( '[' ']' )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1011:1: type returns [String value] : ( 'future' )? ( primitiveType | name ) ( '[' ']' )* ;
     public final String type() throws RecognitionException {
         String value = null;
 
@@ -3838,10 +3834,10 @@ public class SalsaParser extends Parser {
 
         value = "";
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1017:5: ( ( 'future' )? ( primitiveType | name ) ( '[' ']' )* )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1017:9: ( 'future' )? ( primitiveType | name ) ( '[' ']' )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1013:5: ( ( 'future' )? ( primitiveType | name ) ( '[' ']' )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1013:9: ( 'future' )? ( primitiveType | name ) ( '[' ']' )*
             {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1017:9: ( 'future' )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1013:9: ( 'future' )?
             int alt48=2;
             int LA48_0 = input.LA(1);
 
@@ -3850,7 +3846,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt48) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1017:10: 'future'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1013:10: 'future'
                     {
                     match(input,189,FOLLOW_189_in_type7732); 
                     value += "future ";
@@ -3860,7 +3856,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1018:9: ( primitiveType | name )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1014:9: ( primitiveType | name )
             int alt49=2;
             int LA49_0 = input.LA(1);
 
@@ -3878,7 +3874,7 @@ public class SalsaParser extends Parser {
             }
             switch (alt49) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1019:13: primitiveType
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1015:13: primitiveType
                     {
                     pushFollow(FOLLOW_primitiveType_in_type7760);
                     primitiveType61=primitiveType();
@@ -3890,7 +3886,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1020:13: name
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1016:13: name
                     {
                     pushFollow(FOLLOW_name_in_type7776);
                     name62=name();
@@ -3904,7 +3900,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1022:9: ( '[' ']' )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1018:9: ( '[' ']' )*
             loop50:
             do {
                 int alt50=2;
@@ -3917,7 +3913,7 @@ public class SalsaParser extends Parser {
 
                 switch (alt50) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1022:10: '[' ']'
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1018:10: '[' ']'
             	    {
             	    match(input,LBRACK,FOLLOW_LBRACK_in_type7803); 
             	    match(input,RBRACK,FOLLOW_RBRACK_in_type7805); 
@@ -3947,12 +3943,12 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "primitiveType"
-    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1025:1: primitiveType returns [String value] : ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'void' );
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1021:1: primitiveType returns [String value] : ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'void' );
     public final String primitiveType() throws RecognitionException {
         String value = null;
 
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1026:5: ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'void' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1022:5: ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'void' )
             int alt51=9;
             switch ( input.LA(1) ) {
             case BOOLEAN:
@@ -4009,7 +4005,7 @@ public class SalsaParser extends Parser {
 
             switch (alt51) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1026:11: 'boolean'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1022:11: 'boolean'
                     {
                     match(input,BOOLEAN,FOLLOW_BOOLEAN_in_primitiveType7842); 
                      value = "boolean"; 
@@ -4017,7 +4013,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1027:11: 'char'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1023:11: 'char'
                     {
                     match(input,CHAR,FOLLOW_CHAR_in_primitiveType7860); 
                      value = "char"; 
@@ -4025,7 +4021,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1028:11: 'byte'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1024:11: 'byte'
                     {
                     match(input,BYTE,FOLLOW_BYTE_in_primitiveType7881); 
                      value = "byte"; 
@@ -4033,7 +4029,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1029:11: 'short'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1025:11: 'short'
                     {
                     match(input,SHORT,FOLLOW_SHORT_in_primitiveType7902); 
                      value = "short"; 
@@ -4041,7 +4037,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1030:11: 'int'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1026:11: 'int'
                     {
                     match(input,INT,FOLLOW_INT_in_primitiveType7922); 
                      value = "int"; 
@@ -4049,7 +4045,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1031:11: 'long'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1027:11: 'long'
                     {
                     match(input,LONG,FOLLOW_LONG_in_primitiveType7944); 
                      value = "long"; 
@@ -4057,7 +4053,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1032:11: 'float'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1028:11: 'float'
                     {
                     match(input,FLOAT,FOLLOW_FLOAT_in_primitiveType7965); 
                      value = "float"; 
@@ -4065,7 +4061,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1033:11: 'double'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1029:11: 'double'
                     {
                     match(input,DOUBLE,FOLLOW_DOUBLE_in_primitiveType7985); 
                      value = "double"; 
@@ -4073,7 +4069,7 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 9 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1035:11: 'void'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1031:11: 'void'
                     {
                     match(input,VOID,FOLLOW_VOID_in_primitiveType8005); 
                      value = "void"; 
@@ -4172,7 +4168,7 @@ public class SalsaParser extends Parser {
             this.transition = DFA8_transition;
         }
         public String getDescription() {
-            return "()* loopback of 608:13: ( stateVariableDeclaration | methodDeclaration )*";
+            return "()* loopback of 604:13: ( stateVariableDeclaration | methodDeclaration )*";
         }
     }
     static final String DFA9_eotS =
@@ -4245,7 +4241,7 @@ public class SalsaParser extends Parser {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "()* loopback of 632:10: ( stateVariableDeclaration | methodDeclaration )*";
+            return "()* loopback of 628:10: ( stateVariableDeclaration | methodDeclaration )*";
         }
     }
     static final String DFA15_eotS =
@@ -4319,7 +4315,7 @@ public class SalsaParser extends Parser {
             this.transition = DFA15_transition;
         }
         public String getDescription() {
-            return "686:5: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement )";
+            return "682:5: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement )";
         }
     }
     static final String DFA23_eotS =
@@ -4395,7 +4391,7 @@ public class SalsaParser extends Parser {
             this.transition = DFA23_transition;
         }
         public String getDescription() {
-            return "846:9: ( '(' type ')' )?";
+            return "842:9: ( '(' type ')' )?";
         }
     }
     static final String DFA30_eotS =
@@ -4464,7 +4460,7 @@ public class SalsaParser extends Parser {
             this.transition = DFA30_transition;
         }
         public String getDescription() {
-            return "904:1: allocation returns [Allocation a] : ( ( 'new' type actualParameters ) | ( 'new' ( primitiveType | name ) ( '[' expression ']' )+ ) );";
+            return "900:1: allocation returns [Allocation a] : ( ( 'new' type actualParameters ) | ( 'new' ( primitiveType | name ) ( '[' expression ']' )+ ) );";
         }
     }
  

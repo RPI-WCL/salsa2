@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g 2010-10-12 19:26:48
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g 2010-10-14 12:28:08
 
 package salsa.compiler;
 import salsa.compiler.definitions.*;
@@ -221,15 +221,15 @@ public class SalsaLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "/media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g"; }
+    public String getGrammarFileName() { return "/media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g"; }
 
     // $ANTLR start "AND"
     public final void mAND() throws RecognitionException {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:24:5: ( '&' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:24:7: '&'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:24:5: ( '&' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:24:7: '&'
             {
             match('&'); 
 
@@ -248,8 +248,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = AND_ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:25:12: ( '&=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:25:14: '&='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:25:12: ( '&=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:25:14: '&='
             {
             match("&="); 
 
@@ -269,8 +269,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:26:8: ( '=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:26:10: '='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:26:8: ( '=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:26:10: '='
             {
             match('='); 
 
@@ -289,8 +289,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = AT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:27:4: ( '@' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:27:6: '@'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:27:4: ( '@' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:27:6: '@'
             {
             match('@'); 
 
@@ -309,8 +309,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = BIT_SHIFT_RIGHT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:28:17: ( '>>>' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:28:19: '>>>'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:28:17: ( '>>>' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:28:19: '>>>'
             {
             match(">>>"); 
 
@@ -330,8 +330,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = BIT_SHIFT_RIGHT_ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:29:24: ( '>>>=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:29:26: '>>>='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:29:24: ( '>>>=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:29:26: '>>>='
             {
             match(">>>="); 
 
@@ -351,8 +351,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = COLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:30:7: ( ':' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:30:9: ':'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:30:7: ( ':' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:30:9: ':'
             {
             match(':'); 
 
@@ -371,8 +371,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = COMMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:31:7: ( ',' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:31:9: ','
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:31:7: ( ',' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:31:9: ','
             {
             match(','); 
 
@@ -391,8 +391,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = DEC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:32:5: ( '--' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:32:7: '--'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:32:5: ( '--' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:32:7: '--'
             {
             match("--"); 
 
@@ -412,8 +412,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:33:5: ( '/' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:33:7: '/'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:33:5: ( '/' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:33:7: '/'
             {
             match('/'); 
 
@@ -432,8 +432,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = DIV_ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:34:12: ( '/=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:34:14: '/='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:34:12: ( '/=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:34:14: '/='
             {
             match("/="); 
 
@@ -453,8 +453,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = DOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:35:5: ( '.' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:35:7: '.'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:35:5: ( '.' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:35:7: '.'
             {
             match('.'); 
 
@@ -473,8 +473,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = DOTSTAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:36:9: ( '.*' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:36:11: '.*'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:36:9: ( '.*' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:36:11: '.*'
             {
             match(".*"); 
 
@@ -494,8 +494,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = ELLIPSIS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:37:10: ( '...' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:37:12: '...'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:37:10: ( '...' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:37:12: '...'
             {
             match("..."); 
 
@@ -515,8 +515,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:38:7: ( '==' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:38:9: '=='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:38:7: ( '==' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:38:9: '=='
             {
             match("=="); 
 
@@ -536,8 +536,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = GREATER_OR_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:39:18: ( '>=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:39:20: '>='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:39:18: ( '>=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:39:20: '>='
             {
             match(">="); 
 
@@ -557,8 +557,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = GREATER_THAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:40:14: ( '>' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:40:16: '>'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:40:14: ( '>' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:40:16: '>'
             {
             match('>'); 
 
@@ -577,8 +577,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = INC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:41:5: ( '++' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:41:7: '++'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:41:5: ( '++' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:41:7: '++'
             {
             match("++"); 
 
@@ -598,8 +598,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = LBRACK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:42:8: ( '[' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:42:10: '['
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:42:8: ( '[' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:42:10: '['
             {
             match('['); 
 
@@ -618,8 +618,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = LCURLY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:43:8: ( '{' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:43:10: '{'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:43:8: ( '{' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:43:10: '{'
             {
             match('{'); 
 
@@ -638,8 +638,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = LESS_OR_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:44:15: ( '<=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:44:17: '<='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:44:15: ( '<=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:44:17: '<='
             {
             match("<="); 
 
@@ -659,8 +659,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = LESS_THAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:45:11: ( '<' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:45:13: '<'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:45:11: ( '<' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:45:13: '<'
             {
             match('<'); 
 
@@ -679,8 +679,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = LOGICAL_AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:46:13: ( '&&' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:46:15: '&&'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:46:13: ( '&&' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:46:15: '&&'
             {
             match("&&"); 
 
@@ -700,8 +700,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = LOGICAL_NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:47:13: ( '!' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:47:15: '!'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:47:13: ( '!' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:47:15: '!'
             {
             match('!'); 
 
@@ -720,8 +720,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = LOGICAL_OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:48:12: ( '||' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:48:14: '||'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:48:12: ( '||' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:48:14: '||'
             {
             match("||"); 
 
@@ -741,8 +741,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = LPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:49:8: ( '(' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:49:10: '('
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:49:8: ( '(' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:49:10: '('
             {
             match('('); 
 
@@ -761,8 +761,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:50:7: ( '-' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:50:9: '-'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:50:7: ( '-' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:50:9: '-'
             {
             match('-'); 
 
@@ -781,8 +781,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = MINUS_ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:51:14: ( '-=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:51:16: '-='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:51:14: ( '-=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:51:16: '-='
             {
             match("-="); 
 
@@ -802,8 +802,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = MOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:52:5: ( '%' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:52:7: '%'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:52:5: ( '%' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:52:7: '%'
             {
             match('%'); 
 
@@ -822,8 +822,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = MOD_ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:53:12: ( '%=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:53:14: '%='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:53:12: ( '%=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:53:14: '%='
             {
             match("%="); 
 
@@ -843,8 +843,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:54:5: ( '~' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:54:7: '~'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:54:5: ( '~' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:54:7: '~'
             {
             match('~'); 
 
@@ -863,8 +863,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = NOT_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:55:11: ( '!=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:55:13: '!='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:55:11: ( '!=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:55:13: '!='
             {
             match("!="); 
 
@@ -884,8 +884,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:56:4: ( '|' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:56:6: '|'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:56:4: ( '|' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:56:6: '|'
             {
             match('|'); 
 
@@ -904,8 +904,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = OR_ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:57:11: ( '|=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:57:13: '|='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:57:11: ( '|=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:57:13: '|='
             {
             match("|="); 
 
@@ -925,8 +925,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:58:6: ( '+' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:58:8: '+'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:58:6: ( '+' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:58:8: '+'
             {
             match('+'); 
 
@@ -945,8 +945,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = PLUS_ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:59:13: ( '+=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:59:15: '+='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:59:13: ( '+=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:59:15: '+='
             {
             match("+="); 
 
@@ -966,8 +966,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = QUESTION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:60:10: ( '?' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:60:12: '?'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:60:10: ( '?' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:60:12: '?'
             {
             match('?'); 
 
@@ -986,8 +986,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = RBRACK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:61:8: ( ']' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:61:10: ']'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:61:8: ( ']' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:61:10: ']'
             {
             match(']'); 
 
@@ -1006,8 +1006,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = RCURLY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:62:8: ( '}' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:62:10: '}'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:62:8: ( '}' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:62:10: '}'
             {
             match('}'); 
 
@@ -1026,8 +1026,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = RPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:63:8: ( ')' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:63:10: ')'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:63:8: ( ')' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:63:10: ')'
             {
             match(')'); 
 
@@ -1046,8 +1046,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = SEMI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:64:6: ( ';' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:64:8: ';'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:64:6: ( ';' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:64:8: ';'
             {
             match(';'); 
 
@@ -1066,8 +1066,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = SHIFT_LEFT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:65:12: ( '<<' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:65:14: '<<'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:65:12: ( '<<' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:65:14: '<<'
             {
             match("<<"); 
 
@@ -1087,8 +1087,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = SHIFT_LEFT_ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:66:19: ( '<<=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:66:21: '<<='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:66:19: ( '<<=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:66:21: '<<='
             {
             match("<<="); 
 
@@ -1108,8 +1108,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = SHIFT_RIGHT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:67:13: ( '>>' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:67:15: '>>'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:67:13: ( '>>' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:67:15: '>>'
             {
             match(">>"); 
 
@@ -1129,8 +1129,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = SHIFT_RIGHT_ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:68:20: ( '>>=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:68:22: '>>='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:68:20: ( '>>=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:68:22: '>>='
             {
             match(">>="); 
 
@@ -1150,8 +1150,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = STAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:69:6: ( '*' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:69:8: '*'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:69:6: ( '*' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:69:8: '*'
             {
             match('*'); 
 
@@ -1170,8 +1170,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = STAR_ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:70:13: ( '*=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:70:15: '*='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:70:13: ( '*=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:70:15: '*='
             {
             match("*="); 
 
@@ -1191,8 +1191,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = XOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:71:5: ( '^' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:71:7: '^'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:71:5: ( '^' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:71:7: '^'
             {
             match('^'); 
 
@@ -1211,8 +1211,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = XOR_ASSIGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:72:12: ( '^=' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:72:14: '^='
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:72:12: ( '^=' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:72:14: '^='
             {
             match("^="); 
 
@@ -1232,8 +1232,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = ABSTRACT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:73:10: ( 'abstract' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:73:12: 'abstract'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:73:10: ( 'abstract' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:73:12: 'abstract'
             {
             match("abstract"); 
 
@@ -1253,8 +1253,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = ASSERT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:74:8: ( 'assert' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:74:10: 'assert'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:74:8: ( 'assert' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:74:10: 'assert'
             {
             match("assert"); 
 
@@ -1274,8 +1274,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:75:9: ( 'boolean' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:75:11: 'boolean'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:75:9: ( 'boolean' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:75:11: 'boolean'
             {
             match("boolean"); 
 
@@ -1295,8 +1295,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = BREAK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:76:7: ( 'break' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:76:9: 'break'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:76:7: ( 'break' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:76:9: 'break'
             {
             match("break"); 
 
@@ -1316,8 +1316,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = BYTE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:77:6: ( 'byte' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:77:8: 'byte'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:77:6: ( 'byte' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:77:8: 'byte'
             {
             match("byte"); 
 
@@ -1337,8 +1337,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = CASE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:78:6: ( 'case' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:78:8: 'case'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:78:6: ( 'case' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:78:8: 'case'
             {
             match("case"); 
 
@@ -1358,8 +1358,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = CATCH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:79:7: ( 'catch' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:79:9: 'catch'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:79:7: ( 'catch' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:79:9: 'catch'
             {
             match("catch"); 
 
@@ -1379,8 +1379,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = CHAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:80:6: ( 'char' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:80:8: 'char'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:80:6: ( 'char' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:80:8: 'char'
             {
             match("char"); 
 
@@ -1400,8 +1400,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = CLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:81:7: ( 'class' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:81:9: 'class'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:81:7: ( 'class' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:81:9: 'class'
             {
             match("class"); 
 
@@ -1421,8 +1421,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = CONTINUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:82:10: ( 'continue' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:82:12: 'continue'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:82:10: ( 'continue' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:82:12: 'continue'
             {
             match("continue"); 
 
@@ -1442,8 +1442,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = DEFAULT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:83:9: ( 'default' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:83:11: 'default'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:83:9: ( 'default' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:83:11: 'default'
             {
             match("default"); 
 
@@ -1463,8 +1463,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = DO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:84:4: ( 'do' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:84:6: 'do'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:84:4: ( 'do' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:84:6: 'do'
             {
             match("do"); 
 
@@ -1484,8 +1484,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = DOUBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:85:8: ( 'double' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:85:10: 'double'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:85:8: ( 'double' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:85:10: 'double'
             {
             match("double"); 
 
@@ -1505,8 +1505,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:86:6: ( 'else' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:86:8: 'else'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:86:6: ( 'else' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:86:8: 'else'
             {
             match("else"); 
 
@@ -1526,8 +1526,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = ENUM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:87:6: ( 'enum' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:87:8: 'enum'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:87:6: ( 'enum' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:87:8: 'enum'
             {
             match("enum"); 
 
@@ -1547,8 +1547,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = EXTENDS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:88:9: ( 'extends' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:88:11: 'extends'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:88:9: ( 'extends' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:88:11: 'extends'
             {
             match("extends"); 
 
@@ -1568,8 +1568,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:89:7: ( 'false' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:89:9: 'false'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:89:7: ( 'false' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:89:9: 'false'
             {
             match("false"); 
 
@@ -1589,8 +1589,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = FINAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:90:7: ( 'final' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:90:9: 'final'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:90:7: ( 'final' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:90:9: 'final'
             {
             match("final"); 
 
@@ -1610,8 +1610,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = FINALLY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:91:9: ( 'finally' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:91:11: 'finally'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:91:9: ( 'finally' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:91:11: 'finally'
             {
             match("finally"); 
 
@@ -1631,8 +1631,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:92:7: ( 'float' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:92:9: 'float'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:92:7: ( 'float' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:92:9: 'float'
             {
             match("float"); 
 
@@ -1652,8 +1652,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = FOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:93:5: ( 'for' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:93:7: 'for'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:93:5: ( 'for' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:93:7: 'for'
             {
             match("for"); 
 
@@ -1673,8 +1673,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:94:4: ( 'if' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:94:6: 'if'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:94:4: ( 'if' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:94:6: 'if'
             {
             match("if"); 
 
@@ -1694,8 +1694,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = IMPLEMENTS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:95:12: ( 'implements' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:95:14: 'implements'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:95:12: ( 'implements' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:95:14: 'implements'
             {
             match("implements"); 
 
@@ -1715,8 +1715,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = INSTANCEOF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:96:12: ( 'instanceof' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:96:14: 'instanceof'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:96:12: ( 'instanceof' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:96:14: 'instanceof'
             {
             match("instanceof"); 
 
@@ -1736,8 +1736,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = INTERFACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:97:11: ( 'interface' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:97:13: 'interface'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:97:11: ( 'interface' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:97:13: 'interface'
             {
             match("interface"); 
 
@@ -1757,8 +1757,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = IMPORT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:98:8: ( 'import' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:98:10: 'import'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:98:8: ( 'import' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:98:10: 'import'
             {
             match("import"); 
 
@@ -1778,8 +1778,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:99:5: ( 'int' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:99:7: 'int'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:99:5: ( 'int' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:99:7: 'int'
             {
             match("int"); 
 
@@ -1799,8 +1799,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = LONG;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:100:6: ( 'long' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:100:8: 'long'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:100:6: ( 'long' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:100:8: 'long'
             {
             match("long"); 
 
@@ -1820,8 +1820,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = NATIVE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:101:8: ( 'native' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:101:10: 'native'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:101:8: ( 'native' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:101:10: 'native'
             {
             match("native"); 
 
@@ -1841,8 +1841,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = NEW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:102:5: ( 'new' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:102:7: 'new'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:102:5: ( 'new' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:102:7: 'new'
             {
             match("new"); 
 
@@ -1862,8 +1862,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = NULL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:103:6: ( 'null' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:103:8: 'null'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:103:6: ( 'null' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:103:8: 'null'
             {
             match("null"); 
 
@@ -1883,8 +1883,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = PACKAGE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:104:9: ( 'package' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:104:11: 'package'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:104:9: ( 'package' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:104:11: 'package'
             {
             match("package"); 
 
@@ -1904,8 +1904,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = PRIVATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:105:9: ( 'private' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:105:11: 'private'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:105:9: ( 'private' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:105:11: 'private'
             {
             match("private"); 
 
@@ -1925,8 +1925,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = PROTECTED;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:106:11: ( 'protected' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:106:13: 'protected'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:106:11: ( 'protected' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:106:13: 'protected'
             {
             match("protected"); 
 
@@ -1946,8 +1946,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = PUBLIC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:107:8: ( 'public' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:107:10: 'public'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:107:8: ( 'public' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:107:10: 'public'
             {
             match("public"); 
 
@@ -1967,8 +1967,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:108:8: ( 'return' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:108:10: 'return'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:108:8: ( 'return' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:108:10: 'return'
             {
             match("return"); 
 
@@ -1988,8 +1988,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = SHORT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:109:7: ( 'short' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:109:9: 'short'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:109:7: ( 'short' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:109:9: 'short'
             {
             match("short"); 
 
@@ -2009,8 +2009,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = STATIC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:110:8: ( 'static' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:110:10: 'static'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:110:8: ( 'static' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:110:10: 'static'
             {
             match("static"); 
 
@@ -2030,8 +2030,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = STRICTFP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:111:10: ( 'strictfp' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:111:12: 'strictfp'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:111:10: ( 'strictfp' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:111:12: 'strictfp'
             {
             match("strictfp"); 
 
@@ -2051,8 +2051,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = SUPER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:112:7: ( 'super' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:112:9: 'super'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:112:7: ( 'super' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:112:9: 'super'
             {
             match("super"); 
 
@@ -2072,8 +2072,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = SWITCH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:113:8: ( 'switch' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:113:10: 'switch'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:113:8: ( 'switch' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:113:10: 'switch'
             {
             match("switch"); 
 
@@ -2093,8 +2093,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = SYNCHRONIZED;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:114:14: ( 'synchronized' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:114:16: 'synchronized'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:114:14: ( 'synchronized' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:114:16: 'synchronized'
             {
             match("synchronized"); 
 
@@ -2114,8 +2114,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = THIS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:115:6: ( 'this' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:115:8: 'this'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:115:6: ( 'this' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:115:8: 'this'
             {
             match("this"); 
 
@@ -2135,8 +2135,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = THROW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:116:7: ( 'throw' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:116:9: 'throw'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:116:7: ( 'throw' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:116:9: 'throw'
             {
             match("throw"); 
 
@@ -2156,8 +2156,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = THROWS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:117:8: ( 'throws' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:117:10: 'throws'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:117:8: ( 'throws' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:117:10: 'throws'
             {
             match("throws"); 
 
@@ -2177,8 +2177,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = TRANSIENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:118:11: ( 'transient' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:118:13: 'transient'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:118:11: ( 'transient' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:118:13: 'transient'
             {
             match("transient"); 
 
@@ -2198,8 +2198,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:119:6: ( 'true' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:119:8: 'true'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:119:6: ( 'true' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:119:8: 'true'
             {
             match("true"); 
 
@@ -2219,8 +2219,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = TRY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:120:5: ( 'try' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:120:7: 'try'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:120:5: ( 'try' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:120:7: 'try'
             {
             match("try"); 
 
@@ -2240,8 +2240,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = VOID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:121:6: ( 'void' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:121:8: 'void'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:121:6: ( 'void' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:121:8: 'void'
             {
             match("void"); 
 
@@ -2261,8 +2261,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = VOLATILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:122:10: ( 'volatile' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:122:12: 'volatile'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:122:10: ( 'volatile' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:122:12: 'volatile'
             {
             match("volatile"); 
 
@@ -2282,8 +2282,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:123:7: ( 'while' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:123:9: 'while'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:123:7: ( 'while' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:123:9: 'while'
             {
             match("while"); 
 
@@ -2303,8 +2303,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = T__183;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:124:8: ( 'module' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:124:10: 'module'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:124:8: ( 'module' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:124:10: 'module'
             {
             match("module"); 
 
@@ -2324,8 +2324,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = T__184;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:125:8: ( 'immutable' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:125:10: 'immutable'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:125:8: ( 'immutable' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:125:10: 'immutable'
             {
             match("immutable"); 
 
@@ -2345,8 +2345,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = T__185;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:126:8: ( 'behavior' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:126:10: 'behavior'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:126:8: ( 'behavior' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:126:10: 'behavior'
             {
             match("behavior"); 
 
@@ -2366,8 +2366,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = T__186;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:127:8: ( 'join' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:127:10: 'join'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:127:8: ( 'join' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:127:10: 'join'
             {
             match("join"); 
 
@@ -2387,8 +2387,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = T__187;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:128:8: ( 'self' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:128:10: 'self'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:128:8: ( 'self' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:128:10: 'self'
             {
             match("self"); 
 
@@ -2408,8 +2408,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = T__188;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:129:8: ( '<-' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:129:10: '<-'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:129:8: ( '<-' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:129:10: '<-'
             {
             match("<-"); 
 
@@ -2429,8 +2429,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = T__189;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:130:8: ( 'future' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:130:10: 'future'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:130:8: ( 'future' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:130:10: 'future'
             {
             match("future"); 
 
@@ -2450,8 +2450,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = HEX_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1040:13: ( '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ ( INTEGER_TYPE_SUFFIX )? )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1040:15: '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1036:13: ( '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ ( INTEGER_TYPE_SUFFIX )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1036:15: '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ ( INTEGER_TYPE_SUFFIX )?
             {
             match('0'); 
             if ( input.LA(1)=='X'||input.LA(1)=='x' ) {
@@ -2463,7 +2463,7 @@ public class SalsaLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1040:29: ( HEX_DIGIT )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1036:29: ( HEX_DIGIT )+
             int cnt1=0;
             loop1:
             do {
@@ -2477,7 +2477,7 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1040:29: HEX_DIGIT
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1036:29: HEX_DIGIT
             	    {
             	    mHEX_DIGIT(); 
 
@@ -2493,7 +2493,7 @@ public class SalsaLexer extends Lexer {
                 cnt1++;
             } while (true);
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1040:40: ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1036:40: ( INTEGER_TYPE_SUFFIX )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -2502,7 +2502,7 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1040:40: INTEGER_TYPE_SUFFIX
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1036:40: INTEGER_TYPE_SUFFIX
                     {
                     mINTEGER_TYPE_SUFFIX(); 
 
@@ -2527,10 +2527,10 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = DECIMAL_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1042:17: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( INTEGER_TYPE_SUFFIX )? )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1042:19: ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1038:17: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( INTEGER_TYPE_SUFFIX )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1038:19: ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( INTEGER_TYPE_SUFFIX )?
             {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1042:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1038:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -2548,17 +2548,17 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1042:20: '0'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1038:20: '0'
                     {
                     match('0'); 
 
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1042:26: '1' .. '9' ( '0' .. '9' )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1038:26: '1' .. '9' ( '0' .. '9' )*
                     {
                     matchRange('1','9'); 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1042:35: ( '0' .. '9' )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1038:35: ( '0' .. '9' )*
                     loop3:
                     do {
                         int alt3=2;
@@ -2571,7 +2571,7 @@ public class SalsaLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1042:35: '0' .. '9'
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1038:35: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -2589,7 +2589,7 @@ public class SalsaLexer extends Lexer {
 
             }
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1042:46: ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1038:46: ( INTEGER_TYPE_SUFFIX )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -2598,7 +2598,7 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1042:46: INTEGER_TYPE_SUFFIX
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1038:46: INTEGER_TYPE_SUFFIX
                     {
                     mINTEGER_TYPE_SUFFIX(); 
 
@@ -2623,11 +2623,11 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = OCTAL_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1044:15: ( '0' ( '0' .. '7' )+ ( INTEGER_TYPE_SUFFIX )? )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1044:17: '0' ( '0' .. '7' )+ ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1040:15: ( '0' ( '0' .. '7' )+ ( INTEGER_TYPE_SUFFIX )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1040:17: '0' ( '0' .. '7' )+ ( INTEGER_TYPE_SUFFIX )?
             {
             match('0'); 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1044:21: ( '0' .. '7' )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1040:21: ( '0' .. '7' )+
             int cnt6=0;
             loop6:
             do {
@@ -2641,7 +2641,7 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1044:22: '0' .. '7'
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1040:22: '0' .. '7'
             	    {
             	    matchRange('0','7'); 
 
@@ -2657,7 +2657,7 @@ public class SalsaLexer extends Lexer {
                 cnt6++;
             } while (true);
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1044:33: ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1040:33: ( INTEGER_TYPE_SUFFIX )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -2666,7 +2666,7 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1044:33: INTEGER_TYPE_SUFFIX
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1040:33: INTEGER_TYPE_SUFFIX
                     {
                     mINTEGER_TYPE_SUFFIX(); 
 
@@ -2689,8 +2689,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "HEX_DIGIT"
     public final void mHEX_DIGIT() throws RecognitionException {
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1047:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1047:13: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1043:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1043:13: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
                 input.consume();
@@ -2713,8 +2713,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "INTEGER_TYPE_SUFFIX"
     public final void mINTEGER_TYPE_SUFFIX() throws RecognitionException {
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1050:21: ( ( 'l' | 'L' ) )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1050:23: ( 'l' | 'L' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1046:21: ( ( 'l' | 'L' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1046:23: ( 'l' | 'L' )
             {
             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                 input.consume();
@@ -2739,7 +2739,7 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = FLOATING_POINT_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1053:5: ( ( '0' .. '9' )+ ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX ) | DOT ( '0' .. '9' )+ ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1049:5: ( ( '0' .. '9' )+ ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX ) | DOT ( '0' .. '9' )+ ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -2757,9 +2757,9 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt17) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1053:9: ( '0' .. '9' )+ ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1049:9: ( '0' .. '9' )+ ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX )
                     {
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1053:9: ( '0' .. '9' )+
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1049:9: ( '0' .. '9' )+
                     int cnt8=0;
                     loop8:
                     do {
@@ -2773,7 +2773,7 @@ public class SalsaLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1053:10: '0' .. '9'
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1049:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -2789,7 +2789,7 @@ public class SalsaLexer extends Lexer {
                         cnt8++;
                     } while (true);
 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1054:9: ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1050:9: ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX )
                     int alt13=3;
                     switch ( input.LA(1) ) {
                     case '.':
@@ -2820,10 +2820,10 @@ public class SalsaLexer extends Lexer {
 
                     switch (alt13) {
                         case 1 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1055:13: DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )?
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1051:13: DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )?
                             {
                             mDOT(); 
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1055:17: ( '0' .. '9' )*
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1051:17: ( '0' .. '9' )*
                             loop9:
                             do {
                                 int alt9=2;
@@ -2836,7 +2836,7 @@ public class SalsaLexer extends Lexer {
 
                                 switch (alt9) {
                             	case 1 :
-                            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1055:18: '0' .. '9'
+                            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1051:18: '0' .. '9'
                             	    {
                             	    matchRange('0','9'); 
 
@@ -2848,7 +2848,7 @@ public class SalsaLexer extends Lexer {
                                 }
                             } while (true);
 
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1055:29: ( EXPONENT )?
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1051:29: ( EXPONENT )?
                             int alt10=2;
                             int LA10_0 = input.LA(1);
 
@@ -2857,7 +2857,7 @@ public class SalsaLexer extends Lexer {
                             }
                             switch (alt10) {
                                 case 1 :
-                                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1055:29: EXPONENT
+                                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1051:29: EXPONENT
                                     {
                                     mEXPONENT(); 
 
@@ -2866,7 +2866,7 @@ public class SalsaLexer extends Lexer {
 
                             }
 
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1055:39: ( FLOAT_TYPE_SUFFIX )?
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1051:39: ( FLOAT_TYPE_SUFFIX )?
                             int alt11=2;
                             int LA11_0 = input.LA(1);
 
@@ -2875,7 +2875,7 @@ public class SalsaLexer extends Lexer {
                             }
                             switch (alt11) {
                                 case 1 :
-                                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1055:39: FLOAT_TYPE_SUFFIX
+                                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1051:39: FLOAT_TYPE_SUFFIX
                                     {
                                     mFLOAT_TYPE_SUFFIX(); 
 
@@ -2888,10 +2888,10 @@ public class SalsaLexer extends Lexer {
                             }
                             break;
                         case 2 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1056:13: EXPONENT ( FLOAT_TYPE_SUFFIX )?
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1052:13: EXPONENT ( FLOAT_TYPE_SUFFIX )?
                             {
                             mEXPONENT(); 
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1056:22: ( FLOAT_TYPE_SUFFIX )?
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1052:22: ( FLOAT_TYPE_SUFFIX )?
                             int alt12=2;
                             int LA12_0 = input.LA(1);
 
@@ -2900,7 +2900,7 @@ public class SalsaLexer extends Lexer {
                             }
                             switch (alt12) {
                                 case 1 :
-                                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1056:22: FLOAT_TYPE_SUFFIX
+                                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1052:22: FLOAT_TYPE_SUFFIX
                                     {
                                     mFLOAT_TYPE_SUFFIX(); 
 
@@ -2913,7 +2913,7 @@ public class SalsaLexer extends Lexer {
                             }
                             break;
                         case 3 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1057:13: FLOAT_TYPE_SUFFIX
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1053:13: FLOAT_TYPE_SUFFIX
                             {
                             mFLOAT_TYPE_SUFFIX(); 
 
@@ -2926,10 +2926,10 @@ public class SalsaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1059:9: DOT ( '0' .. '9' )+ ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1055:9: DOT ( '0' .. '9' )+ ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )?
                     {
                     mDOT(); 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1059:13: ( '0' .. '9' )+
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1055:13: ( '0' .. '9' )+
                     int cnt14=0;
                     loop14:
                     do {
@@ -2943,7 +2943,7 @@ public class SalsaLexer extends Lexer {
 
                         switch (alt14) {
                     	case 1 :
-                    	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1059:14: '0' .. '9'
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1055:14: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -2959,7 +2959,7 @@ public class SalsaLexer extends Lexer {
                         cnt14++;
                     } while (true);
 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1059:25: ( EXPONENT )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1055:25: ( EXPONENT )?
                     int alt15=2;
                     int LA15_0 = input.LA(1);
 
@@ -2968,7 +2968,7 @@ public class SalsaLexer extends Lexer {
                     }
                     switch (alt15) {
                         case 1 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1059:25: EXPONENT
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1055:25: EXPONENT
                             {
                             mEXPONENT(); 
 
@@ -2977,7 +2977,7 @@ public class SalsaLexer extends Lexer {
 
                     }
 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1059:35: ( FLOAT_TYPE_SUFFIX )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1055:35: ( FLOAT_TYPE_SUFFIX )?
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
@@ -2986,7 +2986,7 @@ public class SalsaLexer extends Lexer {
                     }
                     switch (alt16) {
                         case 1 :
-                            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1059:35: FLOAT_TYPE_SUFFIX
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1055:35: FLOAT_TYPE_SUFFIX
                             {
                             mFLOAT_TYPE_SUFFIX(); 
 
@@ -3011,8 +3011,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "EXPONENT"
     public final void mEXPONENT() throws RecognitionException {
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1063:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1063:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1059:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1059:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -3023,7 +3023,7 @@ public class SalsaLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1063:22: ( '+' | '-' )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1059:22: ( '+' | '-' )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -3032,7 +3032,7 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt18) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:
                     {
                     if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                         input.consume();
@@ -3049,7 +3049,7 @@ public class SalsaLexer extends Lexer {
 
             }
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1063:33: ( '0' .. '9' )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1059:33: ( '0' .. '9' )+
             int cnt19=0;
             loop19:
             do {
@@ -3063,7 +3063,7 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt19) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1063:34: '0' .. '9'
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1059:34: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -3091,8 +3091,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "FLOAT_TYPE_SUFFIX"
     public final void mFLOAT_TYPE_SUFFIX() throws RecognitionException {
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1066:19: ( ( 'f' | 'F' | 'd' | 'D' ) )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1066:21: ( 'f' | 'F' | 'd' | 'D' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1062:19: ( ( 'f' | 'F' | 'd' | 'D' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1062:21: ( 'f' | 'F' | 'd' | 'D' )
             {
             if ( input.LA(1)=='D'||input.LA(1)=='F'||input.LA(1)=='d'||input.LA(1)=='f' ) {
                 input.consume();
@@ -3117,11 +3117,11 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = CHARACTER_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1069:5: ( '\\'' ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) ) '\\'' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1069:9: '\\'' ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) ) '\\''
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1065:5: ( '\\'' ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) ) '\\'' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1065:9: '\\'' ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) ) '\\''
             {
             match('\''); 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1069:14: ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1065:14: ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) )
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -3139,14 +3139,14 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt20) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1069:16: ESCAPE_SEQUENCE
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1065:16: ESCAPE_SEQUENCE
                     {
                     mESCAPE_SEQUENCE(); 
 
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1069:34: ~ ( '\\'' | '\\\\' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1065:34: ~ ( '\\'' | '\\\\' )
                     {
                     if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                         input.consume();
@@ -3180,11 +3180,11 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = STRING_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1073:5: ( '\"' ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )* '\"' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1073:8: '\"' ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )* '\"'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1069:5: ( '\"' ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )* '\"' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1069:8: '\"' ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1073:12: ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1069:12: ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )*
             loop21:
             do {
                 int alt21=3;
@@ -3200,14 +3200,14 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt21) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1073:14: ESCAPE_SEQUENCE
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1069:14: ESCAPE_SEQUENCE
             	    {
             	    mESCAPE_SEQUENCE(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1073:32: ~ ( '\\\\' | '\"' )
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1069:32: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3242,7 +3242,7 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "ESCAPE_SEQUENCE"
     public final void mESCAPE_SEQUENCE() throws RecognitionException {
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1078:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESCAPE | OCTAL_ESCAPE )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1074:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESCAPE | OCTAL_ESCAPE )
             int alt22=3;
             int LA22_0 = input.LA(1);
 
@@ -3293,7 +3293,7 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt22) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1078:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1074:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
                     {
                     match('\\'); 
                     if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -3309,14 +3309,14 @@ public class SalsaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1079:9: UNICODE_ESCAPE
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1075:9: UNICODE_ESCAPE
                     {
                     mUNICODE_ESCAPE(); 
 
                     }
                     break;
                 case 3 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1080:9: OCTAL_ESCAPE
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1076:9: OCTAL_ESCAPE
                     {
                     mOCTAL_ESCAPE(); 
 
@@ -3333,7 +3333,7 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "OCTAL_ESCAPE"
     public final void mOCTAL_ESCAPE() throws RecognitionException {
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1085:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1081:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
             int alt23=3;
             int LA23_0 = input.LA(1);
 
@@ -3379,25 +3379,25 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt23) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1085:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1081:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1085:14: ( '0' .. '3' )
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1085:15: '0' .. '3'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1081:14: ( '0' .. '3' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1081:15: '0' .. '3'
                     {
                     matchRange('0','3'); 
 
                     }
 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1085:25: ( '0' .. '7' )
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1085:26: '0' .. '7'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1081:25: ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1081:26: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1085:36: ( '0' .. '7' )
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1085:37: '0' .. '7'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1081:36: ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1081:37: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -3407,18 +3407,18 @@ public class SalsaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1086:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1082:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1086:14: ( '0' .. '7' )
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1086:15: '0' .. '7'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1082:14: ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1082:15: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1086:25: ( '0' .. '7' )
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1086:26: '0' .. '7'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1082:25: ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1082:26: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -3428,11 +3428,11 @@ public class SalsaLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1087:9: '\\\\' ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1083:9: '\\\\' ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1087:14: ( '0' .. '7' )
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1087:15: '0' .. '7'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1083:14: ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1083:15: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -3452,8 +3452,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "UNICODE_ESCAPE"
     public final void mUNICODE_ESCAPE() throws RecognitionException {
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1092:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1092:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1088:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1088:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
             {
             match('\\'); 
             match('u'); 
@@ -3475,11 +3475,11 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = IDENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1099:5: ( Letter ( Letter | JavaIDDigit )* )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1099:9: Letter ( Letter | JavaIDDigit )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1095:5: ( Letter ( Letter | JavaIDDigit )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1095:9: Letter ( Letter | JavaIDDigit )*
             {
             mLetter(); 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1099:16: ( Letter | JavaIDDigit )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1095:16: ( Letter | JavaIDDigit )*
             loop24:
             do {
                 int alt24=2;
@@ -3492,7 +3492,7 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt24) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:
             	    {
             	    if ( input.LA(1)=='$'||(input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z')||(input.LA(1)>='\u00C0' && input.LA(1)<='\u00D6')||(input.LA(1)>='\u00D8' && input.LA(1)<='\u00F6')||(input.LA(1)>='\u00F8' && input.LA(1)<='\u1FFF')||(input.LA(1)>='\u3040' && input.LA(1)<='\u318F')||(input.LA(1)>='\u3300' && input.LA(1)<='\u337F')||(input.LA(1)>='\u3400' && input.LA(1)<='\u3D2D')||(input.LA(1)>='\u4E00' && input.LA(1)<='\u9FFF')||(input.LA(1)>='\uF900' && input.LA(1)<='\uFAFF') ) {
             	        input.consume();
@@ -3526,8 +3526,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "Letter"
     public final void mLetter() throws RecognitionException {
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1107:5: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1103:5: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:
             {
             if ( input.LA(1)=='$'||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z')||(input.LA(1)>='\u00C0' && input.LA(1)<='\u00D6')||(input.LA(1)>='\u00D8' && input.LA(1)<='\u00F6')||(input.LA(1)>='\u00F8' && input.LA(1)<='\u1FFF')||(input.LA(1)>='\u3040' && input.LA(1)<='\u318F')||(input.LA(1)>='\u3300' && input.LA(1)<='\u337F')||(input.LA(1)>='\u3400' && input.LA(1)<='\u3D2D')||(input.LA(1)>='\u4E00' && input.LA(1)<='\u9FFF')||(input.LA(1)>='\uF900' && input.LA(1)<='\uFAFF') ) {
                 input.consume();
@@ -3550,8 +3550,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "JavaIDDigit"
     public final void mJavaIDDigit() throws RecognitionException {
         try {
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1124:5: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06f0' .. '\\u06f9' | '\\u0966' .. '\\u096f' | '\\u09e6' .. '\\u09ef' | '\\u0a66' .. '\\u0a6f' | '\\u0ae6' .. '\\u0aef' | '\\u0b66' .. '\\u0b6f' | '\\u0be7' .. '\\u0bef' | '\\u0c66' .. '\\u0c6f' | '\\u0ce6' .. '\\u0cef' | '\\u0d66' .. '\\u0d6f' | '\\u0e50' .. '\\u0e59' | '\\u0ed0' .. '\\u0ed9' | '\\u1040' .. '\\u1049' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1120:5: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06f0' .. '\\u06f9' | '\\u0966' .. '\\u096f' | '\\u09e6' .. '\\u09ef' | '\\u0a66' .. '\\u0a6f' | '\\u0ae6' .. '\\u0aef' | '\\u0b66' .. '\\u0b6f' | '\\u0be7' .. '\\u0bef' | '\\u0c66' .. '\\u0c6f' | '\\u0ce6' .. '\\u0cef' | '\\u0d66' .. '\\u0d6f' | '\\u0e50' .. '\\u0e59' | '\\u0ed0' .. '\\u0ed9' | '\\u1040' .. '\\u1049' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='\u0660' && input.LA(1)<='\u0669')||(input.LA(1)>='\u06F0' && input.LA(1)<='\u06F9')||(input.LA(1)>='\u0966' && input.LA(1)<='\u096F')||(input.LA(1)>='\u09E6' && input.LA(1)<='\u09EF')||(input.LA(1)>='\u0A66' && input.LA(1)<='\u0A6F')||(input.LA(1)>='\u0AE6' && input.LA(1)<='\u0AEF')||(input.LA(1)>='\u0B66' && input.LA(1)<='\u0B6F')||(input.LA(1)>='\u0BE7' && input.LA(1)<='\u0BEF')||(input.LA(1)>='\u0C66' && input.LA(1)<='\u0C6F')||(input.LA(1)>='\u0CE6' && input.LA(1)<='\u0CEF')||(input.LA(1)>='\u0D66' && input.LA(1)<='\u0D6F')||(input.LA(1)>='\u0E50' && input.LA(1)<='\u0E59')||(input.LA(1)>='\u0ED0' && input.LA(1)<='\u0ED9')||(input.LA(1)>='\u1040' && input.LA(1)<='\u1049') ) {
                 input.consume();
@@ -3576,8 +3576,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1142:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1142:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1138:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1138:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||(input.LA(1)>='\f' && input.LA(1)<='\r')||input.LA(1)==' ' ) {
                 input.consume();
@@ -3605,12 +3605,12 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1146:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1146:9: '/*' ( options {greedy=false; } : . )* '*/'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1142:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1142:9: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1146:14: ( options {greedy=false; } : . )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1142:14: ( options {greedy=false; } : . )*
             loop25:
             do {
                 int alt25=2;
@@ -3635,7 +3635,7 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt25) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1146:42: .
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1142:42: .
             	    {
             	    matchAny(); 
 
@@ -3672,12 +3672,12 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = LINE_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1157:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1157:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1153:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1153:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
             {
             match("//"); 
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1157:12: (~ ( '\\n' | '\\r' ) )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1153:12: (~ ( '\\n' | '\\r' ) )*
             loop26:
             do {
                 int alt26=2;
@@ -3690,7 +3690,7 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt26) {
             	case 1 :
-            	    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1157:12: ~ ( '\\n' | '\\r' )
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1153:12: ~ ( '\\n' | '\\r' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3710,7 +3710,7 @@ public class SalsaLexer extends Lexer {
                 }
             } while (true);
 
-            // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1157:26: ( '\\r' )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1153:26: ( '\\r' )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -3719,7 +3719,7 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt27) {
                 case 1 :
-                    // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1157:26: '\\r'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1153:26: '\\r'
                     {
                     match('\r'); 
 
@@ -3748,824 +3748,824 @@ public class SalsaLexer extends Lexer {
     // $ANTLR end "LINE_COMMENT"
 
     public void mTokens() throws RecognitionException {
-        // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:8: ( AND | AND_ASSIGN | ASSIGN | AT | BIT_SHIFT_RIGHT | BIT_SHIFT_RIGHT_ASSIGN | COLON | COMMA | DEC | DIV | DIV_ASSIGN | DOT | DOTSTAR | ELLIPSIS | EQUAL | GREATER_OR_EQUAL | GREATER_THAN | INC | LBRACK | LCURLY | LESS_OR_EQUAL | LESS_THAN | LOGICAL_AND | LOGICAL_NOT | LOGICAL_OR | LPAREN | MINUS | MINUS_ASSIGN | MOD | MOD_ASSIGN | NOT | NOT_EQUAL | OR | OR_ASSIGN | PLUS | PLUS_ASSIGN | QUESTION | RBRACK | RCURLY | RPAREN | SEMI | SHIFT_LEFT | SHIFT_LEFT_ASSIGN | SHIFT_RIGHT | SHIFT_RIGHT_ASSIGN | STAR | STAR_ASSIGN | XOR | XOR_ASSIGN | ABSTRACT | ASSERT | BOOLEAN | BREAK | BYTE | CASE | CATCH | CHAR | CLASS | CONTINUE | DEFAULT | DO | DOUBLE | ELSE | ENUM | EXTENDS | FALSE | FINAL | FINALLY | FLOAT | FOR | IF | IMPLEMENTS | INSTANCEOF | INTERFACE | IMPORT | INT | LONG | NATIVE | NEW | NULL | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | SHORT | STATIC | STRICTFP | SUPER | SWITCH | SYNCHRONIZED | THIS | THROW | THROWS | TRANSIENT | TRUE | TRY | VOID | VOLATILE | WHILE | T__183 | T__184 | T__185 | T__186 | T__187 | T__188 | T__189 | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOATING_POINT_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | IDENT | WS | COMMENT | LINE_COMMENT )
+        // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:8: ( AND | AND_ASSIGN | ASSIGN | AT | BIT_SHIFT_RIGHT | BIT_SHIFT_RIGHT_ASSIGN | COLON | COMMA | DEC | DIV | DIV_ASSIGN | DOT | DOTSTAR | ELLIPSIS | EQUAL | GREATER_OR_EQUAL | GREATER_THAN | INC | LBRACK | LCURLY | LESS_OR_EQUAL | LESS_THAN | LOGICAL_AND | LOGICAL_NOT | LOGICAL_OR | LPAREN | MINUS | MINUS_ASSIGN | MOD | MOD_ASSIGN | NOT | NOT_EQUAL | OR | OR_ASSIGN | PLUS | PLUS_ASSIGN | QUESTION | RBRACK | RCURLY | RPAREN | SEMI | SHIFT_LEFT | SHIFT_LEFT_ASSIGN | SHIFT_RIGHT | SHIFT_RIGHT_ASSIGN | STAR | STAR_ASSIGN | XOR | XOR_ASSIGN | ABSTRACT | ASSERT | BOOLEAN | BREAK | BYTE | CASE | CATCH | CHAR | CLASS | CONTINUE | DEFAULT | DO | DOUBLE | ELSE | ENUM | EXTENDS | FALSE | FINAL | FINALLY | FLOAT | FOR | IF | IMPLEMENTS | INSTANCEOF | INTERFACE | IMPORT | INT | LONG | NATIVE | NEW | NULL | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | SHORT | STATIC | STRICTFP | SUPER | SWITCH | SYNCHRONIZED | THIS | THROW | THROWS | TRANSIENT | TRUE | TRY | VOID | VOLATILE | WHILE | T__183 | T__184 | T__185 | T__186 | T__187 | T__188 | T__189 | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOATING_POINT_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | IDENT | WS | COMMENT | LINE_COMMENT )
         int alt28=117;
         alt28 = dfa28.predict(input);
         switch (alt28) {
             case 1 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:10: AND
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:10: AND
                 {
                 mAND(); 
 
                 }
                 break;
             case 2 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:14: AND_ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:14: AND_ASSIGN
                 {
                 mAND_ASSIGN(); 
 
                 }
                 break;
             case 3 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:25: ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:25: ASSIGN
                 {
                 mASSIGN(); 
 
                 }
                 break;
             case 4 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:32: AT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:32: AT
                 {
                 mAT(); 
 
                 }
                 break;
             case 5 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:35: BIT_SHIFT_RIGHT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:35: BIT_SHIFT_RIGHT
                 {
                 mBIT_SHIFT_RIGHT(); 
 
                 }
                 break;
             case 6 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:51: BIT_SHIFT_RIGHT_ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:51: BIT_SHIFT_RIGHT_ASSIGN
                 {
                 mBIT_SHIFT_RIGHT_ASSIGN(); 
 
                 }
                 break;
             case 7 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:74: COLON
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:74: COLON
                 {
                 mCOLON(); 
 
                 }
                 break;
             case 8 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:80: COMMA
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:80: COMMA
                 {
                 mCOMMA(); 
 
                 }
                 break;
             case 9 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:86: DEC
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:86: DEC
                 {
                 mDEC(); 
 
                 }
                 break;
             case 10 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:90: DIV
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:90: DIV
                 {
                 mDIV(); 
 
                 }
                 break;
             case 11 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:94: DIV_ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:94: DIV_ASSIGN
                 {
                 mDIV_ASSIGN(); 
 
                 }
                 break;
             case 12 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:105: DOT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:105: DOT
                 {
                 mDOT(); 
 
                 }
                 break;
             case 13 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:109: DOTSTAR
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:109: DOTSTAR
                 {
                 mDOTSTAR(); 
 
                 }
                 break;
             case 14 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:117: ELLIPSIS
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:117: ELLIPSIS
                 {
                 mELLIPSIS(); 
 
                 }
                 break;
             case 15 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:126: EQUAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:126: EQUAL
                 {
                 mEQUAL(); 
 
                 }
                 break;
             case 16 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:132: GREATER_OR_EQUAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:132: GREATER_OR_EQUAL
                 {
                 mGREATER_OR_EQUAL(); 
 
                 }
                 break;
             case 17 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:149: GREATER_THAN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:149: GREATER_THAN
                 {
                 mGREATER_THAN(); 
 
                 }
                 break;
             case 18 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:162: INC
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:162: INC
                 {
                 mINC(); 
 
                 }
                 break;
             case 19 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:166: LBRACK
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:166: LBRACK
                 {
                 mLBRACK(); 
 
                 }
                 break;
             case 20 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:173: LCURLY
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:173: LCURLY
                 {
                 mLCURLY(); 
 
                 }
                 break;
             case 21 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:180: LESS_OR_EQUAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:180: LESS_OR_EQUAL
                 {
                 mLESS_OR_EQUAL(); 
 
                 }
                 break;
             case 22 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:194: LESS_THAN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:194: LESS_THAN
                 {
                 mLESS_THAN(); 
 
                 }
                 break;
             case 23 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:204: LOGICAL_AND
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:204: LOGICAL_AND
                 {
                 mLOGICAL_AND(); 
 
                 }
                 break;
             case 24 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:216: LOGICAL_NOT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:216: LOGICAL_NOT
                 {
                 mLOGICAL_NOT(); 
 
                 }
                 break;
             case 25 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:228: LOGICAL_OR
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:228: LOGICAL_OR
                 {
                 mLOGICAL_OR(); 
 
                 }
                 break;
             case 26 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:239: LPAREN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:239: LPAREN
                 {
                 mLPAREN(); 
 
                 }
                 break;
             case 27 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:246: MINUS
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:246: MINUS
                 {
                 mMINUS(); 
 
                 }
                 break;
             case 28 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:252: MINUS_ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:252: MINUS_ASSIGN
                 {
                 mMINUS_ASSIGN(); 
 
                 }
                 break;
             case 29 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:265: MOD
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:265: MOD
                 {
                 mMOD(); 
 
                 }
                 break;
             case 30 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:269: MOD_ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:269: MOD_ASSIGN
                 {
                 mMOD_ASSIGN(); 
 
                 }
                 break;
             case 31 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:280: NOT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:280: NOT
                 {
                 mNOT(); 
 
                 }
                 break;
             case 32 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:284: NOT_EQUAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:284: NOT_EQUAL
                 {
                 mNOT_EQUAL(); 
 
                 }
                 break;
             case 33 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:294: OR
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:294: OR
                 {
                 mOR(); 
 
                 }
                 break;
             case 34 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:297: OR_ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:297: OR_ASSIGN
                 {
                 mOR_ASSIGN(); 
 
                 }
                 break;
             case 35 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:307: PLUS
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:307: PLUS
                 {
                 mPLUS(); 
 
                 }
                 break;
             case 36 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:312: PLUS_ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:312: PLUS_ASSIGN
                 {
                 mPLUS_ASSIGN(); 
 
                 }
                 break;
             case 37 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:324: QUESTION
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:324: QUESTION
                 {
                 mQUESTION(); 
 
                 }
                 break;
             case 38 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:333: RBRACK
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:333: RBRACK
                 {
                 mRBRACK(); 
 
                 }
                 break;
             case 39 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:340: RCURLY
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:340: RCURLY
                 {
                 mRCURLY(); 
 
                 }
                 break;
             case 40 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:347: RPAREN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:347: RPAREN
                 {
                 mRPAREN(); 
 
                 }
                 break;
             case 41 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:354: SEMI
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:354: SEMI
                 {
                 mSEMI(); 
 
                 }
                 break;
             case 42 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:359: SHIFT_LEFT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:359: SHIFT_LEFT
                 {
                 mSHIFT_LEFT(); 
 
                 }
                 break;
             case 43 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:370: SHIFT_LEFT_ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:370: SHIFT_LEFT_ASSIGN
                 {
                 mSHIFT_LEFT_ASSIGN(); 
 
                 }
                 break;
             case 44 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:388: SHIFT_RIGHT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:388: SHIFT_RIGHT
                 {
                 mSHIFT_RIGHT(); 
 
                 }
                 break;
             case 45 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:400: SHIFT_RIGHT_ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:400: SHIFT_RIGHT_ASSIGN
                 {
                 mSHIFT_RIGHT_ASSIGN(); 
 
                 }
                 break;
             case 46 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:419: STAR
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:419: STAR
                 {
                 mSTAR(); 
 
                 }
                 break;
             case 47 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:424: STAR_ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:424: STAR_ASSIGN
                 {
                 mSTAR_ASSIGN(); 
 
                 }
                 break;
             case 48 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:436: XOR
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:436: XOR
                 {
                 mXOR(); 
 
                 }
                 break;
             case 49 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:440: XOR_ASSIGN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:440: XOR_ASSIGN
                 {
                 mXOR_ASSIGN(); 
 
                 }
                 break;
             case 50 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:451: ABSTRACT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:451: ABSTRACT
                 {
                 mABSTRACT(); 
 
                 }
                 break;
             case 51 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:460: ASSERT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:460: ASSERT
                 {
                 mASSERT(); 
 
                 }
                 break;
             case 52 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:467: BOOLEAN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:467: BOOLEAN
                 {
                 mBOOLEAN(); 
 
                 }
                 break;
             case 53 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:475: BREAK
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:475: BREAK
                 {
                 mBREAK(); 
 
                 }
                 break;
             case 54 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:481: BYTE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:481: BYTE
                 {
                 mBYTE(); 
 
                 }
                 break;
             case 55 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:486: CASE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:486: CASE
                 {
                 mCASE(); 
 
                 }
                 break;
             case 56 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:491: CATCH
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:491: CATCH
                 {
                 mCATCH(); 
 
                 }
                 break;
             case 57 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:497: CHAR
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:497: CHAR
                 {
                 mCHAR(); 
 
                 }
                 break;
             case 58 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:502: CLASS
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:502: CLASS
                 {
                 mCLASS(); 
 
                 }
                 break;
             case 59 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:508: CONTINUE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:508: CONTINUE
                 {
                 mCONTINUE(); 
 
                 }
                 break;
             case 60 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:517: DEFAULT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:517: DEFAULT
                 {
                 mDEFAULT(); 
 
                 }
                 break;
             case 61 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:525: DO
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:525: DO
                 {
                 mDO(); 
 
                 }
                 break;
             case 62 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:528: DOUBLE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:528: DOUBLE
                 {
                 mDOUBLE(); 
 
                 }
                 break;
             case 63 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:535: ELSE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:535: ELSE
                 {
                 mELSE(); 
 
                 }
                 break;
             case 64 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:540: ENUM
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:540: ENUM
                 {
                 mENUM(); 
 
                 }
                 break;
             case 65 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:545: EXTENDS
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:545: EXTENDS
                 {
                 mEXTENDS(); 
 
                 }
                 break;
             case 66 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:553: FALSE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:553: FALSE
                 {
                 mFALSE(); 
 
                 }
                 break;
             case 67 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:559: FINAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:559: FINAL
                 {
                 mFINAL(); 
 
                 }
                 break;
             case 68 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:565: FINALLY
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:565: FINALLY
                 {
                 mFINALLY(); 
 
                 }
                 break;
             case 69 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:573: FLOAT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:573: FLOAT
                 {
                 mFLOAT(); 
 
                 }
                 break;
             case 70 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:579: FOR
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:579: FOR
                 {
                 mFOR(); 
 
                 }
                 break;
             case 71 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:583: IF
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:583: IF
                 {
                 mIF(); 
 
                 }
                 break;
             case 72 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:586: IMPLEMENTS
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:586: IMPLEMENTS
                 {
                 mIMPLEMENTS(); 
 
                 }
                 break;
             case 73 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:597: INSTANCEOF
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:597: INSTANCEOF
                 {
                 mINSTANCEOF(); 
 
                 }
                 break;
             case 74 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:608: INTERFACE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:608: INTERFACE
                 {
                 mINTERFACE(); 
 
                 }
                 break;
             case 75 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:618: IMPORT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:618: IMPORT
                 {
                 mIMPORT(); 
 
                 }
                 break;
             case 76 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:625: INT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:625: INT
                 {
                 mINT(); 
 
                 }
                 break;
             case 77 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:629: LONG
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:629: LONG
                 {
                 mLONG(); 
 
                 }
                 break;
             case 78 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:634: NATIVE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:634: NATIVE
                 {
                 mNATIVE(); 
 
                 }
                 break;
             case 79 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:641: NEW
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:641: NEW
                 {
                 mNEW(); 
 
                 }
                 break;
             case 80 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:645: NULL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:645: NULL
                 {
                 mNULL(); 
 
                 }
                 break;
             case 81 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:650: PACKAGE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:650: PACKAGE
                 {
                 mPACKAGE(); 
 
                 }
                 break;
             case 82 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:658: PRIVATE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:658: PRIVATE
                 {
                 mPRIVATE(); 
 
                 }
                 break;
             case 83 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:666: PROTECTED
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:666: PROTECTED
                 {
                 mPROTECTED(); 
 
                 }
                 break;
             case 84 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:676: PUBLIC
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:676: PUBLIC
                 {
                 mPUBLIC(); 
 
                 }
                 break;
             case 85 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:683: RETURN
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:683: RETURN
                 {
                 mRETURN(); 
 
                 }
                 break;
             case 86 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:690: SHORT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:690: SHORT
                 {
                 mSHORT(); 
 
                 }
                 break;
             case 87 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:696: STATIC
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:696: STATIC
                 {
                 mSTATIC(); 
 
                 }
                 break;
             case 88 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:703: STRICTFP
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:703: STRICTFP
                 {
                 mSTRICTFP(); 
 
                 }
                 break;
             case 89 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:712: SUPER
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:712: SUPER
                 {
                 mSUPER(); 
 
                 }
                 break;
             case 90 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:718: SWITCH
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:718: SWITCH
                 {
                 mSWITCH(); 
 
                 }
                 break;
             case 91 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:725: SYNCHRONIZED
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:725: SYNCHRONIZED
                 {
                 mSYNCHRONIZED(); 
 
                 }
                 break;
             case 92 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:738: THIS
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:738: THIS
                 {
                 mTHIS(); 
 
                 }
                 break;
             case 93 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:743: THROW
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:743: THROW
                 {
                 mTHROW(); 
 
                 }
                 break;
             case 94 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:749: THROWS
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:749: THROWS
                 {
                 mTHROWS(); 
 
                 }
                 break;
             case 95 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:756: TRANSIENT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:756: TRANSIENT
                 {
                 mTRANSIENT(); 
 
                 }
                 break;
             case 96 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:766: TRUE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:766: TRUE
                 {
                 mTRUE(); 
 
                 }
                 break;
             case 97 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:771: TRY
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:771: TRY
                 {
                 mTRY(); 
 
                 }
                 break;
             case 98 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:775: VOID
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:775: VOID
                 {
                 mVOID(); 
 
                 }
                 break;
             case 99 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:780: VOLATILE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:780: VOLATILE
                 {
                 mVOLATILE(); 
 
                 }
                 break;
             case 100 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:789: WHILE
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:789: WHILE
                 {
                 mWHILE(); 
 
                 }
                 break;
             case 101 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:795: T__183
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:795: T__183
                 {
                 mT__183(); 
 
                 }
                 break;
             case 102 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:802: T__184
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:802: T__184
                 {
                 mT__184(); 
 
                 }
                 break;
             case 103 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:809: T__185
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:809: T__185
                 {
                 mT__185(); 
 
                 }
                 break;
             case 104 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:816: T__186
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:816: T__186
                 {
                 mT__186(); 
 
                 }
                 break;
             case 105 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:823: T__187
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:823: T__187
                 {
                 mT__187(); 
 
                 }
                 break;
             case 106 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:830: T__188
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:830: T__188
                 {
                 mT__188(); 
 
                 }
                 break;
             case 107 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:837: T__189
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:837: T__189
                 {
                 mT__189(); 
 
                 }
                 break;
             case 108 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:844: HEX_LITERAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:844: HEX_LITERAL
                 {
                 mHEX_LITERAL(); 
 
                 }
                 break;
             case 109 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:856: DECIMAL_LITERAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:856: DECIMAL_LITERAL
                 {
                 mDECIMAL_LITERAL(); 
 
                 }
                 break;
             case 110 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:872: OCTAL_LITERAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:872: OCTAL_LITERAL
                 {
                 mOCTAL_LITERAL(); 
 
                 }
                 break;
             case 111 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:886: FLOATING_POINT_LITERAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:886: FLOATING_POINT_LITERAL
                 {
                 mFLOATING_POINT_LITERAL(); 
 
                 }
                 break;
             case 112 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:909: CHARACTER_LITERAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:909: CHARACTER_LITERAL
                 {
                 mCHARACTER_LITERAL(); 
 
                 }
                 break;
             case 113 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:927: STRING_LITERAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:927: STRING_LITERAL
                 {
                 mSTRING_LITERAL(); 
 
                 }
                 break;
             case 114 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:942: IDENT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:942: IDENT
                 {
                 mIDENT(); 
 
                 }
                 break;
             case 115 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:948: WS
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:948: WS
                 {
                 mWS(); 
 
                 }
                 break;
             case 116 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:951: COMMENT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:951: COMMENT
                 {
                 mCOMMENT(); 
 
                 }
                 break;
             case 117 :
-                // /media/LINUXPROG/Dropbox/Projects/salsa2.2/src/salsa/compiler/Salsa.g:1:959: LINE_COMMENT
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler/Salsa.g:1:959: LINE_COMMENT
                 {
                 mLINE_COMMENT(); 
 
