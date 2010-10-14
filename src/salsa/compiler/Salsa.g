@@ -368,7 +368,6 @@ import java.util.regex.Pattern;
 	            String filePath = path + File.separator
 	                    + importName.replaceAll("\\.", File.separator)
 	                    + ".class";
-	            ;
 	            if (new File(filePath).exists()) {
 	                String simpleName = importName.substring(importName
 	                        .lastIndexOf('.') + 1);

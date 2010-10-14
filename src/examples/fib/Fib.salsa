@@ -1,4 +1,4 @@
-module fib;
+module examples.fib;
 import java.lang.System;
 import java.lang.Integer;
 

@@ -1,4 +1,4 @@
-module salsa.test;
+module examples.threadring;
 import java.lang.System;
 import java.lang.Integer;
 

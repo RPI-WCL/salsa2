@@ -1,4 +1,4 @@
-module helloworld;
+module examples.helloworld;
 import java.lang.System;
 import salsa.lib.*;
 
