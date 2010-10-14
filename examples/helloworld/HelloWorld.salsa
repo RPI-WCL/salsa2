@@ -1,0 +1,23 @@
+module helloworld;
+import java.lang.System;
+import salsa.lib.*;
+
+behavior HelloWorld{
+    StandardOutput out;
+    
+    HelloWorld() {
+        out = new StandardOutput();
+    }
+    
+    void hello() {
+        out <- print("Helo ");
+    }
+    void world() {
+        out <- println("World!");
+    }
+    
+    void act(String[] args) {
+        self <- hello();
+        self <- world();
+    }    
+}
