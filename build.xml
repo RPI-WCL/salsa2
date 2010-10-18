@@ -17,20 +17,20 @@
 			<classpath refid="core.classpath"/>
 		</javac>
 	</target>
-	<target name="class" >
+	<target name="core" >
 		<mkdir dir="${build.dir}" />
-		<javac debug="true" srcdir="${src.dir}/salsa" destdir="${build.dir}" includeantruntime="true">
+		<javac debug="true" srcdir="${src.dir}/salsa" destdir="${build.dir}" includeantruntime="false">
 			<classpath refid="core.classpath" />
 		</javac>
 	</target>
 	<target name="examples">
-		<javac debug="true" srcdir="${src.dir}/examples" destdir="${build.dir}"  includeantruntime="true">
+		<javac debug="true" srcdir="${src.dir}/examples" destdir="${build.dir}"  includeantruntime="false">
 			<classpath refid="core.classpath" />
 		</javac>
 	</target>
-	<target name="jar" depends="class">
+	<target name="jar" depends="core">
 		<mkdir dir="${jar.dir}" />
 		<jar jarfile="${jar.dir}/${ant.project.name}.jar" basedir="${build.dir} " />
 	</target>
-	<target name="main" depends="class,examples" />
+	<target name="main" depends="core,examples" />
 </project>
