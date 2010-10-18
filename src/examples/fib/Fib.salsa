@@ -1,6 +1,6 @@
 module examples.fib;
-import java.lang.System;
-import java.lang.Integer;
+// import java.lang.System;
+// import java.lang.Integer;
 
 behavior Fib {
     int n = 2;
@@ -17,9 +17,8 @@ behavior Fib {
         } else {
             Fib fib1 = new Fib(n - 1);
             Fib fib2 = new Fib(n - 2);
-            future int t1 = fib1 <- compute();
-            future int t2 = fib2 <- compute();
-
+            Token int t1 = fib1 <- compute();
+            Token int t2 = fib2 <- compute();
             return self<-add(t1, t2);
         }
     }
@@ -37,7 +36,7 @@ behavior Fib {
         String s = args[0];
         int n = Integer.parseInt(s);
         Fib fib = new Fib(n);
-        future int result = fib <- compute();
+        Token int result = fib <- compute();
         fib <- finish(result);
     }
 }
