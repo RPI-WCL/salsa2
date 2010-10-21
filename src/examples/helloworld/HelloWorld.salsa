@@ -1,6 +1,4 @@
 module examples.helloworld;
-import java.lang.System;
-import salsa.lib.*;
 
 behavior HelloWorld{
     StandardOutput out;
@@ -10,7 +8,7 @@ behavior HelloWorld{
     }
     
     void hello() {
-        out <- print("Helo ");
+        out <- print("Hello ");
     }
     void world() {
         out <- println("World!");
