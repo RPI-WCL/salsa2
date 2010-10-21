@@ -41,6 +41,8 @@ public abstract class ActorState implements Serializable {
      */
     protected Token token;
     protected Object echoObject = new Object();
+    
+    private String identifier;
 
     public ActorState() {
         self = new ActorRef(this);
@@ -54,8 +56,8 @@ public abstract class ActorState implements Serializable {
         return 0;
     }
 
-    public String getUniqueId() {
-        return null;
+    public void setIdentifier(String uanStr) {
+        this.identifier = uanStr;
     }
     
     public abstract void invokeByName(String msgName, Object[] args, ActorRef src, String assignTo);
