@@ -1,28 +1,39 @@
 /**
  * 
  */
-package salsa.lang;
+package salsa.wwc.lang;
 
+import java.io.IOException;
 import java.io.Serializable;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import salsa.lang.services.ServiceFactory;
+import salsa.lib.UAL;
+import salsa.lib.UAN;
+import salsa.wwc.lang.services.MalformedUANException;
+import salsa.wwc.lang.services.ServiceFactory;
 
 /**
  * @author Wei Huang
  * @date Apr 8, 2010
  */
 public abstract class ActorState implements Serializable {
+    
+    @Retention(RetentionPolicy.RUNTIME)
+    public @interface SalsaMsg{
+        public int auxiliaryArgNum = 2;
+    }
 
 //    private static final long serialVersionUID = 1L;
 
     /**
      * Self reference
      */
-    protected ActorRef self;    
+    protected ActorRef self = null;    
     
     /**
      * Used to generate <code>assignTo</code>
@@ -34,36 +45,178 @@ public abstract class ActorState implements Serializable {
      */
     private Map<String, Token> tokenMap = new HashMap<String, Token>();
     
-    private List<Message> mailbox = new LinkedList<Message>();
+   
+    /**
+     * The unique identifier of actors. It can be "uan://" or "ual://"
+     */
+    private String identifier = "";
+    private UAN uan = null;
+    private UAL ual = null;
     
     /**
      * For continuation
      */
-    protected Token token;
-    protected Object echoObject = new Object();
+    protected transient Token token;
+    protected String echoObject = new String();
+    
+    
+    /**
+     * Define the status of actors, ACTOR_MIGRATING belongs to ACTOR_EXECUTIN
+     */
+    public static final int ACTOR_IDLE= 0x1;
+    public static final int ACTOR_EXECUTING = 0x2;
+    public static final int ACTOR_MIGRATING = 0x4;
+    public static final int ACTOR_MIGRATED = 0x8;
+    
+    /**
+     * Initial status is idle
+     */
+    private int status = ACTOR_IDLE;
+    
+    private List<Message> mailbox = new LinkedList<Message>();
 
     public ActorState() {
-        self = new ActorRef(this);
     }
+
 
     public ActorRef getSelfRef() {
         return self;
     }
 
     public int getHashcode() {
+        if (identifier != null)
+            return identifier.hashCode();
         return 0;
     }
 
-    public String getUniqueId() {
-        return null;
+    public UAN getUAN() {
+        // TODO Auto-generated method stub
+        return uan;
     }
     
-    public abstract void invokeByName(String msgName, Object[] args, ActorRef src, String assignTo);
+    public UAL getUAL() {
+        return ual;
+    }
+    
+    public String getIdentifier() {
+        return identifier;
+    }
+    
+    public void initialize(String uanStr, String location) {
+        if (uanStr != null && location != null) {
+            try {
+                uan = new UAN(uanStr);
+                ServiceFactory.getNamingService().put(uan,
+                        ServiceFactory.getReceptionService().getLocation());
+                this.identifier = uanStr;
+                this.ual = new UAL("ual://" + location + "/" + this.hashCode());
+            } catch (MalformedUANException e) {
+            }
+        } else if (location != null) {
+            this.identifier = "ual://" + location + "/" + this.hashCode();
+            this.ual = new UAL(this.identifier);
+        } else {
+            this.identifier = ServiceFactory.getReceptionService().UAL_LOC_PREFIX
+                    + "/" + this.hashCode();
+            this.ual = new UAL(this.identifier);
+        }
+        self = new ActorRef();
+        self.identifier = this.identifier;
+        self.uan = uan;
+        self.ual = ual;
+        ServiceFactory.getStageService().registerActor(this);
+        if (location != null)
+            this.send(self, self, -1, "migrate", "exitValue", Message.NORMAL_TYPE,
+                new Object[] { location }, new int[] {}, null);
+
+    }
+
+//    private void setIdentifier(String identifier) {
+//        this.identifier = identifier;
+//        // Need to test if it is UAN or not
+//        if (identifier.startsWith(UAN.PREFIX)) {
+//            // Register
+//            try {
+//                uan = new UAN(identifier);
+//            } catch (MalformedUANException e) {
+//            }
+//        }
+//        if (uan != null) {
+//            ServiceFactory.getNamingService().put(uan,
+//                    ServiceFactory.getReceptionService().getLocation());
+//        }
+//        self = new ActorRef();
+//        self.identifier = this.identifier;
+//        self.uan = uan;
+//    }
+    
+    public void putMessage(Message m) {
+        synchronized(mailbox) {
+            this.mailbox.add(m);
+        }
+    }
+    
+    private Message getMessage() {
+        synchronized(mailbox) {
+            if (mailbox.size() > 0)
+                return mailbox.remove(0);
+            else
+                return null;
+        }
+    }
+    
+    public int getUnprocessedMsgNum() {
+        synchronized(mailbox) {
+            return mailbox.size();
+        }
+    }
+    
+    public synchronized boolean isIdle() {
+        return status == ACTOR_IDLE;
+    }
+
+    public synchronized boolean isExecuting() {
+        return status == ACTOR_EXECUTING;
+    }
+    
+    public synchronized boolean isMigrating() {
+        return status == ACTOR_MIGRATING;
+    }   
+ 
+    public synchronized boolean isMigrated() {
+        return status == ACTOR_MIGRATED;
+    }   
+ 
+    public synchronized void setIdle() {
+        status = ACTOR_IDLE;
+    }
+
+    public synchronized void setExecuting() {
+        status = ACTOR_EXECUTING;
+    }
+    
+    public synchronized void setMigrating() {
+        status = ACTOR_MIGRATING;
+    }
+
+    public synchronized void setMigrated() {
+        status = ACTOR_MIGRATED;
+    }
+     
+   public abstract void invokeByName(String msgName, Object[] args, ActorRef src, String assignTo);
     
     public abstract void invokeById(int msgId, Object[] args, ActorRef src, String assignTo);
     
-    public void process() {
-        Message message = get();
+    
+    public void schedule() {
+        Message message = getMessage();
+        if (message != null) {
+            process(message);
+        }
+    }
+
+    
+    private void process(Message message) {
         if (message == null) {
             System.err.println("Error");
             return;
@@ -76,10 +229,12 @@ public abstract class ActorState implements Serializable {
         
         if (msgId != -1) {
             invokeById(msgId, args, src, assignTo);
-        } else if (msgName.equals("echo")) {
+        } else if (message.getMsgType() == Message.ECHO_TYPE) {
             this.echo(args[0], assignTo);
         } else if (msgName.equals("joinHelper")) {
             joinHelper(src, assignTo, args);
+        } else if (msgName.equals("migrate")) {
+            migrate((String)args[0]);
         } else {
             invokeByName(msgName, args, src, assignTo);
         }
@@ -90,7 +245,7 @@ public abstract class ActorState implements Serializable {
             String assignTo, int msgType, Object[] args, int[] tokenPos, Token conToken) {
         if (msgType == Message.ECHO_TYPE) {
             // A simple return message
-            Message m = new Message(src, target, msgId, msgName, assignTo, args, 0);
+            Message m = new Message(src, target, msgId, msgName, assignTo, args, 0, msgType);
             ServiceFactory.getStageService().send(m);
             return null;
         } 
@@ -115,7 +270,7 @@ public abstract class ActorState implements Serializable {
 
             int waitingTokenNum = tokenPos.length + (conToken == null ? 0 : 1); 
             Message m = new Message(src, target, msgId, msgName, assignTo,
-                    args, waitingTokenNum);
+                    args, waitingTokenNum, msgType);
             if (waitingTokenNum == 0) {
                 ServiceFactory.getStageService().send(m);
             } else {
@@ -129,7 +284,13 @@ public abstract class ActorState implements Serializable {
             return token;
         }
     }
+
     
+    /**
+     * echo a message 
+     * @param result
+     * @param assignTo
+     */
     public void echo(Object result, String assignTo) {
         Token token = tokenMap.remove(assignTo);
         if (token != null) {
@@ -137,117 +298,34 @@ public abstract class ActorState implements Serializable {
         }
     }
     
+    /**
+     * Auxiliary method for joinblock
+     * @param src
+     * @param assignTo
+     * @param o
+     */
     public void joinHelper( ActorRef src, String assignTo, Object... o) {
         send(self,src,-1,"echo",assignTo,Message.ECHO_TYPE,new Object[]{o}, new int[]{},null);
     }
 
-    private Message get() {
-        if (mailbox.size() > 0)
-            return mailbox.remove(0);
-        else
-            return null;
+    
+    public void migrate(String location) {
+        this.setMigrating();
+//        if (ServiceFactory.getReceptionService().isLocal(location)) {
+            
+//            this.setExecuting();
+//            return;
+//        } else
+            ServiceFactory.getTransportService().migrateActor(this, location);
     }
-    
-    public void put(Message m) {
-        this.mailbox.add(m);
-    }
-    
-    public boolean putDirectly(Message m) {
-        if (!this.isRegister()) {
-            this.put(m);
-            return true;
-        }
-        else 
-            return false;
-    }
-    
-    
-    public static final int NO_MORE_MESSAGE = 1;
-    public static final int ACTOR_EXECUTING = 2;
-    public static final int SUCCEEDED = 3;
-    
-    private boolean isExecuting = false;
-    
-    public synchronized int invokeDirectly() {
-        if (mailbox.size() == 0)
-            return NO_MORE_MESSAGE;
-        if (isExecuting) 
-            return ACTOR_EXECUTING;
-        try {
-            isExecuting = true;
-            process();
-        } finally {
-            isExecuting = false;
-        }
-        return SUCCEEDED;
-    }
-    
-    private boolean isRegister() {
-        return false;
-    }
-    
-    
-//  protected static Map<String, Method> methodTable = new HashMap<String, Method>();    
-//  /**
-//  * If at least one of the arguments is unbound, process this message later.
-//  * 
-//  * @param messageName
-//  * @param arguments
-//  * @return
-//  * @throws ContinuationPassException
-//  * @throws TokenPassException
-//  * @throws MessageHandlerNotFoundException
-//  */
-// public Object invokeMessage(String messageName, Object[] arguments)
-//         throws ContinuationPassException, TokenPassException,
-//         MessageHandlerNotFoundException {
-//     Method method = null;
-//     synchronized (methodTable) {
-//         method = methodTable.get(messageName);
-//     }
-//     if (method == null) {
-//         Class<?>[] parameterClasses = null;
-//         if (arguments != null) {
-//             parameterClasses = new Class<?>[arguments.length];
-//             for (int i = 0; i < arguments.length; i++) {
-//                 if (arguments[i] == null) {
-//                     parameterClasses[i] = null;
-//                 } else {
-//                     parameterClasses[i] = arguments[i].getClass();
-//                 }
-//             }
-//         }
-//         try {
-//             method = this.getClass().getDeclaredMethod(messageName,
-//                     parameterClasses);
-//             synchronized (methodTable) {
-//                 methodTable.put(messageName, method);
-//             }
-//         } catch (SecurityException e) {
-//             // TODO
-//             e.printStackTrace();
-//         } catch (NoSuchMethodException e) {
-//             // TODO
-//             e.printStackTrace();
-//         }
-//     }
-//     if (method != null) {
-//         try {
-//             return method.invoke(this, arguments);
-//         } catch (IllegalArgumentException e) {
-//             // TODO Auto-generated catch block
-//             e.printStackTrace();
-//         } catch (IllegalAccessException e) {
-//             // TODO Auto-generated catch block
-//             e.printStackTrace();
-//         } catch (InvocationTargetException e) {
-//             Throwable cause = e.getCause();
-//             if (cause instanceof TokenPassException) {
-//                 throw (TokenPassException) cause;
-//             }
-//         }
-//     }
-//     return null;
-// }
 
+    private void writeObject(java.io.ObjectOutputStream out) throws IOException {
+        out.defaultWriteObject();
+    }
+
+    private void readObject(java.io.ObjectInputStream in) throws IOException,
+            ClassNotFoundException {
+        in.defaultReadObject();
+        this.status = ACTOR_IDLE;
+    }
 }

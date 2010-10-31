@@ -1,4 +1,4 @@
-package salsa.lang.fullcopy;
+package salsa.wwc.lang.fullcopy;
 
 import java.io.InputStream;
 import java.io.IOException;

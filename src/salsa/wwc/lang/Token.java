@@ -1,11 +1,12 @@
-package salsa.lang;
+package salsa.wwc.lang;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import salsa.lang.services.ServiceFactory;
+import salsa.wwc.lang.services.ServiceFactory;
 
-public class Token {
+public class Token implements Serializable {
 
     private String name;
     

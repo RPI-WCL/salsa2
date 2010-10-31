@@ -1,9 +1,14 @@
 /**
  * 
  */
-package salsa.lang;
+package salsa.wwc.lang;
 
+import java.io.IOException;
 import java.io.Serializable;
+
+import salsa.lib.UAL;
+import salsa.lib.UAN;
+import salsa.wwc.lang.services.ServiceFactory;
 
 /**
  * @author Wei Huang
@@ -13,71 +18,53 @@ public class ActorRef implements Serializable {
     
     private int hashCode;
     
-    private String identifier;
+    protected String identifier;
     
-    protected ActorState actorState;
+    protected UAN uan;
+    
+    protected UAL ual;
     
     public ActorRef() {
     }
-    
+  
     public ActorRef(ActorState actorState) {
-        this.actorState = actorState;
+        this(actorState, null, null);
     }
     
+    public ActorRef(ActorState actorState, String uan, String location) {
+        actorState.initialize(uan, location);
+        this.identifier = actorState.getIdentifier();
+        this.uan = actorState.getUAN();
+        this.ual = actorState.getUAL();
+    }
+   
 	public int getHashcode() {
-	    return hashCode;
+	    return identifier.hashCode();
 	}
 
 	public String getIdentifier() {
 	    return identifier;
 	}
 	
-	public ActorState getActorState() {
-	    return actorState;
-	}
 	
-    public boolean putDirectly(Message m) {
-        if (actorState == null)
-            return false;
-        return actorState.putDirectly(m);
+	public UAN getUAN() {
+        return uan;
     }
-//
-//    public boolean invokeDirectly() {
-//        if (actorState == null)
-//            return false;
-//        return actorState.invokeDirectly();
-//    }
+	
+	public UAL getUAL() {
+	    return ual;
+	}
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof ActorRef) {
+            ActorRef ar = (ActorRef)obj;
+            return identifier.equals(ar.getIdentifier());
+        }
+        return false;
+    }
+
+	
+
 }
-
-///**
-//* Actors that are waiting for its bound
-//*/
-//private List<ActorRef> waitees; 
-
-//public Object invokeMessage(int messageId, Object[] arguments)
-//      throws MessageHandlerNotFoundException, ContinuationPassException, TokenPassException {
-//  if (actorState == null)
-//      throw new MessageHandlerNotFoundException(messageId, arguments);
-//  else
-//      return actorState.invokeMessage(messageId, arguments);
-//}
-
-//public Object invokeMessage(String messageName, Object[] arguments)
-//        throws ContinuationPassException, TokenPassException,
-//        MessageHandlerNotFoundException {
-//    if (actorState == null)
-//        throw new MessageHandlerNotFoundException(messageName, arguments);
-//    else
-//        return actorState.invokeMessage(messageName, arguments);
-//}
-
-
-//public void invokeConstructor(int constructorId, Object[] arguments)
-//      throws ConstructorNotFoundException {
-//  if (actorState == null) {
-//      throw new ConstructorNotFoundException(constructorId, arguments);
-//  }
-//  else 
-//      actorState.invokeConstructor(constructorId, arguments);
-//}
 
