@@ -1,16 +1,19 @@
-package salsa.lang.services;
+package salsa.wwc.lang.services;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import com.tangosol.util.ExternalizableHelper;
+import org.apache.log4j.Logger;
 
-import salsa.lang.Message;
+import salsa.wwc.lang.ActorState;
+import salsa.wwc.lang.Message;
 
 /**
  * Reception service for remote message receiving
@@ -34,6 +37,10 @@ public class ReceptionService implements Runnable {
 	 */
 	private ServerSocket server = null;
 	
+	private static Logger logger = Logger.getLogger(ReceptionService.class);
+	
+	public static String UAL_LOC_PREFIX;
+	
 	
 	public ReceptionService() {
 		this(4040);
@@ -47,6 +54,7 @@ public class ReceptionService implements Runnable {
 		}
 		this.port = port;
 		startService(true);
+		UAL_LOC_PREFIX = "ual://" + host + ":" + this.port;
 	}
 	
 	/**
@@ -58,12 +66,15 @@ public class ReceptionService implements Runnable {
 		try {
 			server = new ServerSocket(port);
 			new Thread(this, "Reception Service Thread").start();
-			System.out.println("Reception Service listening on: " + host + ":"
-					+ port);
+			logger.info("Reception Service listening on: " + host + ":"
+                    + port);
+//			System.out.println("Reception Service listening on: " + host + ":"
+//					+ port);
 			rev = true;
 		} catch (IOException e) {
-			System.err.println("Reception Service error:");
-			System.err.println("\t" + e.getMessage());
+		    logger.error("Reception Service Error", e);
+//			System.err.println("Reception Service error:");
+//			System.err.println("\t" + e.getMessage());
 		}
 		return rev;
 	}
@@ -89,6 +100,13 @@ public class ReceptionService implements Runnable {
 		return host;
 	}
 	
+    public String getLocation() {
+        return host + ":" + port;
+    }
+
+
+
+	
 	/**
 	 * Check if the message comming from local
 	 * @param host
@@ -103,15 +121,23 @@ public class ReceptionService implements Runnable {
 				&& this.port == port;
 	}
 	
+	public boolean isLocal(String location) {
+	    int colonPos = location.indexOf(':');
+	    String targetHost = location.substring(0, colonPos);
+		int targetPort = Integer.valueOf(location.substring(colonPos + 1));    
+		return isLocal(targetHost, targetPort);
+	}
+
 	public void run() {
 		while (true) {
 			try {
 				Socket client = server.accept();
 				handleIncomingSocket(client);
 			} catch (IOException e) {
-				System.err.println("Reception Service error: ");
-				System.err.println("\tFailed to accept connection.");
-				System.err.println("\teException: " + e);
+			    logger.error("Reception Service Error", e);
+//				System.err.println("Reception Service error: ");
+//				System.err.println("\tFailed to accept connection.");
+//				System.err.println("\teException: " + e);
 			}
 		}
 	}
@@ -126,73 +152,86 @@ public class ReceptionService implements Runnable {
 		final Socket incomingSocket = clientSocket;
 		Runnable incomingSocketHandler = new Runnable() {
 			public void run() {
-				String remoteHost;
-				int remotePort;
-				Object receivedObject = null;
-				DataInputStream inputStream = null;
-				DataOutputStream outputStream = null;
+//				String remoteHost;
+//				int remotePort;
+//				Object receivedObject = null;
+//				DataInputStream inputStream = null;
+//				DataOutputStream outputStream = null;
+				ObjectInputStream inputStream = null;
+				ObjectOutputStream outputStream = null;			
 
 				try {
-					try {
-                        inputStream = new DataInputStream(incomingSocket
-                                .getInputStream());
-                        outputStream = new DataOutputStream(incomingSocket
-                                .getOutputStream());
-					} catch (IOException e) {
-						System.err.println("Reception Service error: ");
-						System.err
-								.println("\tIOException occured creating " +
-										"ObjectInputStream from remote host.");
-						System.err.println("\tException: " + e);
-						System.err.println("\tException Message: "
-								+ e.getMessage());
-						e.printStackTrace();
-						return;
-					}
+//					try {
+//                        inputStream = new DataInputStream(incomingSocket
+//                                .getInputStream());
+//                        outputStream = new DataOutputStream(incomingSocket
+//                                .getOutputStream());
+                        outputStream = new ObjectOutputStream(
+                                incomingSocket.getOutputStream());
+                        inputStream = new ObjectInputStream(
+                                incomingSocket.getInputStream());
 
-					try {
-						remoteHost = (String) inputStream.readUTF();
-						remotePort = inputStream.readInt();
-					} catch (Exception e) {
-						System.err.println("Reception Service error: ");
-						System.err
-								.println("\tException occured reading remote " +
-										"host and port.");
-						System.err.println("\tException: " + e);
-						System.err.println("\tException Message: "
-								+ e.getMessage());
-						e.printStackTrace();
-						return;
-					}
+//					} catch (IOException e) {
+					    
+//						System.err.println("Reception Service error: ");
+//						System.err
+//								.println("\tIOException occured creating " +
+//										"ObjectInputStream from remote host.");
+//						System.err.println("\tException: " + e);
+//						System.err.println("\tException Message: "
+//								+ e.getMessage());
+//						e.printStackTrace();
+//						return;
+//					}
 
-					if (ServiceFactory.getReceptionService().isLocal(
-							remoteHost, remotePort)) {
-						System.err
-								.println("Reception Service WARNNING: received " +
-										"incoming connection from same theater.");
-						System.err.println("\thost:port = " + remoteHost + ":"
-								+ remotePort);
-					}
+//					try {
+//						remoteHost = (String) inputStream.readUTF();
+//						remotePort = inputStream.readInt();
+//					} catch (Exception e) {
+//						System.err.println("Reception Service error: ");
+//						System.err
+//								.println("\tException occured reading remote " +
+//										"host and port.");
+//						System.err.println("\tException: " + e);
+//						System.err.println("\tException Message: "
+//								+ e.getMessage());
+//						e.printStackTrace();
+//						return;
+//					}
+//
+//					if (ServiceFactory.getReceptionService().isLocal(
+//							remoteHost, remotePort)) {
+//						System.err
+//								.println("Reception Service WARNNING: received " +
+//										"incoming connection from same theater.");
+//						System.err.println("\thost:port = " + remoteHost + ":"
+//								+ remotePort);
+//					}
 
-					Message receivedMessage = null;
+					Object receivedObject = null;
 					while (true) {
 						try {
-						    byte[] b = new byte[8192];
-						    int len = inputStream.read(b);
-						    if (len == -1)
-						        break;
+//						    byte[] b = new byte[8192];
+//						    int len = inputStream.read(b);
+//						    if (len == -1)
+//						        break;
+//						    outputStream.writeByte(1);  // For sync
+//						    receivedObject = ExternalizableHelper.fromByteArray(b, Message.class.getClassLoader());
+//							receivedMessage = (Message)receivedObject;
+						    receivedObject = inputStream.readObject();
 						    outputStream.writeByte(1);  // For sync
-						    receivedObject = ExternalizableHelper.fromByteArray(b, Message.class.getClassLoader());
-							receivedMessage = (Message)receivedObject;
+						    outputStream.flush();
 						} catch (ClassCastException e) {
-							System.err.println("Reception Service error: " + e.getMessage());
-							System.err
-									.println("\tIncomingSocketHandler received " +
-											"an unknown object.");
-							System.err.println("\treceived: " + receivedObject);
+						    logger.error("Class Cast Failed", e);
+//							System.err.println("Reception Service error: " + e.getMessage());
+//							System.err
+//									.println("\tIncomingSocketHandler received " +
+//											"an unknown object.");
+//							System.err.println("\treceived: " + receivedObject);
 //							e.printStackTrace();
 						} 
-//						catch (ClassNotFoundException e) {
+						catch (ClassNotFoundException e) {
+						    logger.error("Class Not Found", e);
 //							System.err.println("Reception Service error: " + e.getMessage());
 //							System.err
 //									.println("\tCould not load class for an " +
@@ -201,26 +240,33 @@ public class ReceptionService implements Runnable {
 //									.println("\tIs it in the theater CLASSPATH?");
 //							System.err.println("\tException: " + e);
 //							System.err.println("\treceived: " + receivedObject);
-//						} 
-						catch (IOException e) {
-							System.err.println("Reception Service error: " + e.getMessage());
-							System.err
-									.println("\tIOException occured closing connection.");
-							break;
-						}
-//                        if (receivedMessage != null) {
-//                            if (receivedMessage.getType() == Message.FINAL_MESSAGE) {
-//                                break;
-//                            } else {
-//                                StageService.sendMessage(receivedMessage);
-//                            }
-//                        } else  {
-//                            System.err.println("receivedMessage = null");
+						} 
+//						catch (IOException e) {
+//							System.err.println("Reception Service error: " + e.getMessage());
+//							System.err
+//									.println("\tIOException occured closing connection.");
+//							break;
+//						}
+                        if (receivedObject != null) {
+                            if (receivedObject instanceof ActorState) {
+                                ActorState actorState = (ActorState)receivedObject;
+                                ServiceFactory.getStageService().registerIncomingActor(actorState);
+                                logger.debug("Received an actor");
+                            } else if (receivedObject instanceof Message){
+                                Message message = (Message)receivedObject;
+                                ServiceFactory.getStageService().send(message);
+                                logger.debug("Received a message " + message.toString());
+                            }
+                        } else  {
+                            logger.warn("Received a null value.");
 //                            break;
-//                        }
+                        }
 
 					}
-				} finally {
+				} catch (Exception e) {
+				    logger.error("Reception Service Error", e);
+				}
+				finally {
 					try {
 						if (inputStream != null)
 							inputStream.close();
@@ -235,7 +281,4 @@ public class ReceptionService implements Runnable {
 		};
 		new Thread(incomingSocketHandler, "IncomingSocketHandler").start();
 	}
-
-
-
 }

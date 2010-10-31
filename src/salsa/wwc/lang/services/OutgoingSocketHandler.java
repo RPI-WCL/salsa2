@@ -1,18 +1,15 @@
-package salsa.lang.services;
+package salsa.wwc.lang.services;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.OutputStream;
 import java.net.Socket;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.tangosol.util.ExternalizableHelper;
+import org.apache.log4j.Logger;
 
-import salsa.wwc.Message;
-import salsa.wwc.ServiceFactory;
+import salsa.wwc.lang.Message;
 
 
 /**
@@ -24,9 +21,10 @@ import salsa.wwc.ServiceFactory;
 public class OutgoingSocketHandler implements Runnable {
 	
 	private Socket clientSocket = null;
-//	private ObjectOutputStream outputStream = null;
-	private DataOutputStream outputStream = null;
-	private DataInputStream inputStream = null;
+	private ObjectOutputStream outputStream = null;
+	private ObjectInputStream inputStream = null;
+//	private DataOutputStream outputStream = null;
+//	private DataInputStream inputStream = null;
 	private List<Object> objects;
 
 	private String targetHost;
@@ -38,6 +36,8 @@ public class OutgoingSocketHandler implements Runnable {
 	private long timeout = 100000;
 	
 	private boolean isLive;
+	
+	private Logger logger = Logger.getLogger(OutgoingSocketHandler.class);
 	
 	public OutgoingSocketHandler(String targetHost, int targetPort) {
 		this.targetHost = targetHost;
@@ -62,15 +62,17 @@ public class OutgoingSocketHandler implements Runnable {
 	private void initialize() throws IOException {
 		try {
 			clientSocket = new Socket(targetHost, targetPort);
-			inputStream = new DataInputStream(clientSocket.getInputStream());
-			outputStream = new DataOutputStream(clientSocket.getOutputStream());
-            outputStream.writeUTF(ServiceFactory.getReceptionService()
-                    .getHost());
-            outputStream.writeInt(ServiceFactory.getReceptionService()
-                    .getPort());
-            outputStream.flush();
-//			outputStream = new ObjectOutputStream((clientSocket
-//					.getOutputStream()));
+//			inputStream = new DataInputStream(clientSocket.getInputStream());
+//			outputStream = new DataOutputStream(clientSocket.getOutputStream());
+//            outputStream.writeUTF(ServiceFactory.getReceptionService()
+//                    .getHost());
+//            outputStream.writeInt(ServiceFactory.getReceptionService()
+//                    .getPort());
+//            outputStream.flush();
+			outputStream = new ObjectOutputStream((clientSocket
+					.getOutputStream()));
+			inputStream = new ObjectInputStream(
+                                clientSocket.getInputStream());
 //			outputStream.writeObject(ServiceFactory.getReceptionService()
 //					.getHost());
 //			outputStream.writeObject(ServiceFactory.getReceptionService()
@@ -86,10 +88,10 @@ public class OutgoingSocketHandler implements Runnable {
 	private synchronized void cleanup() {
 		try {
 			if (outputStream != null) {
-                byte[] b = ExternalizableHelper.toByteArray(new Message(
-                        Message.FINAL_MESSAGE, null, -1, null));
-				outputStream.write(b);
-				outputStream.flush();
+//                byte[] b = ExternalizableHelper.toByteArray(new Message(
+//                        Message.FINAL_MESSAGE, null, -1, null));
+//				outputStream.write(b);
+//				outputStream.flush();
 				outputStream.close();
 			}
 			if (inputStream != null)
@@ -144,10 +146,13 @@ public class OutgoingSocketHandler implements Runnable {
 			if (!isLive)
 				break;
 			try {
-			    byte[] b = ExternalizableHelper.toByteArray(toSend);
-			    outputStream.write(b);
+//			    byte[] b = ExternalizableHelper.toByteArray(toSend);
+//			    outputStream.write(b);
+			    outputStream.writeObject(toSend);
 			    outputStream.flush();
-			    inputStream.read(); // For synchronization
+			    outputStream.reset();
+			    logger.debug("Sent an object " + toSend.toString());
+			    inputStream.readByte(); // For synchronization
 			    
 			} catch (Exception e) {
 			    e.printStackTrace();
