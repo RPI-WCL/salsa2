@@ -14,6 +14,7 @@ public class ConstructorDeclaration extends MethodDeclaration implements SalsaNo
         this.name = name;
         this.parameters = parameters;
         this.block = block;
+        this.returnType = name;
     }
 
     

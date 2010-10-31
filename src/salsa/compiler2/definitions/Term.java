@@ -67,6 +67,8 @@ public class Term extends SalsaSource implements SalsaNode {
     private List<Expression> arrayIndexes = new ArrayList<Expression>();
     
     private SymbolType symbolType;
+    
+    private SymbolMethod symbolMethod; // if it has 
 
     public String getVarName() {
         return varName;
@@ -252,6 +254,7 @@ public class Term extends SalsaSource implements SalsaNode {
         case Term.LITERAL:
             literal.analyze(this, typeEnv, knownTypes);
             type = literal.type;
+//            type = CompilerHelper.convertoObjectType(literal.type);
             break;
         case Term.EXPRESSION:
             expression.analyze(this, typeEnv, knownTypes);
@@ -263,8 +266,10 @@ public class Term extends SalsaSource implements SalsaNode {
             if (st == null) {
                 // it might be a class with static fields
                 st = CompilerHelper.getSymbolTypeByName(knownTypes, varName);
-                if (st == null)
+                if (st == null) {                    
                     this.log("Cannot resolve the type of " + varName);
+                    return false;
+                }
                 else {
                     varType = type = st.getCanonicalName();
                     CompilerHelper.addStaticTypeEnv(typeEnv, st);
@@ -281,23 +286,13 @@ public class Term extends SalsaSource implements SalsaNode {
             break;
         }
         
-        // If it is type cast
-        if (castType != null) {
-            SymbolType st = CompilerHelper.getKnownType(knownTypes, castType);
-            if (st == null) {
-                this.log("Unknown type " + castType);
-            } else {
-                type = castType = st.getCanonicalName();
-            }
-        }
-        
+                
         // If it is an array access, determine the variable name and type
         for (Iterator<Expression> it = arrayIndexes.iterator(); it.hasNext();) {
             varName += "[" + it.next().toJavaCode("") + "]";
-            type  = varType.substring(0, varType.length() - 2);
+            type = varType = varType.substring(0, varType.length() - 2);
         }
-        
-        // If it is a field selection, method invocation, or message passing
+       // If it is a field selection, method invocation, or message passing
         SymbolType varSt;
         switch (operatorType) {
         case Term.SELECT_FIELD:
@@ -320,15 +315,18 @@ public class Term extends SalsaSource implements SalsaNode {
                 }
             }
             if (tempSt != null) {
-                if (!varSt.isActorType())
-                    type = tempSt.getCanonicalName();
-                else if (varName.equals("this") || varName.equals("self")) {
-                    type = tempSt.getCanonicalName();
+                type = tempSt.getCanonicalName();
+                if (varName.equals("this") || varName.equals("self")) {
                     varName = "this";
-                } else
-                    this.log("Cannot select filed or invoke method on an actor");
-            } else {
-//                this.log("Cannot resovle the type");
+                } 
+                if (varSt.isActorType()) {
+                    if (symbolMethod != null && symbolMethod.isMessage()) {
+                        this.log("Cannot invoke a messgae handler on an actor");
+                    }
+                    if (!varName.equals("this") && operatorType == Term.SELECT_FIELD) {
+                        this.log("Cannot select a field on an actor");
+                    }
+                }
             }
             break;
         case Term.SEND_MESSAGE:
@@ -348,55 +346,91 @@ public class Term extends SalsaSource implements SalsaNode {
             }
             break;
         }
+        
+        // If it is type cast, directly return
+        if (castType != null) {
+            SymbolType st = CompilerHelper.getKnownType(knownTypes, castType);
+            if (st == null) {
+                this.log("Unknown type " + castType);
+                return false;
+            } else {
+                type = castType = st.getCanonicalName();
+            }
+        }
+       
         this.symbolType = CompilerHelper.getKnownType(knownTypes, type);
         return true;
     }
     
     private SymbolType getSelectType(SymbolType parentType, String selector,
             List<Expression> paras, Map<String, SymbolType> knownTypes) {
-        String returnStr = "";
+        SymbolType returnType = null;
         if (paras != null) {
             // Method invocation
-            StringBuilder sb = new StringBuilder();
-            StringBuilder sbShow = new StringBuilder();
-            sb.append(selector).append("\\(");
-            sbShow.append(selector).append("(");
-            for (Expression e : paras) {
-                String eStr = e.toJavaCode(""); 
-                if (eStr.equals("token") || eStr.equals("null")) {
-                    sb.append("[a-zA-Z_0-9\\.\\[\\]]+").append(",");
-                    sbShow.append(eStr).append(",");
-                } else {
-                    SymbolType st = e.getType();
-                    String eType = st.getCanonicalName();
-                    if (eType.startsWith(CompilerHelper.TOKEN))
-                        eType = eType.substring(CompilerHelper.TOKEN.length() + 1).trim();
-                    sb.append(eType).append(",");
-                    sbShow.append(eType).append(",");
+            StringBuilder sbInput = null; 
+            StringBuilder sbRequired = null;
+            
+            List<SymbolMethod> methods = parentType.getMethods();
+            String methodName = selector;
+//            SymbolMethod symbolMethod = null;
+            for (SymbolMethod sm : methods) {
+                if (methodName.equals(sm.getName())
+                        && paras.size() == sm.getParameterTypes().length) {
+                    sbInput = new StringBuilder();
+                    sbRequired = new StringBuilder();
+                    sbInput.append(methodName).append("(");
+                    sbRequired.append(methodName).append("(");
+                    boolean found = true;
+                    for (int i = 0; i < paras.size(); i++) {
+                        SymbolType eType = paras.get(i).getType();
+                        SymbolType rType = sm.getParameterSymbolTypes().get(i);
+                        if (eType == null) {
+                            this.log("Cannot determine the type of "
+                                    + paras.get(i).toJavaCode(""));
+                            break;
+                        } else if (!rType.isAssignable(eType)) {
+                            found = false;
+                            // break;
+                        }
+                        sbInput.append(eType.getCanonicalName());
+                        sbRequired.append(rType.getCanonicalName());
+                        if (i < paras.size() - 1) {
+                            sbInput.append(", ");
+                            sbRequired.append(", ");
+                        }
+
+                    }
+                    sbInput.append(")");
+                    sbRequired.append(")");
+                    if (found) {
+                        symbolMethod = sm;
+                        break;
+                    }
                 }
             }
-            if (paras.size() > 0) {
-                sb.deleteCharAt(sb.length() - 1);
-                sbShow.deleteCharAt(sbShow.length() - 1);
-            }
-            sb.append("\\)");
-            sbShow.append(")");
-            SymbolMethod sm = parentType.getMethodBySignatrue(sb.toString());
-            if (sm != null) {
-                messageId = sm.getId();
-                returnStr = sm.getReturnType();
-            }
-            else {
-                this.log("Cannot find method " + sbShow.toString()
-                        + " in " + parentType.getCanonicalName());
-                return null;
+            if (symbolMethod != null) {
+                messageId = symbolMethod.getId();
+                returnType = symbolMethod.getReturnSymbolType();
+            } else {
+                this.log("Cannot find method "
+                        + (sbInput == null ? methodName : sbInput.toString())
+                        + " in "
+                        + parentType.getCanonicalName()
+                        + (sbRequired == null ? "." : ". Do you mean "
+                                + sbRequired.toString() + "?"));
+               return null;
             }
         } else {
             // Select field
             SymbolField sf = parentType.getField(selector);
-            returnStr = sf.getType();
+            if (sf != null) {
+                sf.formalizeTypes();
+                returnType = sf.getSymbolType();
+            } else {
+                this.log("Cannot find field " + selector + " in "
+                        + parentType.getCanonicalName() + ". Is it public?");
+            }
         }
-        SymbolType returnType = CompilerHelper.getSymbolTypeByName(knownTypes, returnStr);
         return returnType;
     }
 

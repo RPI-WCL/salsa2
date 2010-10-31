@@ -26,7 +26,7 @@ public class SalsaCompiler {
     }
     
     private static void printInfo() {
-        System.err.println("\nSALSA compiler 1.2\n");
+        System.err.println("\nSALSA compiler 2.0alpha\n");
     }
 
     /**
@@ -73,10 +73,11 @@ public class SalsaCompiler {
                 SalsaParser parser = new SalsaParser(tokens);
                 cus[i] = parser.compilationUnit();
                 cus[i].setSourceFileName(salsaFileNames[i]);
-                if (!parser.hasErrors()) {
+                List<String> errorMessages = parser.getMessages();
+                if (errorMessages == null || errorMessages.size() == 0) {
                     System.err.println("  Parse " + parser.getSourceName() + " successfully");
                 } else {
-                    System.err.println("  Parse " + parser.getSourceName() + " failed");
+                    System.err.println("  Parse " + parser.getSourceName() + " failed, total error: " + errorMessages.size());
                     succeed = false;
                 }
                 System.gc();
@@ -91,6 +92,21 @@ public class SalsaCompiler {
         
         System.err.println();
         System.err.println("Typechecking...");
+        for (CompilationUnit cu : cus) {
+            SalsaSource.resetErrorNum();
+            cu.analyzeMethod(null);
+            if (SalsaSource.getErrorNum() > 0) {
+                succeed = false;
+                System.err.println("  Typecheck " + cu.getSourceFileName() + " failed, total error: " + SalsaSource.getErrorNum());
+            }
+            else {
+//                System.err.println("  Typecheck " + cu.getSourceFileName() + " successfully");
+            }
+            System.gc();
+        }
+        if (!succeed)
+            System.exit(2);
+      
         for (CompilationUnit cu : cus) {
             SalsaSource.resetErrorNum();
             cu.analyze(null, null, null);

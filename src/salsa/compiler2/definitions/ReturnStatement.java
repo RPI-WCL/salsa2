@@ -41,7 +41,15 @@ public class ReturnStatement extends Statement {
     public boolean analyze(SalsaNode parent, Map<String, SymbolType> typeEnv, Map<String, SymbolType> knownTypes) {
         super.analyze(parent, typeEnv, knownTypes);
         expression.analyze(this, typeEnv, knownTypes);
+        if (isInJoinBlock())
+            log("Return statement is not allowed in JoinBlock");
         return true;
+    }
+
+    @Override
+    public void setInJoinBlock(boolean isInJoinBlock) {
+        // TODO Auto-generated method stub
+        super.setInJoinBlock(isInJoinBlock);    
     }
     
 }

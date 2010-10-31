@@ -46,7 +46,7 @@ public class MultExpression extends Expression {
         else {
             SymbolType type = expressions.get(0).getType();
             for (int i = 1; i < expressions.size(); i++) 
-                type = CompilerHelper.getDominatingType(type, expressions.get(i).getType());
+                type = CompilerHelper.getSumDominatingType(type, expressions.get(i).getType());
             return type;
         }
     }

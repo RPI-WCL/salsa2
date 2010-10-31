@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g 2010-10-20 16:07:19
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g 2010-10-29 10:45:07
 
 package salsa.compiler2;
 import salsa.compiler2.definitions.*;
@@ -20,194 +20,193 @@ import java.util.ArrayList;
 
 public class SalsaParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "AND_ASSIGN", "ASSIGN", "AT", "BIT_SHIFT_RIGHT", "BIT_SHIFT_RIGHT_ASSIGN", "COLON", "COMMA", "DEC", "DIV", "DIV_ASSIGN", "DOT", "DOTSTAR", "ELLIPSIS", "EQUAL", "GREATER_OR_EQUAL", "GREATER_THAN", "INC", "LBRACK", "LCURLY", "LESS_OR_EQUAL", "LESS_THAN", "LOGICAL_AND", "LOGICAL_NOT", "LOGICAL_OR", "LPAREN", "MINUS", "MINUS_ASSIGN", "MOD", "MOD_ASSIGN", "NOT", "NOT_EQUAL", "OR", "OR_ASSIGN", "PLUS", "PLUS_ASSIGN", "QUESTION", "RBRACK", "RCURLY", "RPAREN", "SEMI", "SHIFT_LEFT", "SHIFT_LEFT_ASSIGN", "SHIFT_RIGHT", "SHIFT_RIGHT_ASSIGN", "STAR", "STAR_ASSIGN", "XOR", "XOR_ASSIGN", "ABSTRACT", "ASSERT", "BOOLEAN", "BREAK", "BYTE", "CASE", "CATCH", "CHAR", "CLASS", "CONTINUE", "DEFAULT", "DO", "DOUBLE", "ELSE", "ENUM", "EXTENDS", "FALSE", "FINAL", "FINALLY", "FLOAT", "FOR", "IF", "IMPLEMENTS", "INSTANCEOF", "INTERFACE", "IMPORT", "INT", "LONG", "NATIVE", "NEW", "NULL", "PACKAGE", "PRIVATE", "PROTECTED", "PUBLIC", "RETURN", "SHORT", "STATIC", "STRICTFP", "SUPER", "SWITCH", "SYNCHRONIZED", "THIS", "THROW", "THROWS", "TRANSIENT", "TRUE", "TRY", "VOID", "VOLATILE", "WHILE", "ANNOTATION_INIT_ARRAY_ELEMENT", "ANNOTATION_INIT_BLOCK", "ANNOTATION_INIT_DEFAULT_KEY", "ANNOTATION_INIT_KEY_LIST", "ANNOTATION_LIST", "ANNOTATION_METHOD_DECL", "ANNOTATION_SCOPE", "ANNOTATION_TOP_LEVEL_SCOPE", "ARGUMENT_LIST", "ARRAY_DECLARATOR", "ARRAY_DECLARATOR_LIST", "ARRAY_ELEMENT_ACCESS", "ARRAY_INITIALIZER", "BLOCK_SCOPE", "CAST_EXPR", "CATCH_CLAUSE_LIST", "CLASS_CONSTRUCTOR_CALL", "CLASS_INSTANCE_INITIALIZER", "CLASS_STATIC_INITIALIZER", "CLASS_TOP_LEVEL_SCOPE", "CONSTRUCTOR_DECL", "ENUM_TOP_LEVEL_SCOPE", "EXPR", "EXTENDS_BOUND_LIST", "EXTENDS_CLAUSE", "FOR_CONDITION", "FOR_EACH", "FOR_INIT", "FOR_UPDATE", "FORMAL_PARAM_LIST", "FORMAL_PARAM_STD_DECL", "FORMAL_PARAM_VARARG_DECL", "FUNCTION_METHOD_DECL", "GENERIC_TYPE_ARG_LIST", "GENERIC_TYPE_PARAM_LIST", "INTERFACE_TOP_LEVEL_SCOPE", "IMPLEMENTS_CLAUSE", "LABELED_STATEMENT", "LOCAL_MODIFIER_LIST", "JAVA_SOURCE", "METHOD_CALL", "MODIFIER_LIST", "PARENTESIZED_EXPR", "POST_DEC", "POST_INC", "PRE_DEC", "PRE_INC", "QUALIFIED_TYPE_IDENT", "STATIC_ARRAY_CREATOR", "SUPER_CONSTRUCTOR_CALL", "SWITCH_BLOCK_LABEL_LIST", "THIS_CONSTRUCTOR_CALL", "THROWS_CLAUSE", "TYPE", "UNARY_MINUS", "UNARY_PLUS", "VAR_DECLARATION", "VAR_DECLARATOR", "VAR_DECLARATOR_LIST", "VOID_METHOD_DECL", "IDENT", "HEX_LITERAL", "DECIMAL_LITERAL", "OCTAL_LITERAL", "CHARACTER_LITERAL", "STRING_LITERAL", "FLOATING_POINT_LITERAL", "HEX_DIGIT", "INTEGER_TYPE_SUFFIX", "EXPONENT", "FLOAT_TYPE_SUFFIX", "ESCAPE_SEQUENCE", "UNICODE_ESCAPE", "OCTAL_ESCAPE", "Letter", "JavaIDDigit", "WS", "COMMENT", "LINE_COMMENT", "'module'", "'Token'", "'behavior'", "'join'", "'<-'", "'at'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "AND_ASSIGN", "ASSIGN", "AT", "BIT_SHIFT_RIGHT", "BIT_SHIFT_RIGHT_ASSIGN", "COLON", "COMMA", "DEC", "DIV", "DIV_ASSIGN", "DOT", "DOTSTAR", "ELLIPSIS", "EQUAL", "GREATER_OR_EQUAL", "GREATER_THAN", "INC", "LBRACK", "LCURLY", "LESS_OR_EQUAL", "LESS_THAN", "LOGICAL_AND", "LOGICAL_NOT", "LOGICAL_OR", "LPAREN", "MINUS", "MINUS_ASSIGN", "MOD", "MOD_ASSIGN", "NOT", "NOT_EQUAL", "OR", "OR_ASSIGN", "PLUS", "PLUS_ASSIGN", "QUESTION", "RBRACK", "RCURLY", "RPAREN", "SEMI", "SHIFT_LEFT", "SHIFT_LEFT_ASSIGN", "SHIFT_RIGHT", "SHIFT_RIGHT_ASSIGN", "STAR", "STAR_ASSIGN", "XOR", "XOR_ASSIGN", "ABSTRACT", "ASSERT", "BOOLEAN", "BREAK", "BYTE", "CASE", "CATCH", "CHAR", "CLASS", "CONTINUE", "DEFAULT", "DO", "DOUBLE", "ELSE", "ENUM", "EXTENDS", "FALSE", "FINAL", "FINALLY", "FLOAT", "FOR", "IF", "IMPLEMENTS", "INSTANCEOF", "INTERFACE", "IMPORT", "INT", "LONG", "NATIVE", "NEW", "NULL", "PACKAGE", "PRIVATE", "PROTECTED", "PUBLIC", "RETURN", "SHORT", "STATIC", "STRICTFP", "SUPER", "SWITCH", "SYNCHRONIZED", "THROW", "THROWS", "TRANSIENT", "TRUE", "TRY", "VOID", "VOLATILE", "WHILE", "ANNOTATION_INIT_ARRAY_ELEMENT", "ANNOTATION_INIT_BLOCK", "ANNOTATION_INIT_DEFAULT_KEY", "ANNOTATION_INIT_KEY_LIST", "ANNOTATION_LIST", "ANNOTATION_METHOD_DECL", "ANNOTATION_SCOPE", "ANNOTATION_TOP_LEVEL_SCOPE", "ARGUMENT_LIST", "ARRAY_DECLARATOR", "ARRAY_DECLARATOR_LIST", "ARRAY_ELEMENT_ACCESS", "ARRAY_INITIALIZER", "BLOCK_SCOPE", "CAST_EXPR", "CATCH_CLAUSE_LIST", "CLASS_CONSTRUCTOR_CALL", "CLASS_INSTANCE_INITIALIZER", "CLASS_STATIC_INITIALIZER", "CLASS_TOP_LEVEL_SCOPE", "CONSTRUCTOR_DECL", "ENUM_TOP_LEVEL_SCOPE", "EXPR", "EXTENDS_BOUND_LIST", "EXTENDS_CLAUSE", "FOR_CONDITION", "FOR_EACH", "FOR_INIT", "FOR_UPDATE", "FORMAL_PARAM_LIST", "FORMAL_PARAM_STD_DECL", "FORMAL_PARAM_VARARG_DECL", "FUNCTION_METHOD_DECL", "GENERIC_TYPE_ARG_LIST", "GENERIC_TYPE_PARAM_LIST", "INTERFACE_TOP_LEVEL_SCOPE", "IMPLEMENTS_CLAUSE", "LABELED_STATEMENT", "LOCAL_MODIFIER_LIST", "JAVA_SOURCE", "METHOD_CALL", "MODIFIER_LIST", "PARENTESIZED_EXPR", "POST_DEC", "POST_INC", "PRE_DEC", "PRE_INC", "QUALIFIED_TYPE_IDENT", "STATIC_ARRAY_CREATOR", "SUPER_CONSTRUCTOR_CALL", "SWITCH_BLOCK_LABEL_LIST", "THIS_CONSTRUCTOR_CALL", "THROWS_CLAUSE", "TYPE", "UNARY_MINUS", "UNARY_PLUS", "VAR_DECLARATION", "VAR_DECLARATOR", "VAR_DECLARATOR_LIST", "VOID_METHOD_DECL", "IDENT", "HEX_LITERAL", "DECIMAL_LITERAL", "OCTAL_LITERAL", "CHARACTER_LITERAL", "STRING_LITERAL", "FLOATING_POINT_LITERAL", "HEX_DIGIT", "INTEGER_TYPE_SUFFIX", "EXPONENT", "FLOAT_TYPE_SUFFIX", "ESCAPE_SEQUENCE", "UNICODE_ESCAPE", "OCTAL_ESCAPE", "Letter", "JavaIDDigit", "WS", "COMMENT", "LINE_COMMENT", "'module'", "'Token'", "'behavior'", "'join'", "'<-'", "'at'"
     };
     public static final int PACKAGE=84;
     public static final int STAR=49;
     public static final int MOD=32;
     public static final int DO=64;
-    public static final int GENERIC_TYPE_PARAM_LIST=138;
+    public static final int GENERIC_TYPE_PARAM_LIST=137;
     public static final int NOT=34;
     public static final int EOF=-1;
-    public static final int ANNOTATION_METHOD_DECL=109;
+    public static final int ANNOTATION_METHOD_DECL=108;
     public static final int BIT_SHIFT_RIGHT_ASSIGN=9;
-    public static final int UNARY_PLUS=159;
-    public static final int TYPE=157;
+    public static final int UNARY_PLUS=158;
+    public static final int TYPE=156;
     public static final int FINAL=70;
     public static final int RPAREN=43;
     public static final int INC=21;
     public static final int IMPORT=78;
-    public static final int STRING_LITERAL=169;
-    public static final int CAST_EXPR=118;
+    public static final int STRING_LITERAL=168;
+    public static final int CAST_EXPR=117;
     public static final int NOT_EQUAL=35;
     public static final int RETURN=88;
-    public static final int THIS=95;
-    public static final int ENUM_TOP_LEVEL_SCOPE=125;
-    public static final int ANNOTATION_INIT_KEY_LIST=107;
+    public static final int ENUM_TOP_LEVEL_SCOPE=124;
+    public static final int ANNOTATION_INIT_KEY_LIST=106;
     public static final int RBRACK=41;
-    public static final int PRE_DEC=149;
-    public static final int SWITCH_BLOCK_LABEL_LIST=154;
+    public static final int PRE_DEC=148;
+    public static final int SWITCH_BLOCK_LABEL_LIST=153;
     public static final int STATIC=90;
     public static final int ELSE=66;
     public static final int MINUS_ASSIGN=31;
     public static final int STRICTFP=91;
     public static final int NATIVE=81;
     public static final int ELLIPSIS=17;
-    public static final int PRE_INC=150;
-    public static final int CHARACTER_LITERAL=168;
+    public static final int PRE_INC=149;
+    public static final int CHARACTER_LITERAL=167;
     public static final int LCURLY=23;
-    public static final int UNARY_MINUS=158;
-    public static final int OCTAL_ESCAPE=177;
+    public static final int UNARY_MINUS=157;
+    public static final int OCTAL_ESCAPE=176;
     public static final int INT=79;
-    public static final int FORMAL_PARAM_VARARG_DECL=135;
-    public static final int INTERFACE_TOP_LEVEL_SCOPE=139;
-    public static final int WS=180;
-    public static final int LOCAL_MODIFIER_LIST=142;
+    public static final int FORMAL_PARAM_VARARG_DECL=134;
+    public static final int INTERFACE_TOP_LEVEL_SCOPE=138;
+    public static final int WS=179;
+    public static final int LOCAL_MODIFIER_LIST=141;
     public static final int LESS_THAN=25;
-    public static final int EXTENDS_BOUND_LIST=127;
-    public static final int JavaIDDigit=179;
-    public static final int DECIMAL_LITERAL=166;
-    public static final int FOR_INIT=131;
+    public static final int EXTENDS_BOUND_LIST=126;
+    public static final int JavaIDDigit=178;
+    public static final int DECIMAL_LITERAL=165;
+    public static final int FOR_INIT=130;
     public static final int PROTECTED=86;
     public static final int LBRACK=22;
-    public static final int THIS_CONSTRUCTOR_CALL=155;
+    public static final int THIS_CONSTRUCTOR_CALL=154;
     public static final int FLOAT=72;
-    public static final int POST_DEC=147;
-    public static final int ANNOTATION_SCOPE=110;
-    public static final int STATIC_ARRAY_CREATOR=152;
+    public static final int POST_DEC=146;
+    public static final int ANNOTATION_SCOPE=109;
+    public static final int STATIC_ARRAY_CREATOR=151;
     public static final int LPAREN=29;
     public static final int AT=7;
     public static final int IMPLEMENTS=75;
     public static final int XOR_ASSIGN=52;
     public static final int LOGICAL_OR=28;
-    public static final int IDENT=164;
+    public static final int IDENT=163;
     public static final int PLUS=38;
-    public static final int ANNOTATION_INIT_BLOCK=105;
-    public static final int GENERIC_TYPE_ARG_LIST=137;
+    public static final int ANNOTATION_INIT_BLOCK=104;
+    public static final int GENERIC_TYPE_ARG_LIST=136;
     public static final int GREATER_THAN=20;
     public static final int LESS_OR_EQUAL=24;
-    public static final int CLASS_STATIC_INITIALIZER=122;
-    public static final int HEX_DIGIT=171;
+    public static final int CLASS_STATIC_INITIALIZER=121;
+    public static final int HEX_DIGIT=170;
     public static final int SHORT=89;
     public static final int INSTANCEOF=76;
     public static final int MINUS=30;
     public static final int SEMI=44;
     public static final int STAR_ASSIGN=50;
-    public static final int VAR_DECLARATOR_LIST=162;
+    public static final int VAR_DECLARATOR_LIST=161;
     public static final int COLON=10;
     public static final int OR_ASSIGN=37;
     public static final int ENUM=67;
     public static final int RCURLY=42;
     public static final int PLUS_ASSIGN=39;
-    public static final int FUNCTION_METHOD_DECL=136;
+    public static final int FUNCTION_METHOD_DECL=135;
     public static final int INTERFACE=77;
     public static final int DIV=13;
-    public static final int POST_INC=148;
+    public static final int POST_INC=147;
     public static final int LONG=80;
-    public static final int CLASS_CONSTRUCTOR_CALL=120;
+    public static final int CLASS_CONSTRUCTOR_CALL=119;
     public static final int PUBLIC=87;
-    public static final int ARRAY_INITIALIZER=116;
-    public static final int CATCH_CLAUSE_LIST=119;
-    public static final int SUPER_CONSTRUCTOR_CALL=153;
-    public static final int EXPONENT=173;
-    public static final int WHILE=103;
+    public static final int ARRAY_INITIALIZER=115;
+    public static final int CATCH_CLAUSE_LIST=118;
+    public static final int SUPER_CONSTRUCTOR_CALL=152;
+    public static final int EXPONENT=172;
+    public static final int WHILE=102;
     public static final int MOD_ASSIGN=33;
     public static final int CASE=58;
     public static final int NEW=82;
     public static final int CHAR=60;
-    public static final int CLASS_INSTANCE_INITIALIZER=121;
-    public static final int ARRAY_ELEMENT_ACCESS=115;
-    public static final int FOR_CONDITION=129;
-    public static final int VAR_DECLARATION=160;
+    public static final int CLASS_INSTANCE_INITIALIZER=120;
+    public static final int ARRAY_ELEMENT_ACCESS=114;
+    public static final int FOR_CONDITION=128;
+    public static final int VAR_DECLARATION=159;
     public static final int DIV_ASSIGN=14;
     public static final int BREAK=56;
     public static final int LOGICAL_AND=26;
-    public static final int FOR_UPDATE=132;
-    public static final int FLOATING_POINT_LITERAL=170;
-    public static final int VOID_METHOD_DECL=163;
+    public static final int FOR_UPDATE=131;
+    public static final int FLOATING_POINT_LITERAL=169;
+    public static final int VOID_METHOD_DECL=162;
     public static final int DOUBLE=65;
-    public static final int VOID=101;
+    public static final int VOID=100;
     public static final int SUPER=92;
-    public static final int COMMENT=181;
-    public static final int FLOAT_TYPE_SUFFIX=174;
-    public static final int IMPLEMENTS_CLAUSE=140;
-    public static final int LINE_COMMENT=182;
+    public static final int COMMENT=180;
+    public static final int FLOAT_TYPE_SUFFIX=173;
+    public static final int IMPLEMENTS_CLAUSE=139;
+    public static final int LINE_COMMENT=181;
     public static final int PRIVATE=85;
-    public static final int BLOCK_SCOPE=117;
+    public static final int BLOCK_SCOPE=116;
     public static final int SWITCH=93;
-    public static final int ANNOTATION_INIT_DEFAULT_KEY=106;
+    public static final int ANNOTATION_INIT_DEFAULT_KEY=105;
     public static final int NULL=83;
-    public static final int VAR_DECLARATOR=161;
-    public static final int ANNOTATION_LIST=108;
-    public static final int THROWS=97;
+    public static final int VAR_DECLARATOR=160;
+    public static final int ANNOTATION_LIST=107;
+    public static final int THROWS=96;
     public static final int ASSERT=54;
-    public static final int METHOD_CALL=144;
-    public static final int TRY=100;
+    public static final int METHOD_CALL=143;
+    public static final int TRY=99;
     public static final int SHIFT_LEFT=45;
     public static final int SHIFT_RIGHT=47;
-    public static final int FORMAL_PARAM_STD_DECL=134;
+    public static final int FORMAL_PARAM_STD_DECL=133;
     public static final int OR=36;
     public static final int SHIFT_RIGHT_ASSIGN=48;
-    public static final int JAVA_SOURCE=143;
+    public static final int JAVA_SOURCE=142;
     public static final int CATCH=59;
     public static final int FALSE=69;
-    public static final int INTEGER_TYPE_SUFFIX=172;
-    public static final int Letter=178;
-    public static final int THROW=96;
+    public static final int INTEGER_TYPE_SUFFIX=171;
+    public static final int Letter=177;
+    public static final int THROW=95;
     public static final int DEC=12;
     public static final int CLASS=61;
     public static final int BIT_SHIFT_RIGHT=8;
-    public static final int THROWS_CLAUSE=156;
+    public static final int THROWS_CLAUSE=155;
     public static final int GREATER_OR_EQUAL=19;
     public static final int FOR=73;
     public static final int LOGICAL_NOT=27;
     public static final int ABSTRACT=53;
     public static final int AND=4;
     public static final int AND_ASSIGN=5;
-    public static final int MODIFIER_LIST=145;
+    public static final int MODIFIER_LIST=144;
     public static final int IF=74;
-    public static final int CONSTRUCTOR_DECL=124;
-    public static final int ESCAPE_SEQUENCE=175;
-    public static final int LABELED_STATEMENT=141;
-    public static final int UNICODE_ESCAPE=176;
+    public static final int CONSTRUCTOR_DECL=123;
+    public static final int ESCAPE_SEQUENCE=174;
+    public static final int LABELED_STATEMENT=140;
+    public static final int UNICODE_ESCAPE=175;
     public static final int BOOLEAN=55;
     public static final int SYNCHRONIZED=94;
-    public static final int EXPR=126;
-    public static final int CLASS_TOP_LEVEL_SCOPE=123;
+    public static final int EXPR=125;
+    public static final int CLASS_TOP_LEVEL_SCOPE=122;
     public static final int CONTINUE=62;
     public static final int COMMA=11;
-    public static final int TRANSIENT=98;
+    public static final int TRANSIENT=97;
     public static final int EQUAL=18;
-    public static final int ARGUMENT_LIST=112;
-    public static final int QUALIFIED_TYPE_IDENT=151;
-    public static final int HEX_LITERAL=165;
+    public static final int ARGUMENT_LIST=111;
+    public static final int QUALIFIED_TYPE_IDENT=150;
+    public static final int HEX_LITERAL=164;
     public static final int DOT=15;
     public static final int SHIFT_LEFT_ASSIGN=46;
-    public static final int FORMAL_PARAM_LIST=133;
+    public static final int FORMAL_PARAM_LIST=132;
     public static final int DOTSTAR=16;
-    public static final int ANNOTATION_TOP_LEVEL_SCOPE=111;
+    public static final int ANNOTATION_TOP_LEVEL_SCOPE=110;
     public static final int T__184=184;
     public static final int T__183=183;
     public static final int BYTE=57;
     public static final int T__186=186;
     public static final int T__185=185;
     public static final int XOR=51;
-    public static final int T__188=188;
     public static final int T__187=187;
-    public static final int VOLATILE=102;
-    public static final int PARENTESIZED_EXPR=146;
-    public static final int ARRAY_DECLARATOR_LIST=114;
+    public static final int VOLATILE=101;
+    public static final int PARENTESIZED_EXPR=145;
+    public static final int ARRAY_DECLARATOR_LIST=113;
     public static final int DEFAULT=63;
-    public static final int OCTAL_LITERAL=167;
-    public static final int TRUE=99;
-    public static final int EXTENDS_CLAUSE=128;
-    public static final int ARRAY_DECLARATOR=113;
+    public static final int T__182=182;
+    public static final int OCTAL_LITERAL=166;
+    public static final int TRUE=98;
+    public static final int EXTENDS_CLAUSE=127;
+    public static final int ARRAY_DECLARATOR=112;
     public static final int QUESTION=40;
     public static final int FINALLY=71;
     public static final int ASSIGN=6;
-    public static final int ANNOTATION_INIT_ARRAY_ELEMENT=104;
+    public static final int ANNOTATION_INIT_ARRAY_ELEMENT=103;
     public static final int EXTENDS=68;
-    public static final int FOR_EACH=130;
+    public static final int FOR_EACH=129;
 
     // delegates
     // delegators
@@ -260,14 +259,6 @@ public class SalsaParser extends Parser {
 
     	Stack<String> paraphrases = new Stack<String>();
     	public String getErrorMessage(RecognitionException e, String[] tokenNames) {
-    		if(e instanceof FailedPredicateException){
-    		  FailedPredicateException fpe = (FailedPredicateException)e;
-              if (fpe.predicateText.contains("Token"))
-                return "Returned value of a message can only be assigned to a token";
-              if (fpe.predicateText.equals("{getKnownType(moduleName + \".\" + $IDENT.text) != null}?")) {
-                return "Duplicated type definition";          
-                }
-    		}
     		return super.getErrorMessage(e, tokenNames);
     	}
         
@@ -308,8 +299,8 @@ public class SalsaParser extends Parser {
             if (mMessageCollectionEnabled) {
                 mMessages.add(pMessage);
             } else {
-                super.emitErrorMessage(pMessage);
             }
+            super.emitErrorMessage(pMessage);
         }
         
         /**
@@ -335,7 +326,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "compilationUnit"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:328:1: compilationUnit returns [CompilationUnit cu] : ( moduleDeclaration )? ( importDeclaration )* ( typeDeclaration )+ ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:320:1: compilationUnit returns [CompilationUnit cu] : ( moduleDeclaration )? ( importDeclaration )* ( typeDeclaration )+ ;
     public final CompilationUnit compilationUnit() throws RecognitionException {
         CompilationUnit cu = null;
 
@@ -347,24 +338,25 @@ public class SalsaParser extends Parser {
 
 
 
+            enableErrorMessageCollection(true);
             cu = new CompilationUnit();
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:332:5: ( ( moduleDeclaration )? ( importDeclaration )* ( typeDeclaration )+ )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:332:9: ( moduleDeclaration )? ( importDeclaration )* ( typeDeclaration )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:325:5: ( ( moduleDeclaration )? ( importDeclaration )* ( typeDeclaration )+ )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:325:9: ( moduleDeclaration )? ( importDeclaration )* ( typeDeclaration )+
             {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:332:9: ( moduleDeclaration )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:325:9: ( moduleDeclaration )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==183) ) {
+            if ( (LA1_0==182) ) {
                 alt1=1;
             }
             switch (alt1) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:332:10: moduleDeclaration
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:325:10: moduleDeclaration
                     {
-                    pushFollow(FOLLOW_moduleDeclaration_in_compilationUnit4483);
+                    pushFollow(FOLLOW_moduleDeclaration_in_compilationUnit4442);
                     moduleDeclaration1=moduleDeclaration();
 
                     state._fsp--;
@@ -376,7 +368,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:333:9: ( importDeclaration )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:326:9: ( importDeclaration )*
             loop2:
             do {
                 int alt2=2;
@@ -389,9 +381,9 @@ public class SalsaParser extends Parser {
 
                 switch (alt2) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:333:10: importDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:326:10: importDeclaration
             	    {
-            	    pushFollow(FOLLOW_importDeclaration_in_compilationUnit4498);
+            	    pushFollow(FOLLOW_importDeclaration_in_compilationUnit4457);
             	    importDeclaration2=importDeclaration();
 
             	    state._fsp--;
@@ -406,23 +398,23 @@ public class SalsaParser extends Parser {
                 }
             } while (true);
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:334:9: ( typeDeclaration )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:327:9: ( typeDeclaration )+
             int cnt3=0;
             loop3:
             do {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==ABSTRACT||LA3_0==BOOLEAN||LA3_0==BYTE||(LA3_0>=CHAR && LA3_0<=CLASS)||LA3_0==DOUBLE||LA3_0==FINAL||LA3_0==FLOAT||LA3_0==INTERFACE||(LA3_0>=INT && LA3_0<=NATIVE)||(LA3_0>=PRIVATE && LA3_0<=PUBLIC)||(LA3_0>=SHORT && LA3_0<=STRICTFP)||LA3_0==SYNCHRONIZED||LA3_0==TRANSIENT||(LA3_0>=VOID && LA3_0<=VOLATILE)||LA3_0==IDENT||(LA3_0>=184 && LA3_0<=185)) ) {
+                if ( (LA3_0==ABSTRACT||LA3_0==BOOLEAN||LA3_0==BYTE||(LA3_0>=CHAR && LA3_0<=CLASS)||LA3_0==DOUBLE||LA3_0==FINAL||LA3_0==FLOAT||LA3_0==INTERFACE||(LA3_0>=INT && LA3_0<=NATIVE)||(LA3_0>=PRIVATE && LA3_0<=PUBLIC)||(LA3_0>=SHORT && LA3_0<=STRICTFP)||LA3_0==SYNCHRONIZED||LA3_0==TRANSIENT||(LA3_0>=VOID && LA3_0<=VOLATILE)||LA3_0==IDENT||(LA3_0>=183 && LA3_0<=184)) ) {
                     alt3=1;
                 }
 
 
                 switch (alt3) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:334:10: typeDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:327:10: typeDeclaration
             	    {
-            	    pushFollow(FOLLOW_typeDeclaration_in_compilationUnit4514);
+            	    pushFollow(FOLLOW_typeDeclaration_in_compilationUnit4473);
             	    typeDeclaration3=typeDeclaration();
 
             	    state._fsp--;
@@ -457,7 +449,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "moduleDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:337:1: moduleDeclaration returns [String value] : 'module' qualifiedName ';' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:330:1: moduleDeclaration returns [String value] : 'module' qualifiedName ';' ;
     public final String moduleDeclaration() throws RecognitionException {
         String value = null;
 
@@ -465,16 +457,16 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:338:5: ( 'module' qualifiedName ';' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:338:9: 'module' qualifiedName ';'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:331:5: ( 'module' qualifiedName ';' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:331:9: 'module' qualifiedName ';'
             {
-            match(input,183,FOLLOW_183_in_moduleDeclaration4541); 
-            pushFollow(FOLLOW_qualifiedName_in_moduleDeclaration4543);
+            match(input,182,FOLLOW_182_in_moduleDeclaration4500); 
+            pushFollow(FOLLOW_qualifiedName_in_moduleDeclaration4502);
             qualifiedName4=qualifiedName();
 
             state._fsp--;
 
-            match(input,SEMI,FOLLOW_SEMI_in_moduleDeclaration4545); 
+            match(input,SEMI,FOLLOW_SEMI_in_moduleDeclaration4504); 
             value = (qualifiedName4!=null?input.toString(qualifiedName4.start,qualifiedName4.stop):null);
 
             }
@@ -492,7 +484,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "importDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:341:1: importDeclaration returns [String value] : 'import' qualifiedName ( '.*' )? ';' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:334:1: importDeclaration returns [String value] : 'import' qualifiedName ( '.*' )? ';' ;
     public final String importDeclaration() throws RecognitionException {
         String value = null;
 
@@ -500,17 +492,17 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:342:5: ( 'import' qualifiedName ( '.*' )? ';' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:342:9: 'import' qualifiedName ( '.*' )? ';'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:335:5: ( 'import' qualifiedName ( '.*' )? ';' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:335:9: 'import' qualifiedName ( '.*' )? ';'
             {
-            match(input,IMPORT,FOLLOW_IMPORT_in_importDeclaration4570); 
-            pushFollow(FOLLOW_qualifiedName_in_importDeclaration4572);
+            match(input,IMPORT,FOLLOW_IMPORT_in_importDeclaration4529); 
+            pushFollow(FOLLOW_qualifiedName_in_importDeclaration4531);
             qualifiedName5=qualifiedName();
 
             state._fsp--;
 
             value = (qualifiedName5!=null?input.toString(qualifiedName5.start,qualifiedName5.stop):null);
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:343:9: ( '.*' )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:336:9: ( '.*' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -519,9 +511,9 @@ public class SalsaParser extends Parser {
             }
             switch (alt4) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:343:10: '.*'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:336:10: '.*'
                     {
-                    match(input,DOTSTAR,FOLLOW_DOTSTAR_in_importDeclaration4585); 
+                    match(input,DOTSTAR,FOLLOW_DOTSTAR_in_importDeclaration4544); 
                     value += ".*";
 
                     }
@@ -529,7 +521,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            match(input,SEMI,FOLLOW_SEMI_in_importDeclaration4591); 
+            match(input,SEMI,FOLLOW_SEMI_in_importDeclaration4550); 
 
             }
 
@@ -546,18 +538,18 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "qualifiedNameList"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:347:1: qualifiedNameList : qualifiedName ( ',' qualifiedName )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:340:1: qualifiedNameList : qualifiedName ( ',' qualifiedName )* ;
     public final void qualifiedNameList() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:348:5: ( qualifiedName ( ',' qualifiedName )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:348:9: qualifiedName ( ',' qualifiedName )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:341:5: ( qualifiedName ( ',' qualifiedName )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:341:9: qualifiedName ( ',' qualifiedName )*
             {
-            pushFollow(FOLLOW_qualifiedName_in_qualifiedNameList4615);
+            pushFollow(FOLLOW_qualifiedName_in_qualifiedNameList4574);
             qualifiedName();
 
             state._fsp--;
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:349:9: ( ',' qualifiedName )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:342:9: ( ',' qualifiedName )*
             loop5:
             do {
                 int alt5=2;
@@ -570,10 +562,10 @@ public class SalsaParser extends Parser {
 
                 switch (alt5) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:349:10: ',' qualifiedName
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:342:10: ',' qualifiedName
             	    {
-            	    match(input,COMMA,FOLLOW_COMMA_in_qualifiedNameList4626); 
-            	    pushFollow(FOLLOW_qualifiedName_in_qualifiedNameList4628);
+            	    match(input,COMMA,FOLLOW_COMMA_in_qualifiedNameList4585); 
+            	    pushFollow(FOLLOW_qualifiedName_in_qualifiedNameList4587);
             	    qualifiedName();
 
             	    state._fsp--;
@@ -605,17 +597,17 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "qualifiedName"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:353:1: qualifiedName : IDENT ( '.' IDENT )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:346:1: qualifiedName : IDENT ( '.' IDENT )* ;
     public final SalsaParser.qualifiedName_return qualifiedName() throws RecognitionException {
         SalsaParser.qualifiedName_return retval = new SalsaParser.qualifiedName_return();
         retval.start = input.LT(1);
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:354:5: ( IDENT ( '.' IDENT )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:354:9: IDENT ( '.' IDENT )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:347:5: ( IDENT ( '.' IDENT )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:347:9: IDENT ( '.' IDENT )*
             {
-            match(input,IDENT,FOLLOW_IDENT_in_qualifiedName4663); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:355:9: ( '.' IDENT )*
+            match(input,IDENT,FOLLOW_IDENT_in_qualifiedName4622); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:348:9: ( '.' IDENT )*
             loop6:
             do {
                 int alt6=2;
@@ -628,10 +620,10 @@ public class SalsaParser extends Parser {
 
                 switch (alt6) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:355:10: '.' IDENT
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:348:10: '.' IDENT
             	    {
-            	    match(input,DOT,FOLLOW_DOT_in_qualifiedName4674); 
-            	    match(input,IDENT,FOLLOW_IDENT_in_qualifiedName4676); 
+            	    match(input,DOT,FOLLOW_DOT_in_qualifiedName4633); 
+            	    match(input,IDENT,FOLLOW_IDENT_in_qualifiedName4635); 
 
             	    }
             	    break;
@@ -661,16 +653,16 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "modifiers"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:358:1: modifiers : ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:351:1: modifiers : ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )* ;
     public final SalsaParser.modifiers_return modifiers() throws RecognitionException {
         SalsaParser.modifiers_return retval = new SalsaParser.modifiers_return();
         retval.start = input.LT(1);
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:359:5: ( ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:360:5: ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:352:5: ( ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:353:5: ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )*
             {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:360:5: ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:353:5: ( 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )*
             loop7:
             do {
                 int alt7=2;
@@ -721,13 +713,13 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "variableModifiers"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:374:1: variableModifiers : ( 'final' )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:367:1: variableModifiers : ( 'final' )* ;
     public final void variableModifiers() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:375:5: ( ( 'final' )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:375:9: ( 'final' )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:368:5: ( ( 'final' )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:368:9: ( 'final' )*
             {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:375:9: ( 'final' )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:368:9: ( 'final' )*
             loop8:
             do {
                 int alt8=2;
@@ -740,9 +732,9 @@ public class SalsaParser extends Parser {
 
                 switch (alt8) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:375:13: 'final'
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:368:13: 'final'
             	    {
-            	    match(input,FINAL,FOLLOW_FINAL_in_variableModifiers4841); 
+            	    match(input,FINAL,FOLLOW_FINAL_in_variableModifiers4800); 
 
             	    }
             	    break;
@@ -768,18 +760,18 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "typeList"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:379:1: typeList : type ( ',' type )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:372:1: typeList : type ( ',' type )* ;
     public final void typeList() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:380:5: ( type ( ',' type )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:380:9: type ( ',' type )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:373:5: ( type ( ',' type )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:373:9: type ( ',' type )*
             {
-            pushFollow(FOLLOW_type_in_typeList4876);
+            pushFollow(FOLLOW_type_in_typeList4835);
             type();
 
             state._fsp--;
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:381:9: ( ',' type )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:374:9: ( ',' type )*
             loop9:
             do {
                 int alt9=2;
@@ -792,10 +784,10 @@ public class SalsaParser extends Parser {
 
                 switch (alt9) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:381:10: ',' type
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:374:10: ',' type
             	    {
-            	    match(input,COMMA,FOLLOW_COMMA_in_typeList4887); 
-            	    pushFollow(FOLLOW_type_in_typeList4889);
+            	    match(input,COMMA,FOLLOW_COMMA_in_typeList4846); 
+            	    pushFollow(FOLLOW_type_in_typeList4848);
             	    type();
 
             	    state._fsp--;
@@ -827,34 +819,34 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "type"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:385:1: type : ( 'Token' )? ( primitiveType | qualifiedName ) ( '[' ']' )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:378:1: type : ( 'Token' )? ( primitiveType | qualifiedName ) ( '[' ']' )* ;
     public final SalsaParser.type_return type() throws RecognitionException {
         SalsaParser.type_return retval = new SalsaParser.type_return();
         retval.start = input.LT(1);
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:386:5: ( ( 'Token' )? ( primitiveType | qualifiedName ) ( '[' ']' )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:386:9: ( 'Token' )? ( primitiveType | qualifiedName ) ( '[' ']' )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:379:5: ( ( 'Token' )? ( primitiveType | qualifiedName ) ( '[' ']' )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:379:9: ( 'Token' )? ( primitiveType | qualifiedName ) ( '[' ']' )*
             {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:386:9: ( 'Token' )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:379:9: ( 'Token' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==184) ) {
+            if ( (LA10_0==183) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:386:10: 'Token'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:379:10: 'Token'
                     {
-                    match(input,184,FOLLOW_184_in_type4924); 
+                    match(input,183,FOLLOW_183_in_type4883); 
 
                     }
                     break;
 
             }
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:387:9: ( primitiveType | qualifiedName )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:380:9: ( primitiveType | qualifiedName )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -872,9 +864,9 @@ public class SalsaParser extends Parser {
             }
             switch (alt11) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:388:13: primitiveType
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:381:13: primitiveType
                     {
-                    pushFollow(FOLLOW_primitiveType_in_type4950);
+                    pushFollow(FOLLOW_primitiveType_in_type4909);
                     primitiveType();
 
                     state._fsp--;
@@ -883,9 +875,9 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:389:13: qualifiedName
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:382:13: qualifiedName
                     {
-                    pushFollow(FOLLOW_qualifiedName_in_type4964);
+                    pushFollow(FOLLOW_qualifiedName_in_type4923);
                     qualifiedName();
 
                     state._fsp--;
@@ -896,7 +888,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:391:9: ( '[' ']' )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:384:9: ( '[' ']' )*
             loop12:
             do {
                 int alt12=2;
@@ -909,10 +901,10 @@ public class SalsaParser extends Parser {
 
                 switch (alt12) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:391:10: '[' ']'
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:384:10: '[' ']'
             	    {
-            	    match(input,LBRACK,FOLLOW_LBRACK_in_type4989); 
-            	    match(input,RBRACK,FOLLOW_RBRACK_in_type4991); 
+            	    match(input,LBRACK,FOLLOW_LBRACK_in_type4948); 
+            	    match(input,RBRACK,FOLLOW_RBRACK_in_type4950); 
 
             	    }
             	    break;
@@ -942,13 +934,13 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "primitiveType"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:394:1: primitiveType : ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'void' );
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:387:1: primitiveType : ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'void' );
     public final SalsaParser.primitiveType_return primitiveType() throws RecognitionException {
         SalsaParser.primitiveType_return retval = new SalsaParser.primitiveType_return();
         retval.start = input.LT(1);
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:395:5: ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'void' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:388:5: ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'void' )
             // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:
             {
             if ( input.LA(1)==BOOLEAN||input.LA(1)==BYTE||input.LA(1)==CHAR||input.LA(1)==DOUBLE||input.LA(1)==FLOAT||(input.LA(1)>=INT && input.LA(1)<=LONG)||input.LA(1)==SHORT||input.LA(1)==VOID ) {
@@ -983,7 +975,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "typeDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:406:1: typeDeclaration returns [TypeDeclaration td] : ( behaviorDeclaration | classDeclaration | interfaceDeclaration );
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:399:1: typeDeclaration returns [TypeDeclaration td] : ( behaviorDeclaration | classDeclaration | interfaceDeclaration );
     public final TypeDeclaration typeDeclaration() throws RecognitionException {
         typeDeclaration_stack.push(new typeDeclaration_scope());
         TypeDeclaration td = null;
@@ -996,14 +988,14 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:408:5: ( behaviorDeclaration | classDeclaration | interfaceDeclaration )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:402:5: ( behaviorDeclaration | classDeclaration | interfaceDeclaration )
             int alt13=3;
             alt13 = dfa13.predict(input);
             switch (alt13) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:408:9: behaviorDeclaration
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:402:9: behaviorDeclaration
                     {
-                    pushFollow(FOLLOW_behaviorDeclaration_in_typeDeclaration5132);
+                    pushFollow(FOLLOW_behaviorDeclaration_in_typeDeclaration5096);
                     behaviorDeclaration6=behaviorDeclaration();
 
                     state._fsp--;
@@ -1013,9 +1005,9 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:409:9: classDeclaration
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:403:9: classDeclaration
                     {
-                    pushFollow(FOLLOW_classDeclaration_in_typeDeclaration5144);
+                    pushFollow(FOLLOW_classDeclaration_in_typeDeclaration5108);
                     classDeclaration7=classDeclaration();
 
                     state._fsp--;
@@ -1025,9 +1017,9 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:410:9: interfaceDeclaration
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:404:9: interfaceDeclaration
                     {
-                    pushFollow(FOLLOW_interfaceDeclaration_in_typeDeclaration5156);
+                    pushFollow(FOLLOW_interfaceDeclaration_in_typeDeclaration5120);
                     interfaceDeclaration8=interfaceDeclaration();
 
                     state._fsp--;
@@ -1038,6 +1030,7 @@ public class SalsaParser extends Parser {
                     break;
 
             }
+             td.setModuleName(moduleName);
         }
         catch (RecognitionException re) {
             reportError(re);
@@ -1052,7 +1045,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "interfaceDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:413:1: interfaceDeclaration returns [InterfaceDeclaration in] : modifiers 'interface' IDENT ( 'extends' typeList )? '{' ( fieldVariableDeclaration | intefaceMethodDeclaration )* '}' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:407:1: interfaceDeclaration returns [InterfaceDeclaration in] : modifiers 'interface' IDENT ( 'extends' typeList )? '{' ( fieldVariableDeclaration | intefaceMethodDeclaration )* '}' ;
     public final InterfaceDeclaration interfaceDeclaration() throws RecognitionException {
         InterfaceDeclaration in = null;
 
@@ -1063,17 +1056,17 @@ public class SalsaParser extends Parser {
 
          in = new InterfaceDeclaration(); 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:415:5: ( modifiers 'interface' IDENT ( 'extends' typeList )? '{' ( fieldVariableDeclaration | intefaceMethodDeclaration )* '}' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:415:9: modifiers 'interface' IDENT ( 'extends' typeList )? '{' ( fieldVariableDeclaration | intefaceMethodDeclaration )* '}'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:409:5: ( modifiers 'interface' IDENT ( 'extends' typeList )? '{' ( fieldVariableDeclaration | intefaceMethodDeclaration )* '}' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:409:9: modifiers 'interface' IDENT ( 'extends' typeList )? '{' ( fieldVariableDeclaration | intefaceMethodDeclaration )* '}'
             {
-            pushFollow(FOLLOW_modifiers_in_interfaceDeclaration5193);
+            pushFollow(FOLLOW_modifiers_in_interfaceDeclaration5157);
             modifiers();
 
             state._fsp--;
 
-            match(input,INTERFACE,FOLLOW_INTERFACE_in_interfaceDeclaration5195); 
-            match(input,IDENT,FOLLOW_IDENT_in_interfaceDeclaration5197); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:416:9: ( 'extends' typeList )?
+            match(input,INTERFACE,FOLLOW_INTERFACE_in_interfaceDeclaration5159); 
+            match(input,IDENT,FOLLOW_IDENT_in_interfaceDeclaration5161); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:410:9: ( 'extends' typeList )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1082,10 +1075,10 @@ public class SalsaParser extends Parser {
             }
             switch (alt14) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:416:10: 'extends' typeList
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:410:10: 'extends' typeList
                     {
-                    match(input,EXTENDS,FOLLOW_EXTENDS_in_interfaceDeclaration5208); 
-                    pushFollow(FOLLOW_typeList_in_interfaceDeclaration5210);
+                    match(input,EXTENDS,FOLLOW_EXTENDS_in_interfaceDeclaration5172); 
+                    pushFollow(FOLLOW_typeList_in_interfaceDeclaration5174);
                     typeList();
 
                     state._fsp--;
@@ -1096,17 +1089,17 @@ public class SalsaParser extends Parser {
 
             }
 
-            match(input,LCURLY,FOLLOW_LCURLY_in_interfaceDeclaration5222); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:418:13: ( fieldVariableDeclaration | intefaceMethodDeclaration )*
+            match(input,LCURLY,FOLLOW_LCURLY_in_interfaceDeclaration5186); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:412:13: ( fieldVariableDeclaration | intefaceMethodDeclaration )*
             loop15:
             do {
                 int alt15=3;
                 alt15 = dfa15.predict(input);
                 switch (alt15) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:418:17: fieldVariableDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:412:17: fieldVariableDeclaration
             	    {
-            	    pushFollow(FOLLOW_fieldVariableDeclaration_in_interfaceDeclaration5240);
+            	    pushFollow(FOLLOW_fieldVariableDeclaration_in_interfaceDeclaration5204);
             	    fieldVariableDeclaration9=fieldVariableDeclaration();
 
             	    state._fsp--;
@@ -1116,9 +1109,9 @@ public class SalsaParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:419:17: intefaceMethodDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:413:17: intefaceMethodDeclaration
             	    {
-            	    pushFollow(FOLLOW_intefaceMethodDeclaration_in_interfaceDeclaration5260);
+            	    pushFollow(FOLLOW_intefaceMethodDeclaration_in_interfaceDeclaration5224);
             	    intefaceMethodDeclaration10=intefaceMethodDeclaration();
 
             	    state._fsp--;
@@ -1133,7 +1126,7 @@ public class SalsaParser extends Parser {
                 }
             } while (true);
 
-            match(input,RCURLY,FOLLOW_RCURLY_in_interfaceDeclaration5287); 
+            match(input,RCURLY,FOLLOW_RCURLY_in_interfaceDeclaration5251); 
 
             }
 
@@ -1150,7 +1143,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "classDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:424:1: classDeclaration returns [ClassDeclaration cd] : modifiers 'class' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | classMethodDeclaration )* '}' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:418:1: classDeclaration returns [ClassDeclaration cd] : modifiers 'class' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | classMethodDeclaration )* '}' ;
     public final ClassDeclaration classDeclaration() throws RecognitionException {
         ClassDeclaration cd = null;
 
@@ -1164,17 +1157,17 @@ public class SalsaParser extends Parser {
 
          cd = new ClassDeclaration(); 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:426:5: ( modifiers 'class' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | classMethodDeclaration )* '}' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:426:9: modifiers 'class' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | classMethodDeclaration )* '}'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:420:5: ( modifiers 'class' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | classMethodDeclaration )* '}' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:420:9: modifiers 'class' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | classMethodDeclaration )* '}'
             {
-            pushFollow(FOLLOW_modifiers_in_classDeclaration5333);
+            pushFollow(FOLLOW_modifiers_in_classDeclaration5297);
             modifiers();
 
             state._fsp--;
 
-            match(input,CLASS,FOLLOW_CLASS_in_classDeclaration5335); 
-            IDENT11=(Token)match(input,IDENT,FOLLOW_IDENT_in_classDeclaration5337); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:427:9: ( 'extends' type )?
+            match(input,CLASS,FOLLOW_CLASS_in_classDeclaration5299); 
+            IDENT11=(Token)match(input,IDENT,FOLLOW_IDENT_in_classDeclaration5301); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:421:9: ( 'extends' type )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1183,10 +1176,10 @@ public class SalsaParser extends Parser {
             }
             switch (alt16) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:427:10: 'extends' type
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:421:10: 'extends' type
                     {
-                    match(input,EXTENDS,FOLLOW_EXTENDS_in_classDeclaration5348); 
-                    pushFollow(FOLLOW_type_in_classDeclaration5350);
+                    match(input,EXTENDS,FOLLOW_EXTENDS_in_classDeclaration5312); 
+                    pushFollow(FOLLOW_type_in_classDeclaration5314);
                     type();
 
                     state._fsp--;
@@ -1197,7 +1190,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:428:9: ( 'implements' typeList )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:422:9: ( 'implements' typeList )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -1206,10 +1199,10 @@ public class SalsaParser extends Parser {
             }
             switch (alt17) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:428:10: 'implements' typeList
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:422:10: 'implements' typeList
                     {
-                    match(input,IMPLEMENTS,FOLLOW_IMPLEMENTS_in_classDeclaration5363); 
-                    pushFollow(FOLLOW_typeList_in_classDeclaration5365);
+                    match(input,IMPLEMENTS,FOLLOW_IMPLEMENTS_in_classDeclaration5327); 
+                    pushFollow(FOLLOW_typeList_in_classDeclaration5329);
                     typeList();
 
                     state._fsp--;
@@ -1226,17 +1219,17 @@ public class SalsaParser extends Parser {
                         CompilerHelper.addInitKnownType(((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType);
                         cd.setSymbolType(((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType);        
                     
-            match(input,LCURLY,FOLLOW_LCURLY_in_classDeclaration5387); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:436:13: ( fieldVariableDeclaration | constructorDeclaration | classMethodDeclaration )*
+            match(input,LCURLY,FOLLOW_LCURLY_in_classDeclaration5351); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:430:13: ( fieldVariableDeclaration | constructorDeclaration | classMethodDeclaration )*
             loop18:
             do {
                 int alt18=4;
                 alt18 = dfa18.predict(input);
                 switch (alt18) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:436:17: fieldVariableDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:430:17: fieldVariableDeclaration
             	    {
-            	    pushFollow(FOLLOW_fieldVariableDeclaration_in_classDeclaration5405);
+            	    pushFollow(FOLLOW_fieldVariableDeclaration_in_classDeclaration5369);
             	    fieldVariableDeclaration12=fieldVariableDeclaration();
 
             	    state._fsp--;
@@ -1246,9 +1239,9 @@ public class SalsaParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:437:17: constructorDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:431:17: constructorDeclaration
             	    {
-            	    pushFollow(FOLLOW_constructorDeclaration_in_classDeclaration5425);
+            	    pushFollow(FOLLOW_constructorDeclaration_in_classDeclaration5389);
             	    constructorDeclaration13=constructorDeclaration();
 
             	    state._fsp--;
@@ -1258,9 +1251,9 @@ public class SalsaParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:438:17: classMethodDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:432:17: classMethodDeclaration
             	    {
-            	    pushFollow(FOLLOW_classMethodDeclaration_in_classDeclaration5445);
+            	    pushFollow(FOLLOW_classMethodDeclaration_in_classDeclaration5409);
             	    classMethodDeclaration14=classMethodDeclaration();
 
             	    state._fsp--;
@@ -1275,7 +1268,7 @@ public class SalsaParser extends Parser {
                 }
             } while (true);
 
-            match(input,RCURLY,FOLLOW_RCURLY_in_classDeclaration5472); 
+            match(input,RCURLY,FOLLOW_RCURLY_in_classDeclaration5436); 
 
             }
 
@@ -1292,7 +1285,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "behaviorDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:443:1: behaviorDeclaration returns [BehaviorDeclaration bd] : modifiers 'behavior' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | messageHandlerDeclaration )* '}' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:437:1: behaviorDeclaration returns [BehaviorDeclaration bd] : modifiers 'behavior' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | messageHandlerDeclaration )* '}' ;
     public final BehaviorDeclaration behaviorDeclaration() throws RecognitionException {
         BehaviorDeclaration bd = null;
 
@@ -1306,17 +1299,17 @@ public class SalsaParser extends Parser {
 
          bd = new BehaviorDeclaration();
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:445:5: ( modifiers 'behavior' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | messageHandlerDeclaration )* '}' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:445:9: modifiers 'behavior' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | messageHandlerDeclaration )* '}'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:439:5: ( modifiers 'behavior' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | messageHandlerDeclaration )* '}' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:439:9: modifiers 'behavior' IDENT ( 'extends' type )? ( 'implements' typeList )? '{' ( fieldVariableDeclaration | constructorDeclaration | messageHandlerDeclaration )* '}'
             {
-            pushFollow(FOLLOW_modifiers_in_behaviorDeclaration5508);
+            pushFollow(FOLLOW_modifiers_in_behaviorDeclaration5472);
             modifiers();
 
             state._fsp--;
 
-            match(input,185,FOLLOW_185_in_behaviorDeclaration5510); 
-            IDENT15=(Token)match(input,IDENT,FOLLOW_IDENT_in_behaviorDeclaration5512); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:446:9: ( 'extends' type )?
+            match(input,184,FOLLOW_184_in_behaviorDeclaration5474); 
+            IDENT15=(Token)match(input,IDENT,FOLLOW_IDENT_in_behaviorDeclaration5476); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:440:9: ( 'extends' type )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -1325,10 +1318,10 @@ public class SalsaParser extends Parser {
             }
             switch (alt19) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:446:10: 'extends' type
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:440:10: 'extends' type
                     {
-                    match(input,EXTENDS,FOLLOW_EXTENDS_in_behaviorDeclaration5524); 
-                    pushFollow(FOLLOW_type_in_behaviorDeclaration5526);
+                    match(input,EXTENDS,FOLLOW_EXTENDS_in_behaviorDeclaration5488); 
+                    pushFollow(FOLLOW_type_in_behaviorDeclaration5490);
                     type();
 
                     state._fsp--;
@@ -1339,7 +1332,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:447:9: ( 'implements' typeList )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:441:9: ( 'implements' typeList )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -1348,10 +1341,10 @@ public class SalsaParser extends Parser {
             }
             switch (alt20) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:447:10: 'implements' typeList
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:441:10: 'implements' typeList
                     {
-                    match(input,IMPLEMENTS,FOLLOW_IMPLEMENTS_in_behaviorDeclaration5539); 
-                    pushFollow(FOLLOW_typeList_in_behaviorDeclaration5541);
+                    match(input,IMPLEMENTS,FOLLOW_IMPLEMENTS_in_behaviorDeclaration5503); 
+                    pushFollow(FOLLOW_typeList_in_behaviorDeclaration5505);
                     typeList();
 
                     state._fsp--;
@@ -1368,17 +1361,17 @@ public class SalsaParser extends Parser {
                         CompilerHelper.addInitKnownType(((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType);
                         bd.setSymbolType(((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType);
                     
-            match(input,LCURLY,FOLLOW_LCURLY_in_behaviorDeclaration5563); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:455:10: ( fieldVariableDeclaration | constructorDeclaration | messageHandlerDeclaration )*
+            match(input,LCURLY,FOLLOW_LCURLY_in_behaviorDeclaration5527); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:449:10: ( fieldVariableDeclaration | constructorDeclaration | messageHandlerDeclaration )*
             loop21:
             do {
                 int alt21=4;
                 alt21 = dfa21.predict(input);
                 switch (alt21) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:455:14: fieldVariableDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:449:14: fieldVariableDeclaration
             	    {
-            	    pushFollow(FOLLOW_fieldVariableDeclaration_in_behaviorDeclaration5578);
+            	    pushFollow(FOLLOW_fieldVariableDeclaration_in_behaviorDeclaration5542);
             	    fieldVariableDeclaration16=fieldVariableDeclaration();
 
             	    state._fsp--;
@@ -1388,9 +1381,9 @@ public class SalsaParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:456:14: constructorDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:450:14: constructorDeclaration
             	    {
-            	    pushFollow(FOLLOW_constructorDeclaration_in_behaviorDeclaration5595);
+            	    pushFollow(FOLLOW_constructorDeclaration_in_behaviorDeclaration5559);
             	    constructorDeclaration17=constructorDeclaration();
 
             	    state._fsp--;
@@ -1400,9 +1393,9 @@ public class SalsaParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:457:14: messageHandlerDeclaration
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:451:14: messageHandlerDeclaration
             	    {
-            	    pushFollow(FOLLOW_messageHandlerDeclaration_in_behaviorDeclaration5612);
+            	    pushFollow(FOLLOW_messageHandlerDeclaration_in_behaviorDeclaration5576);
             	    messageHandlerDeclaration18=messageHandlerDeclaration();
 
             	    state._fsp--;
@@ -1417,7 +1410,7 @@ public class SalsaParser extends Parser {
                 }
             } while (true);
 
-            match(input,RCURLY,FOLLOW_RCURLY_in_behaviorDeclaration5640); 
+            match(input,RCURLY,FOLLOW_RCURLY_in_behaviorDeclaration5604); 
 
             }
 
@@ -1434,7 +1427,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "intefaceMethodDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:462:1: intefaceMethodDeclaration returns [InterfaceMethodDeclaration m] : modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? ';' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:456:1: intefaceMethodDeclaration returns [InterfaceMethodDeclaration m] : modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? ';' ;
     public final InterfaceMethodDeclaration intefaceMethodDeclaration() throws RecognitionException {
         InterfaceMethodDeclaration m = null;
 
@@ -1443,26 +1436,26 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:463:5: ( modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? ';' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:463:10: modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? ';'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:457:5: ( modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? ';' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:457:10: modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? ';'
             {
-            pushFollow(FOLLOW_modifiers_in_intefaceMethodDeclaration5673);
+            pushFollow(FOLLOW_modifiers_in_intefaceMethodDeclaration5637);
             modifiers();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_type_in_intefaceMethodDeclaration5675);
+            pushFollow(FOLLOW_type_in_intefaceMethodDeclaration5639);
             type();
 
             state._fsp--;
 
-            IDENT20=(Token)match(input,IDENT,FOLLOW_IDENT_in_intefaceMethodDeclaration5677); 
-            pushFollow(FOLLOW_formalParameters_in_intefaceMethodDeclaration5679);
+            IDENT20=(Token)match(input,IDENT,FOLLOW_IDENT_in_intefaceMethodDeclaration5641); 
+            pushFollow(FOLLOW_formalParameters_in_intefaceMethodDeclaration5643);
             formalParameters19=formalParameters();
 
             state._fsp--;
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:463:48: ( 'throws' qualifiedNameList )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:457:48: ( 'throws' qualifiedNameList )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -1471,10 +1464,10 @@ public class SalsaParser extends Parser {
             }
             switch (alt22) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:463:49: 'throws' qualifiedNameList
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:457:49: 'throws' qualifiedNameList
                     {
-                    match(input,THROWS,FOLLOW_THROWS_in_intefaceMethodDeclaration5682); 
-                    pushFollow(FOLLOW_qualifiedNameList_in_intefaceMethodDeclaration5684);
+                    match(input,THROWS,FOLLOW_THROWS_in_intefaceMethodDeclaration5646); 
+                    pushFollow(FOLLOW_qualifiedNameList_in_intefaceMethodDeclaration5648);
                     qualifiedNameList();
 
                     state._fsp--;
@@ -1485,16 +1478,17 @@ public class SalsaParser extends Parser {
 
             }
 
-            match(input,SEMI,FOLLOW_SEMI_in_intefaceMethodDeclaration5689); 
+            match(input,SEMI,FOLLOW_SEMI_in_intefaceMethodDeclaration5653); 
 
-                        List<FormalParameter> list = formalParameters19;
-                        List<String> typeList = new ArrayList<String>();
-                        for (FormalParameter fp : list) {
-                            typeList.add(fp.getType());
-                        }
-                        SymbolMethod sm = new SymbolMethod((IDENT20!=null?IDENT20.getText():null), "", typeList.toArray(new String[0]));
-            //            $md.setSymbolMethod(sm);
-                        ((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType.addMethod(sm);
+                        m = new InterfaceMethodDeclaration();
+            //            List<FormalParameter> list = formalParameters19;
+            //            List<String> typeList = new ArrayList<String>();
+            //            for (FormalParameter fp : list) {
+            //                typeList.add(fp.getType());
+            //            }
+            //            SymbolMethod sm = new SymbolMethod((IDENT20!=null?IDENT20.getText():null), "", typeList.toArray(new String[0]));
+            //            m.setSymbolMethod(sm);
+            //            ((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType.addMethod(sm);
                     
 
             }
@@ -1512,7 +1506,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "classMethodDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:476:1: classMethodDeclaration returns [ClassMethodDeclaration cd] : modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? block ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:471:1: classMethodDeclaration returns [ClassMethodDeclaration cd] : modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? block ;
     public final ClassMethodDeclaration classMethodDeclaration() throws RecognitionException {
         ClassMethodDeclaration cd = null;
 
@@ -1527,26 +1521,26 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:477:5: ( modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? block )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:477:9: modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? block
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:472:5: ( modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? block )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:472:9: modifiers type IDENT formalParameters ( 'throws' qualifiedNameList )? block
             {
-            pushFollow(FOLLOW_modifiers_in_classMethodDeclaration5746);
+            pushFollow(FOLLOW_modifiers_in_classMethodDeclaration5710);
             modifiers21=modifiers();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_type_in_classMethodDeclaration5748);
+            pushFollow(FOLLOW_type_in_classMethodDeclaration5712);
             type22=type();
 
             state._fsp--;
 
-            IDENT23=(Token)match(input,IDENT,FOLLOW_IDENT_in_classMethodDeclaration5750); 
-            pushFollow(FOLLOW_formalParameters_in_classMethodDeclaration5752);
+            IDENT23=(Token)match(input,IDENT,FOLLOW_IDENT_in_classMethodDeclaration5714); 
+            pushFollow(FOLLOW_formalParameters_in_classMethodDeclaration5716);
             formalParameters24=formalParameters();
 
             state._fsp--;
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:477:47: ( 'throws' qualifiedNameList )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:472:47: ( 'throws' qualifiedNameList )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -1555,10 +1549,10 @@ public class SalsaParser extends Parser {
             }
             switch (alt23) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:477:48: 'throws' qualifiedNameList
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:472:48: 'throws' qualifiedNameList
                     {
-                    match(input,THROWS,FOLLOW_THROWS_in_classMethodDeclaration5755); 
-                    pushFollow(FOLLOW_qualifiedNameList_in_classMethodDeclaration5757);
+                    match(input,THROWS,FOLLOW_THROWS_in_classMethodDeclaration5719); 
+                    pushFollow(FOLLOW_qualifiedNameList_in_classMethodDeclaration5721);
                     qualifiedNameList();
 
                     state._fsp--;
@@ -1569,21 +1563,21 @@ public class SalsaParser extends Parser {
 
             }
 
-            pushFollow(FOLLOW_block_in_classMethodDeclaration5769);
+            pushFollow(FOLLOW_block_in_classMethodDeclaration5733);
             block25=block();
 
             state._fsp--;
 
 
                         cd = new ClassMethodDeclaration((modifiers21!=null?input.toString(modifiers21.start,modifiers21.stop):null), (type22!=null?input.toString(type22.start,type22.stop):null), (IDENT23!=null?IDENT23.getText():null), formalParameters24, block25);
-                        List<FormalParameter> list = formalParameters24;
-                        List<String> typeList = new ArrayList<String>();
-                        for (FormalParameter fp : list) {   
-                            typeList.add(fp.getType());
-                        }
-                        SymbolMethod sm = new SymbolMethod((IDENT23!=null?IDENT23.getText():null), (type22!=null?input.toString(type22.start,type22.stop):null), typeList.toArray(new String[0]));
-                        cd.setSymbolMethod(sm);
-                        ((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType.addMethod(sm);
+            //            List<FormalParameter> list = formalParameters24;
+            //            List<String> typeList = new ArrayList<String>();
+            //            for (FormalParameter fp : list) {   
+            //                typeList.add(fp.getType());
+            //            }
+            //            SymbolMethod sm = new SymbolMethod((IDENT23!=null?IDENT23.getText():null), (type22!=null?input.toString(type22.start,type22.stop):null), typeList.toArray(new String[0]));
+            //            cd.setSymbolMethod(sm);
+            //            ((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType.addMethod(sm);
                     
 
             }
@@ -1601,7 +1595,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "constructorDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:492:1: constructorDeclaration returns [ConstructorDeclaration cd] : modifiers IDENT formalParameters block ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:487:1: constructorDeclaration returns [ConstructorDeclaration cd] : modifiers IDENT formalParameters block ;
     public final ConstructorDeclaration constructorDeclaration() throws RecognitionException {
         ConstructorDeclaration cd = null;
 
@@ -1614,36 +1608,36 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:493:5: ( modifiers IDENT formalParameters block )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:493:9: modifiers IDENT formalParameters block
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:488:5: ( modifiers IDENT formalParameters block )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:488:9: modifiers IDENT formalParameters block
             {
-            pushFollow(FOLLOW_modifiers_in_constructorDeclaration5808);
+            pushFollow(FOLLOW_modifiers_in_constructorDeclaration5772);
             modifiers26=modifiers();
 
             state._fsp--;
 
-            IDENT27=(Token)match(input,IDENT,FOLLOW_IDENT_in_constructorDeclaration5810); 
+            IDENT27=(Token)match(input,IDENT,FOLLOW_IDENT_in_constructorDeclaration5774); 
             int ln = getLine(input);
-            pushFollow(FOLLOW_formalParameters_in_constructorDeclaration5814);
+            pushFollow(FOLLOW_formalParameters_in_constructorDeclaration5778);
             formalParameters28=formalParameters();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_block_in_constructorDeclaration5816);
+            pushFollow(FOLLOW_block_in_constructorDeclaration5780);
             block29=block();
 
             state._fsp--;
 
                cd = new ConstructorDeclaration((modifiers26!=null?input.toString(modifiers26.start,modifiers26.stop):null), (IDENT27!=null?IDENT27.getText():null), formalParameters28, block29);
                         cd.setLine(ln);
-                        List<FormalParameter> list = formalParameters28;
-                        List<String> typeList = new ArrayList<String>();
-                        for (FormalParameter fp : list) {
-                            typeList.add(fp.getType());
-                        }
-                        SymbolMethod sm = new SymbolMethod((IDENT27!=null?IDENT27.getText():null), "", typeList.toArray(new String[0]));
+            //            List<FormalParameter> list = formalParameters28;
+            //            List<String> typeList = new ArrayList<String>();
+            //            for (FormalParameter fp : list) {
+            //                typeList.add(fp.getType());
+            //            }
+            //            SymbolMethod sm = new SymbolMethod((IDENT27!=null?IDENT27.getText():null), "", typeList.toArray(new String[0]));
             //            cd.setSymbolMethod(sm);
-                        ((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType.addMethod(sm);            
+            //            ((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType.addMethod(sm);            
                     
 
             }
@@ -1661,14 +1655,14 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "messageHandlerDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:507:1: messageHandlerDeclaration returns [MessageHandlerDeclaration md] : modifiers type IDENT formalParameters block ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:502:1: messageHandlerDeclaration returns [MessageHandlerDeclaration md] : modifiers type IDENT formalParameters block ;
     public final MessageHandlerDeclaration messageHandlerDeclaration() throws RecognitionException {
         MessageHandlerDeclaration md = null;
 
         Token IDENT32=null;
-        SalsaParser.type_return type30 = null;
+        SalsaParser.modifiers_return modifiers30 = null;
 
-        SalsaParser.modifiers_return modifiers31 = null;
+        SalsaParser.type_return type31 = null;
 
         List<FormalParameter> formalParameters33 = null;
 
@@ -1676,41 +1670,41 @@ public class SalsaParser extends Parser {
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:508:5: ( modifiers type IDENT formalParameters block )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:508:9: modifiers type IDENT formalParameters block
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:503:5: ( modifiers type IDENT formalParameters block )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:503:9: modifiers type IDENT formalParameters block
             {
-            pushFollow(FOLLOW_modifiers_in_messageHandlerDeclaration5849);
-            modifiers31=modifiers();
+            pushFollow(FOLLOW_modifiers_in_messageHandlerDeclaration5813);
+            modifiers30=modifiers();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_type_in_messageHandlerDeclaration5851);
-            type30=type();
+            pushFollow(FOLLOW_type_in_messageHandlerDeclaration5815);
+            type31=type();
 
             state._fsp--;
 
-            IDENT32=(Token)match(input,IDENT,FOLLOW_IDENT_in_messageHandlerDeclaration5853); 
-            pushFollow(FOLLOW_formalParameters_in_messageHandlerDeclaration5855);
+            IDENT32=(Token)match(input,IDENT,FOLLOW_IDENT_in_messageHandlerDeclaration5817); 
+            pushFollow(FOLLOW_formalParameters_in_messageHandlerDeclaration5819);
             formalParameters33=formalParameters();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_block_in_messageHandlerDeclaration5866);
+            pushFollow(FOLLOW_block_in_messageHandlerDeclaration5830);
             block34=block();
 
             state._fsp--;
 
 
-                        String returnType = CompilerHelper.TOKEN + " " + (type30!=null?input.toString(type30.start,type30.stop):null);
-                        md = new MessageHandlerDeclaration((modifiers31!=null?input.toString(modifiers31.start,modifiers31.stop):null), (type30!=null?input.toString(type30.start,type30.stop):null), (IDENT32!=null?IDENT32.getText():null), formalParameters33, block34);
-                        List<FormalParameter> list = formalParameters33;
-                        List<String> typeList = new ArrayList<String>();
-                        for (FormalParameter fp : list) {   
-                            typeList.add(fp.getType());
-                        }
-                        SymbolMethod sm = new SymbolMethod((IDENT32!=null?IDENT32.getText():null), returnType, typeList.toArray(new String[0]));
-                        md.setSymbolMethod(sm);
-                        ((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType.addMethod(sm);
+                        md = new MessageHandlerDeclaration((modifiers30!=null?input.toString(modifiers30.start,modifiers30.stop):null), (type31!=null?input.toString(type31.start,type31.stop):null), (IDENT32!=null?IDENT32.getText():null), formalParameters33, block34);
+            //            String returnType = CompilerHelper.TOKEN + " " + (type31!=null?input.toString(type31.start,type31.stop):null);
+            //            List<FormalParameter> list = formalParameters33;
+            //            List<String> typeList = new ArrayList<String>();
+            //            for (FormalParameter fp : list) {   
+            //                typeList.add(fp.getType());
+            //            }
+            //            SymbolMethod sm = new SymbolMethod((IDENT32!=null?IDENT32.getText():null), returnType, typeList.toArray(new String[0]));
+            //            md.setSymbolMethod(sm);
+            //            ((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType.addMethod(sm);
                     
 
             }
@@ -1728,7 +1722,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "block"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:525:1: block returns [Block b] : '{' ( statement )* '}' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:520:1: block returns [Block b] : '{' ( statement )* '}' ;
     public final Block block() throws RecognitionException {
         Block b = null;
 
@@ -1740,34 +1734,36 @@ public class SalsaParser extends Parser {
             boolean isPreviousLineContinuation = false;   
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:530:5: ( '{' ( statement )* '}' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:530:9: '{' ( statement )* '}'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:525:5: ( '{' ( statement )* '}' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:525:9: '{' ( statement )* '}'
             {
-            match(input,LCURLY,FOLLOW_LCURLY_in_block5904); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:530:13: ( statement )*
+            match(input,LCURLY,FOLLOW_LCURLY_in_block5868); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:525:13: ( statement )*
             loop24:
             do {
                 int alt24=2;
                 int LA24_0 = input.LA(1);
 
-                if ( (LA24_0==DEC||LA24_0==INC||LA24_0==LCURLY||LA24_0==LOGICAL_NOT||(LA24_0>=LPAREN && LA24_0<=MINUS)||LA24_0==NOT||LA24_0==PLUS||LA24_0==BOOLEAN||LA24_0==BYTE||LA24_0==CHAR||LA24_0==DOUBLE||LA24_0==FALSE||(LA24_0>=FLOAT && LA24_0<=IF)||(LA24_0>=INT && LA24_0<=LONG)||(LA24_0>=NEW && LA24_0<=NULL)||(LA24_0>=RETURN && LA24_0<=SHORT)||LA24_0==TRUE||LA24_0==VOID||(LA24_0>=IDENT && LA24_0<=FLOATING_POINT_LITERAL)||LA24_0==184||LA24_0==186) ) {
+                if ( (LA24_0==DEC||LA24_0==INC||LA24_0==LCURLY||LA24_0==LOGICAL_NOT||(LA24_0>=LPAREN && LA24_0<=MINUS)||LA24_0==NOT||LA24_0==PLUS||(LA24_0>=BOOLEAN && LA24_0<=BYTE)||LA24_0==CHAR||LA24_0==CONTINUE||(LA24_0>=DO && LA24_0<=DOUBLE)||LA24_0==FALSE||(LA24_0>=FLOAT && LA24_0<=IF)||(LA24_0>=INT && LA24_0<=LONG)||(LA24_0>=NEW && LA24_0<=NULL)||(LA24_0>=RETURN && LA24_0<=SHORT)||LA24_0==SWITCH||LA24_0==THROW||(LA24_0>=TRUE && LA24_0<=VOID)||LA24_0==WHILE||(LA24_0>=IDENT && LA24_0<=FLOATING_POINT_LITERAL)||LA24_0==183||LA24_0==185) ) {
                     alt24=1;
                 }
 
 
                 switch (alt24) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:530:14: statement
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:525:14: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_block5907);
+            	    pushFollow(FOLLOW_statement_in_block5871);
             	    statement35=statement();
 
             	    state._fsp--;
 
 
-            	                b.addStatement((statement35!=null?statement35.stat:null));
-            	                (statement35!=null?statement35.stat:null).setAfterContinuation(isPreviousLineContinuation);
-            	                isPreviousLineContinuation = (statement35!=null?statement35.stat:null).isInContinuation();
+            	                if ((statement35!=null?statement35.stat:null) != null) {
+            	                    b.addStatement((statement35!=null?statement35.stat:null));
+            	                    (statement35!=null?statement35.stat:null).setAfterContinuation(isPreviousLineContinuation);
+            	                    isPreviousLineContinuation = (statement35!=null?statement35.stat:null).isInContinuation();
+            	                }
             	                
 
             	    }
@@ -1778,7 +1774,7 @@ public class SalsaParser extends Parser {
                 }
             } while (true);
 
-            match(input,RCURLY,FOLLOW_RCURLY_in_block5942); 
+            match(input,RCURLY,FOLLOW_RCURLY_in_block5906); 
 
             }
 
@@ -1803,7 +1799,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "statement"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:541:1: statement returns [Statement stat] : ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement ) ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:538:1: statement returns [Statement stat] : ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement | whileStatement | doWhileStatement ';' | breakStatement ';' | continueStatement ';' | tryStatement | throwStatement ';' | switchStatement ) ;
     public final SalsaParser.statement_return statement() throws RecognitionException {
         statement_stack.push(new statement_scope());
         SalsaParser.statement_return retval = new SalsaParser.statement_return();
@@ -1825,26 +1821,40 @@ public class SalsaParser extends Parser {
 
         ForStatement forStatement41 = null;
 
+        WhileStatement whileStatement42 = null;
+
+        DoWhileStatement doWhileStatement43 = null;
+
+        BreakStatement breakStatement44 = null;
+
+        ContinueStatement continueStatement45 = null;
+
+        TryStatement tryStatement46 = null;
+
+        ThrowStatement throwStatement47 = null;
+
+        SwitchStatement switchStatement48 = null;
+
 
         boolean isContinuation = false; ((statement_scope)statement_stack.peek()).isSendMessage = false;
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:548:5: ( ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement ) )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:548:7: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:545:5: ( ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement | whileStatement | doWhileStatement ';' | breakStatement ';' | continueStatement ';' | tryStatement | throwStatement ';' | switchStatement ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:545:7: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement | whileStatement | doWhileStatement ';' | breakStatement ';' | continueStatement ';' | tryStatement | throwStatement ';' | switchStatement )
             {
             int ln = getLine(input);
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:549:5: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement )
-            int alt28=7;
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:546:5: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement | whileStatement | doWhileStatement ';' | breakStatement ';' | continueStatement ';' | tryStatement | throwStatement ';' | switchStatement )
+            int alt28=14;
             alt28 = dfa28.predict(input);
             switch (alt28) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:550:9: localVariableDeclaration ( ';' | '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:547:9: localVariableDeclaration ( ';' | '@' )
                     {
-                    pushFollow(FOLLOW_localVariableDeclaration_in_statement6007);
+                    pushFollow(FOLLOW_localVariableDeclaration_in_statement5971);
                     localVariableDeclaration36=localVariableDeclaration();
 
                     state._fsp--;
 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:550:34: ( ';' | '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:547:34: ( ';' | '@' )
                     int alt25=2;
                     int LA25_0 = input.LA(1);
 
@@ -1862,16 +1872,16 @@ public class SalsaParser extends Parser {
                     }
                     switch (alt25) {
                         case 1 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:550:35: ';'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:547:35: ';'
                             {
-                            match(input,SEMI,FOLLOW_SEMI_in_statement6010); 
+                            match(input,SEMI,FOLLOW_SEMI_in_statement5974); 
 
                             }
                             break;
                         case 2 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:550:41: '@'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:547:41: '@'
                             {
-                            match(input,AT,FOLLOW_AT_in_statement6014); 
+                            match(input,AT,FOLLOW_AT_in_statement5978); 
                             isContinuation=true;
 
                             }
@@ -1884,14 +1894,14 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:551:9: e1= expression ( '=' e2= expression )? ( ';' | '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:548:9: e1= expression ( '=' e2= expression )? ( ';' | '@' )
                     {
-                    pushFollow(FOLLOW_expression_in_statement6032);
+                    pushFollow(FOLLOW_expression_in_statement5996);
                     e1=expression();
 
                     state._fsp--;
 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:551:25: ( '=' e2= expression )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:548:25: ( '=' e2= expression )?
                     int alt26=2;
                     int LA26_0 = input.LA(1);
 
@@ -1900,10 +1910,10 @@ public class SalsaParser extends Parser {
                     }
                     switch (alt26) {
                         case 1 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:551:26: '=' e2= expression
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:548:26: '=' e2= expression
                             {
-                            match(input,ASSIGN,FOLLOW_ASSIGN_in_statement6035); 
-                            pushFollow(FOLLOW_expression_in_statement6041);
+                            match(input,ASSIGN,FOLLOW_ASSIGN_in_statement5999); 
+                            pushFollow(FOLLOW_expression_in_statement6005);
                             e2=expression();
 
                             state._fsp--;
@@ -1920,7 +1930,7 @@ public class SalsaParser extends Parser {
                                     retval.stat = new AssignmentStatement((e1!=null?e1.e:null), (e2!=null?e2.e:null));
                                  }
                             
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:558:9: ( ';' | '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:555:9: ( ';' | '@' )
                     int alt27=2;
                     int LA27_0 = input.LA(1);
 
@@ -1938,16 +1948,16 @@ public class SalsaParser extends Parser {
                     }
                     switch (alt27) {
                         case 1 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:558:10: ';'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:555:10: ';'
                             {
-                            match(input,SEMI,FOLLOW_SEMI_in_statement6065); 
+                            match(input,SEMI,FOLLOW_SEMI_in_statement6029); 
 
                             }
                             break;
                         case 2 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:558:16: '@'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:555:16: '@'
                             {
-                            match(input,AT,FOLLOW_AT_in_statement6069); 
+                            match(input,AT,FOLLOW_AT_in_statement6033); 
                             isContinuation=true;
 
                             }
@@ -1959,17 +1969,17 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:559:9: joinBlockStatement ( '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:556:9: joinBlockStatement ( '@' )
                     {
-                    pushFollow(FOLLOW_joinBlockStatement_in_statement6082);
+                    pushFollow(FOLLOW_joinBlockStatement_in_statement6046);
                     joinBlockStatement37=joinBlockStatement();
 
                     state._fsp--;
 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:559:28: ( '@' )
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:559:29: '@'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:556:28: ( '@' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:556:29: '@'
                     {
-                    match(input,AT,FOLLOW_AT_in_statement6085); 
+                    match(input,AT,FOLLOW_AT_in_statement6049); 
 
                     }
 
@@ -1978,9 +1988,9 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:560:9: blockStatement
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:557:9: blockStatement
                     {
-                    pushFollow(FOLLOW_blockStatement_in_statement6099);
+                    pushFollow(FOLLOW_blockStatement_in_statement6063);
                     blockStatement38=blockStatement();
 
                     state._fsp--;
@@ -1990,9 +2000,9 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:561:9: ifStatement
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:558:9: ifStatement
                     {
-                    pushFollow(FOLLOW_ifStatement_in_statement6112);
+                    pushFollow(FOLLOW_ifStatement_in_statement6076);
                     ifStatement39=ifStatement();
 
                     state._fsp--;
@@ -2002,27 +2012,115 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:562:9: returnStatement ';'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:559:9: returnStatement ';'
                     {
-                    pushFollow(FOLLOW_returnStatement_in_statement6124);
+                    pushFollow(FOLLOW_returnStatement_in_statement6088);
                     returnStatement40=returnStatement();
 
                     state._fsp--;
 
-                    match(input,SEMI,FOLLOW_SEMI_in_statement6126); 
+                    match(input,SEMI,FOLLOW_SEMI_in_statement6090); 
                     retval.stat = returnStatement40; 
 
                     }
                     break;
                 case 7 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:563:9: forStatement
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:560:9: forStatement
                     {
-                    pushFollow(FOLLOW_forStatement_in_statement6138);
+                    pushFollow(FOLLOW_forStatement_in_statement6102);
                     forStatement41=forStatement();
 
                     state._fsp--;
 
                     retval.stat = forStatement41; 
+
+                    }
+                    break;
+                case 8 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:561:9: whileStatement
+                    {
+                    pushFollow(FOLLOW_whileStatement_in_statement6114);
+                    whileStatement42=whileStatement();
+
+                    state._fsp--;
+
+                    retval.stat = whileStatement42; 
+
+                    }
+                    break;
+                case 9 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:562:9: doWhileStatement ';'
+                    {
+                    pushFollow(FOLLOW_doWhileStatement_in_statement6126);
+                    doWhileStatement43=doWhileStatement();
+
+                    state._fsp--;
+
+                    match(input,SEMI,FOLLOW_SEMI_in_statement6128); 
+                    retval.stat = doWhileStatement43; 
+
+                    }
+                    break;
+                case 10 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:563:9: breakStatement ';'
+                    {
+                    pushFollow(FOLLOW_breakStatement_in_statement6140);
+                    breakStatement44=breakStatement();
+
+                    state._fsp--;
+
+                    match(input,SEMI,FOLLOW_SEMI_in_statement6142); 
+                    retval.stat = breakStatement44; 
+
+                    }
+                    break;
+                case 11 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:564:9: continueStatement ';'
+                    {
+                    pushFollow(FOLLOW_continueStatement_in_statement6154);
+                    continueStatement45=continueStatement();
+
+                    state._fsp--;
+
+                    match(input,SEMI,FOLLOW_SEMI_in_statement6156); 
+                    retval.stat = continueStatement45; 
+
+                    }
+                    break;
+                case 12 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:565:9: tryStatement
+                    {
+                    pushFollow(FOLLOW_tryStatement_in_statement6168);
+                    tryStatement46=tryStatement();
+
+                    state._fsp--;
+
+                    retval.stat = tryStatement46; 
+
+                    }
+                    break;
+                case 13 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:566:9: throwStatement ';'
+                    {
+                    pushFollow(FOLLOW_throwStatement_in_statement6180);
+                    throwStatement47=throwStatement();
+
+                    state._fsp--;
+
+                    match(input,SEMI,FOLLOW_SEMI_in_statement6182); 
+                    retval.stat = throwStatement47; 
+
+                    }
+                    break;
+                case 14 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:567:9: switchStatement
+                    {
+                    pushFollow(FOLLOW_switchStatement_in_statement6194);
+                    switchStatement48=switchStatement();
+
+                    state._fsp--;
+
+                    retval.stat = switchStatement48; 
 
                     }
                     break;
@@ -2053,8 +2151,459 @@ public class SalsaParser extends Parser {
     // $ANTLR end "statement"
 
 
+    // $ANTLR start "doWhileStatement"
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:573:1: doWhileStatement returns [DoWhileStatement s] : 'do' st= statement 'while' '(' e= expression ')' ;
+    public final DoWhileStatement doWhileStatement() throws RecognitionException {
+        DoWhileStatement s = null;
+
+        SalsaParser.statement_return st = null;
+
+        SalsaParser.expression_return e = null;
+
+
+        try {
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:574:5: ( 'do' st= statement 'while' '(' e= expression ')' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:574:9: 'do' st= statement 'while' '(' e= expression ')'
+            {
+            match(input,DO,FOLLOW_DO_in_doWhileStatement6241); 
+            pushFollow(FOLLOW_statement_in_doWhileStatement6247);
+            st=statement();
+
+            state._fsp--;
+
+            match(input,WHILE,FOLLOW_WHILE_in_doWhileStatement6249); 
+            match(input,LPAREN,FOLLOW_LPAREN_in_doWhileStatement6251); 
+            pushFollow(FOLLOW_expression_in_doWhileStatement6257);
+            e=expression();
+
+            state._fsp--;
+
+            match(input,RPAREN,FOLLOW_RPAREN_in_doWhileStatement6259); 
+            s = new DoWhileStatement((st!=null?st.stat:null), (e!=null?e.e:null));
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return s;
+    }
+    // $ANTLR end "doWhileStatement"
+
+
+    // $ANTLR start "whileStatement"
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:578:1: whileStatement returns [WhileStatement s] : 'while' '(' e= expression ')' st= statement ;
+    public final WhileStatement whileStatement() throws RecognitionException {
+        WhileStatement s = null;
+
+        SalsaParser.expression_return e = null;
+
+        SalsaParser.statement_return st = null;
+
+
+        try {
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:579:5: ( 'while' '(' e= expression ')' st= statement )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:579:9: 'while' '(' e= expression ')' st= statement
+            {
+            match(input,WHILE,FOLLOW_WHILE_in_whileStatement6301); 
+            match(input,LPAREN,FOLLOW_LPAREN_in_whileStatement6303); 
+            pushFollow(FOLLOW_expression_in_whileStatement6309);
+            e=expression();
+
+            state._fsp--;
+
+            match(input,RPAREN,FOLLOW_RPAREN_in_whileStatement6311); 
+            pushFollow(FOLLOW_statement_in_whileStatement6317);
+            st=statement();
+
+            state._fsp--;
+
+            s = new WhileStatement((e!=null?e.e:null), (st!=null?st.stat:null));
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return s;
+    }
+    // $ANTLR end "whileStatement"
+
+
+    // $ANTLR start "throwStatement"
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:583:1: throwStatement returns [ThrowStatement s] : 'throw' e= expression ;
+    public final ThrowStatement throwStatement() throws RecognitionException {
+        ThrowStatement s = null;
+
+        SalsaParser.expression_return e = null;
+
+
+        try {
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:584:5: ( 'throw' e= expression )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:584:9: 'throw' e= expression
+            {
+            match(input,THROW,FOLLOW_THROW_in_throwStatement6354); 
+            pushFollow(FOLLOW_expression_in_throwStatement6360);
+            e=expression();
+
+            state._fsp--;
+
+            s = new ThrowStatement((e!=null?e.e:null));
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return s;
+    }
+    // $ANTLR end "throwStatement"
+
+
+    // $ANTLR start "breakStatement"
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:588:1: breakStatement returns [BreakStatement s] : 'break' ;
+    public final BreakStatement breakStatement() throws RecognitionException {
+        BreakStatement s = null;
+
+        s = new BreakStatement();
+        try {
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:590:5: ( 'break' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:590:9: 'break'
+            {
+            match(input,BREAK,FOLLOW_BREAK_in_breakStatement6402); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return s;
+    }
+    // $ANTLR end "breakStatement"
+
+
+    // $ANTLR start "continueStatement"
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:594:1: continueStatement returns [ContinueStatement s] : 'continue' ;
+    public final ContinueStatement continueStatement() throws RecognitionException {
+        ContinueStatement s = null;
+
+        s = new ContinueStatement();
+        try {
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:596:5: ( 'continue' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:596:9: 'continue'
+            {
+            match(input,CONTINUE,FOLLOW_CONTINUE_in_continueStatement6438); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return s;
+    }
+    // $ANTLR end "continueStatement"
+
+
+    // $ANTLR start "tryStatement"
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:599:1: tryStatement returns [TryStatement s] : 'try' b1= block ( 'catch' '(' fp= formalParameter ')' b2= block )* ( 'finally' b3= block )? ;
+    public final TryStatement tryStatement() throws RecognitionException {
+        TryStatement s = null;
+
+        Block b1 = null;
+
+        SalsaParser.formalParameter_return fp = null;
+
+        Block b2 = null;
+
+        Block b3 = null;
+
+
+        s = new TryStatement(); 
+        try {
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:601:5: ( 'try' b1= block ( 'catch' '(' fp= formalParameter ')' b2= block )* ( 'finally' b3= block )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:601:9: 'try' b1= block ( 'catch' '(' fp= formalParameter ')' b2= block )* ( 'finally' b3= block )?
+            {
+            match(input,TRY,FOLLOW_TRY_in_tryStatement6470); 
+            pushFollow(FOLLOW_block_in_tryStatement6478);
+            b1=block();
+
+            state._fsp--;
+
+            s.setTryBlock(b1);
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:602:9: ( 'catch' '(' fp= formalParameter ')' b2= block )*
+            loop29:
+            do {
+                int alt29=2;
+                int LA29_0 = input.LA(1);
+
+                if ( (LA29_0==CATCH) ) {
+                    alt29=1;
+                }
+
+
+                switch (alt29) {
+            	case 1 :
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:602:13: 'catch' '(' fp= formalParameter ')' b2= block
+            	    {
+            	    match(input,CATCH,FOLLOW_CATCH_in_tryStatement6494); 
+            	    match(input,LPAREN,FOLLOW_LPAREN_in_tryStatement6496); 
+            	    pushFollow(FOLLOW_formalParameter_in_tryStatement6502);
+            	    fp=formalParameter();
+
+            	    state._fsp--;
+
+            	    match(input,RPAREN,FOLLOW_RPAREN_in_tryStatement6504); 
+            	    pushFollow(FOLLOW_block_in_tryStatement6510);
+            	    b2=block();
+
+            	    state._fsp--;
+
+            	    s.addCatchBlock(b2); s.addCatchFP((fp!=null?fp.fp:null));
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop29;
+                }
+            } while (true);
+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:605:9: ( 'finally' b3= block )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
+
+            if ( (LA30_0==FINALLY) ) {
+                alt30=1;
+            }
+            switch (alt30) {
+                case 1 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:605:13: 'finally' b3= block
+                    {
+                    match(input,FINALLY,FOLLOW_FINALLY_in_tryStatement6549); 
+                    pushFollow(FOLLOW_block_in_tryStatement6555);
+                    b3=block();
+
+                    state._fsp--;
+
+                    s.setFinallyBlock(b3);
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return s;
+    }
+    // $ANTLR end "tryStatement"
+
+
+    // $ANTLR start "switchStatement"
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:610:1: switchStatement returns [SwitchStatement s] : 'switch' '(' expression ')' '{' ( switchBlockStatementGroup )* '}' ;
+    public final SwitchStatement switchStatement() throws RecognitionException {
+        SwitchStatement s = null;
+
+        try {
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:611:5: ( 'switch' '(' expression ')' '{' ( switchBlockStatementGroup )* '}' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:611:9: 'switch' '(' expression ')' '{' ( switchBlockStatementGroup )* '}'
+            {
+            match(input,SWITCH,FOLLOW_SWITCH_in_switchStatement6616); 
+            match(input,LPAREN,FOLLOW_LPAREN_in_switchStatement6618); 
+            pushFollow(FOLLOW_expression_in_switchStatement6620);
+            expression();
+
+            state._fsp--;
+
+            match(input,RPAREN,FOLLOW_RPAREN_in_switchStatement6622); 
+            match(input,LCURLY,FOLLOW_LCURLY_in_switchStatement6632); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:613:13: ( switchBlockStatementGroup )*
+            loop31:
+            do {
+                int alt31=2;
+                int LA31_0 = input.LA(1);
+
+                if ( (LA31_0==CASE||LA31_0==DEFAULT) ) {
+                    alt31=1;
+                }
+
+
+                switch (alt31) {
+            	case 1 :
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:613:14: switchBlockStatementGroup
+            	    {
+            	    pushFollow(FOLLOW_switchBlockStatementGroup_in_switchStatement6647);
+            	    switchBlockStatementGroup();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop31;
+                }
+            } while (true);
+
+            match(input,RCURLY,FOLLOW_RCURLY_in_switchStatement6659); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return s;
+    }
+    // $ANTLR end "switchStatement"
+
+
+    // $ANTLR start "switchBlockStatementGroup"
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:617:1: switchBlockStatementGroup : switchLabel ( blockStatement )* ;
+    public final void switchBlockStatementGroup() throws RecognitionException {
+        try {
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:618:5: ( switchLabel ( blockStatement )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:619:9: switchLabel ( blockStatement )*
+            {
+            pushFollow(FOLLOW_switchLabel_in_switchBlockStatementGroup6697);
+            switchLabel();
+
+            state._fsp--;
+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:620:9: ( blockStatement )*
+            loop32:
+            do {
+                int alt32=2;
+                int LA32_0 = input.LA(1);
+
+                if ( (LA32_0==LCURLY) ) {
+                    alt32=1;
+                }
+
+
+                switch (alt32) {
+            	case 1 :
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:620:10: blockStatement
+            	    {
+            	    pushFollow(FOLLOW_blockStatement_in_switchBlockStatementGroup6708);
+            	    blockStatement();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop32;
+                }
+            } while (true);
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "switchBlockStatementGroup"
+
+
+    // $ANTLR start "switchLabel"
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:624:1: switchLabel : ( 'case' expression ':' | 'default' ':' );
+    public final void switchLabel() throws RecognitionException {
+        try {
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:625:5: ( 'case' expression ':' | 'default' ':' )
+            int alt33=2;
+            int LA33_0 = input.LA(1);
+
+            if ( (LA33_0==CASE) ) {
+                alt33=1;
+            }
+            else if ( (LA33_0==DEFAULT) ) {
+                alt33=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 33, 0, input);
+
+                throw nvae;
+            }
+            switch (alt33) {
+                case 1 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:625:9: 'case' expression ':'
+                    {
+                    match(input,CASE,FOLLOW_CASE_in_switchLabel6739); 
+                    pushFollow(FOLLOW_expression_in_switchLabel6741);
+                    expression();
+
+                    state._fsp--;
+
+                    match(input,COLON,FOLLOW_COLON_in_switchLabel6743); 
+
+                    }
+                    break;
+                case 2 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:626:9: 'default' ':'
+                    {
+                    match(input,DEFAULT,FOLLOW_DEFAULT_in_switchLabel6753); 
+                    match(input,COLON,FOLLOW_COLON_in_switchLabel6755); 
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "switchLabel"
+
+
     // $ANTLR start "forStatement"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:569:1: forStatement returns [ForStatement s] : 'for' '(' localVariableDeclaration ';' e1= expression ';' e2= expression ')' block ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:630:1: forStatement returns [ForStatement s] : 'for' '(' ( localVariableDeclaration )? ';' (e1= expression )? ';' (e2= expression )? ')' st= statement ;
     public final ForStatement forStatement() throws RecognitionException {
         ForStatement s = null;
 
@@ -2062,42 +2611,93 @@ public class SalsaParser extends Parser {
 
         SalsaParser.expression_return e2 = null;
 
-        SalsaParser.localVariableDeclaration_return localVariableDeclaration42 = null;
+        SalsaParser.statement_return st = null;
 
-        Block block43 = null;
+        SalsaParser.localVariableDeclaration_return localVariableDeclaration49 = null;
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:570:5: ( 'for' '(' localVariableDeclaration ';' e1= expression ';' e2= expression ')' block )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:570:9: 'for' '(' localVariableDeclaration ';' e1= expression ';' e2= expression ')' block
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:631:5: ( 'for' '(' ( localVariableDeclaration )? ';' (e1= expression )? ';' (e2= expression )? ')' st= statement )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:631:9: 'for' '(' ( localVariableDeclaration )? ';' (e1= expression )? ';' (e2= expression )? ')' st= statement
             {
-            match(input,FOR,FOLLOW_FOR_in_forStatement6186); 
-            match(input,LPAREN,FOLLOW_LPAREN_in_forStatement6197); 
-            pushFollow(FOLLOW_localVariableDeclaration_in_forStatement6212);
-            localVariableDeclaration42=localVariableDeclaration();
+            match(input,FOR,FOLLOW_FOR_in_forStatement6780); 
+            match(input,LPAREN,FOLLOW_LPAREN_in_forStatement6791); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:633:13: ( localVariableDeclaration )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
+
+            if ( (LA34_0==BOOLEAN||LA34_0==BYTE||LA34_0==CHAR||LA34_0==DOUBLE||LA34_0==FLOAT||(LA34_0>=INT && LA34_0<=LONG)||LA34_0==SHORT||LA34_0==VOID||LA34_0==IDENT||LA34_0==183) ) {
+                alt34=1;
+            }
+            switch (alt34) {
+                case 1 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:633:14: localVariableDeclaration
+                    {
+                    pushFollow(FOLLOW_localVariableDeclaration_in_forStatement6807);
+                    localVariableDeclaration49=localVariableDeclaration();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+            match(input,SEMI,FOLLOW_SEMI_in_forStatement6824); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:635:13: (e1= expression )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
+
+            if ( (LA35_0==DEC||LA35_0==INC||LA35_0==LOGICAL_NOT||(LA35_0>=LPAREN && LA35_0<=MINUS)||LA35_0==NOT||LA35_0==PLUS||LA35_0==FALSE||(LA35_0>=NEW && LA35_0<=NULL)||LA35_0==TRUE||(LA35_0>=IDENT && LA35_0<=FLOATING_POINT_LITERAL)) ) {
+                alt35=1;
+            }
+            switch (alt35) {
+                case 1 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:635:14: e1= expression
+                    {
+                    pushFollow(FOLLOW_expression_in_forStatement6844);
+                    e1=expression();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+            match(input,SEMI,FOLLOW_SEMI_in_forStatement6848); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:636:13: (e2= expression )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
+
+            if ( (LA36_0==DEC||LA36_0==INC||LA36_0==LOGICAL_NOT||(LA36_0>=LPAREN && LA36_0<=MINUS)||LA36_0==NOT||LA36_0==PLUS||LA36_0==FALSE||(LA36_0>=NEW && LA36_0<=NULL)||LA36_0==TRUE||(LA36_0>=IDENT && LA36_0<=FLOATING_POINT_LITERAL)) ) {
+                alt36=1;
+            }
+            switch (alt36) {
+                case 1 :
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:636:14: e2= expression
+                    {
+                    pushFollow(FOLLOW_expression_in_forStatement6868);
+                    e2=expression();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+            match(input,RPAREN,FOLLOW_RPAREN_in_forStatement6881); 
+            pushFollow(FOLLOW_statement_in_forStatement6895);
+            st=statement();
 
             state._fsp--;
 
-            match(input,SEMI,FOLLOW_SEMI_in_forStatement6227); 
-            pushFollow(FOLLOW_expression_in_forStatement6246);
-            e1=expression();
 
-            state._fsp--;
-
-            match(input,SEMI,FOLLOW_SEMI_in_forStatement6248); 
-            pushFollow(FOLLOW_expression_in_forStatement6267);
-            e2=expression();
-
-            state._fsp--;
-
-            match(input,RPAREN,FOLLOW_RPAREN_in_forStatement6278); 
-            pushFollow(FOLLOW_block_in_forStatement6288);
-            block43=block();
-
-            state._fsp--;
-
-
-                        s = new ForStatement((localVariableDeclaration42!=null?localVariableDeclaration42.ld:null), (e1!=null?e1.e:null), (e2!=null?e2.e:null), block43);
+                        s = new ForStatement((localVariableDeclaration49!=null?localVariableDeclaration49.ld:null), (e1!=null?e1.e:null), (e2!=null?e2.e:null), (st!=null?st.stat:null));
                     
 
             }
@@ -2115,31 +2715,31 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "returnStatement"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:583:1: returnStatement returns [ReturnStatement s] : 'return' ( expression )? ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:644:1: returnStatement returns [ReturnStatement s] : 'return' ( expression )? ;
     public final ReturnStatement returnStatement() throws RecognitionException {
         ReturnStatement s = null;
 
-        SalsaParser.expression_return expression44 = null;
+        SalsaParser.expression_return expression50 = null;
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:584:5: ( 'return' ( expression )? )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:584:9: 'return' ( expression )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:645:5: ( 'return' ( expression )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:645:9: 'return' ( expression )?
             {
-            match(input,RETURN,FOLLOW_RETURN_in_returnStatement6330); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:584:18: ( expression )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            match(input,RETURN,FOLLOW_RETURN_in_returnStatement6937); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:645:18: ( expression )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA29_0==DEC||LA29_0==INC||LA29_0==LOGICAL_NOT||(LA29_0>=LPAREN && LA29_0<=MINUS)||LA29_0==NOT||LA29_0==PLUS||LA29_0==FALSE||(LA29_0>=NEW && LA29_0<=NULL)||LA29_0==TRUE||(LA29_0>=IDENT && LA29_0<=FLOATING_POINT_LITERAL)) ) {
-                alt29=1;
+            if ( (LA37_0==DEC||LA37_0==INC||LA37_0==LOGICAL_NOT||(LA37_0>=LPAREN && LA37_0<=MINUS)||LA37_0==NOT||LA37_0==PLUS||LA37_0==FALSE||(LA37_0>=NEW && LA37_0<=NULL)||LA37_0==TRUE||(LA37_0>=IDENT && LA37_0<=FLOATING_POINT_LITERAL)) ) {
+                alt37=1;
             }
-            switch (alt29) {
+            switch (alt37) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:584:19: expression
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:645:19: expression
                     {
-                    pushFollow(FOLLOW_expression_in_returnStatement6333);
-                    expression44=expression();
+                    pushFollow(FOLLOW_expression_in_returnStatement6940);
+                    expression50=expression();
 
                     state._fsp--;
 
@@ -2149,7 +2749,7 @@ public class SalsaParser extends Parser {
 
             }
 
-             s = new ReturnStatement((expression44!=null?expression44.e:null)); 
+             s = new ReturnStatement((expression50!=null?expression50.e:null)); 
 
             }
 
@@ -2166,54 +2766,54 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "ifStatement"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:588:1: ifStatement returns [IfStatement s] : 'if' '(' expression ')' block ( 'else' statement )? ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:649:1: ifStatement returns [IfStatement s] : 'if' '(' expression ')' s1= statement ( 'else' s2= statement )? ;
     public final IfStatement ifStatement() throws RecognitionException {
         IfStatement s = null;
 
-        SalsaParser.expression_return expression45 = null;
+        SalsaParser.statement_return s1 = null;
 
-        Block block46 = null;
+        SalsaParser.statement_return s2 = null;
 
-        SalsaParser.statement_return statement47 = null;
+        SalsaParser.expression_return expression51 = null;
 
 
         s = new IfStatement();
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:590:5: ( 'if' '(' expression ')' block ( 'else' statement )? )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:590:9: 'if' '(' expression ')' block ( 'else' statement )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:651:5: ( 'if' '(' expression ')' s1= statement ( 'else' s2= statement )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:651:9: 'if' '(' expression ')' s1= statement ( 'else' s2= statement )?
             {
-            match(input,IF,FOLLOW_IF_in_ifStatement6373); 
-            match(input,LPAREN,FOLLOW_LPAREN_in_ifStatement6375); 
-            pushFollow(FOLLOW_expression_in_ifStatement6377);
-            expression45=expression();
+            match(input,IF,FOLLOW_IF_in_ifStatement6980); 
+            match(input,LPAREN,FOLLOW_LPAREN_in_ifStatement6982); 
+            pushFollow(FOLLOW_expression_in_ifStatement6984);
+            expression51=expression();
 
             state._fsp--;
 
-            match(input,RPAREN,FOLLOW_RPAREN_in_ifStatement6379); 
-            pushFollow(FOLLOW_block_in_ifStatement6381);
-            block46=block();
+            match(input,RPAREN,FOLLOW_RPAREN_in_ifStatement6986); 
+            pushFollow(FOLLOW_statement_in_ifStatement6992);
+            s1=statement();
 
             state._fsp--;
 
-            s.setExpression((expression45!=null?expression45.e:null)); s.setBlock(block46);
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:591:9: ( 'else' statement )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            s.setExpression((expression51!=null?expression51.e:null)); s.setIfStatement((s1!=null?s1.stat:null));
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:652:9: ( 'else' s2= statement )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA30_0==ELSE) ) {
-                alt30=1;
+            if ( (LA38_0==ELSE) ) {
+                alt38=1;
             }
-            switch (alt30) {
+            switch (alt38) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:591:10: 'else' statement
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:652:10: 'else' s2= statement
                     {
-                    match(input,ELSE,FOLLOW_ELSE_in_ifStatement6394); 
-                    pushFollow(FOLLOW_statement_in_ifStatement6396);
-                    statement47=statement();
+                    match(input,ELSE,FOLLOW_ELSE_in_ifStatement7005); 
+                    pushFollow(FOLLOW_statement_in_ifStatement7011);
+                    s2=statement();
 
                     state._fsp--;
 
-                    s.setElseStatement((statement47!=null?statement47.stat:null));
+                    s.setElseStatement((s2!=null?s2.stat:null));
 
                     }
                     break;
@@ -2236,24 +2836,24 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "joinBlockStatement"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:594:1: joinBlockStatement returns [JoinBlockStatement s] : 'join' block ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:655:1: joinBlockStatement returns [JoinBlockStatement s] : 'join' block ;
     public final JoinBlockStatement joinBlockStatement() throws RecognitionException {
         JoinBlockStatement s = null;
 
-        Block block48 = null;
+        Block block52 = null;
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:595:5: ( 'join' block )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:595:9: 'join' block
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:656:5: ( 'join' block )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:656:9: 'join' block
             {
-            match(input,186,FOLLOW_186_in_joinBlockStatement6427); 
-            pushFollow(FOLLOW_block_in_joinBlockStatement6429);
-            block48=block();
+            match(input,185,FOLLOW_185_in_joinBlockStatement7042); 
+            pushFollow(FOLLOW_block_in_joinBlockStatement7044);
+            block52=block();
 
             state._fsp--;
 
-            s = new JoinBlockStatement(block48);
+            s = new JoinBlockStatement(block52);
 
             }
 
@@ -2270,23 +2870,23 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "blockStatement"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:598:1: blockStatement returns [BlockStatement s] : block ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:659:1: blockStatement returns [BlockStatement s] : block ;
     public final BlockStatement blockStatement() throws RecognitionException {
         BlockStatement s = null;
 
-        Block block49 = null;
+        Block block53 = null;
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:599:5: ( block )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:599:9: block
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:660:5: ( block )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:660:9: block
             {
-            pushFollow(FOLLOW_block_in_blockStatement6467);
-            block49=block();
+            pushFollow(FOLLOW_block_in_blockStatement7082);
+            block53=block();
 
             state._fsp--;
 
-            s = new BlockStatement(block49);
+            s = new BlockStatement(block53);
 
             }
 
@@ -2303,23 +2903,23 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "expressionStatement"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:602:1: expressionStatement returns [ExpressionStatement s] : expression ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:663:1: expressionStatement returns [ExpressionStatement s] : expression ;
     public final ExpressionStatement expressionStatement() throws RecognitionException {
         ExpressionStatement s = null;
 
-        SalsaParser.expression_return expression50 = null;
+        SalsaParser.expression_return expression54 = null;
 
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:603:5: ( expression )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:603:9: expression
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:664:5: ( expression )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:664:9: expression
             {
-            pushFollow(FOLLOW_expression_in_expressionStatement6492);
-            expression50=expression();
+            pushFollow(FOLLOW_expression_in_expressionStatement7107);
+            expression54=expression();
 
             state._fsp--;
 
-            s = new ExpressionStatement((expression50!=null?expression50.e:null));
+            s = new ExpressionStatement((expression54!=null?expression54.e:null));
 
             }
 
@@ -2336,7 +2936,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "formalParameters"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:607:1: formalParameters returns [List<FormalParameter> list] : '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:668:1: formalParameters returns [List<FormalParameter> list] : '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')' ;
     public final List<FormalParameter> formalParameters() throws RecognitionException {
         List<FormalParameter> list = null;
 
@@ -2347,44 +2947,44 @@ public class SalsaParser extends Parser {
 
          list = new ArrayList<FormalParameter>(); 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:609:5: ( '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:609:9: '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:670:5: ( '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:670:9: '(' (f1= formalParameter ( ',' f2= formalParameter )* )? ')'
             {
-            match(input,LPAREN,FOLLOW_LPAREN_in_formalParameters6534); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:610:9: (f1= formalParameter ( ',' f2= formalParameter )* )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            match(input,LPAREN,FOLLOW_LPAREN_in_formalParameters7149); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:671:9: (f1= formalParameter ( ',' f2= formalParameter )* )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA32_0==BOOLEAN||LA32_0==BYTE||LA32_0==CHAR||LA32_0==DOUBLE||LA32_0==FLOAT||(LA32_0>=INT && LA32_0<=LONG)||LA32_0==SHORT||LA32_0==VOID||LA32_0==IDENT||LA32_0==184) ) {
-                alt32=1;
+            if ( (LA40_0==BOOLEAN||LA40_0==BYTE||LA40_0==CHAR||LA40_0==DOUBLE||LA40_0==FLOAT||(LA40_0>=INT && LA40_0<=LONG)||LA40_0==SHORT||LA40_0==VOID||LA40_0==IDENT||LA40_0==183) ) {
+                alt40=1;
             }
-            switch (alt32) {
+            switch (alt40) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:611:13: f1= formalParameter ( ',' f2= formalParameter )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:672:13: f1= formalParameter ( ',' f2= formalParameter )*
                     {
-                    pushFollow(FOLLOW_formalParameter_in_formalParameters6562);
+                    pushFollow(FOLLOW_formalParameter_in_formalParameters7177);
                     f1=formalParameter();
 
                     state._fsp--;
 
                      list.add((f1!=null?f1.fp:null)); 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:612:13: ( ',' f2= formalParameter )*
-                    loop31:
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:673:13: ( ',' f2= formalParameter )*
+                    loop39:
                     do {
-                        int alt31=2;
-                        int LA31_0 = input.LA(1);
+                        int alt39=2;
+                        int LA39_0 = input.LA(1);
 
-                        if ( (LA31_0==COMMA) ) {
-                            alt31=1;
+                        if ( (LA39_0==COMMA) ) {
+                            alt39=1;
                         }
 
 
-                        switch (alt31) {
+                        switch (alt39) {
                     	case 1 :
-                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:612:14: ',' f2= formalParameter
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:673:14: ',' f2= formalParameter
                     	    {
-                    	    match(input,COMMA,FOLLOW_COMMA_in_formalParameters6579); 
-                    	    pushFollow(FOLLOW_formalParameter_in_formalParameters6585);
+                    	    match(input,COMMA,FOLLOW_COMMA_in_formalParameters7194); 
+                    	    pushFollow(FOLLOW_formalParameter_in_formalParameters7200);
                     	    f2=formalParameter();
 
                     	    state._fsp--;
@@ -2395,7 +2995,7 @@ public class SalsaParser extends Parser {
                     	    break;
 
                     	default :
-                    	    break loop31;
+                    	    break loop39;
                         }
                     } while (true);
 
@@ -2405,7 +3005,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            match(input,RPAREN,FOLLOW_RPAREN_in_formalParameters6611); 
+            match(input,RPAREN,FOLLOW_RPAREN_in_formalParameters7226); 
 
             }
 
@@ -2425,27 +3025,27 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "formalParameter"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:618:1: formalParameter returns [FormalParameter fp] : type IDENT ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:679:1: formalParameter returns [FormalParameter fp] : type IDENT ;
     public final SalsaParser.formalParameter_return formalParameter() throws RecognitionException {
         SalsaParser.formalParameter_return retval = new SalsaParser.formalParameter_return();
         retval.start = input.LT(1);
 
-        Token IDENT52=null;
-        SalsaParser.type_return type51 = null;
+        Token IDENT56=null;
+        SalsaParser.type_return type55 = null;
 
 
         SymbolType st;
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:621:5: ( type IDENT )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:621:9: type IDENT
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:682:5: ( type IDENT )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:682:9: type IDENT
             {
-            pushFollow(FOLLOW_type_in_formalParameter6645);
-            type51=type();
+            pushFollow(FOLLOW_type_in_formalParameter7260);
+            type55=type();
 
             state._fsp--;
 
-            IDENT52=(Token)match(input,IDENT,FOLLOW_IDENT_in_formalParameter6655); 
-             retval.fp = new FormalParameter((type51!=null?input.toString(type51.start,type51.stop):null), (IDENT52!=null?IDENT52.getText():null));
+            IDENT56=(Token)match(input,IDENT,FOLLOW_IDENT_in_formalParameter7270); 
+             retval.fp = new FormalParameter((type55!=null?input.toString(type55.start,type55.stop):null), (IDENT56!=null?IDENT56.getText():null));
 
             }
 
@@ -2469,7 +3069,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "localVariableDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:626:1: localVariableDeclaration returns [LocalVariableDeclaration ld, String canonicalType] : type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:687:1: localVariableDeclaration returns [LocalVariableDeclaration ld, String canonicalType] : type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )* ;
     public final SalsaParser.localVariableDeclaration_return localVariableDeclaration() throws RecognitionException {
         SalsaParser.localVariableDeclaration_return retval = new SalsaParser.localVariableDeclaration_return();
         retval.start = input.LT(1);
@@ -2478,57 +3078,57 @@ public class SalsaParser extends Parser {
 
         SalsaParser.variableDeclaration_return v2 = null;
 
-        SalsaParser.type_return type53 = null;
+        SalsaParser.type_return type57 = null;
 
 
          retval.ld = new LocalVariableDeclaration(); String rawType; SymbolType st;
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:628:5: ( type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:628:9: type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:689:5: ( type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:689:9: type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )*
             {
-            pushFollow(FOLLOW_type_in_localVariableDeclaration6693);
-            type53=type();
+            pushFollow(FOLLOW_type_in_localVariableDeclaration7308);
+            type57=type();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_variableDeclaration_in_localVariableDeclaration6708);
-            v1=variableDeclaration((type53!=null?input.toString(type53.start,type53.stop):null));
+            pushFollow(FOLLOW_variableDeclaration_in_localVariableDeclaration7323);
+            v1=variableDeclaration((type57!=null?input.toString(type57.start,type57.stop):null));
 
             state._fsp--;
 
              
-                        (v1!=null?v1.vd:null).setType((type53!=null?input.toString(type53.start,type53.stop):null));       
+                        (v1!=null?v1.vd:null).setType((type57!=null?input.toString(type57.start,type57.stop):null));       
                         retval.ld.addVariableDeclaration((v1!=null?v1.vd:null));
                     
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:634:9: ( ',' v2= variableDeclaration[$type.text] )*
-            loop33:
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:695:9: ( ',' v2= variableDeclaration[$type.text] )*
+            loop41:
             do {
-                int alt33=2;
-                int LA33_0 = input.LA(1);
+                int alt41=2;
+                int LA41_0 = input.LA(1);
 
-                if ( (LA33_0==COMMA) ) {
-                    alt33=1;
+                if ( (LA41_0==COMMA) ) {
+                    alt41=1;
                 }
 
 
-                switch (alt33) {
+                switch (alt41) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:634:10: ',' v2= variableDeclaration[$type.text]
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:695:10: ',' v2= variableDeclaration[$type.text]
             	    {
-            	    match(input,COMMA,FOLLOW_COMMA_in_localVariableDeclaration6730); 
-            	    pushFollow(FOLLOW_variableDeclaration_in_localVariableDeclaration6736);
-            	    v2=variableDeclaration((type53!=null?input.toString(type53.start,type53.stop):null));
+            	    match(input,COMMA,FOLLOW_COMMA_in_localVariableDeclaration7345); 
+            	    pushFollow(FOLLOW_variableDeclaration_in_localVariableDeclaration7351);
+            	    v2=variableDeclaration((type57!=null?input.toString(type57.start,type57.stop):null));
 
             	    state._fsp--;
 
-            	     (v2!=null?v2.vd:null).setType((type53!=null?input.toString(type53.start,type53.stop):null));
+            	     (v2!=null?v2.vd:null).setType((type57!=null?input.toString(type57.start,type57.stop):null));
             	                  retval.ld.addVariableDeclaration((v2!=null?v2.vd:null));
 
             	    }
             	    break;
 
             	default :
-            	    break loop33;
+            	    break loop41;
                 }
             } while (true);
 
@@ -2554,7 +3154,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "fieldVariableDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:640:1: fieldVariableDeclaration returns [FieldVariableDeclaration sd, String canonicalType] : modifiers type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )* ';' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:701:1: fieldVariableDeclaration returns [FieldVariableDeclaration sd, String canonicalType] : modifiers type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )* ';' ;
     public final SalsaParser.fieldVariableDeclaration_return fieldVariableDeclaration() throws RecognitionException {
         SalsaParser.fieldVariableDeclaration_return retval = new SalsaParser.fieldVariableDeclaration_return();
         retval.start = input.LT(1);
@@ -2563,64 +3163,64 @@ public class SalsaParser extends Parser {
 
         SalsaParser.variableDeclaration_return v2 = null;
 
-        SalsaParser.type_return type54 = null;
+        SalsaParser.type_return type58 = null;
 
-        SalsaParser.modifiers_return modifiers55 = null;
+        SalsaParser.modifiers_return modifiers59 = null;
 
 
          retval.sd = new FieldVariableDeclaration(); String rawType; SymbolType st;
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:642:5: ( modifiers type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )* ';' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:642:9: modifiers type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )* ';'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:703:5: ( modifiers type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )* ';' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:703:9: modifiers type v1= variableDeclaration[$type.text] ( ',' v2= variableDeclaration[$type.text] )* ';'
             {
-            pushFollow(FOLLOW_modifiers_in_fieldVariableDeclaration6799);
-            modifiers55=modifiers();
+            pushFollow(FOLLOW_modifiers_in_fieldVariableDeclaration7414);
+            modifiers59=modifiers();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_type_in_fieldVariableDeclaration6801);
-            type54=type();
+            pushFollow(FOLLOW_type_in_fieldVariableDeclaration7416);
+            type58=type();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_variableDeclaration_in_fieldVariableDeclaration6815);
-            v1=variableDeclaration((type54!=null?input.toString(type54.start,type54.stop):null));
+            pushFollow(FOLLOW_variableDeclaration_in_fieldVariableDeclaration7430);
+            v1=variableDeclaration((type58!=null?input.toString(type58.start,type58.stop):null));
 
             state._fsp--;
 
 
-                        (v1!=null?v1.vd:null).setType((type54!=null?input.toString(type54.start,type54.stop):null)); 
-                        (v1!=null?v1.vd:null).setModifiers((modifiers55!=null?input.toString(modifiers55.start,modifiers55.stop):null));         
+                        (v1!=null?v1.vd:null).setType((type58!=null?input.toString(type58.start,type58.stop):null)); 
+                        (v1!=null?v1.vd:null).setModifiers((modifiers59!=null?input.toString(modifiers59.start,modifiers59.stop):null));         
                         retval.sd.addVariableDeclaration((v1!=null?v1.vd:null));
-                        SymbolField sf = new SymbolField((v1!=null?v1.vd:null).getName(), (type54!=null?input.toString(type54.start,type54.stop):null));
+                        SymbolField sf = new SymbolField((v1!=null?v1.vd:null).getName(), (type58!=null?input.toString(type58.start,type58.stop):null));
                         ((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType.addField(sf);
                     
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:651:9: ( ',' v2= variableDeclaration[$type.text] )*
-            loop34:
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:712:9: ( ',' v2= variableDeclaration[$type.text] )*
+            loop42:
             do {
-                int alt34=2;
-                int LA34_0 = input.LA(1);
+                int alt42=2;
+                int LA42_0 = input.LA(1);
 
-                if ( (LA34_0==COMMA) ) {
-                    alt34=1;
+                if ( (LA42_0==COMMA) ) {
+                    alt42=1;
                 }
 
 
-                switch (alt34) {
+                switch (alt42) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:651:10: ',' v2= variableDeclaration[$type.text]
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:712:10: ',' v2= variableDeclaration[$type.text]
             	    {
-            	    match(input,COMMA,FOLLOW_COMMA_in_fieldVariableDeclaration6838); 
-            	    pushFollow(FOLLOW_variableDeclaration_in_fieldVariableDeclaration6844);
-            	    v2=variableDeclaration((type54!=null?input.toString(type54.start,type54.stop):null));
+            	    match(input,COMMA,FOLLOW_COMMA_in_fieldVariableDeclaration7453); 
+            	    pushFollow(FOLLOW_variableDeclaration_in_fieldVariableDeclaration7459);
+            	    v2=variableDeclaration((type58!=null?input.toString(type58.start,type58.stop):null));
 
             	    state._fsp--;
 
 
-            	                (v2!=null?v2.vd:null).setType((type54!=null?input.toString(type54.start,type54.stop):null)); 
-            	                (v2!=null?v2.vd:null).setModifiers((modifiers55!=null?input.toString(modifiers55.start,modifiers55.stop):null));         
+            	                (v2!=null?v2.vd:null).setType((type58!=null?input.toString(type58.start,type58.stop):null)); 
+            	                (v2!=null?v2.vd:null).setModifiers((modifiers59!=null?input.toString(modifiers59.start,modifiers59.stop):null));         
             	    	        retval.sd.addVariableDeclaration((v2!=null?v2.vd:null));
-            	                sf = new SymbolField((v2!=null?v2.vd:null).getName(), (type54!=null?input.toString(type54.start,type54.stop):null));
+            	                sf = new SymbolField((v2!=null?v2.vd:null).getName(), (type58!=null?input.toString(type58.start,type58.stop):null));
             	                ((typeDeclaration_scope)typeDeclaration_stack.peek()).currentType.addField(sf);
             	            
 
@@ -2628,11 +3228,11 @@ public class SalsaParser extends Parser {
             	    break;
 
             	default :
-            	    break loop34;
+            	    break loop42;
                 }
             } while (true);
 
-            match(input,SEMI,FOLLOW_SEMI_in_fieldVariableDeclaration6877); 
+            match(input,SEMI,FOLLOW_SEMI_in_fieldVariableDeclaration7492); 
 
             }
 
@@ -2655,41 +3255,41 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "variableDeclaration"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:664:1: variableDeclaration[String type] returns [VariableDeclaration vd, String value] : IDENT ( '=' expression )? ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:725:1: variableDeclaration[String type] returns [VariableDeclaration vd, String value] : IDENT ( '=' expression )? ;
     public final SalsaParser.variableDeclaration_return variableDeclaration(String type) throws RecognitionException {
         SalsaParser.variableDeclaration_return retval = new SalsaParser.variableDeclaration_return();
         retval.start = input.LT(1);
 
-        Token IDENT56=null;
-        SalsaParser.expression_return expression57 = null;
+        Token IDENT60=null;
+        SalsaParser.expression_return expression61 = null;
 
 
          retval.vd = new VariableDeclaration(); retval.vd.setType(type); 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:666:5: ( IDENT ( '=' expression )? )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:666:9: IDENT ( '=' expression )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:727:5: ( IDENT ( '=' expression )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:727:9: IDENT ( '=' expression )?
             {
-            IDENT56=(Token)match(input,IDENT,FOLLOW_IDENT_in_variableDeclaration6916); 
-            retval.vd.setName((IDENT56!=null?IDENT56.getText():null)); retval.value =(IDENT56!=null?IDENT56.getText():null); retval.vd.setLine(getLine(input));
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:667:9: ( '=' expression )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            IDENT60=(Token)match(input,IDENT,FOLLOW_IDENT_in_variableDeclaration7531); 
+            retval.vd.setName((IDENT60!=null?IDENT60.getText():null)); retval.value =(IDENT60!=null?IDENT60.getText():null); retval.vd.setLine(getLine(input));
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:728:9: ( '=' expression )?
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( (LA35_0==ASSIGN) ) {
-                alt35=1;
+            if ( (LA43_0==ASSIGN) ) {
+                alt43=1;
             }
-            switch (alt35) {
+            switch (alt43) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:667:10: '=' expression
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:728:10: '=' expression
                     {
-                    match(input,ASSIGN,FOLLOW_ASSIGN_in_variableDeclaration6934); 
-                    pushFollow(FOLLOW_expression_in_variableDeclaration6936);
-                    expression57=expression();
+                    match(input,ASSIGN,FOLLOW_ASSIGN_in_variableDeclaration7549); 
+                    pushFollow(FOLLOW_expression_in_variableDeclaration7551);
+                    expression61=expression();
 
                     state._fsp--;
 
                        
-                    	        retval.vd.setInitExpresssion((expression57!=null?expression57.e:null));
+                    	        retval.vd.setInitExpresssion((expression61!=null?expression61.e:null));
 
                     }
                     break;
@@ -2718,7 +3318,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "term"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:674:1: term returns [Term t] : ( '(' type ')' )? ( literal | '(' e1= expression ')' | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= qualifiedName (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )? ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:735:1: term returns [Term t] : ( '(' type ')' )? ( literal | '(' e1= expression ')' | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= qualifiedName (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )? ;
     public final SalsaParser.term_return term() throws RecognitionException {
         SalsaParser.term_return retval = new SalsaParser.term_return();
         retval.start = input.LT(1);
@@ -2735,42 +3335,42 @@ public class SalsaParser extends Parser {
 
         List<Expression> p2 = null;
 
-        SalsaParser.type_return type58 = null;
+        SalsaParser.type_return type62 = null;
 
-        Literal literal59 = null;
+        Literal literal63 = null;
 
-        SalsaParser.allocation_return allocation60 = null;
+        SalsaParser.allocation_return allocation64 = null;
 
 
          retval.t = new Term(); int arrayDims = 0; String type = null;
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:677:5: ( ( '(' type ')' )? ( literal | '(' e1= expression ')' | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= qualifiedName (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )? )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:677:9: ( '(' type ')' )? ( literal | '(' e1= expression ')' | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= qualifiedName (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:738:5: ( ( '(' type ')' )? ( literal | '(' e1= expression ')' | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= qualifiedName (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:738:9: ( '(' type ')' )? ( literal | '(' e1= expression ')' | v1= IDENT ( '[' index= expression ']' )* | allocation ) ( '.' v2= qualifiedName (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )?
             {
             retval.t.setLine(getLine(input));
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:678:9: ( '(' type ')' )?
-            int alt36=2;
-            alt36 = dfa36.predict(input);
-            switch (alt36) {
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:739:9: ( '(' type ')' )?
+            int alt44=2;
+            alt44 = dfa44.predict(input);
+            switch (alt44) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:678:10: '(' type ')'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:739:10: '(' type ')'
                     {
-                    match(input,LPAREN,FOLLOW_LPAREN_in_term7002); 
-                    pushFollow(FOLLOW_type_in_term7004);
-                    type58=type();
+                    match(input,LPAREN,FOLLOW_LPAREN_in_term7617); 
+                    pushFollow(FOLLOW_type_in_term7619);
+                    type62=type();
 
                     state._fsp--;
 
-                    match(input,RPAREN,FOLLOW_RPAREN_in_term7006); 
-                    retval.t.setCastType((type58!=null?input.toString(type58.start,type58.stop):null));
+                    match(input,RPAREN,FOLLOW_RPAREN_in_term7621); 
+                    retval.t.setCastType((type62!=null?input.toString(type62.start,type62.stop):null));
 
                     }
                     break;
 
             }
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:679:9: ( literal | '(' e1= expression ')' | v1= IDENT ( '[' index= expression ']' )* | allocation )
-            int alt38=4;
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:740:9: ( literal | '(' e1= expression ')' | v1= IDENT ( '[' index= expression ']' )* | allocation )
+            int alt46=4;
             switch ( input.LA(1) ) {
             case FALSE:
             case NULL:
@@ -2782,91 +3382,91 @@ public class SalsaParser extends Parser {
             case STRING_LITERAL:
             case FLOATING_POINT_LITERAL:
                 {
-                alt38=1;
+                alt46=1;
                 }
                 break;
             case LPAREN:
                 {
-                alt38=2;
+                alt46=2;
                 }
                 break;
             case IDENT:
                 {
-                alt38=3;
+                alt46=3;
                 }
                 break;
             case NEW:
                 {
-                alt38=4;
+                alt46=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 38, 0, input);
+                    new NoViableAltException("", 46, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt38) {
+            switch (alt46) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:680:13: literal
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:741:13: literal
                     {
-                    pushFollow(FOLLOW_literal_in_term7039);
-                    literal59=literal();
+                    pushFollow(FOLLOW_literal_in_term7654);
+                    literal63=literal();
 
                     state._fsp--;
 
-                    retval.t.setLiteral(literal59);
+                    retval.t.setLiteral(literal63);
 
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:681:10: '(' e1= expression ')'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:742:10: '(' e1= expression ')'
                     {
-                    match(input,LPAREN,FOLLOW_LPAREN_in_term7052); 
-                    pushFollow(FOLLOW_expression_in_term7058);
+                    match(input,LPAREN,FOLLOW_LPAREN_in_term7667); 
+                    pushFollow(FOLLOW_expression_in_term7673);
                     e1=expression();
 
                     state._fsp--;
 
-                    match(input,RPAREN,FOLLOW_RPAREN_in_term7060); 
+                    match(input,RPAREN,FOLLOW_RPAREN_in_term7675); 
                     retval.t.setExpression((e1!=null?e1.e:null));
 
                     }
                     break;
                 case 3 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:682:10: v1= IDENT ( '[' index= expression ']' )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:743:10: v1= IDENT ( '[' index= expression ']' )*
                     {
-                    v1=(Token)match(input,IDENT,FOLLOW_IDENT_in_term7076); 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:682:21: ( '[' index= expression ']' )*
-                    loop37:
+                    v1=(Token)match(input,IDENT,FOLLOW_IDENT_in_term7691); 
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:743:21: ( '[' index= expression ']' )*
+                    loop45:
                     do {
-                        int alt37=2;
-                        int LA37_0 = input.LA(1);
+                        int alt45=2;
+                        int LA45_0 = input.LA(1);
 
-                        if ( (LA37_0==LBRACK) ) {
-                            alt37=1;
+                        if ( (LA45_0==LBRACK) ) {
+                            alt45=1;
                         }
 
 
-                        switch (alt37) {
+                        switch (alt45) {
                     	case 1 :
-                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:682:22: '[' index= expression ']'
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:743:22: '[' index= expression ']'
                     	    {
-                    	    match(input,LBRACK,FOLLOW_LBRACK_in_term7079); 
-                    	    pushFollow(FOLLOW_expression_in_term7085);
+                    	    match(input,LBRACK,FOLLOW_LBRACK_in_term7694); 
+                    	    pushFollow(FOLLOW_expression_in_term7700);
                     	    index=expression();
 
                     	    state._fsp--;
 
-                    	    match(input,RBRACK,FOLLOW_RBRACK_in_term7087); 
+                    	    match(input,RBRACK,FOLLOW_RBRACK_in_term7702); 
                     	    retval.t.addIndexExpression((index!=null?index.e:null)); arrayDims++;
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop37;
+                    	    break loop45;
                         }
                     } while (true);
 
@@ -2875,53 +3475,53 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:684:10: allocation
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:745:10: allocation
                     {
-                    pushFollow(FOLLOW_allocation_in_term7113);
-                    allocation60=allocation();
+                    pushFollow(FOLLOW_allocation_in_term7728);
+                    allocation64=allocation();
 
                     state._fsp--;
 
-                    retval.t.setAllocation((allocation60!=null?allocation60.a:null));
+                    retval.t.setAllocation((allocation64!=null?allocation64.a:null));
 
                     }
                     break;
 
             }
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:686:9: ( '.' v2= qualifiedName (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )?
-            int alt40=3;
-            int LA40_0 = input.LA(1);
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:758:9: ( '.' v2= qualifiedName (p1= actualParameters )? | ( '<-' | '!' ) v3= IDENT p2= actualParameters )?
+            int alt48=3;
+            int LA48_0 = input.LA(1);
 
-            if ( (LA40_0==DOT) ) {
-                alt40=1;
+            if ( (LA48_0==DOT) ) {
+                alt48=1;
             }
-            else if ( (LA40_0==LOGICAL_NOT||LA40_0==187) ) {
-                alt40=2;
+            else if ( (LA48_0==LOGICAL_NOT||LA48_0==186) ) {
+                alt48=2;
             }
-            switch (alt40) {
+            switch (alt48) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:687:13: '.' v2= qualifiedName (p1= actualParameters )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:759:13: '.' v2= qualifiedName (p1= actualParameters )?
                     {
-                    match(input,DOT,FOLLOW_DOT_in_term7146); 
-                    pushFollow(FOLLOW_qualifiedName_in_term7152);
+                    match(input,DOT,FOLLOW_DOT_in_term7785); 
+                    pushFollow(FOLLOW_qualifiedName_in_term7791);
                     v2=qualifiedName();
 
                     state._fsp--;
 
                     retval.t.setSelector((v2!=null?input.toString(v2.start,v2.stop):null));
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:688:17: (p1= actualParameters )?
-                    int alt39=2;
-                    int LA39_0 = input.LA(1);
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:760:17: (p1= actualParameters )?
+                    int alt47=2;
+                    int LA47_0 = input.LA(1);
 
-                    if ( (LA39_0==LPAREN) ) {
-                        alt39=1;
+                    if ( (LA47_0==LPAREN) ) {
+                        alt47=1;
                     }
-                    switch (alt39) {
+                    switch (alt47) {
                         case 1 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:688:18: p1= actualParameters
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:760:18: p1= actualParameters
                             {
-                            pushFollow(FOLLOW_actualParameters_in_term7178);
+                            pushFollow(FOLLOW_actualParameters_in_term7817);
                             p1=actualParameters();
 
                             state._fsp--;
@@ -2937,9 +3537,9 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:691:13: ( '<-' | '!' ) v3= IDENT p2= actualParameters
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:763:13: ( '<-' | '!' ) v3= IDENT p2= actualParameters
                     {
-                    if ( input.LA(1)==LOGICAL_NOT||input.LA(1)==187 ) {
+                    if ( input.LA(1)==LOGICAL_NOT||input.LA(1)==186 ) {
                         input.consume();
                         state.errorRecovery=false;
                     }
@@ -2948,9 +3548,9 @@ public class SalsaParser extends Parser {
                         throw mse;
                     }
 
-                    v3=(Token)match(input,IDENT,FOLLOW_IDENT_in_term7238); 
+                    v3=(Token)match(input,IDENT,FOLLOW_IDENT_in_term7877); 
                     retval.t.setMessageName((v3!=null?v3.getText():null));
-                    pushFollow(FOLLOW_actualParameters_in_term7263);
+                    pushFollow(FOLLOW_actualParameters_in_term7902);
                     p2=actualParameters();
 
                     state._fsp--;
@@ -2986,7 +3586,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "allocation"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:699:1: allocation returns [Allocation a] : ( 'new' type actualParameters ( 'at' '(' uan= expression ( ',' host= expression )? ')' )? | ( 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+ ) );
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:771:1: allocation returns [Allocation a] : ( 'new' type actualParameters ( 'at' '(' uan= expression ( ',' host= expression )? ')' )? | ( 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+ ) );
     public final SalsaParser.allocation_return allocation() throws RecognitionException {
         SalsaParser.allocation_return retval = new SalsaParser.allocation_return();
         retval.start = input.LT(1);
@@ -2995,69 +3595,69 @@ public class SalsaParser extends Parser {
 
         SalsaParser.expression_return host = null;
 
-        SalsaParser.type_return type61 = null;
+        SalsaParser.type_return type65 = null;
 
-        List<Expression> actualParameters62 = null;
+        List<Expression> actualParameters66 = null;
 
-        SalsaParser.primitiveType_return primitiveType63 = null;
+        SalsaParser.primitiveType_return primitiveType67 = null;
 
-        SalsaParser.qualifiedName_return qualifiedName64 = null;
+        SalsaParser.qualifiedName_return qualifiedName68 = null;
 
-        SalsaParser.expression_return expression65 = null;
+        SalsaParser.expression_return expression69 = null;
 
 
          retval.a = new Allocation(); String temp = null;
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:702:5: ( 'new' type actualParameters ( 'at' '(' uan= expression ( ',' host= expression )? ')' )? | ( 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+ ) )
-            int alt45=2;
-            alt45 = dfa45.predict(input);
-            switch (alt45) {
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:774:5: ( 'new' type actualParameters ( 'at' '(' uan= expression ( ',' host= expression )? ')' )? | ( 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+ ) )
+            int alt53=2;
+            alt53 = dfa53.predict(input);
+            switch (alt53) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:704:3: 'new' type actualParameters ( 'at' '(' uan= expression ( ',' host= expression )? ')' )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:776:3: 'new' type actualParameters ( 'at' '(' uan= expression ( ',' host= expression )? ')' )?
                     {
-                    match(input,NEW,FOLLOW_NEW_in_allocation7344); 
-                    pushFollow(FOLLOW_type_in_allocation7346);
-                    type61=type();
+                    match(input,NEW,FOLLOW_NEW_in_allocation7976); 
+                    pushFollow(FOLLOW_type_in_allocation7978);
+                    type65=type();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_actualParameters_in_allocation7349);
-                    actualParameters62=actualParameters();
+                    pushFollow(FOLLOW_actualParameters_in_allocation7981);
+                    actualParameters66=actualParameters();
 
                     state._fsp--;
 
-                    retval.a.setType((type61!=null?input.toString(type61.start,type61.stop):null)); retval.a.setActualArguments(actualParameters62);
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:706:3: ( 'at' '(' uan= expression ( ',' host= expression )? ')' )?
-                    int alt42=2;
-                    int LA42_0 = input.LA(1);
+                    retval.a.setType((type65!=null?input.toString(type65.start,type65.stop):null)); retval.a.setActualArguments(actualParameters66);
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:778:3: ( 'at' '(' uan= expression ( ',' host= expression )? ')' )?
+                    int alt50=2;
+                    int LA50_0 = input.LA(1);
 
-                    if ( (LA42_0==188) ) {
-                        alt42=1;
+                    if ( (LA50_0==187) ) {
+                        alt50=1;
                     }
-                    switch (alt42) {
+                    switch (alt50) {
                         case 1 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:706:4: 'at' '(' uan= expression ( ',' host= expression )? ')'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:778:4: 'at' '(' uan= expression ( ',' host= expression )? ')'
                             {
-                            match(input,188,FOLLOW_188_in_allocation7361); 
-                            match(input,LPAREN,FOLLOW_LPAREN_in_allocation7372); 
-                            pushFollow(FOLLOW_expression_in_allocation7376);
+                            match(input,187,FOLLOW_187_in_allocation7993); 
+                            match(input,LPAREN,FOLLOW_LPAREN_in_allocation8004); 
+                            pushFollow(FOLLOW_expression_in_allocation8008);
                             uan=expression();
 
                             state._fsp--;
 
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:707:28: ( ',' host= expression )?
-                            int alt41=2;
-                            int LA41_0 = input.LA(1);
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:779:28: ( ',' host= expression )?
+                            int alt49=2;
+                            int LA49_0 = input.LA(1);
 
-                            if ( (LA41_0==COMMA) ) {
-                                alt41=1;
+                            if ( (LA49_0==COMMA) ) {
+                                alt49=1;
                             }
-                            switch (alt41) {
+                            switch (alt49) {
                                 case 1 :
-                                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:707:29: ',' host= expression
+                                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:779:29: ',' host= expression
                                     {
-                                    match(input,COMMA,FOLLOW_COMMA_in_allocation7379); 
-                                    pushFollow(FOLLOW_expression_in_allocation7383);
+                                    match(input,COMMA,FOLLOW_COMMA_in_allocation8011); 
+                                    pushFollow(FOLLOW_expression_in_allocation8015);
                                     host=expression();
 
                                     state._fsp--;
@@ -3069,7 +3669,7 @@ public class SalsaParser extends Parser {
 
                             }
 
-                            match(input,RPAREN,FOLLOW_RPAREN_in_allocation7411); 
+                            match(input,RPAREN,FOLLOW_RPAREN_in_allocation8043); 
                             retval.a.setUANExpression((uan!=null?uan.e:null));
 
                             }
@@ -3081,50 +3681,50 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:714:3: ( 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+ )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:786:3: ( 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+ )
                     {
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:714:3: ( 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+ )
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:714:4: 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:786:3: ( 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+ )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:786:4: 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+
                     {
-                    match(input,NEW,FOLLOW_NEW_in_allocation7438); 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:714:10: ( primitiveType | qualifiedName )
-                    int alt43=2;
-                    int LA43_0 = input.LA(1);
+                    match(input,NEW,FOLLOW_NEW_in_allocation8070); 
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:786:10: ( primitiveType | qualifiedName )
+                    int alt51=2;
+                    int LA51_0 = input.LA(1);
 
-                    if ( (LA43_0==BOOLEAN||LA43_0==BYTE||LA43_0==CHAR||LA43_0==DOUBLE||LA43_0==FLOAT||(LA43_0>=INT && LA43_0<=LONG)||LA43_0==SHORT||LA43_0==VOID) ) {
-                        alt43=1;
+                    if ( (LA51_0==BOOLEAN||LA51_0==BYTE||LA51_0==CHAR||LA51_0==DOUBLE||LA51_0==FLOAT||(LA51_0>=INT && LA51_0<=LONG)||LA51_0==SHORT||LA51_0==VOID) ) {
+                        alt51=1;
                     }
-                    else if ( (LA43_0==IDENT) ) {
-                        alt43=2;
+                    else if ( (LA51_0==IDENT) ) {
+                        alt51=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 43, 0, input);
+                            new NoViableAltException("", 51, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt43) {
+                    switch (alt51) {
                         case 1 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:714:11: primitiveType
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:786:11: primitiveType
                             {
-                            pushFollow(FOLLOW_primitiveType_in_allocation7441);
-                            primitiveType63=primitiveType();
+                            pushFollow(FOLLOW_primitiveType_in_allocation8073);
+                            primitiveType67=primitiveType();
 
                             state._fsp--;
 
-                            temp = (primitiveType63!=null?input.toString(primitiveType63.start,primitiveType63.stop):null);
+                            temp = (primitiveType67!=null?input.toString(primitiveType67.start,primitiveType67.stop):null);
 
                             }
                             break;
                         case 2 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:714:59: qualifiedName
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:786:59: qualifiedName
                             {
-                            pushFollow(FOLLOW_qualifiedName_in_allocation7449);
-                            qualifiedName64=qualifiedName();
+                            pushFollow(FOLLOW_qualifiedName_in_allocation8081);
+                            qualifiedName68=qualifiedName();
 
                             state._fsp--;
 
-                            temp = (qualifiedName64!=null?input.toString(qualifiedName64.start,qualifiedName64.stop):null);
+                            temp = (qualifiedName68!=null?input.toString(qualifiedName68.start,qualifiedName68.stop):null);
 
                             }
                             break;
@@ -3132,41 +3732,41 @@ public class SalsaParser extends Parser {
                     }
 
                     retval.a.setType(temp);
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:716:5: ( '[' expression ']' )+
-                    int cnt44=0;
-                    loop44:
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:788:5: ( '[' expression ']' )+
+                    int cnt52=0;
+                    loop52:
                     do {
-                        int alt44=2;
-                        int LA44_0 = input.LA(1);
+                        int alt52=2;
+                        int LA52_0 = input.LA(1);
 
-                        if ( (LA44_0==LBRACK) ) {
-                            alt44=1;
+                        if ( (LA52_0==LBRACK) ) {
+                            alt52=1;
                         }
 
 
-                        switch (alt44) {
+                        switch (alt52) {
                     	case 1 :
-                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:716:6: '[' expression ']'
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:788:6: '[' expression ']'
                     	    {
-                    	    match(input,LBRACK,FOLLOW_LBRACK_in_allocation7473); 
-                    	    pushFollow(FOLLOW_expression_in_allocation7475);
-                    	    expression65=expression();
+                    	    match(input,LBRACK,FOLLOW_LBRACK_in_allocation8105); 
+                    	    pushFollow(FOLLOW_expression_in_allocation8107);
+                    	    expression69=expression();
 
                     	    state._fsp--;
 
-                    	    match(input,RBRACK,FOLLOW_RBRACK_in_allocation7477); 
-                    	    retval.a.addExpression((expression65!=null?expression65.e:null));
+                    	    match(input,RBRACK,FOLLOW_RBRACK_in_allocation8109); 
+                    	    retval.a.addExpression((expression69!=null?expression69.e:null));
 
                     	    }
                     	    break;
 
                     	default :
-                    	    if ( cnt44 >= 1 ) break loop44;
+                    	    if ( cnt52 >= 1 ) break loop52;
                                 EarlyExitException eee =
-                                    new EarlyExitException(44, input);
+                                    new EarlyExitException(52, input);
                                 throw eee;
                         }
-                        cnt44++;
+                        cnt52++;
                     } while (true);
 
 
@@ -3193,7 +3793,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "actualParameters"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:720:1: actualParameters returns [List<Expression> list] : '(' (e1= expression ( ',' e2= expression )* )? ')' ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:792:1: actualParameters returns [List<Expression> list] : '(' (e1= expression ( ',' e2= expression )* )? ')' ;
     public final List<Expression> actualParameters() throws RecognitionException {
         List<Expression> list = null;
 
@@ -3204,44 +3804,44 @@ public class SalsaParser extends Parser {
 
          list = new ArrayList<Expression>();
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:722:5: ( '(' (e1= expression ( ',' e2= expression )* )? ')' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:722:9: '(' (e1= expression ( ',' e2= expression )* )? ')'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:794:5: ( '(' (e1= expression ( ',' e2= expression )* )? ')' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:794:9: '(' (e1= expression ( ',' e2= expression )* )? ')'
             {
-            match(input,LPAREN,FOLLOW_LPAREN_in_actualParameters7512); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:723:13: (e1= expression ( ',' e2= expression )* )?
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            match(input,LPAREN,FOLLOW_LPAREN_in_actualParameters8144); 
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:795:13: (e1= expression ( ',' e2= expression )* )?
+            int alt55=2;
+            int LA55_0 = input.LA(1);
 
-            if ( (LA47_0==DEC||LA47_0==INC||LA47_0==LOGICAL_NOT||(LA47_0>=LPAREN && LA47_0<=MINUS)||LA47_0==NOT||LA47_0==PLUS||LA47_0==FALSE||(LA47_0>=NEW && LA47_0<=NULL)||LA47_0==TRUE||(LA47_0>=IDENT && LA47_0<=FLOATING_POINT_LITERAL)) ) {
-                alt47=1;
+            if ( (LA55_0==DEC||LA55_0==INC||LA55_0==LOGICAL_NOT||(LA55_0>=LPAREN && LA55_0<=MINUS)||LA55_0==NOT||LA55_0==PLUS||LA55_0==FALSE||(LA55_0>=NEW && LA55_0<=NULL)||LA55_0==TRUE||(LA55_0>=IDENT && LA55_0<=FLOATING_POINT_LITERAL)) ) {
+                alt55=1;
             }
-            switch (alt47) {
+            switch (alt55) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:723:14: e1= expression ( ',' e2= expression )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:795:14: e1= expression ( ',' e2= expression )*
                     {
-                    pushFollow(FOLLOW_expression_in_actualParameters7531);
+                    pushFollow(FOLLOW_expression_in_actualParameters8163);
                     e1=expression();
 
                     state._fsp--;
 
                     list.add((e1!=null?e1.e:null));
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:724:13: ( ',' e2= expression )*
-                    loop46:
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:796:13: ( ',' e2= expression )*
+                    loop54:
                     do {
-                        int alt46=2;
-                        int LA46_0 = input.LA(1);
+                        int alt54=2;
+                        int LA54_0 = input.LA(1);
 
-                        if ( (LA46_0==COMMA) ) {
-                            alt46=1;
+                        if ( (LA54_0==COMMA) ) {
+                            alt54=1;
                         }
 
 
-                        switch (alt46) {
+                        switch (alt54) {
                     	case 1 :
-                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:724:14: ',' e2= expression
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:796:14: ',' e2= expression
                     	    {
-                    	    match(input,COMMA,FOLLOW_COMMA_in_actualParameters7548); 
-                    	    pushFollow(FOLLOW_expression_in_actualParameters7554);
+                    	    match(input,COMMA,FOLLOW_COMMA_in_actualParameters8180); 
+                    	    pushFollow(FOLLOW_expression_in_actualParameters8186);
                     	    e2=expression();
 
                     	    state._fsp--;
@@ -3252,7 +3852,7 @@ public class SalsaParser extends Parser {
                     	    break;
 
                     	default :
-                    	    break loop46;
+                    	    break loop54;
                         }
                     } while (true);
 
@@ -3262,7 +3862,7 @@ public class SalsaParser extends Parser {
 
             }
 
-            match(input,RPAREN,FOLLOW_RPAREN_in_actualParameters7570); 
+            match(input,RPAREN,FOLLOW_RPAREN_in_actualParameters8202); 
 
             }
 
@@ -3279,50 +3879,50 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "negation"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:729:1: negation returns [NegationExpression e] : ( '~' )* term ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:801:1: negation returns [NegationExpression e] : ( '~' )* term ;
     public final NegationExpression negation() throws RecognitionException {
         NegationExpression e = null;
 
-        SalsaParser.term_return term66 = null;
+        SalsaParser.term_return term70 = null;
 
 
          e = new NegationExpression();
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:731:5: ( ( '~' )* term )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:731:9: ( '~' )* term
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:803:5: ( ( '~' )* term )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:803:9: ( '~' )* term
             {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:731:9: ( '~' )*
-            loop48:
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:803:9: ( '~' )*
+            loop56:
             do {
-                int alt48=2;
-                int LA48_0 = input.LA(1);
+                int alt56=2;
+                int LA56_0 = input.LA(1);
 
-                if ( (LA48_0==NOT) ) {
-                    alt48=1;
+                if ( (LA56_0==NOT) ) {
+                    alt56=1;
                 }
 
 
-                switch (alt48) {
+                switch (alt56) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:731:10: '~'
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:803:10: '~'
             	    {
-            	    match(input,NOT,FOLLOW_NOT_in_negation7603); 
+            	    match(input,NOT,FOLLOW_NOT_in_negation8235); 
             	    e.addOperator("~");
 
             	    }
             	    break;
 
             	default :
-            	    break loop48;
+            	    break loop56;
                 }
             } while (true);
 
-            pushFollow(FOLLOW_term_in_negation7609);
-            term66=term();
+            pushFollow(FOLLOW_term_in_negation8241);
+            term70=term();
 
             state._fsp--;
 
-            e.setTerm((term66!=null?term66.t:null));
+            e.setTerm((term70!=null?term70.t:null));
 
             }
 
@@ -3339,103 +3939,103 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "unary"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:734:1: unary returns [UnaryExpression e] : ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:806:1: unary returns [UnaryExpression e] : ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?;
     public final UnaryExpression unary() throws RecognitionException {
         UnaryExpression e = null;
 
         Token op=null;
         Token op2=null;
-        NegationExpression negation67 = null;
+        NegationExpression negation71 = null;
 
 
          e = new UnaryExpression();
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:736:5: ( ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?)
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:736:9: ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:5: ( ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?)
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:9: ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )* negation ( (op2= '++' | op2= '--' ) )? {...}?
             {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:736:9: ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )*
-            loop50:
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:9: ( (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' ) )*
+            loop58:
             do {
-                int alt50=2;
-                int LA50_0 = input.LA(1);
+                int alt58=2;
+                int LA58_0 = input.LA(1);
 
-                if ( (LA50_0==DEC||LA50_0==INC||LA50_0==LOGICAL_NOT||LA50_0==MINUS||LA50_0==PLUS) ) {
-                    alt50=1;
+                if ( (LA58_0==DEC||LA58_0==INC||LA58_0==LOGICAL_NOT||LA58_0==MINUS||LA58_0==PLUS) ) {
+                    alt58=1;
                 }
 
 
-                switch (alt50) {
+                switch (alt58) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:736:10: (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' )
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:10: (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' )
             	    {
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:736:10: (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' )
-            	    int alt49=5;
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:10: (op= '+' | op= '-' | op= '!' | op= '++' | op= '--' )
+            	    int alt57=5;
             	    switch ( input.LA(1) ) {
             	    case PLUS:
             	        {
-            	        alt49=1;
+            	        alt57=1;
             	        }
             	        break;
             	    case MINUS:
             	        {
-            	        alt49=2;
+            	        alt57=2;
             	        }
             	        break;
             	    case LOGICAL_NOT:
             	        {
-            	        alt49=3;
+            	        alt57=3;
             	        }
             	        break;
             	    case INC:
             	        {
-            	        alt49=4;
+            	        alt57=4;
             	        }
             	        break;
             	    case DEC:
             	        {
-            	        alt49=5;
+            	        alt57=5;
             	        }
             	        break;
             	    default:
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 49, 0, input);
+            	            new NoViableAltException("", 57, 0, input);
 
             	        throw nvae;
             	    }
 
-            	    switch (alt49) {
+            	    switch (alt57) {
             	        case 1 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:736:11: op= '+'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:11: op= '+'
             	            {
-            	            op=(Token)match(input,PLUS,FOLLOW_PLUS_in_unary7649); 
+            	            op=(Token)match(input,PLUS,FOLLOW_PLUS_in_unary8281); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:736:22: op= '-'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:22: op= '-'
             	            {
-            	            op=(Token)match(input,MINUS,FOLLOW_MINUS_in_unary7657); 
+            	            op=(Token)match(input,MINUS,FOLLOW_MINUS_in_unary8289); 
 
             	            }
             	            break;
             	        case 3 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:736:33: op= '!'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:33: op= '!'
             	            {
-            	            op=(Token)match(input,LOGICAL_NOT,FOLLOW_LOGICAL_NOT_in_unary7665); 
+            	            op=(Token)match(input,LOGICAL_NOT,FOLLOW_LOGICAL_NOT_in_unary8297); 
 
             	            }
             	            break;
             	        case 4 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:736:44: op= '++'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:44: op= '++'
             	            {
-            	            op=(Token)match(input,INC,FOLLOW_INC_in_unary7673); 
+            	            op=(Token)match(input,INC,FOLLOW_INC_in_unary8305); 
 
             	            }
             	            break;
             	        case 5 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:736:56: op= '--'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:56: op= '--'
             	            {
-            	            op=(Token)match(input,DEC,FOLLOW_DEC_in_unary7681); 
+            	            op=(Token)match(input,DEC,FOLLOW_DEC_in_unary8313); 
 
             	            }
             	            break;
@@ -3448,55 +4048,55 @@ public class SalsaParser extends Parser {
             	    break;
 
             	default :
-            	    break loop50;
+            	    break loop58;
                 }
             } while (true);
 
-            pushFollow(FOLLOW_negation_in_unary7697);
-            negation67=negation();
+            pushFollow(FOLLOW_negation_in_unary8329);
+            negation71=negation();
 
             state._fsp--;
 
-            e.addExpression(negation67);
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:738:9: ( (op2= '++' | op2= '--' ) )?
-            int alt52=2;
-            int LA52_0 = input.LA(1);
+            e.addExpression(negation71);
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:810:9: ( (op2= '++' | op2= '--' ) )?
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA52_0==DEC||LA52_0==INC) ) {
-                alt52=1;
+            if ( (LA60_0==DEC||LA60_0==INC) ) {
+                alt60=1;
             }
-            switch (alt52) {
+            switch (alt60) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:738:10: (op2= '++' | op2= '--' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:810:10: (op2= '++' | op2= '--' )
                     {
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:738:10: (op2= '++' | op2= '--' )
-                    int alt51=2;
-                    int LA51_0 = input.LA(1);
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:810:10: (op2= '++' | op2= '--' )
+                    int alt59=2;
+                    int LA59_0 = input.LA(1);
 
-                    if ( (LA51_0==INC) ) {
-                        alt51=1;
+                    if ( (LA59_0==INC) ) {
+                        alt59=1;
                     }
-                    else if ( (LA51_0==DEC) ) {
-                        alt51=2;
+                    else if ( (LA59_0==DEC) ) {
+                        alt59=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 51, 0, input);
+                            new NoViableAltException("", 59, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt51) {
+                    switch (alt59) {
                         case 1 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:738:11: op2= '++'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:810:11: op2= '++'
                             {
-                            op2=(Token)match(input,INC,FOLLOW_INC_in_unary7715); 
+                            op2=(Token)match(input,INC,FOLLOW_INC_in_unary8347); 
 
                             }
                             break;
                         case 2 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:738:24: op2= '--'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:810:24: op2= '--'
                             {
-                            op2=(Token)match(input,DEC,FOLLOW_DEC_in_unary7723); 
+                            op2=(Token)match(input,DEC,FOLLOW_DEC_in_unary8355); 
 
                             }
                             break;
@@ -3529,7 +4129,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "mult"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:743:1: mult returns [MultExpression e] : e1= unary ( (op= '*' | op= '/' | op= '%' ) e2= unary )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:815:1: mult returns [MultExpression e] : e1= unary ( (op= '*' | op= '/' | op= '%' | op= '*=' | op= '/=' ) e2= unary )* ;
     public final MultExpression mult() throws RecognitionException {
         MultExpression e = null;
 
@@ -3541,81 +4141,105 @@ public class SalsaParser extends Parser {
 
          e = new MultExpression();
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:745:5: (e1= unary ( (op= '*' | op= '/' | op= '%' ) e2= unary )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:745:9: e1= unary ( (op= '*' | op= '/' | op= '%' ) e2= unary )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:817:5: (e1= unary ( (op= '*' | op= '/' | op= '%' | op= '*=' | op= '/=' ) e2= unary )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:817:9: e1= unary ( (op= '*' | op= '/' | op= '%' | op= '*=' | op= '/=' ) e2= unary )*
             {
-            pushFollow(FOLLOW_unary_in_mult7770);
+            pushFollow(FOLLOW_unary_in_mult8402);
             e1=unary();
 
             state._fsp--;
 
             e.addExpression(e1);
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:746:9: ( (op= '*' | op= '/' | op= '%' ) e2= unary )*
-            loop54:
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:818:9: ( (op= '*' | op= '/' | op= '%' | op= '*=' | op= '/=' ) e2= unary )*
+            loop62:
             do {
-                int alt54=2;
-                int LA54_0 = input.LA(1);
+                int alt62=2;
+                int LA62_0 = input.LA(1);
 
-                if ( (LA54_0==DIV||LA54_0==MOD||LA54_0==STAR) ) {
-                    alt54=1;
+                if ( ((LA62_0>=DIV && LA62_0<=DIV_ASSIGN)||LA62_0==MOD||(LA62_0>=STAR && LA62_0<=STAR_ASSIGN)) ) {
+                    alt62=1;
                 }
 
 
-                switch (alt54) {
+                switch (alt62) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:747:13: (op= '*' | op= '/' | op= '%' ) e2= unary
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:819:13: (op= '*' | op= '/' | op= '%' | op= '*=' | op= '/=' ) e2= unary
             	    {
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:747:13: (op= '*' | op= '/' | op= '%' )
-            	    int alt53=3;
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:819:13: (op= '*' | op= '/' | op= '%' | op= '*=' | op= '/=' )
+            	    int alt61=5;
             	    switch ( input.LA(1) ) {
             	    case STAR:
             	        {
-            	        alt53=1;
+            	        alt61=1;
             	        }
             	        break;
             	    case DIV:
             	        {
-            	        alt53=2;
+            	        alt61=2;
             	        }
             	        break;
             	    case MOD:
             	        {
-            	        alt53=3;
+            	        alt61=3;
+            	        }
+            	        break;
+            	    case STAR_ASSIGN:
+            	        {
+            	        alt61=4;
+            	        }
+            	        break;
+            	    case DIV_ASSIGN:
+            	        {
+            	        alt61=5;
             	        }
             	        break;
             	    default:
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 53, 0, input);
+            	            new NoViableAltException("", 61, 0, input);
 
             	        throw nvae;
             	    }
 
-            	    switch (alt53) {
+            	    switch (alt61) {
             	        case 1 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:747:14: op= '*'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:819:14: op= '*'
             	            {
-            	            op=(Token)match(input,STAR,FOLLOW_STAR_in_mult7802); 
+            	            op=(Token)match(input,STAR,FOLLOW_STAR_in_mult8434); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:747:25: op= '/'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:819:25: op= '/'
             	            {
-            	            op=(Token)match(input,DIV,FOLLOW_DIV_in_mult7810); 
+            	            op=(Token)match(input,DIV,FOLLOW_DIV_in_mult8442); 
 
             	            }
             	            break;
             	        case 3 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:747:36: op= '%'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:819:36: op= '%'
             	            {
-            	            op=(Token)match(input,MOD,FOLLOW_MOD_in_mult7818); 
+            	            op=(Token)match(input,MOD,FOLLOW_MOD_in_mult8450); 
+
+            	            }
+            	            break;
+            	        case 4 :
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:819:47: op= '*='
+            	            {
+            	            op=(Token)match(input,STAR_ASSIGN,FOLLOW_STAR_ASSIGN_in_mult8458); 
+
+            	            }
+            	            break;
+            	        case 5 :
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:819:59: op= '/='
+            	            {
+            	            op=(Token)match(input,DIV_ASSIGN,FOLLOW_DIV_ASSIGN_in_mult8466); 
 
             	            }
             	            break;
 
             	    }
 
-            	    pushFollow(FOLLOW_unary_in_mult7838);
+            	    pushFollow(FOLLOW_unary_in_mult8486);
             	    e2=unary();
 
             	    state._fsp--;
@@ -3626,7 +4250,7 @@ public class SalsaParser extends Parser {
             	    break;
 
             	default :
-            	    break loop54;
+            	    break loop62;
                 }
             } while (true);
 
@@ -3646,7 +4270,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "add"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:752:1: add returns [AddExpression e] : e1= mult ( (op= '+' | op= '-' ) e2= mult )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:824:1: add returns [AddExpression e] : e1= mult ( (op= '+' | op= '-' | op= '+=' | op= '-=' ) e2= mult )* ;
     public final AddExpression add() throws RecognitionException {
         AddExpression e = null;
 
@@ -3658,65 +4282,93 @@ public class SalsaParser extends Parser {
 
          e = new AddExpression(); 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:754:5: (e1= mult ( (op= '+' | op= '-' ) e2= mult )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:754:9: e1= mult ( (op= '+' | op= '-' ) e2= mult )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:826:5: (e1= mult ( (op= '+' | op= '-' | op= '+=' | op= '-=' ) e2= mult )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:826:9: e1= mult ( (op= '+' | op= '-' | op= '+=' | op= '-=' ) e2= mult )*
             {
-            pushFollow(FOLLOW_mult_in_add7886);
+            pushFollow(FOLLOW_mult_in_add8534);
             e1=mult();
 
             state._fsp--;
 
             e.addExpression(e1);
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:755:9: ( (op= '+' | op= '-' ) e2= mult )*
-            loop56:
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:827:9: ( (op= '+' | op= '-' | op= '+=' | op= '-=' ) e2= mult )*
+            loop64:
             do {
-                int alt56=2;
-                int LA56_0 = input.LA(1);
+                int alt64=2;
+                int LA64_0 = input.LA(1);
 
-                if ( (LA56_0==MINUS||LA56_0==PLUS) ) {
-                    alt56=1;
+                if ( ((LA64_0>=MINUS && LA64_0<=MINUS_ASSIGN)||(LA64_0>=PLUS && LA64_0<=PLUS_ASSIGN)) ) {
+                    alt64=1;
                 }
 
 
-                switch (alt56) {
+                switch (alt64) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:756:13: (op= '+' | op= '-' ) e2= mult
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:828:13: (op= '+' | op= '-' | op= '+=' | op= '-=' ) e2= mult
             	    {
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:756:13: (op= '+' | op= '-' )
-            	    int alt55=2;
-            	    int LA55_0 = input.LA(1);
-
-            	    if ( (LA55_0==PLUS) ) {
-            	        alt55=1;
-            	    }
-            	    else if ( (LA55_0==MINUS) ) {
-            	        alt55=2;
-            	    }
-            	    else {
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:828:13: (op= '+' | op= '-' | op= '+=' | op= '-=' )
+            	    int alt63=4;
+            	    switch ( input.LA(1) ) {
+            	    case PLUS:
+            	        {
+            	        alt63=1;
+            	        }
+            	        break;
+            	    case MINUS:
+            	        {
+            	        alt63=2;
+            	        }
+            	        break;
+            	    case PLUS_ASSIGN:
+            	        {
+            	        alt63=3;
+            	        }
+            	        break;
+            	    case MINUS_ASSIGN:
+            	        {
+            	        alt63=4;
+            	        }
+            	        break;
+            	    default:
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 55, 0, input);
+            	            new NoViableAltException("", 63, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt55) {
+
+            	    switch (alt63) {
             	        case 1 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:756:14: op= '+'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:828:14: op= '+'
             	            {
-            	            op=(Token)match(input,PLUS,FOLLOW_PLUS_in_add7918); 
+            	            op=(Token)match(input,PLUS,FOLLOW_PLUS_in_add8566); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:756:25: op= '-'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:828:25: op= '-'
             	            {
-            	            op=(Token)match(input,MINUS,FOLLOW_MINUS_in_add7926); 
+            	            op=(Token)match(input,MINUS,FOLLOW_MINUS_in_add8574); 
+
+            	            }
+            	            break;
+            	        case 3 :
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:828:36: op= '+='
+            	            {
+            	            op=(Token)match(input,PLUS_ASSIGN,FOLLOW_PLUS_ASSIGN_in_add8582); 
+
+            	            }
+            	            break;
+            	        case 4 :
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:828:48: op= '-='
+            	            {
+            	            op=(Token)match(input,MINUS_ASSIGN,FOLLOW_MINUS_ASSIGN_in_add8590); 
 
             	            }
             	            break;
 
             	    }
 
-            	    pushFollow(FOLLOW_mult_in_add7946);
+            	    pushFollow(FOLLOW_mult_in_add8610);
             	    e2=mult();
 
             	    state._fsp--;
@@ -3727,7 +4379,7 @@ public class SalsaParser extends Parser {
             	    break;
 
             	default :
-            	    break loop56;
+            	    break loop64;
                 }
             } while (true);
 
@@ -3747,7 +4399,7 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "relation"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:761:1: relation returns [Expression e] : e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:833:1: relation returns [Expression e] : e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )* ;
     public final Expression relation() throws RecognitionException {
         Expression e = null;
 
@@ -3759,117 +4411,117 @@ public class SalsaParser extends Parser {
 
          e = new Expression();
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:763:5: (e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:763:9: e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:835:5: (e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:835:9: e1= add ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )*
             {
-            pushFollow(FOLLOW_add_in_relation7990);
+            pushFollow(FOLLOW_add_in_relation8654);
             e1=add();
 
             state._fsp--;
 
             e.addExpression(e1);
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:764:9: ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )*
-            loop58:
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:836:9: ( (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add )*
+            loop66:
             do {
-                int alt58=2;
-                int LA58_0 = input.LA(1);
+                int alt66=2;
+                int LA66_0 = input.LA(1);
 
-                if ( ((LA58_0>=EQUAL && LA58_0<=GREATER_THAN)||(LA58_0>=LESS_OR_EQUAL && LA58_0<=LESS_THAN)||LA58_0==NOT_EQUAL) ) {
-                    alt58=1;
+                if ( ((LA66_0>=EQUAL && LA66_0<=GREATER_THAN)||(LA66_0>=LESS_OR_EQUAL && LA66_0<=LESS_THAN)||LA66_0==NOT_EQUAL) ) {
+                    alt66=1;
                 }
 
 
-                switch (alt58) {
+                switch (alt66) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:765:13: (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:837:13: (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' ) e2= add
             	    {
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:765:13: (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' )
-            	    int alt57=6;
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:837:13: (op= '==' | op= '!=' | op= '<' | op= '<=' | op= '>=' | op= '>' )
+            	    int alt65=6;
             	    switch ( input.LA(1) ) {
             	    case EQUAL:
             	        {
-            	        alt57=1;
+            	        alt65=1;
             	        }
             	        break;
             	    case NOT_EQUAL:
             	        {
-            	        alt57=2;
+            	        alt65=2;
             	        }
             	        break;
             	    case LESS_THAN:
             	        {
-            	        alt57=3;
+            	        alt65=3;
             	        }
             	        break;
             	    case LESS_OR_EQUAL:
             	        {
-            	        alt57=4;
+            	        alt65=4;
             	        }
             	        break;
             	    case GREATER_OR_EQUAL:
             	        {
-            	        alt57=5;
+            	        alt65=5;
             	        }
             	        break;
             	    case GREATER_THAN:
             	        {
-            	        alt57=6;
+            	        alt65=6;
             	        }
             	        break;
             	    default:
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 57, 0, input);
+            	            new NoViableAltException("", 65, 0, input);
 
             	        throw nvae;
             	    }
 
-            	    switch (alt57) {
+            	    switch (alt65) {
             	        case 1 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:765:14: op= '=='
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:837:14: op= '=='
             	            {
-            	            op=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_relation8023); 
+            	            op=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_relation8687); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:765:26: op= '!='
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:837:26: op= '!='
             	            {
-            	            op=(Token)match(input,NOT_EQUAL,FOLLOW_NOT_EQUAL_in_relation8031); 
+            	            op=(Token)match(input,NOT_EQUAL,FOLLOW_NOT_EQUAL_in_relation8695); 
 
             	            }
             	            break;
             	        case 3 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:765:38: op= '<'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:837:38: op= '<'
             	            {
-            	            op=(Token)match(input,LESS_THAN,FOLLOW_LESS_THAN_in_relation8039); 
+            	            op=(Token)match(input,LESS_THAN,FOLLOW_LESS_THAN_in_relation8703); 
 
             	            }
             	            break;
             	        case 4 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:765:49: op= '<='
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:837:49: op= '<='
             	            {
-            	            op=(Token)match(input,LESS_OR_EQUAL,FOLLOW_LESS_OR_EQUAL_in_relation8047); 
+            	            op=(Token)match(input,LESS_OR_EQUAL,FOLLOW_LESS_OR_EQUAL_in_relation8711); 
 
             	            }
             	            break;
             	        case 5 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:765:61: op= '>='
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:837:61: op= '>='
             	            {
-            	            op=(Token)match(input,GREATER_OR_EQUAL,FOLLOW_GREATER_OR_EQUAL_in_relation8055); 
+            	            op=(Token)match(input,GREATER_OR_EQUAL,FOLLOW_GREATER_OR_EQUAL_in_relation8719); 
 
             	            }
             	            break;
             	        case 6 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:765:73: op= '>'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:837:73: op= '>'
             	            {
-            	            op=(Token)match(input,GREATER_THAN,FOLLOW_GREATER_THAN_in_relation8063); 
+            	            op=(Token)match(input,GREATER_THAN,FOLLOW_GREATER_THAN_in_relation8727); 
 
             	            }
             	            break;
 
             	    }
 
-            	    pushFollow(FOLLOW_add_in_relation8083);
+            	    pushFollow(FOLLOW_add_in_relation8747);
             	    e2=add();
 
             	    state._fsp--;
@@ -3880,7 +4532,7 @@ public class SalsaParser extends Parser {
             	    break;
 
             	default :
-            	    break loop58;
+            	    break loop66;
                 }
             } while (true);
 
@@ -3903,7 +4555,7 @@ public class SalsaParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:770:1: expression returns [Expression e] : e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )* ;
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:842:1: expression returns [Expression e] : e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )* ;
     public final SalsaParser.expression_return expression() throws RecognitionException {
         SalsaParser.expression_return retval = new SalsaParser.expression_return();
         retval.start = input.LT(1);
@@ -3916,82 +4568,82 @@ public class SalsaParser extends Parser {
 
          retval.e = new Expression(); 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:775:5: (e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:776:9: e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:847:5: (e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:848:9: e1= relation ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )*
             {
             retval.e.setLine(getLine(input));
-            pushFollow(FOLLOW_relation_in_expression8154);
+            pushFollow(FOLLOW_relation_in_expression8818);
             e1=relation();
 
             state._fsp--;
 
             retval.e.addExpression(e1);
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:778:9: ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )*
-            loop60:
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:850:9: ( (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation )*
+            loop68:
             do {
-                int alt60=2;
-                int LA60_0 = input.LA(1);
+                int alt68=2;
+                int LA68_0 = input.LA(1);
 
-                if ( (LA60_0==LOGICAL_AND||LA60_0==LOGICAL_OR||LA60_0==INSTANCEOF) ) {
-                    alt60=1;
+                if ( (LA68_0==LOGICAL_AND||LA68_0==LOGICAL_OR||LA68_0==INSTANCEOF) ) {
+                    alt68=1;
                 }
 
 
-                switch (alt60) {
+                switch (alt68) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:779:13: (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:851:13: (op= '&&' | op= '||' | op= 'instanceof' ) e2= relation
             	    {
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:779:13: (op= '&&' | op= '||' | op= 'instanceof' )
-            	    int alt59=3;
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:851:13: (op= '&&' | op= '||' | op= 'instanceof' )
+            	    int alt67=3;
             	    switch ( input.LA(1) ) {
             	    case LOGICAL_AND:
             	        {
-            	        alt59=1;
+            	        alt67=1;
             	        }
             	        break;
             	    case LOGICAL_OR:
             	        {
-            	        alt59=2;
+            	        alt67=2;
             	        }
             	        break;
             	    case INSTANCEOF:
             	        {
-            	        alt59=3;
+            	        alt67=3;
             	        }
             	        break;
             	    default:
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 59, 0, input);
+            	            new NoViableAltException("", 67, 0, input);
 
             	        throw nvae;
             	    }
 
-            	    switch (alt59) {
+            	    switch (alt67) {
             	        case 1 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:779:14: op= '&&'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:851:14: op= '&&'
             	            {
-            	            op=(Token)match(input,LOGICAL_AND,FOLLOW_LOGICAL_AND_in_expression8188); 
+            	            op=(Token)match(input,LOGICAL_AND,FOLLOW_LOGICAL_AND_in_expression8852); 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:779:26: op= '||'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:851:26: op= '||'
             	            {
-            	            op=(Token)match(input,LOGICAL_OR,FOLLOW_LOGICAL_OR_in_expression8196); 
+            	            op=(Token)match(input,LOGICAL_OR,FOLLOW_LOGICAL_OR_in_expression8860); 
 
             	            }
             	            break;
             	        case 3 :
-            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:779:38: op= 'instanceof'
+            	            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:851:38: op= 'instanceof'
             	            {
-            	            op=(Token)match(input,INSTANCEOF,FOLLOW_INSTANCEOF_in_expression8204); 
+            	            op=(Token)match(input,INSTANCEOF,FOLLOW_INSTANCEOF_in_expression8868); 
 
             	            }
             	            break;
 
             	    }
 
-            	    pushFollow(FOLLOW_relation_in_expression8211);
+            	    pushFollow(FOLLOW_relation_in_expression8875);
             	    e2=relation();
 
             	    state._fsp--;
@@ -4002,7 +4654,7 @@ public class SalsaParser extends Parser {
             	    break;
 
             	default :
-            	    break loop60;
+            	    break loop68;
                 }
             } while (true);
 
@@ -4027,150 +4679,150 @@ public class SalsaParser extends Parser {
 
 
     // $ANTLR start "literal"
-    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:785:1: literal returns [Literal literal] : ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | FLOATING_POINT_LITERAL | (t= 'true' | t= 'false' ) | 'null' );
+    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:857:1: literal returns [Literal literal] : ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | FLOATING_POINT_LITERAL | (t= 'true' | t= 'false' ) | 'null' );
     public final Literal literal() throws RecognitionException {
         Literal literal = null;
 
         Token t=null;
-        Token HEX_LITERAL68=null;
-        Token DECIMAL_LITERAL69=null;
-        Token OCTAL_LITERAL70=null;
-        Token CHARACTER_LITERAL71=null;
-        Token STRING_LITERAL72=null;
-        Token FLOATING_POINT_LITERAL73=null;
+        Token HEX_LITERAL72=null;
+        Token DECIMAL_LITERAL73=null;
+        Token OCTAL_LITERAL74=null;
+        Token CHARACTER_LITERAL75=null;
+        Token STRING_LITERAL76=null;
+        Token FLOATING_POINT_LITERAL77=null;
 
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:786:5: ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | FLOATING_POINT_LITERAL | (t= 'true' | t= 'false' ) | 'null' )
-            int alt62=8;
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:858:5: ( HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | FLOATING_POINT_LITERAL | (t= 'true' | t= 'false' ) | 'null' )
+            int alt70=8;
             switch ( input.LA(1) ) {
             case HEX_LITERAL:
                 {
-                alt62=1;
+                alt70=1;
                 }
                 break;
             case DECIMAL_LITERAL:
                 {
-                alt62=2;
+                alt70=2;
                 }
                 break;
             case OCTAL_LITERAL:
                 {
-                alt62=3;
+                alt70=3;
                 }
                 break;
             case CHARACTER_LITERAL:
                 {
-                alt62=4;
+                alt70=4;
                 }
                 break;
             case STRING_LITERAL:
                 {
-                alt62=5;
+                alt70=5;
                 }
                 break;
             case FLOATING_POINT_LITERAL:
                 {
-                alt62=6;
+                alt70=6;
                 }
                 break;
             case FALSE:
             case TRUE:
                 {
-                alt62=7;
+                alt70=7;
                 }
                 break;
             case NULL:
                 {
-                alt62=8;
+                alt70=8;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 62, 0, input);
+                    new NoViableAltException("", 70, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt62) {
+            switch (alt70) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:786:9: HEX_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:858:9: HEX_LITERAL
                     {
-                    HEX_LITERAL68=(Token)match(input,HEX_LITERAL,FOLLOW_HEX_LITERAL_in_literal8261); 
-                    literal = new Literal("int", (HEX_LITERAL68!=null?HEX_LITERAL68.getText():null));
+                    HEX_LITERAL72=(Token)match(input,HEX_LITERAL,FOLLOW_HEX_LITERAL_in_literal8925); 
+                    literal = new Literal("int", (HEX_LITERAL72!=null?HEX_LITERAL72.getText():null));
 
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:787:9: DECIMAL_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:859:9: DECIMAL_LITERAL
                     {
-                    DECIMAL_LITERAL69=(Token)match(input,DECIMAL_LITERAL,FOLLOW_DECIMAL_LITERAL_in_literal8273); 
-                    literal = new Literal("int", (DECIMAL_LITERAL69!=null?DECIMAL_LITERAL69.getText():null));
+                    DECIMAL_LITERAL73=(Token)match(input,DECIMAL_LITERAL,FOLLOW_DECIMAL_LITERAL_in_literal8937); 
+                    literal = new Literal("int", (DECIMAL_LITERAL73!=null?DECIMAL_LITERAL73.getText():null));
 
                     }
                     break;
                 case 3 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:788:9: OCTAL_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:860:9: OCTAL_LITERAL
                     {
-                    OCTAL_LITERAL70=(Token)match(input,OCTAL_LITERAL,FOLLOW_OCTAL_LITERAL_in_literal8285); 
-                    literal = new Literal("int", (OCTAL_LITERAL70!=null?OCTAL_LITERAL70.getText():null));
+                    OCTAL_LITERAL74=(Token)match(input,OCTAL_LITERAL,FOLLOW_OCTAL_LITERAL_in_literal8949); 
+                    literal = new Literal("int", (OCTAL_LITERAL74!=null?OCTAL_LITERAL74.getText():null));
 
                     }
                     break;
                 case 4 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:789:9: CHARACTER_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:861:9: CHARACTER_LITERAL
                     {
-                    CHARACTER_LITERAL71=(Token)match(input,CHARACTER_LITERAL,FOLLOW_CHARACTER_LITERAL_in_literal8297); 
-                    literal = new Literal("char", (CHARACTER_LITERAL71!=null?CHARACTER_LITERAL71.getText():null));
+                    CHARACTER_LITERAL75=(Token)match(input,CHARACTER_LITERAL,FOLLOW_CHARACTER_LITERAL_in_literal8961); 
+                    literal = new Literal("char", (CHARACTER_LITERAL75!=null?CHARACTER_LITERAL75.getText():null));
 
                     }
                     break;
                 case 5 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:790:9: STRING_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:862:9: STRING_LITERAL
                     {
-                    STRING_LITERAL72=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_literal8311); 
-                    literal = new Literal("java.lang.String", (STRING_LITERAL72!=null?STRING_LITERAL72.getText():null));
+                    STRING_LITERAL76=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_literal8975); 
+                    literal = new Literal("java.lang.String", (STRING_LITERAL76!=null?STRING_LITERAL76.getText():null));
 
                     }
                     break;
                 case 6 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:791:9: FLOATING_POINT_LITERAL
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:863:9: FLOATING_POINT_LITERAL
                     {
-                    FLOATING_POINT_LITERAL73=(Token)match(input,FLOATING_POINT_LITERAL,FOLLOW_FLOATING_POINT_LITERAL_in_literal8324); 
-                    literal = new Literal("double", (FLOATING_POINT_LITERAL73!=null?FLOATING_POINT_LITERAL73.getText():null));
+                    FLOATING_POINT_LITERAL77=(Token)match(input,FLOATING_POINT_LITERAL,FOLLOW_FLOATING_POINT_LITERAL_in_literal8988); 
+                    literal = new Literal("double", (FLOATING_POINT_LITERAL77!=null?FLOATING_POINT_LITERAL77.getText():null));
 
                     }
                     break;
                 case 7 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:792:9: (t= 'true' | t= 'false' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:864:9: (t= 'true' | t= 'false' )
                     {
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:792:9: (t= 'true' | t= 'false' )
-                    int alt61=2;
-                    int LA61_0 = input.LA(1);
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:864:9: (t= 'true' | t= 'false' )
+                    int alt69=2;
+                    int LA69_0 = input.LA(1);
 
-                    if ( (LA61_0==TRUE) ) {
-                        alt61=1;
+                    if ( (LA69_0==TRUE) ) {
+                        alt69=1;
                     }
-                    else if ( (LA61_0==FALSE) ) {
-                        alt61=2;
+                    else if ( (LA69_0==FALSE) ) {
+                        alt69=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 61, 0, input);
+                            new NoViableAltException("", 69, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt61) {
+                    switch (alt69) {
                         case 1 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:792:10: t= 'true'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:864:10: t= 'true'
                             {
-                            t=(Token)match(input,TRUE,FOLLOW_TRUE_in_literal8342); 
+                            t=(Token)match(input,TRUE,FOLLOW_TRUE_in_literal9006); 
 
                             }
                             break;
                         case 2 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:792:23: t= 'false'
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:864:23: t= 'false'
                             {
-                            t=(Token)match(input,FALSE,FOLLOW_FALSE_in_literal8350); 
+                            t=(Token)match(input,FALSE,FOLLOW_FALSE_in_literal9014); 
 
                             }
                             break;
@@ -4182,9 +4834,9 @@ public class SalsaParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:793:9: 'null'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:865:9: 'null'
                     {
-                    match(input,NULL,FOLLOW_NULL_in_literal8363); 
+                    match(input,NULL,FOLLOW_NULL_in_literal9027); 
                     literal = new Literal("null", "null");
 
                     }
@@ -4210,8 +4862,8 @@ public class SalsaParser extends Parser {
     protected DFA18 dfa18 = new DFA18(this);
     protected DFA21 dfa21 = new DFA21(this);
     protected DFA28 dfa28 = new DFA28(this);
-    protected DFA36 dfa36 = new DFA36(this);
-    protected DFA45 dfa45 = new DFA45(this);
+    protected DFA44 dfa44 = new DFA44(this);
+    protected DFA53 dfa53 = new DFA53(this);
     static final String DFA13_eotS =
         "\5\uffff";
     static final String DFA13_eofS =
@@ -4219,17 +4871,17 @@ public class SalsaParser extends Parser {
     static final String DFA13_minS =
         "\2\65\3\uffff";
     static final String DFA13_maxS =
-        "\2\u00b9\3\uffff";
+        "\2\u00b8\3\uffff";
     static final String DFA13_acceptS =
         "\2\uffff\1\1\1\2\1\3";
     static final String DFA13_specialS =
         "\5\uffff}>";
     static final String[] DFA13_transitionS = {
             "\1\1\7\uffff\1\3\10\uffff\1\1\6\uffff\1\4\3\uffff\1\1\3\uffff"+
-            "\3\1\2\uffff\2\1\2\uffff\1\1\3\uffff\1\1\3\uffff\1\1\122\uffff"+
+            "\3\1\2\uffff\2\1\2\uffff\1\1\2\uffff\1\1\3\uffff\1\1\122\uffff"+
             "\1\2",
             "\1\1\7\uffff\1\3\10\uffff\1\1\6\uffff\1\4\3\uffff\1\1\3\uffff"+
-            "\3\1\2\uffff\2\1\2\uffff\1\1\3\uffff\1\1\3\uffff\1\1\122\uffff"+
+            "\3\1\2\uffff\2\1\2\uffff\1\1\2\uffff\1\1\3\uffff\1\1\122\uffff"+
             "\1\2",
             "",
             "",
@@ -4266,7 +4918,7 @@ public class SalsaParser extends Parser {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "406:1: typeDeclaration returns [TypeDeclaration td] : ( behaviorDeclaration | classDeclaration | interfaceDeclaration );";
+            return "399:1: typeDeclaration returns [TypeDeclaration td] : ( behaviorDeclaration | classDeclaration | interfaceDeclaration );";
         }
     }
     static final String DFA15_eotS =
@@ -4274,10 +4926,10 @@ public class SalsaParser extends Parser {
     static final String DFA15_eofS =
         "\15\uffff";
     static final String DFA15_minS =
-        "\1\52\1\uffff\1\65\1\67\1\26\1\17\1\51\1\6\1\u00a4\1\26\2\uffff"+
+        "\1\52\1\uffff\1\65\1\67\1\26\1\17\1\51\1\6\1\u00a3\1\26\2\uffff"+
         "\1\17";
     static final String DFA15_maxS =
-        "\1\u00b8\1\uffff\1\u00b8\3\u00a4\1\51\1\54\2\u00a4\2\uffff\1\u00a4";
+        "\1\u00b7\1\uffff\1\u00b7\3\u00a3\1\51\1\54\2\u00a3\2\uffff\1\u00a3";
     static final String DFA15_acceptS =
         "\1\uffff\1\3\10\uffff\1\1\1\2\1\uffff";
     static final String DFA15_specialS =
@@ -4285,24 +4937,24 @@ public class SalsaParser extends Parser {
     static final String[] DFA15_transitionS = {
             "\1\1\12\uffff\1\2\1\uffff\1\4\1\uffff\1\4\2\uffff\1\4\4\uffff"+
             "\1\4\4\uffff\1\2\1\uffff\1\4\6\uffff\2\4\1\2\3\uffff\3\2\1\uffff"+
-            "\1\4\2\2\2\uffff\1\2\3\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1"+
+            "\1\4\2\2\2\uffff\1\2\2\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1"+
             "\5\23\uffff\1\3",
             "",
             "\1\2\1\uffff\1\4\1\uffff\1\4\2\uffff\1\4\4\uffff\1\4\4\uffff"+
             "\1\2\1\uffff\1\4\6\uffff\2\4\1\2\3\uffff\3\2\1\uffff\1\4\2\2"+
-            "\2\uffff\1\2\3\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1\5\23\uffff"+
+            "\2\uffff\1\2\2\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1\5\23\uffff"+
             "\1\3",
             "\1\4\1\uffff\1\4\2\uffff\1\4\4\uffff\1\4\6\uffff\1\4\6\uffff"+
-            "\2\4\10\uffff\1\4\13\uffff\1\4\76\uffff\1\5",
-            "\1\6\u008d\uffff\1\7",
-            "\1\10\6\uffff\1\6\u008d\uffff\1\7",
+            "\2\4\10\uffff\1\4\12\uffff\1\4\76\uffff\1\5",
+            "\1\6\u008c\uffff\1\7",
+            "\1\10\6\uffff\1\6\u008c\uffff\1\7",
             "\1\11",
             "\1\12\4\uffff\1\12\21\uffff\1\13\16\uffff\1\12",
             "\1\14",
-            "\1\6\u008d\uffff\1\7",
+            "\1\6\u008c\uffff\1\7",
             "",
             "",
-            "\1\10\6\uffff\1\6\u008d\uffff\1\7"
+            "\1\10\6\uffff\1\6\u008c\uffff\1\7"
     };
 
     static final short[] DFA15_eot = DFA.unpackEncodedString(DFA15_eotS);
@@ -4335,7 +4987,7 @@ public class SalsaParser extends Parser {
             this.transition = DFA15_transition;
         }
         public String getDescription() {
-            return "()* loopback of 418:13: ( fieldVariableDeclaration | intefaceMethodDeclaration )*";
+            return "()* loopback of 412:13: ( fieldVariableDeclaration | intefaceMethodDeclaration )*";
         }
     }
     static final String DFA18_eotS =
@@ -4343,38 +4995,38 @@ public class SalsaParser extends Parser {
     static final String DFA18_eofS =
         "\17\uffff";
     static final String DFA18_minS =
-        "\1\52\1\uffff\1\65\1\67\1\26\2\17\1\51\1\6\1\u00a4\1\uffff\1\26"+
+        "\1\52\1\uffff\1\65\1\67\1\26\2\17\1\51\1\6\1\uffff\1\u00a3\1\26"+
         "\2\uffff\1\17";
     static final String DFA18_maxS =
-        "\1\u00b8\1\uffff\1\u00b8\4\u00a4\1\51\1\54\1\u00a4\1\uffff\1\u00a4"+
-        "\2\uffff\1\u00a4";
+        "\1\u00b7\1\uffff\1\u00b7\4\u00a3\1\51\1\54\1\uffff\2\u00a3\2\uffff"+
+        "\1\u00a3";
     static final String DFA18_acceptS =
-        "\1\uffff\1\4\10\uffff\1\2\1\uffff\1\1\1\3\1\uffff";
+        "\1\uffff\1\4\7\uffff\1\2\2\uffff\1\3\1\1\1\uffff";
     static final String DFA18_specialS =
         "\17\uffff}>";
     static final String[] DFA18_transitionS = {
             "\1\1\12\uffff\1\2\1\uffff\1\4\1\uffff\1\4\2\uffff\1\4\4\uffff"+
             "\1\4\4\uffff\1\2\1\uffff\1\4\6\uffff\2\4\1\2\3\uffff\3\2\1\uffff"+
-            "\1\4\2\2\2\uffff\1\2\3\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1"+
+            "\1\4\2\2\2\uffff\1\2\2\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1"+
             "\5\23\uffff\1\3",
             "",
             "\1\2\1\uffff\1\4\1\uffff\1\4\2\uffff\1\4\4\uffff\1\4\4\uffff"+
             "\1\2\1\uffff\1\4\6\uffff\2\4\1\2\3\uffff\3\2\1\uffff\1\4\2\2"+
-            "\2\uffff\1\2\3\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1\5\23\uffff"+
+            "\2\uffff\1\2\2\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1\5\23\uffff"+
             "\1\3",
             "\1\4\1\uffff\1\4\2\uffff\1\4\4\uffff\1\4\6\uffff\1\4\6\uffff"+
-            "\2\4\10\uffff\1\4\13\uffff\1\4\76\uffff\1\6",
-            "\1\7\u008d\uffff\1\10",
-            "\1\11\6\uffff\1\7\6\uffff\1\12\u0086\uffff\1\10",
-            "\1\11\6\uffff\1\7\u008d\uffff\1\10",
+            "\2\4\10\uffff\1\4\12\uffff\1\4\76\uffff\1\6",
+            "\1\7\u008c\uffff\1\10",
+            "\1\12\6\uffff\1\7\6\uffff\1\11\u0085\uffff\1\10",
+            "\1\12\6\uffff\1\7\u008c\uffff\1\10",
             "\1\13",
-            "\1\14\4\uffff\1\14\21\uffff\1\15\16\uffff\1\14",
+            "\1\15\4\uffff\1\15\21\uffff\1\14\16\uffff\1\15",
+            "",
             "\1\16",
+            "\1\7\u008c\uffff\1\10",
             "",
-            "\1\7\u008d\uffff\1\10",
             "",
-            "",
-            "\1\11\6\uffff\1\7\u008d\uffff\1\10"
+            "\1\12\6\uffff\1\7\u008c\uffff\1\10"
     };
 
     static final short[] DFA18_eot = DFA.unpackEncodedString(DFA18_eotS);
@@ -4407,7 +5059,7 @@ public class SalsaParser extends Parser {
             this.transition = DFA18_transition;
         }
         public String getDescription() {
-            return "()* loopback of 436:13: ( fieldVariableDeclaration | constructorDeclaration | classMethodDeclaration )*";
+            return "()* loopback of 430:13: ( fieldVariableDeclaration | constructorDeclaration | classMethodDeclaration )*";
         }
     }
     static final String DFA21_eotS =
@@ -4415,38 +5067,38 @@ public class SalsaParser extends Parser {
     static final String DFA21_eofS =
         "\17\uffff";
     static final String DFA21_minS =
-        "\1\52\1\uffff\1\65\1\67\1\26\2\17\1\51\1\6\1\u00a4\1\uffff\1\26"+
+        "\1\52\1\uffff\1\65\1\67\1\26\2\17\1\51\1\6\1\uffff\1\u00a3\1\26"+
         "\2\uffff\1\17";
     static final String DFA21_maxS =
-        "\1\u00b8\1\uffff\1\u00b8\4\u00a4\1\51\1\54\1\u00a4\1\uffff\1\u00a4"+
-        "\2\uffff\1\u00a4";
+        "\1\u00b7\1\uffff\1\u00b7\4\u00a3\1\51\1\54\1\uffff\2\u00a3\2\uffff"+
+        "\1\u00a3";
     static final String DFA21_acceptS =
-        "\1\uffff\1\4\10\uffff\1\2\1\uffff\1\3\1\1\1\uffff";
+        "\1\uffff\1\4\7\uffff\1\2\2\uffff\1\3\1\1\1\uffff";
     static final String DFA21_specialS =
         "\17\uffff}>";
     static final String[] DFA21_transitionS = {
             "\1\1\12\uffff\1\2\1\uffff\1\4\1\uffff\1\4\2\uffff\1\4\4\uffff"+
             "\1\4\4\uffff\1\2\1\uffff\1\4\6\uffff\2\4\1\2\3\uffff\3\2\1\uffff"+
-            "\1\4\2\2\2\uffff\1\2\3\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1"+
+            "\1\4\2\2\2\uffff\1\2\2\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1"+
             "\5\23\uffff\1\3",
             "",
             "\1\2\1\uffff\1\4\1\uffff\1\4\2\uffff\1\4\4\uffff\1\4\4\uffff"+
             "\1\2\1\uffff\1\4\6\uffff\2\4\1\2\3\uffff\3\2\1\uffff\1\4\2\2"+
-            "\2\uffff\1\2\3\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1\5\23\uffff"+
+            "\2\uffff\1\2\2\uffff\1\2\2\uffff\1\4\1\2\75\uffff\1\5\23\uffff"+
             "\1\3",
             "\1\4\1\uffff\1\4\2\uffff\1\4\4\uffff\1\4\6\uffff\1\4\6\uffff"+
-            "\2\4\10\uffff\1\4\13\uffff\1\4\76\uffff\1\6",
-            "\1\7\u008d\uffff\1\10",
-            "\1\11\6\uffff\1\7\6\uffff\1\12\u0086\uffff\1\10",
-            "\1\11\6\uffff\1\7\u008d\uffff\1\10",
+            "\2\4\10\uffff\1\4\12\uffff\1\4\76\uffff\1\6",
+            "\1\7\u008c\uffff\1\10",
+            "\1\12\6\uffff\1\7\6\uffff\1\11\u0085\uffff\1\10",
+            "\1\12\6\uffff\1\7\u008c\uffff\1\10",
             "\1\13",
             "\1\15\4\uffff\1\15\21\uffff\1\14\16\uffff\1\15",
+            "",
             "\1\16",
+            "\1\7\u008c\uffff\1\10",
             "",
-            "\1\7\u008d\uffff\1\10",
             "",
-            "",
-            "\1\11\6\uffff\1\7\u008d\uffff\1\10"
+            "\1\12\6\uffff\1\7\u008c\uffff\1\10"
     };
 
     static final short[] DFA21_eot = DFA.unpackEncodedString(DFA21_eotS);
@@ -4479,48 +5131,57 @@ public class SalsaParser extends Parser {
             this.transition = DFA21_transition;
         }
         public String getDescription() {
-            return "()* loopback of 455:10: ( fieldVariableDeclaration | constructorDeclaration | messageHandlerDeclaration )*";
+            return "()* loopback of 449:10: ( fieldVariableDeclaration | constructorDeclaration | messageHandlerDeclaration )*";
         }
     }
     static final String DFA28_eotS =
-        "\16\uffff";
+        "\25\uffff";
     static final String DFA28_eofS =
-        "\16\uffff";
+        "\25\uffff";
     static final String DFA28_minS =
-        "\1\14\1\uffff\1\6\6\uffff\1\14\1\u00a4\1\6\1\u00a4\1\6";
+        "\1\14\1\uffff\1\6\15\uffff\1\u00a3\1\14\1\6\1\u00a3\1\6";
     static final String DFA28_maxS =
-        "\1\u00ba\1\uffff\1\u00bb\6\uffff\1\u00aa\4\u00a4";
+        "\1\u00b9\1\uffff\1\u00ba\15\uffff\1\u00a3\1\u00a9\3\u00a3";
     static final String DFA28_acceptS =
-        "\1\uffff\1\1\1\uffff\1\2\1\3\1\4\1\5\1\6\1\7\5\uffff";
+        "\1\uffff\1\1\1\uffff\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13"+
+        "\1\14\1\15\1\16\5\uffff";
     static final String DFA28_specialS =
-        "\16\uffff}>";
+        "\25\uffff}>";
     static final String[] DFA28_transitionS = {
             "\1\3\10\uffff\1\3\1\uffff\1\5\3\uffff\1\3\1\uffff\2\3\3\uffff"+
-            "\1\3\3\uffff\1\3\20\uffff\1\1\1\uffff\1\1\2\uffff\1\1\4\uffff"+
-            "\1\1\3\uffff\1\3\2\uffff\1\1\1\10\1\6\4\uffff\2\1\1\uffff\2"+
-            "\3\4\uffff\1\7\1\1\11\uffff\1\3\1\uffff\1\1\76\uffff\1\2\6\3"+
-            "\15\uffff\1\1\1\uffff\1\4",
+            "\1\3\3\uffff\1\3\20\uffff\1\1\1\13\1\1\2\uffff\1\1\1\uffff\1"+
+            "\14\1\uffff\1\12\1\1\3\uffff\1\3\2\uffff\1\1\1\10\1\6\4\uffff"+
+            "\2\1\1\uffff\2\3\4\uffff\1\7\1\1\3\uffff\1\17\1\uffff\1\16\2"+
+            "\uffff\1\3\1\15\1\1\1\uffff\1\11\74\uffff\1\2\6\3\15\uffff\1"+
+            "\1\1\uffff\1\4",
             "",
-            "\2\3\4\uffff\2\3\1\uffff\1\12\2\uffff\4\3\1\11\1\uffff\5\3"+
-            "\1\uffff\1\3\1\uffff\1\3\2\uffff\1\3\2\uffff\1\3\5\uffff\1\3"+
-            "\4\uffff\1\3\32\uffff\1\3\127\uffff\1\1\26\uffff\1\3",
-            "",
-            "",
-            "",
+            "\2\3\4\uffff\3\3\1\20\2\uffff\4\3\1\21\1\uffff\5\3\1\uffff"+
+            "\3\3\2\uffff\1\3\2\uffff\2\3\4\uffff\1\3\4\uffff\2\3\31\uffff"+
+            "\1\3\126\uffff\1\1\26\uffff\1\3",
             "",
             "",
             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\22",
             "\1\3\10\uffff\1\3\5\uffff\1\3\1\uffff\2\3\3\uffff\1\3\3\uffff"+
-            "\1\3\2\uffff\1\1\33\uffff\1\3\14\uffff\2\3\17\uffff\1\3\100"+
+            "\1\3\2\uffff\1\1\33\uffff\1\3\14\uffff\2\3\16\uffff\1\3\100"+
             "\uffff\7\3",
-            "\1\13",
-            "\2\3\4\uffff\2\3\1\uffff\1\14\2\uffff\4\3\1\1\1\uffff\3\3\1"+
-            "\uffff\3\3\1\uffff\1\3\2\uffff\1\3\2\uffff\1\3\5\uffff\1\3\4"+
-            "\uffff\1\3\32\uffff\1\3\127\uffff\1\1",
-            "\1\15",
-            "\2\3\4\uffff\2\3\1\uffff\1\14\2\uffff\4\3\1\1\1\uffff\3\3\1"+
-            "\uffff\3\3\1\uffff\1\3\2\uffff\1\3\2\uffff\1\3\5\uffff\1\3\4"+
-            "\uffff\1\3\32\uffff\1\3\127\uffff\1\1"
+            "\2\3\4\uffff\3\3\1\23\2\uffff\4\3\1\1\1\uffff\3\3\1\uffff\5"+
+            "\3\2\uffff\1\3\2\uffff\2\3\4\uffff\1\3\4\uffff\2\3\31\uffff"+
+            "\1\3\126\uffff\1\1",
+            "\1\24",
+            "\2\3\4\uffff\3\3\1\23\2\uffff\4\3\1\1\1\uffff\3\3\1\uffff\5"+
+            "\3\2\uffff\1\3\2\uffff\2\3\4\uffff\1\3\4\uffff\2\3\31\uffff"+
+            "\1\3\126\uffff\1\1"
     };
 
     static final short[] DFA28_eot = DFA.unpackEncodedString(DFA28_eotS);
@@ -4553,370 +5214,421 @@ public class SalsaParser extends Parser {
             this.transition = DFA28_transition;
         }
         public String getDescription() {
-            return "549:5: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement )";
+            return "546:5: ( localVariableDeclaration ( ';' | '@' ) | e1= expression ( '=' e2= expression )? ( ';' | '@' ) | joinBlockStatement ( '@' ) | blockStatement | ifStatement | returnStatement ';' | forStatement | whileStatement | doWhileStatement ';' | breakStatement ';' | continueStatement ';' | tryStatement | throwStatement ';' | switchStatement )";
         }
     }
-    static final String DFA36_eotS =
+    static final String DFA44_eotS =
         "\13\uffff";
-    static final String DFA36_eofS =
+    static final String DFA44_eofS =
         "\7\uffff\1\2\3\uffff";
-    static final String DFA36_minS =
-        "\1\35\1\14\1\uffff\1\14\1\uffff\1\14\1\u00a4\1\6\1\14\1\u00a4\1"+
+    static final String DFA44_minS =
+        "\1\35\1\14\1\uffff\1\14\1\uffff\1\14\1\u00a3\1\6\1\14\1\u00a3\1"+
         "\14";
-    static final String DFA36_maxS =
-        "\1\u00aa\1\u00b8\1\uffff\1\u00bb\1\uffff\1\u00aa\1\u00a4\1\u00bb"+
-        "\1\114\1\u00a4\1\114";
-    static final String DFA36_acceptS =
+    static final String DFA44_maxS =
+        "\1\u00a9\1\u00b7\1\uffff\1\u00ba\1\uffff\1\u00a9\1\u00a3\1\u00ba"+
+        "\1\114\1\u00a3\1\114";
+    static final String DFA44_acceptS =
         "\2\uffff\1\2\1\uffff\1\1\6\uffff";
-    static final String DFA36_specialS =
+    static final String DFA44_specialS =
         "\13\uffff}>";
-    static final String[] DFA36_transitionS = {
-            "\1\1\47\uffff\1\2\14\uffff\2\2\17\uffff\1\2\100\uffff\7\2",
+    static final String[] DFA44_transitionS = {
+            "\1\1\47\uffff\1\2\14\uffff\2\2\16\uffff\1\2\100\uffff\7\2",
             "\1\2\10\uffff\1\2\5\uffff\1\2\1\uffff\2\2\3\uffff\1\2\3\uffff"+
             "\1\2\20\uffff\1\4\1\uffff\1\4\2\uffff\1\4\4\uffff\1\4\3\uffff"+
-            "\1\2\2\uffff\1\4\6\uffff\2\4\1\uffff\2\2\5\uffff\1\4\11\uffff"+
+            "\1\2\2\uffff\1\4\6\uffff\2\4\1\uffff\2\2\5\uffff\1\4\10\uffff"+
             "\1\2\1\uffff\1\4\76\uffff\1\3\6\2\15\uffff\1\4",
             "",
-            "\2\2\1\uffff\1\6\2\uffff\4\2\1\5\1\uffff\5\2\1\uffff\1\2\1"+
-            "\uffff\1\2\2\uffff\1\2\2\uffff\1\2\4\uffff\1\7\5\uffff\1\2\32"+
-            "\uffff\1\2\156\uffff\1\2",
+            "\3\2\1\6\2\uffff\4\2\1\5\1\uffff\5\2\1\uffff\3\2\2\uffff\1"+
+            "\2\2\uffff\2\2\3\uffff\1\7\5\uffff\2\2\31\uffff\1\2\155\uffff"+
+            "\1\2",
             "",
             "\1\2\10\uffff\1\2\5\uffff\1\2\1\uffff\2\2\3\uffff\1\2\3\uffff"+
-            "\1\2\2\uffff\1\4\33\uffff\1\2\14\uffff\2\2\17\uffff\1\2\100"+
+            "\1\2\2\uffff\1\4\33\uffff\1\2\14\uffff\2\2\16\uffff\1\2\100"+
             "\uffff\7\2",
             "\1\10",
-            "\2\2\3\uffff\3\2\1\uffff\1\2\2\uffff\4\2\2\uffff\5\2\1\4\1"+
-            "\2\1\uffff\1\2\2\uffff\1\2\2\uffff\1\2\2\uffff\1\2\1\uffff\2"+
-            "\2\4\uffff\1\2\23\uffff\1\4\6\uffff\1\2\5\uffff\2\4\17\uffff"+
-            "\1\4\100\uffff\7\4\20\uffff\1\2",
-            "\2\2\1\uffff\1\11\2\uffff\4\2\1\4\1\uffff\3\2\1\uffff\3\2\1"+
-            "\uffff\1\2\2\uffff\1\2\2\uffff\1\2\4\uffff\1\7\5\uffff\1\2\32"+
-            "\uffff\1\2",
+            "\2\2\2\uffff\6\2\2\uffff\4\2\2\uffff\5\2\1\4\3\2\2\uffff\1"+
+            "\2\2\uffff\2\2\1\uffff\1\2\1\uffff\2\2\4\uffff\2\2\22\uffff"+
+            "\1\4\6\uffff\1\2\5\uffff\2\4\16\uffff\1\4\100\uffff\7\4\20\uffff"+
+            "\1\2",
+            "\3\2\1\11\2\uffff\4\2\1\4\1\uffff\3\2\1\uffff\5\2\2\uffff\1"+
+            "\2\2\uffff\2\2\3\uffff\1\7\5\uffff\2\2\31\uffff\1\2",
             "\1\12",
-            "\2\2\1\uffff\1\11\2\uffff\4\2\1\4\1\uffff\3\2\1\uffff\3\2\1"+
-            "\uffff\1\2\2\uffff\1\2\2\uffff\1\2\4\uffff\1\7\5\uffff\1\2\32"+
-            "\uffff\1\2"
+            "\3\2\1\11\2\uffff\4\2\1\4\1\uffff\3\2\1\uffff\5\2\2\uffff\1"+
+            "\2\2\uffff\2\2\3\uffff\1\7\5\uffff\2\2\31\uffff\1\2"
     };
 
-    static final short[] DFA36_eot = DFA.unpackEncodedString(DFA36_eotS);
-    static final short[] DFA36_eof = DFA.unpackEncodedString(DFA36_eofS);
-    static final char[] DFA36_min = DFA.unpackEncodedStringToUnsignedChars(DFA36_minS);
-    static final char[] DFA36_max = DFA.unpackEncodedStringToUnsignedChars(DFA36_maxS);
-    static final short[] DFA36_accept = DFA.unpackEncodedString(DFA36_acceptS);
-    static final short[] DFA36_special = DFA.unpackEncodedString(DFA36_specialS);
-    static final short[][] DFA36_transition;
+    static final short[] DFA44_eot = DFA.unpackEncodedString(DFA44_eotS);
+    static final short[] DFA44_eof = DFA.unpackEncodedString(DFA44_eofS);
+    static final char[] DFA44_min = DFA.unpackEncodedStringToUnsignedChars(DFA44_minS);
+    static final char[] DFA44_max = DFA.unpackEncodedStringToUnsignedChars(DFA44_maxS);
+    static final short[] DFA44_accept = DFA.unpackEncodedString(DFA44_acceptS);
+    static final short[] DFA44_special = DFA.unpackEncodedString(DFA44_specialS);
+    static final short[][] DFA44_transition;
 
     static {
-        int numStates = DFA36_transitionS.length;
-        DFA36_transition = new short[numStates][];
+        int numStates = DFA44_transitionS.length;
+        DFA44_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA36_transition[i] = DFA.unpackEncodedString(DFA36_transitionS[i]);
+            DFA44_transition[i] = DFA.unpackEncodedString(DFA44_transitionS[i]);
         }
     }
 
-    class DFA36 extends DFA {
+    class DFA44 extends DFA {
 
-        public DFA36(BaseRecognizer recognizer) {
+        public DFA44(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 36;
-            this.eot = DFA36_eot;
-            this.eof = DFA36_eof;
-            this.min = DFA36_min;
-            this.max = DFA36_max;
-            this.accept = DFA36_accept;
-            this.special = DFA36_special;
-            this.transition = DFA36_transition;
+            this.decisionNumber = 44;
+            this.eot = DFA44_eot;
+            this.eof = DFA44_eof;
+            this.min = DFA44_min;
+            this.max = DFA44_max;
+            this.accept = DFA44_accept;
+            this.special = DFA44_special;
+            this.transition = DFA44_transition;
         }
         public String getDescription() {
-            return "678:9: ( '(' type ')' )?";
+            return "739:9: ( '(' type ')' )?";
         }
     }
-    static final String DFA45_eotS =
+    static final String DFA53_eotS =
         "\11\uffff";
-    static final String DFA45_eofS =
+    static final String DFA53_eofS =
         "\11\uffff";
-    static final String DFA45_minS =
-        "\1\122\1\67\1\26\1\17\1\uffff\1\14\1\u00a4\1\uffff\1\17";
-    static final String DFA45_maxS =
-        "\1\122\1\u00b8\2\35\1\uffff\1\u00aa\1\u00a4\1\uffff\1\35";
-    static final String DFA45_acceptS =
-        "\4\uffff\1\1\2\uffff\1\2\1\uffff";
-    static final String DFA45_specialS =
+    static final String DFA53_minS =
+        "\1\122\1\67\1\uffff\1\26\1\17\1\14\1\u00a3\1\uffff\1\17";
+    static final String DFA53_maxS =
+        "\1\122\1\u00b7\1\uffff\2\35\1\u00a9\1\u00a3\1\uffff\1\35";
+    static final String DFA53_acceptS =
+        "\2\uffff\1\1\4\uffff\1\2\1\uffff";
+    static final String DFA53_specialS =
         "\11\uffff}>";
-    static final String[] DFA45_transitionS = {
+    static final String[] DFA53_transitionS = {
             "\1\1",
-            "\1\2\1\uffff\1\2\2\uffff\1\2\4\uffff\1\2\6\uffff\1\2\6\uffff"+
-            "\2\2\10\uffff\1\2\13\uffff\1\2\76\uffff\1\3\23\uffff\1\4",
-            "\1\5\6\uffff\1\4",
-            "\1\6\6\uffff\1\5\6\uffff\1\4",
+            "\1\3\1\uffff\1\3\2\uffff\1\3\4\uffff\1\3\6\uffff\1\3\6\uffff"+
+            "\2\3\10\uffff\1\3\12\uffff\1\3\76\uffff\1\4\23\uffff\1\2",
             "",
+            "\1\5\6\uffff\1\2",
+            "\1\6\6\uffff\1\5\6\uffff\1\2",
             "\1\7\10\uffff\1\7\5\uffff\1\7\1\uffff\2\7\3\uffff\1\7\3\uffff"+
-            "\1\7\2\uffff\1\4\33\uffff\1\7\14\uffff\2\7\17\uffff\1\7\100"+
+            "\1\7\2\uffff\1\2\33\uffff\1\7\14\uffff\2\7\16\uffff\1\7\100"+
             "\uffff\7\7",
             "\1\10",
             "",
-            "\1\6\6\uffff\1\5\6\uffff\1\4"
+            "\1\6\6\uffff\1\5\6\uffff\1\2"
     };
 
-    static final short[] DFA45_eot = DFA.unpackEncodedString(DFA45_eotS);
-    static final short[] DFA45_eof = DFA.unpackEncodedString(DFA45_eofS);
-    static final char[] DFA45_min = DFA.unpackEncodedStringToUnsignedChars(DFA45_minS);
-    static final char[] DFA45_max = DFA.unpackEncodedStringToUnsignedChars(DFA45_maxS);
-    static final short[] DFA45_accept = DFA.unpackEncodedString(DFA45_acceptS);
-    static final short[] DFA45_special = DFA.unpackEncodedString(DFA45_specialS);
-    static final short[][] DFA45_transition;
+    static final short[] DFA53_eot = DFA.unpackEncodedString(DFA53_eotS);
+    static final short[] DFA53_eof = DFA.unpackEncodedString(DFA53_eofS);
+    static final char[] DFA53_min = DFA.unpackEncodedStringToUnsignedChars(DFA53_minS);
+    static final char[] DFA53_max = DFA.unpackEncodedStringToUnsignedChars(DFA53_maxS);
+    static final short[] DFA53_accept = DFA.unpackEncodedString(DFA53_acceptS);
+    static final short[] DFA53_special = DFA.unpackEncodedString(DFA53_specialS);
+    static final short[][] DFA53_transition;
 
     static {
-        int numStates = DFA45_transitionS.length;
-        DFA45_transition = new short[numStates][];
+        int numStates = DFA53_transitionS.length;
+        DFA53_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA45_transition[i] = DFA.unpackEncodedString(DFA45_transitionS[i]);
+            DFA53_transition[i] = DFA.unpackEncodedString(DFA53_transitionS[i]);
         }
     }
 
-    class DFA45 extends DFA {
+    class DFA53 extends DFA {
 
-        public DFA45(BaseRecognizer recognizer) {
+        public DFA53(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 45;
-            this.eot = DFA45_eot;
-            this.eof = DFA45_eof;
-            this.min = DFA45_min;
-            this.max = DFA45_max;
-            this.accept = DFA45_accept;
-            this.special = DFA45_special;
-            this.transition = DFA45_transition;
+            this.decisionNumber = 53;
+            this.eot = DFA53_eot;
+            this.eof = DFA53_eof;
+            this.min = DFA53_min;
+            this.max = DFA53_max;
+            this.accept = DFA53_accept;
+            this.special = DFA53_special;
+            this.transition = DFA53_transition;
         }
         public String getDescription() {
-            return "699:1: allocation returns [Allocation a] : ( 'new' type actualParameters ( 'at' '(' uan= expression ( ',' host= expression )? ')' )? | ( 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+ ) );";
+            return "771:1: allocation returns [Allocation a] : ( 'new' type actualParameters ( 'at' '(' uan= expression ( ',' host= expression )? ')' )? | ( 'new' ( primitiveType | qualifiedName ) ( '[' expression ']' )+ ) );";
         }
     }
  
 
-    public static final BitSet FOLLOW_moduleDeclaration_in_compilationUnit4483 = new BitSet(new long[]{0x2020000000000000L,0x000000444CE26040L,0x0200000000000000L});
-    public static final BitSet FOLLOW_importDeclaration_in_compilationUnit4498 = new BitSet(new long[]{0x2020000000000000L,0x000000444CE26040L,0x0200000000000000L});
-    public static final BitSet FOLLOW_typeDeclaration_in_compilationUnit4514 = new BitSet(new long[]{0x2020000000000002L,0x000000444CE26040L,0x0200000000000000L});
-    public static final BitSet FOLLOW_183_in_moduleDeclaration4541 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_qualifiedName_in_moduleDeclaration4543 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_SEMI_in_moduleDeclaration4545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IMPORT_in_importDeclaration4570 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_qualifiedName_in_importDeclaration4572 = new BitSet(new long[]{0x0000100000010000L});
-    public static final BitSet FOLLOW_DOTSTAR_in_importDeclaration4585 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_SEMI_in_importDeclaration4591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_qualifiedName_in_qualifiedNameList4615 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_COMMA_in_qualifiedNameList4626 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_qualifiedName_in_qualifiedNameList4628 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_IDENT_in_qualifiedName4663 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_DOT_in_qualifiedName4674 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_IDENT_in_qualifiedName4676 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_set_in_modifiers4706 = new BitSet(new long[]{0x0020000000000002L,0x000000444CE20040L});
-    public static final BitSet FOLLOW_FINAL_in_variableModifiers4841 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000040L});
-    public static final BitSet FOLLOW_type_in_typeList4876 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_COMMA_in_typeList4887 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_type_in_typeList4889 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_184_in_type4924 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0000001000000000L});
-    public static final BitSet FOLLOW_primitiveType_in_type4950 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_qualifiedName_in_type4964 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_LBRACK_in_type4989 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_RBRACK_in_type4991 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_moduleDeclaration_in_compilationUnit4442 = new BitSet(new long[]{0x2020000000000000L,0x000000224CE26040L,0x0100000000000000L});
+    public static final BitSet FOLLOW_importDeclaration_in_compilationUnit4457 = new BitSet(new long[]{0x2020000000000000L,0x000000224CE26040L,0x0100000000000000L});
+    public static final BitSet FOLLOW_typeDeclaration_in_compilationUnit4473 = new BitSet(new long[]{0x2020000000000002L,0x000000224CE26040L,0x0100000000000000L});
+    public static final BitSet FOLLOW_182_in_moduleDeclaration4500 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_qualifiedName_in_moduleDeclaration4502 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_SEMI_in_moduleDeclaration4504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IMPORT_in_importDeclaration4529 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_qualifiedName_in_importDeclaration4531 = new BitSet(new long[]{0x0000100000010000L});
+    public static final BitSet FOLLOW_DOTSTAR_in_importDeclaration4544 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_SEMI_in_importDeclaration4550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_qualifiedName_in_qualifiedNameList4574 = new BitSet(new long[]{0x0000000000000802L});
+    public static final BitSet FOLLOW_COMMA_in_qualifiedNameList4585 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_qualifiedName_in_qualifiedNameList4587 = new BitSet(new long[]{0x0000000000000802L});
+    public static final BitSet FOLLOW_IDENT_in_qualifiedName4622 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_DOT_in_qualifiedName4633 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_IDENT_in_qualifiedName4635 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_set_in_modifiers4665 = new BitSet(new long[]{0x0020000000000002L,0x000000224CE20040L});
+    public static final BitSet FOLLOW_FINAL_in_variableModifiers4800 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000040L});
+    public static final BitSet FOLLOW_type_in_typeList4835 = new BitSet(new long[]{0x0000000000000802L});
+    public static final BitSet FOLLOW_COMMA_in_typeList4846 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_type_in_typeList4848 = new BitSet(new long[]{0x0000000000000802L});
+    public static final BitSet FOLLOW_183_in_type4883 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0000000800000000L});
+    public static final BitSet FOLLOW_primitiveType_in_type4909 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_qualifiedName_in_type4923 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_LBRACK_in_type4948 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_RBRACK_in_type4950 = new BitSet(new long[]{0x0000000000400002L});
     public static final BitSet FOLLOW_set_in_primitiveType0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_behaviorDeclaration_in_typeDeclaration5132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classDeclaration_in_typeDeclaration5144 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_interfaceDeclaration_in_typeDeclaration5156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifiers_in_interfaceDeclaration5193 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_INTERFACE_in_interfaceDeclaration5195 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_IDENT_in_interfaceDeclaration5197 = new BitSet(new long[]{0x0000000000800000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_EXTENDS_in_interfaceDeclaration5208 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_typeList_in_interfaceDeclaration5210 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_LCURLY_in_interfaceDeclaration5222 = new BitSet(new long[]{0x12A0040000000000L,0x000000644EE38142L,0x0100001000000000L});
-    public static final BitSet FOLLOW_fieldVariableDeclaration_in_interfaceDeclaration5240 = new BitSet(new long[]{0x12A0040000000000L,0x000000644EE38142L,0x0100001000000000L});
-    public static final BitSet FOLLOW_intefaceMethodDeclaration_in_interfaceDeclaration5260 = new BitSet(new long[]{0x12A0040000000000L,0x000000644EE38142L,0x0100001000000000L});
-    public static final BitSet FOLLOW_RCURLY_in_interfaceDeclaration5287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifiers_in_classDeclaration5333 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_CLASS_in_classDeclaration5335 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_IDENT_in_classDeclaration5337 = new BitSet(new long[]{0x0000000000800000L,0x0000000000000810L});
-    public static final BitSet FOLLOW_EXTENDS_in_classDeclaration5348 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_type_in_classDeclaration5350 = new BitSet(new long[]{0x0000000000800000L,0x0000000000000800L});
-    public static final BitSet FOLLOW_IMPLEMENTS_in_classDeclaration5363 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_typeList_in_classDeclaration5365 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_LCURLY_in_classDeclaration5387 = new BitSet(new long[]{0x12A0040000000000L,0x000000644EE38142L,0x0100001000000000L});
-    public static final BitSet FOLLOW_fieldVariableDeclaration_in_classDeclaration5405 = new BitSet(new long[]{0x12A0040000000000L,0x000000644EE38142L,0x0100001000000000L});
-    public static final BitSet FOLLOW_constructorDeclaration_in_classDeclaration5425 = new BitSet(new long[]{0x12A0040000000000L,0x000000644EE38142L,0x0100001000000000L});
-    public static final BitSet FOLLOW_classMethodDeclaration_in_classDeclaration5445 = new BitSet(new long[]{0x12A0040000000000L,0x000000644EE38142L,0x0100001000000000L});
-    public static final BitSet FOLLOW_RCURLY_in_classDeclaration5472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifiers_in_behaviorDeclaration5508 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0200000000000000L});
-    public static final BitSet FOLLOW_185_in_behaviorDeclaration5510 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_IDENT_in_behaviorDeclaration5512 = new BitSet(new long[]{0x0000000000800000L,0x0000000000000810L});
-    public static final BitSet FOLLOW_EXTENDS_in_behaviorDeclaration5524 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_type_in_behaviorDeclaration5526 = new BitSet(new long[]{0x0000000000800000L,0x0000000000000800L});
-    public static final BitSet FOLLOW_IMPLEMENTS_in_behaviorDeclaration5539 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_typeList_in_behaviorDeclaration5541 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_LCURLY_in_behaviorDeclaration5563 = new BitSet(new long[]{0x12A0040000000000L,0x000000644EE38142L,0x0100001000000000L});
-    public static final BitSet FOLLOW_fieldVariableDeclaration_in_behaviorDeclaration5578 = new BitSet(new long[]{0x12A0040000000000L,0x000000644EE38142L,0x0100001000000000L});
-    public static final BitSet FOLLOW_constructorDeclaration_in_behaviorDeclaration5595 = new BitSet(new long[]{0x12A0040000000000L,0x000000644EE38142L,0x0100001000000000L});
-    public static final BitSet FOLLOW_messageHandlerDeclaration_in_behaviorDeclaration5612 = new BitSet(new long[]{0x12A0040000000000L,0x000000644EE38142L,0x0100001000000000L});
-    public static final BitSet FOLLOW_RCURLY_in_behaviorDeclaration5640 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifiers_in_intefaceMethodDeclaration5673 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_type_in_intefaceMethodDeclaration5675 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_IDENT_in_intefaceMethodDeclaration5677 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_formalParameters_in_intefaceMethodDeclaration5679 = new BitSet(new long[]{0x0000100000000000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_THROWS_in_intefaceMethodDeclaration5682 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_qualifiedNameList_in_intefaceMethodDeclaration5684 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_SEMI_in_intefaceMethodDeclaration5689 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifiers_in_classMethodDeclaration5746 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_type_in_classMethodDeclaration5748 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_IDENT_in_classMethodDeclaration5750 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_formalParameters_in_classMethodDeclaration5752 = new BitSet(new long[]{0x0000000000800000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_THROWS_in_classMethodDeclaration5755 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_qualifiedNameList_in_classMethodDeclaration5757 = new BitSet(new long[]{0x0000000000800000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_block_in_classMethodDeclaration5769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifiers_in_constructorDeclaration5808 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_IDENT_in_constructorDeclaration5810 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_formalParameters_in_constructorDeclaration5814 = new BitSet(new long[]{0x0000000000800000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_block_in_constructorDeclaration5816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifiers_in_messageHandlerDeclaration5849 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_type_in_messageHandlerDeclaration5851 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_IDENT_in_messageHandlerDeclaration5853 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_formalParameters_in_messageHandlerDeclaration5855 = new BitSet(new long[]{0x0000000000800000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_block_in_messageHandlerDeclaration5866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LCURLY_in_block5904 = new BitSet(new long[]{0x1280044468A01000L,0x0000002A030D8722L,0x050007F000000000L});
-    public static final BitSet FOLLOW_statement_in_block5907 = new BitSet(new long[]{0x1280044468A01000L,0x0000002A030D8722L,0x050007F000000000L});
-    public static final BitSet FOLLOW_RCURLY_in_block5942 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_localVariableDeclaration_in_statement6007 = new BitSet(new long[]{0x0000100000000080L});
-    public static final BitSet FOLLOW_SEMI_in_statement6010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_AT_in_statement6014 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_statement6032 = new BitSet(new long[]{0x00001000000000C0L});
-    public static final BitSet FOLLOW_ASSIGN_in_statement6035 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_statement6041 = new BitSet(new long[]{0x0000100000000080L});
-    public static final BitSet FOLLOW_SEMI_in_statement6065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_AT_in_statement6069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_joinBlockStatement_in_statement6082 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_AT_in_statement6085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_blockStatement_in_statement6099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ifStatement_in_statement6112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_returnStatement_in_statement6124 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_SEMI_in_statement6126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_forStatement_in_statement6138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FOR_in_forStatement6186 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_LPAREN_in_forStatement6197 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_localVariableDeclaration_in_forStatement6212 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_SEMI_in_forStatement6227 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_forStatement6246 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_SEMI_in_forStatement6248 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_forStatement6267 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_RPAREN_in_forStatement6278 = new BitSet(new long[]{0x0000000000800000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_block_in_forStatement6288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RETURN_in_returnStatement6330 = new BitSet(new long[]{0x0000004468201002L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_returnStatement6333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IF_in_ifStatement6373 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_LPAREN_in_ifStatement6375 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_ifStatement6377 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_RPAREN_in_ifStatement6379 = new BitSet(new long[]{0x0000000000800000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_block_in_ifStatement6381 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ELSE_in_ifStatement6394 = new BitSet(new long[]{0x1280004468A01000L,0x0000002A030D8722L,0x050007F000000000L});
-    public static final BitSet FOLLOW_statement_in_ifStatement6396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_186_in_joinBlockStatement6427 = new BitSet(new long[]{0x0000000000800000L,0x0000000200000000L});
-    public static final BitSet FOLLOW_block_in_joinBlockStatement6429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_block_in_blockStatement6467 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_expressionStatement6492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LPAREN_in_formalParameters6534 = new BitSet(new long[]{0x1280080000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_formalParameter_in_formalParameters6562 = new BitSet(new long[]{0x0000080000000800L});
-    public static final BitSet FOLLOW_COMMA_in_formalParameters6579 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_formalParameter_in_formalParameters6585 = new BitSet(new long[]{0x0000080000000800L});
-    public static final BitSet FOLLOW_RPAREN_in_formalParameters6611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_formalParameter6645 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_IDENT_in_formalParameter6655 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_localVariableDeclaration6693 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_variableDeclaration_in_localVariableDeclaration6708 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_COMMA_in_localVariableDeclaration6730 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_variableDeclaration_in_localVariableDeclaration6736 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_modifiers_in_fieldVariableDeclaration6799 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_type_in_fieldVariableDeclaration6801 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_variableDeclaration_in_fieldVariableDeclaration6815 = new BitSet(new long[]{0x0000100000000800L});
-    public static final BitSet FOLLOW_COMMA_in_fieldVariableDeclaration6838 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_variableDeclaration_in_fieldVariableDeclaration6844 = new BitSet(new long[]{0x0000100000000800L});
-    public static final BitSet FOLLOW_SEMI_in_fieldVariableDeclaration6877 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENT_in_variableDeclaration6916 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_ASSIGN_in_variableDeclaration6934 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_variableDeclaration6936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LPAREN_in_term7002 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_type_in_term7004 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_RPAREN_in_term7006 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_literal_in_term7039 = new BitSet(new long[]{0x0000000008008002L,0x0000000000000000L,0x0800000000000000L});
-    public static final BitSet FOLLOW_LPAREN_in_term7052 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_term7058 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_RPAREN_in_term7060 = new BitSet(new long[]{0x0000000008008002L,0x0000000000000000L,0x0800000000000000L});
-    public static final BitSet FOLLOW_IDENT_in_term7076 = new BitSet(new long[]{0x0000000008408002L,0x0000000000000000L,0x0800000000000000L});
-    public static final BitSet FOLLOW_LBRACK_in_term7079 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_term7085 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_RBRACK_in_term7087 = new BitSet(new long[]{0x0000000008408002L,0x0000000000000000L,0x0800000000000000L});
-    public static final BitSet FOLLOW_allocation_in_term7113 = new BitSet(new long[]{0x0000000008008002L,0x0000000000000000L,0x0800000000000000L});
-    public static final BitSet FOLLOW_DOT_in_term7146 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_qualifiedName_in_term7152 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_actualParameters_in_term7178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_term7226 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
-    public static final BitSet FOLLOW_IDENT_in_term7238 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_actualParameters_in_term7263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NEW_in_allocation7344 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0100001000000000L});
-    public static final BitSet FOLLOW_type_in_allocation7346 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_actualParameters_in_allocation7349 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x1000000000000000L});
-    public static final BitSet FOLLOW_188_in_allocation7361 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_LPAREN_in_allocation7372 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_allocation7376 = new BitSet(new long[]{0x0000080000000800L});
-    public static final BitSet FOLLOW_COMMA_in_allocation7379 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_allocation7383 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_RPAREN_in_allocation7411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NEW_in_allocation7438 = new BitSet(new long[]{0x1280000000000000L,0x0000002002018102L,0x0000001000000000L});
-    public static final BitSet FOLLOW_primitiveType_in_allocation7441 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_qualifiedName_in_allocation7449 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_LBRACK_in_allocation7473 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_allocation7475 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_RBRACK_in_allocation7477 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_LPAREN_in_actualParameters7512 = new BitSet(new long[]{0x0000084468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_actualParameters7531 = new BitSet(new long[]{0x0000080000000800L});
-    public static final BitSet FOLLOW_COMMA_in_actualParameters7548 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_expression_in_actualParameters7554 = new BitSet(new long[]{0x0000080000000800L});
-    public static final BitSet FOLLOW_RPAREN_in_actualParameters7570 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOT_in_negation7603 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_term_in_negation7609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PLUS_in_unary7649 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_MINUS_in_unary7657 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_LOGICAL_NOT_in_unary7665 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_INC_in_unary7673 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_DEC_in_unary7681 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_negation_in_unary7697 = new BitSet(new long[]{0x0000000000201002L});
-    public static final BitSet FOLLOW_INC_in_unary7715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DEC_in_unary7723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unary_in_mult7770 = new BitSet(new long[]{0x0002000100002002L});
-    public static final BitSet FOLLOW_STAR_in_mult7802 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_DIV_in_mult7810 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_MOD_in_mult7818 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_unary_in_mult7838 = new BitSet(new long[]{0x0002000100002002L});
-    public static final BitSet FOLLOW_mult_in_add7886 = new BitSet(new long[]{0x0000004040000002L});
-    public static final BitSet FOLLOW_PLUS_in_add7918 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_MINUS_in_add7926 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_mult_in_add7946 = new BitSet(new long[]{0x0000004040000002L});
-    public static final BitSet FOLLOW_add_in_relation7990 = new BitSet(new long[]{0x00000008031C0002L});
-    public static final BitSet FOLLOW_EQUAL_in_relation8023 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_NOT_EQUAL_in_relation8031 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_LESS_THAN_in_relation8039 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_LESS_OR_EQUAL_in_relation8047 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_GREATER_OR_EQUAL_in_relation8055 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_GREATER_THAN_in_relation8063 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_add_in_relation8083 = new BitSet(new long[]{0x00000008031C0002L});
-    public static final BitSet FOLLOW_relation_in_expression8154 = new BitSet(new long[]{0x0000000014000002L,0x0000000000001000L});
-    public static final BitSet FOLLOW_LOGICAL_AND_in_expression8188 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_LOGICAL_OR_in_expression8196 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_INSTANCEOF_in_expression8204 = new BitSet(new long[]{0x0000004468201000L,0x00000008000C0020L,0x000007F000000000L});
-    public static final BitSet FOLLOW_relation_in_expression8211 = new BitSet(new long[]{0x0000000014000002L,0x0000000000001000L});
-    public static final BitSet FOLLOW_HEX_LITERAL_in_literal8261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DECIMAL_LITERAL_in_literal8273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_OCTAL_LITERAL_in_literal8285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARACTER_LITERAL_in_literal8297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_LITERAL_in_literal8311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FLOATING_POINT_LITERAL_in_literal8324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TRUE_in_literal8342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FALSE_in_literal8350 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NULL_in_literal8363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_behaviorDeclaration_in_typeDeclaration5096 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classDeclaration_in_typeDeclaration5108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_interfaceDeclaration_in_typeDeclaration5120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifiers_in_interfaceDeclaration5157 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+    public static final BitSet FOLLOW_INTERFACE_in_interfaceDeclaration5159 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_IDENT_in_interfaceDeclaration5161 = new BitSet(new long[]{0x0000000000800000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_EXTENDS_in_interfaceDeclaration5172 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_typeList_in_interfaceDeclaration5174 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_LCURLY_in_interfaceDeclaration5186 = new BitSet(new long[]{0x12A0040000000000L,0x000000324EE38142L,0x0080000800000000L});
+    public static final BitSet FOLLOW_fieldVariableDeclaration_in_interfaceDeclaration5204 = new BitSet(new long[]{0x12A0040000000000L,0x000000324EE38142L,0x0080000800000000L});
+    public static final BitSet FOLLOW_intefaceMethodDeclaration_in_interfaceDeclaration5224 = new BitSet(new long[]{0x12A0040000000000L,0x000000324EE38142L,0x0080000800000000L});
+    public static final BitSet FOLLOW_RCURLY_in_interfaceDeclaration5251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifiers_in_classDeclaration5297 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_CLASS_in_classDeclaration5299 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_IDENT_in_classDeclaration5301 = new BitSet(new long[]{0x0000000000800000L,0x0000000000000810L});
+    public static final BitSet FOLLOW_EXTENDS_in_classDeclaration5312 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_type_in_classDeclaration5314 = new BitSet(new long[]{0x0000000000800000L,0x0000000000000800L});
+    public static final BitSet FOLLOW_IMPLEMENTS_in_classDeclaration5327 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_typeList_in_classDeclaration5329 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_LCURLY_in_classDeclaration5351 = new BitSet(new long[]{0x12A0040000000000L,0x000000324EE38142L,0x0080000800000000L});
+    public static final BitSet FOLLOW_fieldVariableDeclaration_in_classDeclaration5369 = new BitSet(new long[]{0x12A0040000000000L,0x000000324EE38142L,0x0080000800000000L});
+    public static final BitSet FOLLOW_constructorDeclaration_in_classDeclaration5389 = new BitSet(new long[]{0x12A0040000000000L,0x000000324EE38142L,0x0080000800000000L});
+    public static final BitSet FOLLOW_classMethodDeclaration_in_classDeclaration5409 = new BitSet(new long[]{0x12A0040000000000L,0x000000324EE38142L,0x0080000800000000L});
+    public static final BitSet FOLLOW_RCURLY_in_classDeclaration5436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifiers_in_behaviorDeclaration5472 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0100000000000000L});
+    public static final BitSet FOLLOW_184_in_behaviorDeclaration5474 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_IDENT_in_behaviorDeclaration5476 = new BitSet(new long[]{0x0000000000800000L,0x0000000000000810L});
+    public static final BitSet FOLLOW_EXTENDS_in_behaviorDeclaration5488 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_type_in_behaviorDeclaration5490 = new BitSet(new long[]{0x0000000000800000L,0x0000000000000800L});
+    public static final BitSet FOLLOW_IMPLEMENTS_in_behaviorDeclaration5503 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_typeList_in_behaviorDeclaration5505 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_LCURLY_in_behaviorDeclaration5527 = new BitSet(new long[]{0x12A0040000000000L,0x000000324EE38142L,0x0080000800000000L});
+    public static final BitSet FOLLOW_fieldVariableDeclaration_in_behaviorDeclaration5542 = new BitSet(new long[]{0x12A0040000000000L,0x000000324EE38142L,0x0080000800000000L});
+    public static final BitSet FOLLOW_constructorDeclaration_in_behaviorDeclaration5559 = new BitSet(new long[]{0x12A0040000000000L,0x000000324EE38142L,0x0080000800000000L});
+    public static final BitSet FOLLOW_messageHandlerDeclaration_in_behaviorDeclaration5576 = new BitSet(new long[]{0x12A0040000000000L,0x000000324EE38142L,0x0080000800000000L});
+    public static final BitSet FOLLOW_RCURLY_in_behaviorDeclaration5604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifiers_in_intefaceMethodDeclaration5637 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_type_in_intefaceMethodDeclaration5639 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_IDENT_in_intefaceMethodDeclaration5641 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_formalParameters_in_intefaceMethodDeclaration5643 = new BitSet(new long[]{0x0000100000000000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_THROWS_in_intefaceMethodDeclaration5646 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_qualifiedNameList_in_intefaceMethodDeclaration5648 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_SEMI_in_intefaceMethodDeclaration5653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifiers_in_classMethodDeclaration5710 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_type_in_classMethodDeclaration5712 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_IDENT_in_classMethodDeclaration5714 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_formalParameters_in_classMethodDeclaration5716 = new BitSet(new long[]{0x0000000000800000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_THROWS_in_classMethodDeclaration5719 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_qualifiedNameList_in_classMethodDeclaration5721 = new BitSet(new long[]{0x0000000000800000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_block_in_classMethodDeclaration5733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifiers_in_constructorDeclaration5772 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_IDENT_in_constructorDeclaration5774 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_formalParameters_in_constructorDeclaration5778 = new BitSet(new long[]{0x0000000000800000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_block_in_constructorDeclaration5780 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifiers_in_messageHandlerDeclaration5813 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_type_in_messageHandlerDeclaration5815 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_IDENT_in_messageHandlerDeclaration5817 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_formalParameters_in_messageHandlerDeclaration5819 = new BitSet(new long[]{0x0000000000800000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_block_in_messageHandlerDeclaration5830 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LCURLY_in_block5868 = new BitSet(new long[]{0x5380044468A01000L,0x0000005DA30D8723L,0x028003F800000000L});
+    public static final BitSet FOLLOW_statement_in_block5871 = new BitSet(new long[]{0x5380044468A01000L,0x0000005DA30D8723L,0x028003F800000000L});
+    public static final BitSet FOLLOW_RCURLY_in_block5906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_localVariableDeclaration_in_statement5971 = new BitSet(new long[]{0x0000100000000080L});
+    public static final BitSet FOLLOW_SEMI_in_statement5974 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_AT_in_statement5978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_statement5996 = new BitSet(new long[]{0x00001000000000C0L});
+    public static final BitSet FOLLOW_ASSIGN_in_statement5999 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_statement6005 = new BitSet(new long[]{0x0000100000000080L});
+    public static final BitSet FOLLOW_SEMI_in_statement6029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_AT_in_statement6033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_joinBlockStatement_in_statement6046 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_AT_in_statement6049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_blockStatement_in_statement6063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ifStatement_in_statement6076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_returnStatement_in_statement6088 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_SEMI_in_statement6090 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_forStatement_in_statement6102 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_whileStatement_in_statement6114 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_doWhileStatement_in_statement6126 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_SEMI_in_statement6128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_breakStatement_in_statement6140 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_SEMI_in_statement6142 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_continueStatement_in_statement6154 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_SEMI_in_statement6156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_tryStatement_in_statement6168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_throwStatement_in_statement6180 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_SEMI_in_statement6182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_switchStatement_in_statement6194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DO_in_doWhileStatement6241 = new BitSet(new long[]{0x5380004468A01000L,0x0000005DA30D8723L,0x028003F800000000L});
+    public static final BitSet FOLLOW_statement_in_doWhileStatement6247 = new BitSet(new long[]{0x0000000000000000L,0x0000004000000000L});
+    public static final BitSet FOLLOW_WHILE_in_doWhileStatement6249 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_LPAREN_in_doWhileStatement6251 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_doWhileStatement6257 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_RPAREN_in_doWhileStatement6259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_WHILE_in_whileStatement6301 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_LPAREN_in_whileStatement6303 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_whileStatement6309 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_RPAREN_in_whileStatement6311 = new BitSet(new long[]{0x5380004468A01000L,0x0000005DA30D8723L,0x028003F800000000L});
+    public static final BitSet FOLLOW_statement_in_whileStatement6317 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_THROW_in_throwStatement6354 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_throwStatement6360 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BREAK_in_breakStatement6402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CONTINUE_in_continueStatement6438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TRY_in_tryStatement6470 = new BitSet(new long[]{0x0000000000800000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_block_in_tryStatement6478 = new BitSet(new long[]{0x0800000000000002L,0x0000000000000080L});
+    public static final BitSet FOLLOW_CATCH_in_tryStatement6494 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_LPAREN_in_tryStatement6496 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_formalParameter_in_tryStatement6502 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_RPAREN_in_tryStatement6504 = new BitSet(new long[]{0x0000000000800000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_block_in_tryStatement6510 = new BitSet(new long[]{0x0800000000000002L,0x0000000000000080L});
+    public static final BitSet FOLLOW_FINALLY_in_tryStatement6549 = new BitSet(new long[]{0x0000000000800000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_block_in_tryStatement6555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SWITCH_in_switchStatement6616 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_LPAREN_in_switchStatement6618 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_switchStatement6620 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_RPAREN_in_switchStatement6622 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_LCURLY_in_switchStatement6632 = new BitSet(new long[]{0x8400040000000000L});
+    public static final BitSet FOLLOW_switchBlockStatementGroup_in_switchStatement6647 = new BitSet(new long[]{0x8400040000000000L});
+    public static final BitSet FOLLOW_RCURLY_in_switchStatement6659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_switchLabel_in_switchBlockStatementGroup6697 = new BitSet(new long[]{0x0000000000800002L,0x0000000100000000L});
+    public static final BitSet FOLLOW_blockStatement_in_switchBlockStatementGroup6708 = new BitSet(new long[]{0x0000000000800002L,0x0000000100000000L});
+    public static final BitSet FOLLOW_CASE_in_switchLabel6739 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_switchLabel6741 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_COLON_in_switchLabel6743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DEFAULT_in_switchLabel6753 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_COLON_in_switchLabel6755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FOR_in_forStatement6780 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_LPAREN_in_forStatement6791 = new BitSet(new long[]{0x1280100000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_localVariableDeclaration_in_forStatement6807 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_SEMI_in_forStatement6824 = new BitSet(new long[]{0x0000104468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_forStatement6844 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_SEMI_in_forStatement6848 = new BitSet(new long[]{0x0000084468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_forStatement6868 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_RPAREN_in_forStatement6881 = new BitSet(new long[]{0x5380004468A01000L,0x0000005DA30D8723L,0x028003F800000000L});
+    public static final BitSet FOLLOW_statement_in_forStatement6895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RETURN_in_returnStatement6937 = new BitSet(new long[]{0x0000004468201002L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_returnStatement6940 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IF_in_ifStatement6980 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_LPAREN_in_ifStatement6982 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_ifStatement6984 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_RPAREN_in_ifStatement6986 = new BitSet(new long[]{0x5380004468A01000L,0x0000005DA30D8723L,0x028003F800000000L});
+    public static final BitSet FOLLOW_statement_in_ifStatement6992 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000004L});
+    public static final BitSet FOLLOW_ELSE_in_ifStatement7005 = new BitSet(new long[]{0x5380004468A01000L,0x0000005DA30D8723L,0x028003F800000000L});
+    public static final BitSet FOLLOW_statement_in_ifStatement7011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_185_in_joinBlockStatement7042 = new BitSet(new long[]{0x0000000000800000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_block_in_joinBlockStatement7044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_block_in_blockStatement7082 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_expressionStatement7107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LPAREN_in_formalParameters7149 = new BitSet(new long[]{0x1280080000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_formalParameter_in_formalParameters7177 = new BitSet(new long[]{0x0000080000000800L});
+    public static final BitSet FOLLOW_COMMA_in_formalParameters7194 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_formalParameter_in_formalParameters7200 = new BitSet(new long[]{0x0000080000000800L});
+    public static final BitSet FOLLOW_RPAREN_in_formalParameters7226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_formalParameter7260 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_IDENT_in_formalParameter7270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_localVariableDeclaration7308 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_variableDeclaration_in_localVariableDeclaration7323 = new BitSet(new long[]{0x0000000000000802L});
+    public static final BitSet FOLLOW_COMMA_in_localVariableDeclaration7345 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_variableDeclaration_in_localVariableDeclaration7351 = new BitSet(new long[]{0x0000000000000802L});
+    public static final BitSet FOLLOW_modifiers_in_fieldVariableDeclaration7414 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_type_in_fieldVariableDeclaration7416 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_variableDeclaration_in_fieldVariableDeclaration7430 = new BitSet(new long[]{0x0000100000000800L});
+    public static final BitSet FOLLOW_COMMA_in_fieldVariableDeclaration7453 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_variableDeclaration_in_fieldVariableDeclaration7459 = new BitSet(new long[]{0x0000100000000800L});
+    public static final BitSet FOLLOW_SEMI_in_fieldVariableDeclaration7492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENT_in_variableDeclaration7531 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_ASSIGN_in_variableDeclaration7549 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_variableDeclaration7551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LPAREN_in_term7617 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_type_in_term7619 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_RPAREN_in_term7621 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_literal_in_term7654 = new BitSet(new long[]{0x0000000008008002L,0x0000000000000000L,0x0400000000000000L});
+    public static final BitSet FOLLOW_LPAREN_in_term7667 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_term7673 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_RPAREN_in_term7675 = new BitSet(new long[]{0x0000000008008002L,0x0000000000000000L,0x0400000000000000L});
+    public static final BitSet FOLLOW_IDENT_in_term7691 = new BitSet(new long[]{0x0000000008408002L,0x0000000000000000L,0x0400000000000000L});
+    public static final BitSet FOLLOW_LBRACK_in_term7694 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_term7700 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_RBRACK_in_term7702 = new BitSet(new long[]{0x0000000008408002L,0x0000000000000000L,0x0400000000000000L});
+    public static final BitSet FOLLOW_allocation_in_term7728 = new BitSet(new long[]{0x0000000008008002L,0x0000000000000000L,0x0400000000000000L});
+    public static final BitSet FOLLOW_DOT_in_term7785 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_qualifiedName_in_term7791 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_actualParameters_in_term7817 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_term7865 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_IDENT_in_term7877 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_actualParameters_in_term7902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NEW_in_allocation7976 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0080000800000000L});
+    public static final BitSet FOLLOW_type_in_allocation7978 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_actualParameters_in_allocation7981 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0800000000000000L});
+    public static final BitSet FOLLOW_187_in_allocation7993 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_LPAREN_in_allocation8004 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_allocation8008 = new BitSet(new long[]{0x0000080000000800L});
+    public static final BitSet FOLLOW_COMMA_in_allocation8011 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_allocation8015 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_RPAREN_in_allocation8043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NEW_in_allocation8070 = new BitSet(new long[]{0x1280000000000000L,0x0000001002018102L,0x0000000800000000L});
+    public static final BitSet FOLLOW_primitiveType_in_allocation8073 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_qualifiedName_in_allocation8081 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_LBRACK_in_allocation8105 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_allocation8107 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_RBRACK_in_allocation8109 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_LPAREN_in_actualParameters8144 = new BitSet(new long[]{0x0000084468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_actualParameters8163 = new BitSet(new long[]{0x0000080000000800L});
+    public static final BitSet FOLLOW_COMMA_in_actualParameters8180 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_expression_in_actualParameters8186 = new BitSet(new long[]{0x0000080000000800L});
+    public static final BitSet FOLLOW_RPAREN_in_actualParameters8202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOT_in_negation8235 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_term_in_negation8241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PLUS_in_unary8281 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_MINUS_in_unary8289 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_LOGICAL_NOT_in_unary8297 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_INC_in_unary8305 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_DEC_in_unary8313 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_negation_in_unary8329 = new BitSet(new long[]{0x0000000000201002L});
+    public static final BitSet FOLLOW_INC_in_unary8347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DEC_in_unary8355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unary_in_mult8402 = new BitSet(new long[]{0x0006000100006002L});
+    public static final BitSet FOLLOW_STAR_in_mult8434 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_DIV_in_mult8442 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_MOD_in_mult8450 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_STAR_ASSIGN_in_mult8458 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_DIV_ASSIGN_in_mult8466 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_unary_in_mult8486 = new BitSet(new long[]{0x0006000100006002L});
+    public static final BitSet FOLLOW_mult_in_add8534 = new BitSet(new long[]{0x000000C0C0000002L});
+    public static final BitSet FOLLOW_PLUS_in_add8566 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_MINUS_in_add8574 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_PLUS_ASSIGN_in_add8582 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_MINUS_ASSIGN_in_add8590 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_mult_in_add8610 = new BitSet(new long[]{0x000000C0C0000002L});
+    public static final BitSet FOLLOW_add_in_relation8654 = new BitSet(new long[]{0x00000008031C0002L});
+    public static final BitSet FOLLOW_EQUAL_in_relation8687 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_NOT_EQUAL_in_relation8695 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_LESS_THAN_in_relation8703 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_LESS_OR_EQUAL_in_relation8711 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_GREATER_OR_EQUAL_in_relation8719 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_GREATER_THAN_in_relation8727 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_add_in_relation8747 = new BitSet(new long[]{0x00000008031C0002L});
+    public static final BitSet FOLLOW_relation_in_expression8818 = new BitSet(new long[]{0x0000000014000002L,0x0000000000001000L});
+    public static final BitSet FOLLOW_LOGICAL_AND_in_expression8852 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_LOGICAL_OR_in_expression8860 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_INSTANCEOF_in_expression8868 = new BitSet(new long[]{0x0000004468201000L,0x00000004000C0020L,0x000003F800000000L});
+    public static final BitSet FOLLOW_relation_in_expression8875 = new BitSet(new long[]{0x0000000014000002L,0x0000000000001000L});
+    public static final BitSet FOLLOW_HEX_LITERAL_in_literal8925 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DECIMAL_LITERAL_in_literal8937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_OCTAL_LITERAL_in_literal8949 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARACTER_LITERAL_in_literal8961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_LITERAL_in_literal8975 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FLOATING_POINT_LITERAL_in_literal8988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TRUE_in_literal9006 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FALSE_in_literal9014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NULL_in_literal9027 = new BitSet(new long[]{0x0000000000000002L});
 
 }

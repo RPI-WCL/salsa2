@@ -101,8 +101,7 @@ public class VariableDeclaration extends SalsaSource implements SalsaNode {
 
         if (initExpresssion != null) {
             initExpresssion.analyze(this, typeEnv, knownTypes);
-//            if (!SalsaParser.typeAssignable(type, initExpresssion.getType()))
-            if (!st.equals(initExpresssion.getType())) {
+            if (!st.isAssignable((initExpresssion.getType()))) {
                 this.log("Incompatible type (" + type + " != "
                         + initExpresssion.getType() + ")");
             }

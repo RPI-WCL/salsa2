@@ -77,4 +77,15 @@ public abstract class Statement extends SalsaSource implements SalsaNode {
         }
         return true;
     }
+    
+    private SymbolType msgReturnType;
+
+    public SymbolType getMsgReturnType() {
+        return msgReturnType;
+    }
+
+    public void setMsgReturnType(SymbolType msgReturnType) {
+        this.msgReturnType = msgReturnType;
+    }
+    
 }

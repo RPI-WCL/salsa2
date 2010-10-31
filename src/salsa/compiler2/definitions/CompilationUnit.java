@@ -36,8 +36,6 @@ public class CompilationUnit extends SalsaSource implements SalsaNode {
     
     private String sourceDirName = "";
     
-//    private static Map<String, SymbolType> knownTypes; 
-    
     public CompilationUnit() {
         imports = new ArrayList<String>();
         typeDeclarations = new ArrayList<TypeDeclaration>();
@@ -76,8 +74,8 @@ public class CompilationUnit extends SalsaSource implements SalsaNode {
         for (Iterator<String> it = imports.iterator(); it.hasNext();) {
             sb.append(identation).append("import ").append(it.next()).append(";\n");
         }
-        sb.append(identation).append("import salsa.lang.*").append(";\n");
-        sb.append(identation).append("import salsa.lang.fullcopy.DeepCopy").append(";\n");
+        sb.append(identation).append("import salsa.wwc.lang.*").append(";\n");
+        sb.append(identation).append("import salsa.wwc.lang.fullcopy.DeepCopy").append(";\n");
         sb.append(identation).append("import java.util.*").append(";\n");
         sb.append("\n");
         return sb.toString();
@@ -110,7 +108,37 @@ public class CompilationUnit extends SalsaSource implements SalsaNode {
         
         return sb.toString();
     }
+    
         
+    public void analyzeMethod(Map<String, SymbolType> knownTypes) {
+        // Following code is repeated in analyze(), need rework...
+         // Make a copy first
+        knownTypes =  new HashMap<String, SymbolType>(CompilerHelper.initKnownTypes);
+        // Add import types into knownTypes
+        for (String className : imports) {
+            if (!className.endsWith("*")) {
+                SymbolType st = CompilerHelper.getSymbolTypeByName(knownTypes, className);
+                if (st == null)
+                    System.err.println("ERROR: Cannot find " + className);
+                else {
+                    // Put into the typEnv for classes that contain static fields
+                }
+            } else {
+                int index = className.lastIndexOf('.');
+                String prefix = className;
+                if (index > 0) {
+                    prefix = className.substring(0, index);
+                }
+                CompilerHelper.classPrefixes.add(prefix);
+            }
+        }
+        // Add necessary library classes into knownTypes
+        CompilerHelper.getSymbolTypeByName(knownTypes, "java.lang.String");
+        CompilerHelper.getSymbolTypeByName(knownTypes, "java.lang.Object");
+        for (Iterator<TypeDeclaration> it = typeDeclarations.iterator(); it.hasNext();) {            
+            it.next().analyzeMethod(knownTypes);
+        }
+    }
 
     @Override
     public boolean analyze(SalsaNode parent, Map<String, SymbolType> typeEnv, Map<String, SymbolType> knownTypes) {

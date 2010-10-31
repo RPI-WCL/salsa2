@@ -43,7 +43,11 @@ public class AssignmentStatement extends Statement {
 
         if (isInContinuation() && isSendMessage()) {
             sb.append("\n").append(identation).append("token = ")
-                    .append(expression1.toJavaCode("")).append(";");
+                    .append(expression1.toJavaCode("")).append(";\n");
+        } else if (!isInContinuation() && isSendMessage() && isInJoinBlock()) {
+            sb.append(identation).append("token = ")
+                    .append(expression1.toJavaCode(identation) + ";\n");
+            sb.append(identation).append("_tokenList.add(token);");
         }
         return sb.toString();
     }
@@ -53,10 +57,23 @@ public class AssignmentStatement extends Statement {
         super.analyze(parent, typeEnv, knownTypes);
         expression1.analyze(this, typeEnv, knownTypes);
         expression2.analyze(this, typeEnv, knownTypes);
-        if (!expression1.getType().equals(expression2.getType())) {
+        SymbolType t1 = expression1.getType();
+        SymbolType t2 = expression2.getType();
+        if (t1 == null || t2 == null)
+            return false;
+        if (!expression1.getType().isAssignable((expression2.getType()))) {
             this.log("Incompatible type (" + expression1.getType() + " != "
                     + expression2.getType() + ")");
         }
+        if (isInJoinBlock() && isSendMessage() && !isInContinuation()) {
+            this.setMsgReturnType(expression2.getType());
+        }
         return true;
+    }
+
+
+    @Override
+    public void setInJoinBlock(boolean isInJoinBlock) {
+        super.setInJoinBlock(isInJoinBlock);
     }
 }

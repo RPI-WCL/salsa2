@@ -8,6 +8,7 @@ import java.util.Map;
 import salsa.compiler2.CompilerHelper;
 import salsa.compiler2.SalsaNode;
 import salsa.compiler2.SalsaSource;
+import salsa.compiler2.SymbolMethod;
 import salsa.compiler2.SymbolType;
 
 
@@ -29,8 +30,6 @@ public class Allocation extends SalsaSource implements SalsaNode {
     
     private Expression hostExpression;
     
-    private Expression portExpression;
-
     public void setType(String type) {
         this.type = type;
         this.arrayType = "";
@@ -95,24 +94,87 @@ public class Allocation extends SalsaSource implements SalsaNode {
     @Override
     public boolean analyze(SalsaNode parent, Map<String, SymbolType> typeEnv,
             Map<String, SymbolType> knownTypes) {
+        
+        if (type.contains("UAL")) {
+            System.out.print("");
+        }      
+        
+        for (Expression e : actualArguments) {
+            e.analyze(parent, typeEnv, knownTypes);
+        }
+        
         // Type test
         SymbolType st = CompilerHelper.getKnownType(knownTypes, type);
         if (st == null) {
             log("Unknown type " + type);
+            return false;
         } else {
             this.type = st.getCanonicalName();
             symbolType = st;
         }
         
+        // Check if the constructor exist 
+        StringBuilder sbInput = null; 
+        StringBuilder sbRequired = null;
+        List<SymbolMethod> methods = st.getMethods();
+        boolean found = true;
+        for (SymbolMethod sm : methods) {
+                if (type.equals(sm.getName())
+                        && actualArguments.size() == sm.getParameterTypes().length) {
+                    sbInput = new StringBuilder();
+                    sbRequired = new StringBuilder();
+                    sbInput.append(type).append("(");
+                    found = true;
+                    sbRequired.append(type).append("(");
+                    for (int i = 0; i < actualArguments.size(); i++) {
+                        SymbolType eType = actualArguments.get(i).getType();
+                        SymbolType rType = sm.getParameterSymbolTypes().get(i);
+                        if (eType == null) {
+                            this.log("Cannot determine the type of "
+                                    + actualArguments.get(i).toJavaCode(""));
+                            break;
+                        } else if (!rType.isAssignable(eType)) {
+                            found = false;
+                            // break;
+                        }
+                        sbInput.append(eType.getCanonicalName());
+                        sbRequired.append(rType.getCanonicalName());
+                        if (i < actualArguments.size() - 1) {
+                            sbInput.append(", ");
+                            sbRequired.append(", ");
+                        }
+
+                    }
+                    sbInput.append(")");
+                    sbRequired.append(")");
+                    if (found) {
+                        break;
+                    }
+                }
+            }
+        if (!found)
+            this.log("Cannot find method "
+                    + (sbInput == null ? type : sbInput.toString())
+                    + " in "
+                    + type
+                    + (sbRequired == null ? "." : ". Do you mean "
+                            + sbRequired.toString() + "?"));
+        
         // TODO
         if (!symbolType.isActorType()
-                && (uanExpression != null || hostExpression != null || portExpression != null)) {
+                && (uanExpression != null || hostExpression != null )) {
             log("Only actors can have UAN or UAL");
         }
         if (uanExpression != null
                 && uanExpression.analyze(parent, typeEnv, knownTypes)
                 && !uanExpression.getType().getSimpleName().equals("String")) {
             log("UAN should be of String type");
+        }
+        if (hostExpression != null            
+                 && hostExpression.analyze(parent, typeEnv, knownTypes)
+                && !hostExpression.getType().getSimpleName().equals("String")) {
+            log("Location should be of String type in the form of host:port");
+               
         }
         return true;
     }
@@ -133,7 +195,4 @@ public class Allocation extends SalsaSource implements SalsaNode {
         this.hostExpression = expression;
     }
 
-    public void setPortExpression(Expression expression) {
-        this.portExpression = expression;
-    }
 }

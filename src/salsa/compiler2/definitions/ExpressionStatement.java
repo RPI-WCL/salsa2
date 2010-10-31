@@ -56,7 +56,18 @@ public class ExpressionStatement extends Statement implements SalsaNode {
     public boolean analyze(SalsaNode parent, Map<String, SymbolType> typeEnv, Map<String, SymbolType> knownTypes) {
         super.analyze(parent, typeEnv, knownTypes);
         expression.analyze(this, typeEnv, knownTypes);
+        if (isInJoinBlock() && isSendMessage() && !isInContinuation()) {
+            this.setMsgReturnType(expression.getType());
+        }
+
         return true;
+    }
+
+
+
+    @Override
+    public void setInJoinBlock(boolean isInJoinBlock) {
+        super.setInJoinBlock(isInJoinBlock);
     }    
     
 }

@@ -10,6 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import salsa.compiler2.CompilerHelper;
 import salsa.compiler2.SalsaNode;
 import salsa.compiler2.SymbolTable;
 import salsa.compiler2.SymbolType;
@@ -23,33 +24,51 @@ public class BehaviorDeclaration extends TypeDeclaration implements SalsaNode {
         
         sb.append(identation).append("public " + modifiers + "class ")
                 .append(name + " extends ActorRef {\n");
+        
+        sb.append(identation + "  ").append("public ").append(name).append("() {}\n");
+
+        
         sb.append(identation + "  ").append("public ").append(name).append("(")
                 .append(name).append("State actorState) {\n");
         sb.append(identation + "    ").append("super(actorState);\n");
+        sb.append(identation + "    ").append("actorState.self = new " + name + "();\n")  ;
+        sb.append(identation + "    ").append("actorState.self.identifier = this.identifier;\n")  ;
+        sb.append(identation + "    ").append("actorState.self.uan = this.uan;\n")  ;
+        sb.append(identation + "    ").append("actorState.self.ual = this.ual;\n")  ;
         sb.append(identation + "  }\n");
         
         sb.append(identation + "  ").append("public ").append(name).append("(")
-                .append(name).append("State actorState, String uanStr, String host) {\n");
-        sb.append(identation + "    ").append("super(actorState);\n");
-        sb.append(identation + "    ").append("if (uanStr != null) actorState.setIdentifier(uanStr);\n");
-//        sb.append(identation + "    ").append("else actorState.setIdentifier(\"ual://\" + host);\n");
-        sb.append(identation + "    ").append("if (host != null) {\n");
-        sb.append(identation + "      " +
-                "actorState.setIdentifier(\"ual://\" + host + \"/\" + actorState.hashCode());\n");
-        sb.append(identation + "      " +
-        		"actorState.send(this, actorState.getSelfRef(),-1,\"migrate\",\"exitValue\",Message.NORMAL_TYPE,new Object[]{host},new int[]{},null);\n");
-        sb.append(identation + "    }\n");
+                .append(name).append("State actorState, String uan, String location) {\n");
+        sb.append(identation + "    ").append("super(actorState, uan, location);\n"); 
+        sb.append(identation + "    ").append("actorState.self = new " + name + "();\n")  ;
+        sb.append(identation + "    ").append("actorState.self.identifier = this.identifier;\n")  ;
+        sb.append(identation + "    ").append("actorState.self.uan = this.uan;\n")  ;
+        sb.append(identation + "    ").append("actorState.self.ual = this.ual;\n")  ;
+       
         sb.append(identation + "  }\n");
+//        sb.append(identation + "    ").append("if (uanStr != null && location != null) {\n");
+//        sb.append(identation + "      ").append("actorState.setIdentifier(uanStr);\n");
+//        sb.append(identation + "      ").append("actorState.send(this, actorState.getSelfRef(),-1,\"migrate\",\"exitValue\",Message.NORMAL_TYPE,new Object[]{location},new int[]{},null);\n");
+//        sb.append(identation + "    }\n");
+//        sb.append(identation + "    ").append("else if (location != null) {\n");
+//        sb.append(identation + "      " +
+//                "actorState.setIdentifier(\"ual://\" + location + \"/\" + actorState.hashCode());\n");
+//        sb.append(identation + "    }\n");
+//        sb.append(identation + "    else {\n");
+//        sb.append(identation + "    ").append("this.identifier = actorState.getIdentifier();\n");
+//        sb.append(identation + "    ").append("this.uan = actorState.getUAN();\n");
+//        sb.append(identation + "    ").append("if (uanStr == null && location == null) this.actorState = actorState;\n");
 
-        sb.append(identation+ "  ").append("public void go(String[] args) {\n");
+        sb.append(identation+ "  ").append("public void go(ActorState actorState, String[] args) {\n");
         sb.append(identation + "    ").append("actorState.send(this, actorState.getSelfRef(),-1,\"act1\",\"exitValue\",Message.NORMAL_TYPE,new Object[]{args},new int[]{},null);").append("\n");
         sb.append(identation + "  }").append("\n");
         
         // Main method
         sb.append(identation+ "  ").append("public static void main(String[] args) {\n");
+        sb.append(identation + "    ").append(name).append("State as = new ").append(name).append("State();\n");
         sb.append(identation + "    ").append(name + " ref=").append("new ").append(name)
-            .append("(new ").append(name).append("State());\n");
-        sb.append(identation + "    ref.go(args);\n");
+            .append("(as);\n");
+        sb.append(identation + "    ref.go(as, args);\n");
         sb.append(identation + "  }\n");
         sb.append(identation + "}\n");
         return sb.toString();
@@ -75,6 +94,7 @@ public class BehaviorDeclaration extends TypeDeclaration implements SalsaNode {
         
         sb.append(" {\n");        
         
+        sb.append(identation).append("  ").append(name + " self;\n");
         
         /**
          * Field Variables
@@ -131,12 +151,24 @@ public class BehaviorDeclaration extends TypeDeclaration implements SalsaNode {
             for (int i = 0; i < parameters.size(); i++) {
                 FormalParameter fp = parameters.get(i);
                 sb.append(",");
-                if (fp.getType().indexOf('[') != -1) {
-                    sb.append("Arrays.copyOf(((Object[])args[").append(i)
-                        .append("]), ((Object[])args[").append(i)
-                        .append("]).length, ").append(fp.getType()).append(".class)");
+                String type = fp.getType();
+                if (type.indexOf('[') != -1) {
+                    if (!CompilerHelper.isPrimitiveType(type))
+                        sb.append("Arrays.copyOf(((Object[])args[")
+                                .append(i)
+                                .append("]), ((Object[])args[")
+                                .append(i)
+                                .append("]).length, ")
+                                .append(CompilerHelper.convertoObjectType(type))
+                                .append(".class)");
+                    else
+                        sb.append("(" + type + ")").append("args[").append(i)
+                                .append("]");
                 } else
-                    sb.append("(" + SymbolTable.convertoObjectType(fp.getType()) + ")").append("args[").append(i).append("]");
+                    sb.append(
+                            "(" + CompilerHelper.convertoObjectType(type) + ")")
+                            .append("args[").append(i).append("]");
+
             }
             sb.append(");\n");
             sb.append(identation + "      return;\n");
@@ -148,23 +180,36 @@ public class BehaviorDeclaration extends TypeDeclaration implements SalsaNode {
          * Invoke Message by id
          */        
         sb.append(identation + "  ").append("public void invokeById(int msgId, Object[] args, ActorRef src, String assignTo) {\n");
-        for (Iterator<MethodDeclaration> it = methodDeclaration.iterator(); it.hasNext();) {
-            MessageHandlerDeclaration mh = (MessageHandlerDeclaration)it.next();
-            sb.append(identation + "    ").append("if (msgId == ").append(mh.getSymbolMethod().getId())
-                .append(") {\n");
+        for (Iterator<MethodDeclaration> it = methodDeclaration.iterator(); it
+                .hasNext();) {
+            MessageHandlerDeclaration mh = (MessageHandlerDeclaration) it
+                    .next();
+            sb.append(identation + "    ").append("if (msgId == ")
+                    .append(mh.getSymbolMethod().getId()).append(") {\n");
             sb.append(identation + "      ").append(mh.getName()).append("(");
             sb.append("src,assignTo");
-            
+
             List<FormalParameter> parameters = mh.getParameters();
             for (int i = 0; i < parameters.size(); i++) {
                 FormalParameter fp = parameters.get(i);
                 sb.append(",");
-                if (fp.getType().indexOf('[') != -1) {
-                    sb.append("Arrays.copyOf(((Object[])args[").append(i)
-                        .append("]), ((Object[])args[").append(i)
-                        .append("]).length, ").append(fp.getType()).append(".class)");
+                String type = fp.getType();
+                if (type.indexOf('[') != -1) {
+                    if (!CompilerHelper.isPrimitiveType(type))
+                        sb.append("Arrays.copyOf(((Object[])args[")
+                                .append(i)
+                                .append("]), ((Object[])args[")
+                                .append(i)
+                                .append("]).length, ")
+                                .append(CompilerHelper.convertoObjectType(type))
+                                .append(".class)");
+                    else
+                        sb.append("(" + type + ")").append("args[").append(i)
+                                .append("]");
                 } else
-                    sb.append("(" + SymbolTable.convertoObjectType(fp.getType()) + ")").append("args[").append(i).append("]");
+                    sb.append(
+                            "(" + CompilerHelper.convertoObjectType(type) + ")")
+                            .append("args[").append(i).append("]");
             }
             sb.append(");\n");
             sb.append(identation + "      return;\n");
@@ -183,7 +228,4 @@ public class BehaviorDeclaration extends TypeDeclaration implements SalsaNode {
         typeEnv.put("self", this.symbolType);
         return super.analyze(parent, typeEnv, knownTypes);
     }
-    
-    
-
 }

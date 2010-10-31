@@ -1,12 +1,13 @@
 package salsa.compiler2.definitions;
 
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import salsa.compiler2.CompilerHelper;
 import salsa.compiler2.SalsaNode;
 import salsa.compiler2.SalsaSource;
+import salsa.compiler2.SymbolMethod;
 import salsa.compiler2.SymbolType;
 
 public abstract class MethodDeclaration extends SalsaSource implements SalsaNode {
@@ -18,24 +19,16 @@ public abstract class MethodDeclaration extends SalsaSource implements SalsaNode
     protected String modifiers = "";
     protected String returnType = "";
     private boolean isClassDef = false;
+    private SymbolMethod symbolMethod;
     
-    /**
-     * Signature is not related to pass type.
-     * @return
-     */
-    public String getSignature() {
-        if (signature == null) {
-            StringBuilder sb = new StringBuilder();
-            sb.append(name).append("(");
-            for (Iterator<FormalParameter> it = parameters.iterator(); it.hasNext();) {
-                FormalParameter fp = it.next();
-                sb.append(fp.getType());
-                if (it.hasNext())
-                    sb.append(",");
-            }
-            signature = sb.toString();
-        }
-        return signature;
+    
+ 
+    public SymbolMethod getSymbolMethod() {
+        return symbolMethod;
+    }
+
+    public void setSymbolMethod(SymbolMethod symbolMethod) {
+        this.symbolMethod = symbolMethod;
     }
 
     public String getName() {
@@ -78,6 +71,42 @@ public abstract class MethodDeclaration extends SalsaSource implements SalsaNode
         block.analyze(this, typeEnv, knownTypes);
         return true;
     }
-    
-    
+
+    public SymbolMethod getSymbolMethod(Map<String, SymbolType> knownTypes) {
+       List<String> typeList = new ArrayList<String>();
+       for (FormalParameter fp : parameters) {
+            String type =  fp.getType();
+            SymbolType st = CompilerHelper.getSymbolTypeByName(type);
+            if (st != null) {
+//                if (!isClassDefinition() && type.contains("[")
+//                        && st.getRawType().isPrimitive()) {
+//                    fp.log("Array arguments of a message should be of wrapper type, you may want to change "
+//                            + type
+//                            + " to "
+//                            + CompilerHelper.convertoObjectType(type));
+//                }
+              fp.setType(st.getCanonicalName());
+            }
+            else 
+                fp.log("Unknown type " + type);
+            typeList.add(fp.getType());
+        }
+        if (!isClassDefinition() && !returnType.equals(name)
+                && !returnType.equals("void")
+                && !returnType.startsWith(CompilerHelper.TOKEN)) {
+            returnType = CompilerHelper.TOKEN + " " + returnType;
+        }
+        SymbolType returnSt = CompilerHelper.getSymbolTypeByName(returnType);
+        if (returnSt != null)
+            returnType = returnSt.getCanonicalName();
+        else 
+            log("Unknown type " + returnType);
+
+        symbolMethod = new SymbolMethod(name, returnType, typeList.toArray(new String[0])); 
+        if (!isClassDefinition()) {
+            symbolMethod.setMessage(true);
+        }
+        return symbolMethod;
+    }
+
 }

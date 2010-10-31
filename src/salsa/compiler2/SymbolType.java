@@ -1,13 +1,17 @@
 package salsa.compiler2;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
+
+import salsa.wwc.lang.ActorState.SalsaMsg;
 
 public class SymbolType {
 
@@ -25,6 +29,10 @@ public class SymbolType {
 
     private String simpleName;
     
+    private SymbolType superType;
+    
+    private List<SymbolType> interfaces = new LinkedList<SymbolType>();
+    
     public static int ACTOR_TYPE = 1;
     
     public static int OBJECT_TYPE = 2;
@@ -32,6 +40,8 @@ public class SymbolType {
     public static int LIBRARY_TYPE = 3;
     
     private int type;
+    
+    private SymbolType rawType; // The raw type of an array
     
     private static Map<String, String> primitiveTypes = new HashMap<String, String>();
 
@@ -46,7 +56,7 @@ public class SymbolType {
         primitiveTypes.put("double", "");
         primitiveTypes.put("void", "");
         primitiveTypes.put("Token", "");
-        primitiveTypes.put("java.lang.String", "");
+//        primitiveTypes.put("java.lang.String", "");
     }
     
         
@@ -60,7 +70,12 @@ public class SymbolType {
             simpleName = canonicalName.substring(i + 1);
         else
             simpleName = canonicalName;
-        this.isActor  = type == ACTOR_TYPE? true : false;
+        
+        if (type == ACTOR_TYPE) {
+            this.isActor = true;
+        } else
+            this.isActor = false;
+        
         if (primitiveTypes.get(canonicalName) != null) {
             isPrimitive = true;
         } else {
@@ -68,15 +83,22 @@ public class SymbolType {
         }
         if (!isPrimitive && type == LIBRARY_TYPE) {
             try {
+                if (canonicalName.equals("salsa.wwc.lang.ActorRef")) {
+                    isActor = true;
+                    canonicalName = "salsa.wwc.lang.ActorState";
+                }
                 Class c = Class.forName(canonicalName);
                 /**
                  * Check if it is of actor type.
                  */
                 Class superClass = c.getSuperclass();
+                if (superClass != null) {
+                    String superTypeName = superClass.getCanonicalName();
+                    superType = CompilerHelper.getSymbolTypeByName(superTypeName);
+                }
                 while (superClass != null) {
                     if (superClass.getCanonicalName().contains("ActorRef")) {
                         isActor = true;
-                        
                         // If it is an actor from library, need to have NameState file
                         c = Class.forName(canonicalName+"State");
                         break;
@@ -84,32 +106,49 @@ public class SymbolType {
                     superClass = superClass.getSuperclass();
                 }
                 
+                Class[] ins = c.getInterfaces();
+                for (Class in : ins) {
+                    interfaces.add(CompilerHelper.getSymbolTypeByName(in.getCanonicalName()));
+                }
+                
                 Field[] fields = c.getFields();
                 for (Field field : fields) {
                     if (Modifier.isPublic(field.getModifiers())) {
                         String typeName = field.getType().getCanonicalName();
-                        this.addField(new SymbolField(field.getName(),
-                                typeName));
+//                        typeName = CompilerHelper.convertoObjectType(typeName);
+                        SymbolField sf = new SymbolField(field.getName(),
+                                typeName);
+                        this.addField(sf);
                     }
                 }
 
                 // If it is from actor library, need to remove the first N parameters.
-                int auxilaryParaNum = 2;
+                final int auxiliaryArgNum = 2;
                 Method[] methods = c.getMethods();
                 for (Method method : methods) {
                     if (Modifier.isPublic(method.getModifiers())) {
+                        boolean isSalsaMsg = false;
+                        if (method.isAnnotationPresent(SalsaMsg.class)) 
+                            isSalsaMsg = true;
                         String name = method.getName();
-                        String returnType = method.getReturnType()
+                        String returnTypeName = method.getReturnType()
                                 .getCanonicalName();
                         List<String> parameters = new ArrayList<String>();
-                        int j = 0; 
+                        int j = 0;
                         for (Class pt : method.getParameterTypes()) {
-                            if (!isActor || j >= auxilaryParaNum)
-                                parameters.add(pt.getCanonicalName());
+                            String paraTypeName = pt.getCanonicalName();
+//                            if (isSalsaMsg && paraTypeName.contains("[")) {
+//                                paraTypeName = CompilerHelper.convertoObjectType(paraTypeName);
+//                            }
+                            // CompilerHelper.convertoObjectType(pt.getCanonicalName())
+                            if (!isSalsaMsg || j >= auxiliaryArgNum)
+                                parameters.add(paraTypeName);
                             j++;
                         }
-                        this.addMethod((new SymbolMethod(name, returnType,
-                                parameters.toArray((new String[0])))));
+                        SymbolMethod sm = new SymbolMethod(name, returnTypeName,
+                                parameters.toArray(new String[0]));
+                        sm.setMessage(isSalsaMsg);
+                        this.addMethod(sm);
                     }
                 }
             } catch (ClassNotFoundException e) {
@@ -133,105 +172,6 @@ public class SymbolType {
         this.isImmutable = isActor || isPrimitive ? true : false;
     }    
 
-//    public SymbolType(String className, boolean isActor) {
-////        this(className);
-//        this.absoluteName = className;
-//        fields = new ArrayList<SymbolField>();
-//        methods = new ArrayList<SymbolMethod>();
-//        int i = className.lastIndexOf('.');
-//        if (i > 0)
-//            simpleName = className.substring(i + 1);
-//        else
-//            simpleName = className;
-//        this.isActor = isActor;
-//        this.isImmutable = isActor || isPrimitive ? true : false;
-//    }
-//    
-//    public SymbolType(SymbolType st) {
-//        this.isActor = st.isActorType();
-//        this.isPrimitive = st.isPrimitive();
-//        this.absoluteName = st.getCanonicalName();
-//        this.simpleName = st.getSimpleName();
-//        fields = new ArrayList<SymbolField>();
-//        methods = new ArrayList<SymbolMethod>();
-//        fields.addAll(st.getFields());
-//        methods.addAll(st.getMethods());
-//        this.isImmutable = isActor || isPrimitive ? true : false;
-//    }
-//
-//    public SymbolType(String className) {
-//        this.absoluteName = className;
-//        fields = new ArrayList<SymbolField>();
-//        methods = new ArrayList<SymbolMethod>();
-//        int i = className.lastIndexOf('.');
-//        if (i > 0)
-//            simpleName = className.substring(i + 1);
-//        else
-//            simpleName = className;
-//        if (primitiveTypes.get(absoluteName) != null) {
-//            isPrimitive = true;
-//        } else {
-//            isPrimitive = false;
-//            try {
-//                Class c = Class.forName(className);
-//                
-//                /**
-//                 * Check if it is of actor type.
-//                 */
-//                Class superClass = c.getSuperclass();
-//                while (superClass != null) {
-//                    if (superClass.getCanonicalName().contains("ActorRef")) {
-//                        isActor = true;
-//                        
-//                        // If it is an actor from library, need to have NameState file
-//                        c = Class.forName(className+"State");
-//                        break;
-//                    }
-//                    superClass = superClass.getSuperclass();
-//                }
-//                
-//                
-//                Field[] fields = c.getFields();
-//                for (Field field : fields) {
-//                    if (Modifier.isPublic(field.getModifiers())) {
-//                        String typeName = field.getType().getCanonicalName();
-//                        this.addField(new SymbolField(field.getName(),
-//                                typeName));
-//                    }
-//                }
-//
-//                // If it is from actor library, need to remove the first N parameters.
-//                int auxilaryParaNum = 2;
-//                Method[] methods = c.getMethods();
-//                for (Method method : methods) {
-//                    if (Modifier.isPublic(method.getModifiers())) {
-//                        String name = method.getName();
-//                        String returnType = method.getReturnType()
-//                                .getCanonicalName();
-//                        List<String> parameters = new ArrayList<String>();
-//                        int j = 0; 
-//                        for (Class pt : method.getParameterTypes()) {
-//                            if (!isActor || j >= auxilaryParaNum)
-//                                parameters.add(pt.getCanonicalName());
-//                            j++;
-//                        }
-//                        this.addMethod((new SymbolMethod(name, returnType,
-//                                parameters.toArray((new String[0])))));
-//                    }
-//                }
-//
-//
-//            } catch (ClassNotFoundException e) {
-//                // e.printStackTrace();
-//                System.err.println("Cannot find " + className + ": "
-//                        + e.getMessage());
-//            }
-//        }
-//        this.isImmutable = isActor || isPrimitive ? true : false;
-//    }
-    
-    
-    
     public void setCanonicalName(String canonicalName) {
         this.canonicalName = canonicalName;
         int i = canonicalName.lastIndexOf('.');
@@ -252,16 +192,17 @@ public class SymbolType {
         return canonicalName;
     }
     
+    
 
-    public SymbolMethod getMethodBySignatrue(String signature) {
-        Pattern p = Pattern.compile("^" + signature + "$");
-        for (SymbolMethod sm : methods) {
-//            if (sm.getSignature().equals(signature))
-            if (p.matcher(sm.getSignature()).matches())
-                return sm;
-        }
-        return null;
-    }
+//    public SymbolMethod getMethodBySignatrue(String signature) {
+//        Pattern p = Pattern.compile("^" + signature + "$");
+//        for (SymbolMethod sm : methods) {
+////            if (sm.getSignature().equals(signature))
+//            if (p.matcher(sm.getSignature()).matches())
+//                return sm;
+//        }
+//        return null;
+//    }
 
     public SymbolField getField(String fieldName) {
         for (SymbolField sf : fields) {
@@ -287,6 +228,11 @@ public class SymbolType {
         this.methods.add(sm);
     }
 
+
+    public void addMethod(List<SymbolMethod> methods2) {
+        this.methods.addAll(methods2);
+    }
+    
   
     public boolean isActorType() {
         // TODO Auto-generated method stub
@@ -306,23 +252,71 @@ public class SymbolType {
     }
 
     public boolean isSuperType(SymbolType st) {
-        if (st.isActorType())
-            return false;
-        String stName = st.getCanonicalName();
         try {
-            Class c;
-            c = Class.forName(stName);
-            c = c.getSuperclass();
-            while (c != null) {
-                if (c.getCanonicalName().equals(this.canonicalName)) {
+            List<SymbolType> interfaceQueue = new LinkedList<SymbolType>(); // a list of interfaces
+            interfaceQueue.addAll(st.getInterfaces());
+            
+            // Check super class first
+            SymbolType superSt = st.getSuperType();
+            while (superSt != null) {
+                if (superSt.getCanonicalName().equals(this.canonicalName)) {
                     return true;
                 }
-                c = c.getSuperclass();
+                // add st's interfaces
+                interfaceQueue.addAll(superSt.getInterfaces());
+                superSt = superSt.getSuperType();
             }
-        } catch (ClassNotFoundException e) {
+            
+            // Check interfaces
+            while(interfaceQueue.size() > 0) {
+                SymbolType superInterface = interfaceQueue.remove(0);
+                if (superInterface.getCanonicalName().equals(this.canonicalName))
+                    return true;
+                else {
+                    superInterface = superInterface.getSuperType(); 
+                    if (superInterface != null)
+                        interfaceQueue.add(superInterface);
+                }
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return false;
+    }
+    
+    /**
+     * Check if it can be assinged to type st
+     * @param st
+     * @return
+     */
+    public boolean isAssignable(SymbolType st) {
+        if (st != null) {
+            if (st.getSimpleName().equals("null") && !st.isPrimitive())
+                return true;
+            else if (this.equals(st))
+                return true;
+            else if (st.getCanonicalName().startsWith(CompilerHelper.TOKEN)) {
+                SymbolType stNormal = CompilerHelper.getSymbolTypeByName(st
+                        .getCanonicalName()
+                        .substring(CompilerHelper.TOKEN.length()).trim());
+                return this.isAssignable(stNormal);
+            } else if (st.getCanonicalName().contains("[")
+                    && this.canonicalName.contains("[")) {
+                return this.getRawType().isAssignable(st.getRawType());
+            } else if (this.isPrimitive
+                    && st.isPrimitive()
+                    && this.equals(CompilerHelper
+                            .getSumDominatingType(this, st))) {
+                return true;
+            } else if (this.canonicalName.equals(CompilerHelper
+                    .convertoObjectType(st.getCanonicalName()))) {
+                return true;
+            } else if (this.isSuperType(st)) {
+                return true;
+            } else
+                return false;
+        } else
+            return false;
     }
 
     @Override
@@ -339,7 +333,32 @@ public class SymbolType {
         }
         return false;
     }
+
+    public void setSuperType(SymbolType superType) {
+        this.superType = superType;
+    }
     
+    public SymbolType getSuperType() {
+        return superType;
+    }
     
+    public void addInterfaceType(SymbolType interfaceType) {
+        this.interfaces.add(interfaceType);
+    }
     
+    public List<SymbolType> getInterfaces() {
+        return this.interfaces;
+    }
+
+    public void addField(List<SymbolField> fields2) {
+        this.fields.addAll(fields2);
+    }
+
+    public void setRawType(SymbolType rawType) {
+        this.rawType = rawType;
+    }
+    
+    public SymbolType getRawType() {
+        return this.rawType;
+    }
 }

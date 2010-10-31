@@ -23,11 +23,6 @@ public class AddExpression extends Expression {
         return sb.toString();
     }
 
-//    @Override
-//    public void analyze(SalsaNode parent) {
-//        // TODO Auto-generated method stub
-//
-//    }
 
     @Override
     public void addOperator(String operator) {
@@ -46,7 +41,7 @@ public class AddExpression extends Expression {
         else {
             SymbolType type = expressions.get(0).getType();
             for (int i = 1; i < expressions.size(); i++) 
-                type = CompilerHelper.getDominatingType(type, expressions.get(i).getType());
+                type = CompilerHelper.getSumDominatingType(type, expressions.get(i).getType());
             return type;
         }
     }

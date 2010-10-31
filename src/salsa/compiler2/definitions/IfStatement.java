@@ -9,9 +9,7 @@ public class IfStatement extends Statement implements SalsaNode {
 
     Expression e;
 
-    Block block;
-
-    Statement elseStatement;
+    Statement ifStatement, elseStatement;
 
     @Override
     public String toJavaCode(String identation) {
@@ -20,7 +18,7 @@ public class IfStatement extends Statement implements SalsaNode {
         sb.append(identation).append("if(").append(e.toJavaCode(identation))
                 .append(")");
 
-        sb.append(block.toJavaCode(identation));
+        sb.append(ifStatement.toJavaCode(identation));
 
         if (elseStatement != null) {
             sb.append("\n" + identation + "else").append(
@@ -34,7 +32,7 @@ public class IfStatement extends Statement implements SalsaNode {
     public boolean analyze(SalsaNode parent, Map<String, SymbolType> typeEnv, Map<String, SymbolType> knownTypes) {
         super.analyze(parent, typeEnv, knownTypes);
         e.analyze(this, typeEnv, knownTypes);
-        block.analyze(this, typeEnv, knownTypes);
+        ifStatement.analyze(this, typeEnv, knownTypes);
         if (elseStatement != null)
             elseStatement.analyze(this, typeEnv, knownTypes);
         if (!e.getType().getCanonicalName().equalsIgnoreCase("boolean")) {
@@ -47,14 +45,20 @@ public class IfStatement extends Statement implements SalsaNode {
         this.e = e;
     }
 
-    public void setBlock(Block block) {
-        this.block = block;
+    public void setIfStatement(Statement statement) {
+        ifStatement = statement;
     }
 
     public void setElseStatement(Statement s) {
         this.elseStatement = s;
     }
 
+    @Override
+    public void setInJoinBlock(boolean isInJoinBlock) {
+        super.setInJoinBlock(isInJoinBlock);
+    }
+
+    
 
 //    private int line = -1;
 //    @Override

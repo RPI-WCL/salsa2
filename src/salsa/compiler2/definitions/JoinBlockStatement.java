@@ -35,4 +35,9 @@ public class JoinBlockStatement extends Statement implements SalsaNode {
         return true;
     }
 
+    @Override
+    public void setInJoinBlock(boolean isInJoinBlock) {
+        super.setInJoinBlock(isInJoinBlock);
+    }
+
 }

@@ -19,18 +19,31 @@ public class CompilerHelper {
     
     private static SymbolType objectSymbolType, arraySymbolType;
     
+    static Map<String, String> objectTypes = new HashMap<String, String>();
+    
+    static {
+        objectTypes.put("boolean", "java.lang.Boolean");
+        objectTypes.put("char", "java.lang.Character");
+        objectTypes.put("byte", "java.lang.Byte");
+        objectTypes.put("short", "java.lang.Short");
+        objectTypes.put("int", "java.lang.Integer");
+        objectTypes.put("long", "java.lang.Long");
+        objectTypes.put("float", "java.lang.Float");
+        objectTypes.put("double", "java.lang.Double");
+    }
     static {
 
         classPrefixes.add("java.lang");
         classPrefixes.add("salsa.lib");
         
+       
         objectSymbolType = new SymbolType("java.lang.Object",
                 SymbolType.LIBRARY_TYPE);
         arraySymbolType = new SymbolType(objectSymbolType);
         arraySymbolType.addField(new SymbolField("length", "int"));
         
-        addKnownType(initKnownTypes, new SymbolType("boolean", SymbolType.OBJECT_TYPE));
         addKnownType(initKnownTypes, new SymbolType("char", SymbolType.OBJECT_TYPE));
+        addKnownType(initKnownTypes, new SymbolType("boolean", SymbolType.OBJECT_TYPE));
         addKnownType(initKnownTypes, new SymbolType("byte", SymbolType.OBJECT_TYPE));
         addKnownType(initKnownTypes, new SymbolType("short", SymbolType.OBJECT_TYPE));
         addKnownType(initKnownTypes, new SymbolType("int", SymbolType.OBJECT_TYPE));
@@ -38,8 +51,33 @@ public class CompilerHelper {
         addKnownType(initKnownTypes, new SymbolType("float", SymbolType.OBJECT_TYPE));
         addKnownType(initKnownTypes, new SymbolType("double", SymbolType.OBJECT_TYPE));
         addKnownType(initKnownTypes, new SymbolType("void", SymbolType.OBJECT_TYPE));
+        addKnownType(initKnownTypes, new SymbolType("null", SymbolType.OBJECT_TYPE));
+        addKnownType(initKnownTypes, new SymbolType("java.lang.String", SymbolType.LIBRARY_TYPE));
     }
     
+    public static boolean isPrimitiveType(String type) {
+        String s = convertoObjectType(type);
+        return s.equals(type)? false : true;
+    }
+
+    public static String convertoObjectType(String type) {
+        String s = objectTypes.get(type);
+        if (s != null)
+            return s;        
+        else if (type.contains("[")) {
+            int first = type.indexOf('[');
+            int last = type.lastIndexOf(']');
+            if (first > 0 && last > 0) {
+                // extract the dim string like [][][]
+                String dimStr = type.substring(first, last + 1);
+                String rawTypeStr = type.substring(0, first);            
+                s = objectTypes.get(rawTypeStr);
+                if (s != null)
+                    return s + dimStr;
+            }
+        }
+        return type;
+    }
 
     private static List<String> getPossibleClasspaths(String[] properties) {
         List<String> l = new ArrayList<String>();
@@ -71,7 +109,7 @@ public class CompilerHelper {
          * First try if it is of array type
          */
         int first = className.indexOf('[');
-        int last = className.indexOf(']');
+        int last = className.lastIndexOf(']');
         if (first > 0 && last > 0) {
             // extract the dim string like [][][]
             String dimStr = className.substring(first, last + 1);
@@ -80,6 +118,7 @@ public class CompilerHelper {
             if (rawType != null) {
                 SymbolType arrayType = new SymbolType(arraySymbolType);
                 arrayType.setCanonicalName(rawType.getCanonicalName() + dimStr);
+                arrayType.setRawType(rawType);
                 addKnownType(knownTypes, arrayType);
                 return arrayType;
             }
@@ -113,7 +152,7 @@ public class CompilerHelper {
                             break;
                         }
                     } catch (IOException e) {
-                        System.err.println("WARNNING: " + e.getMessage() + " " + path);
+//                        System.err.println("WARNNING: " + e.getMessage() + " " + path);
                     }
                 } else {
                     String filePath = path + File.separator
@@ -130,8 +169,9 @@ public class CompilerHelper {
             if (symbolType != null)
                 break;
         }
-//        if (symbolType == null) 
-//            System.err.println("ERROR: Cannot resove the type " + className);
+        if (symbolType == null) {
+            System.err.print("");
+        }
         return symbolType;
     }
     
@@ -201,9 +241,11 @@ public class CompilerHelper {
         return initKnownTypes.remove(type);
     }
     
-    public static SymbolType getDominatingType(SymbolType type1, SymbolType type2) {
+    public static SymbolType getSumDominatingType(SymbolType type1, SymbolType type2) {
         String type = "";
-        if (type1.getSimpleName().equalsIgnoreCase("double") || type2.getSimpleName().equalsIgnoreCase("double")) {
+        if (type1.getSimpleName().equalsIgnoreCase("String") || type2.getSimpleName().equalsIgnoreCase("String")) {
+            type = "String";
+        } else if (type1.getSimpleName().equalsIgnoreCase("double") || type2.getSimpleName().equalsIgnoreCase("double")) {
             type = "double";
         }
         else if (type1.getSimpleName().equalsIgnoreCase("float") || type2.getSimpleName().equalsIgnoreCase("float")) {
@@ -219,8 +261,10 @@ public class CompilerHelper {
             type = "short";
         }
         //TODO byte and char?
-        else type = "byte";
-        return CompilerHelper.getSymbolTypeByName(type);
+        if (type.length() > 0)
+            return CompilerHelper.getSymbolTypeByName(type);
+        else 
+            return type1;
     }
     
 

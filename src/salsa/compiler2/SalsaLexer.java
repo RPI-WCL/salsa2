@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g 2010-10-20 16:07:21
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g 2010-10-29 10:45:08
 
 package salsa.compiler2;
 import salsa.compiler2.definitions.*;
@@ -14,188 +14,187 @@ public class SalsaLexer extends Lexer {
     public static final int STAR=49;
     public static final int MOD=32;
     public static final int DO=64;
-    public static final int GENERIC_TYPE_PARAM_LIST=138;
+    public static final int GENERIC_TYPE_PARAM_LIST=137;
     public static final int NOT=34;
-    public static final int ANNOTATION_METHOD_DECL=109;
+    public static final int ANNOTATION_METHOD_DECL=108;
     public static final int EOF=-1;
-    public static final int UNARY_PLUS=159;
+    public static final int UNARY_PLUS=158;
     public static final int BIT_SHIFT_RIGHT_ASSIGN=9;
-    public static final int TYPE=157;
+    public static final int TYPE=156;
     public static final int INC=21;
     public static final int RPAREN=43;
     public static final int FINAL=70;
     public static final int IMPORT=78;
-    public static final int STRING_LITERAL=169;
-    public static final int CAST_EXPR=118;
+    public static final int STRING_LITERAL=168;
+    public static final int CAST_EXPR=117;
     public static final int NOT_EQUAL=35;
     public static final int RETURN=88;
-    public static final int THIS=95;
-    public static final int ENUM_TOP_LEVEL_SCOPE=125;
-    public static final int ANNOTATION_INIT_KEY_LIST=107;
+    public static final int ENUM_TOP_LEVEL_SCOPE=124;
+    public static final int ANNOTATION_INIT_KEY_LIST=106;
     public static final int RBRACK=41;
-    public static final int PRE_DEC=149;
-    public static final int SWITCH_BLOCK_LABEL_LIST=154;
+    public static final int PRE_DEC=148;
+    public static final int SWITCH_BLOCK_LABEL_LIST=153;
     public static final int STATIC=90;
     public static final int ELSE=66;
     public static final int MINUS_ASSIGN=31;
     public static final int STRICTFP=91;
     public static final int NATIVE=81;
     public static final int ELLIPSIS=17;
-    public static final int PRE_INC=150;
-    public static final int CHARACTER_LITERAL=168;
+    public static final int PRE_INC=149;
+    public static final int CHARACTER_LITERAL=167;
     public static final int LCURLY=23;
-    public static final int UNARY_MINUS=158;
-    public static final int OCTAL_ESCAPE=177;
+    public static final int UNARY_MINUS=157;
+    public static final int OCTAL_ESCAPE=176;
     public static final int INT=79;
-    public static final int FORMAL_PARAM_VARARG_DECL=135;
-    public static final int INTERFACE_TOP_LEVEL_SCOPE=139;
-    public static final int WS=180;
-    public static final int LOCAL_MODIFIER_LIST=142;
+    public static final int FORMAL_PARAM_VARARG_DECL=134;
+    public static final int INTERFACE_TOP_LEVEL_SCOPE=138;
+    public static final int WS=179;
+    public static final int LOCAL_MODIFIER_LIST=141;
     public static final int LESS_THAN=25;
-    public static final int JavaIDDigit=179;
-    public static final int EXTENDS_BOUND_LIST=127;
-    public static final int DECIMAL_LITERAL=166;
-    public static final int FOR_INIT=131;
+    public static final int JavaIDDigit=178;
+    public static final int EXTENDS_BOUND_LIST=126;
+    public static final int DECIMAL_LITERAL=165;
+    public static final int FOR_INIT=130;
     public static final int PROTECTED=86;
     public static final int LBRACK=22;
-    public static final int THIS_CONSTRUCTOR_CALL=155;
+    public static final int THIS_CONSTRUCTOR_CALL=154;
     public static final int FLOAT=72;
-    public static final int POST_DEC=147;
-    public static final int STATIC_ARRAY_CREATOR=152;
-    public static final int ANNOTATION_SCOPE=110;
+    public static final int POST_DEC=146;
+    public static final int STATIC_ARRAY_CREATOR=151;
+    public static final int ANNOTATION_SCOPE=109;
     public static final int LPAREN=29;
     public static final int AT=7;
     public static final int IMPLEMENTS=75;
     public static final int XOR_ASSIGN=52;
     public static final int LOGICAL_OR=28;
-    public static final int IDENT=164;
+    public static final int IDENT=163;
     public static final int PLUS=38;
-    public static final int ANNOTATION_INIT_BLOCK=105;
-    public static final int GENERIC_TYPE_ARG_LIST=137;
+    public static final int ANNOTATION_INIT_BLOCK=104;
+    public static final int GENERIC_TYPE_ARG_LIST=136;
     public static final int GREATER_THAN=20;
-    public static final int CLASS_STATIC_INITIALIZER=122;
+    public static final int CLASS_STATIC_INITIALIZER=121;
     public static final int LESS_OR_EQUAL=24;
-    public static final int HEX_DIGIT=171;
+    public static final int HEX_DIGIT=170;
     public static final int SHORT=89;
     public static final int INSTANCEOF=76;
     public static final int MINUS=30;
     public static final int SEMI=44;
     public static final int STAR_ASSIGN=50;
-    public static final int VAR_DECLARATOR_LIST=162;
+    public static final int VAR_DECLARATOR_LIST=161;
     public static final int COLON=10;
     public static final int OR_ASSIGN=37;
     public static final int ENUM=67;
     public static final int RCURLY=42;
     public static final int PLUS_ASSIGN=39;
-    public static final int FUNCTION_METHOD_DECL=136;
+    public static final int FUNCTION_METHOD_DECL=135;
     public static final int INTERFACE=77;
-    public static final int POST_INC=148;
+    public static final int POST_INC=147;
     public static final int DIV=13;
-    public static final int CLASS_CONSTRUCTOR_CALL=120;
+    public static final int CLASS_CONSTRUCTOR_CALL=119;
     public static final int LONG=80;
     public static final int PUBLIC=87;
-    public static final int ARRAY_INITIALIZER=116;
-    public static final int CATCH_CLAUSE_LIST=119;
-    public static final int SUPER_CONSTRUCTOR_CALL=153;
-    public static final int EXPONENT=173;
-    public static final int WHILE=103;
+    public static final int ARRAY_INITIALIZER=115;
+    public static final int CATCH_CLAUSE_LIST=118;
+    public static final int SUPER_CONSTRUCTOR_CALL=152;
+    public static final int EXPONENT=172;
+    public static final int WHILE=102;
     public static final int MOD_ASSIGN=33;
     public static final int CASE=58;
     public static final int NEW=82;
     public static final int CHAR=60;
-    public static final int CLASS_INSTANCE_INITIALIZER=121;
-    public static final int ARRAY_ELEMENT_ACCESS=115;
-    public static final int FOR_CONDITION=129;
-    public static final int VAR_DECLARATION=160;
+    public static final int CLASS_INSTANCE_INITIALIZER=120;
+    public static final int ARRAY_ELEMENT_ACCESS=114;
+    public static final int FOR_CONDITION=128;
+    public static final int VAR_DECLARATION=159;
     public static final int DIV_ASSIGN=14;
     public static final int BREAK=56;
     public static final int LOGICAL_AND=26;
-    public static final int FOR_UPDATE=132;
-    public static final int FLOATING_POINT_LITERAL=170;
-    public static final int VOID_METHOD_DECL=163;
+    public static final int FOR_UPDATE=131;
+    public static final int FLOATING_POINT_LITERAL=169;
+    public static final int VOID_METHOD_DECL=162;
     public static final int DOUBLE=65;
-    public static final int VOID=101;
+    public static final int VOID=100;
     public static final int SUPER=92;
-    public static final int COMMENT=181;
-    public static final int FLOAT_TYPE_SUFFIX=174;
-    public static final int IMPLEMENTS_CLAUSE=140;
-    public static final int LINE_COMMENT=182;
+    public static final int COMMENT=180;
+    public static final int FLOAT_TYPE_SUFFIX=173;
+    public static final int IMPLEMENTS_CLAUSE=139;
+    public static final int LINE_COMMENT=181;
     public static final int PRIVATE=85;
-    public static final int BLOCK_SCOPE=117;
+    public static final int BLOCK_SCOPE=116;
     public static final int SWITCH=93;
-    public static final int ANNOTATION_INIT_DEFAULT_KEY=106;
+    public static final int ANNOTATION_INIT_DEFAULT_KEY=105;
     public static final int NULL=83;
-    public static final int VAR_DECLARATOR=161;
-    public static final int ANNOTATION_LIST=108;
-    public static final int THROWS=97;
+    public static final int VAR_DECLARATOR=160;
+    public static final int ANNOTATION_LIST=107;
+    public static final int THROWS=96;
     public static final int ASSERT=54;
-    public static final int METHOD_CALL=144;
-    public static final int TRY=100;
+    public static final int METHOD_CALL=143;
+    public static final int TRY=99;
     public static final int SHIFT_LEFT=45;
     public static final int SHIFT_RIGHT=47;
-    public static final int FORMAL_PARAM_STD_DECL=134;
+    public static final int FORMAL_PARAM_STD_DECL=133;
     public static final int OR=36;
     public static final int SHIFT_RIGHT_ASSIGN=48;
-    public static final int JAVA_SOURCE=143;
+    public static final int JAVA_SOURCE=142;
     public static final int CATCH=59;
     public static final int FALSE=69;
-    public static final int INTEGER_TYPE_SUFFIX=172;
-    public static final int Letter=178;
-    public static final int THROW=96;
+    public static final int INTEGER_TYPE_SUFFIX=171;
+    public static final int Letter=177;
+    public static final int THROW=95;
     public static final int DEC=12;
     public static final int CLASS=61;
     public static final int BIT_SHIFT_RIGHT=8;
-    public static final int THROWS_CLAUSE=156;
+    public static final int THROWS_CLAUSE=155;
     public static final int GREATER_OR_EQUAL=19;
     public static final int FOR=73;
     public static final int LOGICAL_NOT=27;
     public static final int ABSTRACT=53;
     public static final int AND=4;
     public static final int AND_ASSIGN=5;
-    public static final int MODIFIER_LIST=145;
+    public static final int MODIFIER_LIST=144;
     public static final int IF=74;
-    public static final int CONSTRUCTOR_DECL=124;
-    public static final int ESCAPE_SEQUENCE=175;
-    public static final int LABELED_STATEMENT=141;
-    public static final int UNICODE_ESCAPE=176;
+    public static final int CONSTRUCTOR_DECL=123;
+    public static final int ESCAPE_SEQUENCE=174;
+    public static final int LABELED_STATEMENT=140;
+    public static final int UNICODE_ESCAPE=175;
     public static final int BOOLEAN=55;
     public static final int SYNCHRONIZED=94;
-    public static final int EXPR=126;
-    public static final int CLASS_TOP_LEVEL_SCOPE=123;
+    public static final int EXPR=125;
+    public static final int CLASS_TOP_LEVEL_SCOPE=122;
     public static final int CONTINUE=62;
     public static final int COMMA=11;
-    public static final int TRANSIENT=98;
+    public static final int TRANSIENT=97;
     public static final int EQUAL=18;
-    public static final int ARGUMENT_LIST=112;
-    public static final int QUALIFIED_TYPE_IDENT=151;
-    public static final int HEX_LITERAL=165;
+    public static final int ARGUMENT_LIST=111;
+    public static final int QUALIFIED_TYPE_IDENT=150;
+    public static final int HEX_LITERAL=164;
     public static final int DOT=15;
     public static final int SHIFT_LEFT_ASSIGN=46;
-    public static final int FORMAL_PARAM_LIST=133;
+    public static final int FORMAL_PARAM_LIST=132;
     public static final int DOTSTAR=16;
-    public static final int ANNOTATION_TOP_LEVEL_SCOPE=111;
+    public static final int ANNOTATION_TOP_LEVEL_SCOPE=110;
     public static final int T__184=184;
     public static final int T__183=183;
     public static final int BYTE=57;
     public static final int T__186=186;
     public static final int T__185=185;
     public static final int XOR=51;
-    public static final int T__188=188;
     public static final int T__187=187;
-    public static final int VOLATILE=102;
-    public static final int PARENTESIZED_EXPR=146;
-    public static final int ARRAY_DECLARATOR_LIST=114;
+    public static final int VOLATILE=101;
+    public static final int PARENTESIZED_EXPR=145;
+    public static final int ARRAY_DECLARATOR_LIST=113;
     public static final int DEFAULT=63;
-    public static final int OCTAL_LITERAL=167;
-    public static final int TRUE=99;
-    public static final int EXTENDS_CLAUSE=128;
-    public static final int ARRAY_DECLARATOR=113;
+    public static final int T__182=182;
+    public static final int OCTAL_LITERAL=166;
+    public static final int TRUE=98;
+    public static final int EXTENDS_CLAUSE=127;
+    public static final int ARRAY_DECLARATOR=112;
     public static final int QUESTION=40;
     public static final int FINALLY=71;
     public static final int ASSIGN=6;
-    public static final int ANNOTATION_INIT_ARRAY_ELEMENT=104;
-    public static final int FOR_EACH=130;
+    public static final int ANNOTATION_INIT_ARRAY_ELEMENT=103;
     public static final int EXTENDS=68;
+    public static final int FOR_EACH=129;
 
     /** 
      *  Determines if whitespaces and comments should be preserved or thrown away.
@@ -2108,34 +2107,13 @@ public class SalsaLexer extends Lexer {
     }
     // $ANTLR end "SYNCHRONIZED"
 
-    // $ANTLR start "THIS"
-    public final void mTHIS() throws RecognitionException {
-        try {
-            int _type = THIS;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:115:6: ( 'this' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:115:8: 'this'
-            {
-            match("this"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "THIS"
-
     // $ANTLR start "THROW"
     public final void mTHROW() throws RecognitionException {
         try {
             int _type = THROW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:116:7: ( 'throw' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:116:9: 'throw'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:115:7: ( 'throw' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:115:9: 'throw'
             {
             match("throw"); 
 
@@ -2155,8 +2133,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = THROWS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:117:8: ( 'throws' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:117:10: 'throws'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:116:8: ( 'throws' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:116:10: 'throws'
             {
             match("throws"); 
 
@@ -2176,8 +2154,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = TRANSIENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:118:11: ( 'transient' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:118:13: 'transient'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:117:11: ( 'transient' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:117:13: 'transient'
             {
             match("transient"); 
 
@@ -2197,8 +2175,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:119:6: ( 'true' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:119:8: 'true'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:118:6: ( 'true' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:118:8: 'true'
             {
             match("true"); 
 
@@ -2218,8 +2196,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = TRY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:120:5: ( 'try' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:120:7: 'try'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:119:5: ( 'try' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:119:7: 'try'
             {
             match("try"); 
 
@@ -2239,8 +2217,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = VOID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:121:6: ( 'void' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:121:8: 'void'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:120:6: ( 'void' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:120:8: 'void'
             {
             match("void"); 
 
@@ -2260,8 +2238,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = VOLATILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:122:10: ( 'volatile' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:122:12: 'volatile'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:121:10: ( 'volatile' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:121:12: 'volatile'
             {
             match("volatile"); 
 
@@ -2281,8 +2259,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:123:7: ( 'while' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:123:9: 'while'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:122:7: ( 'while' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:122:9: 'while'
             {
             match("while"); 
 
@@ -2297,15 +2275,36 @@ public class SalsaLexer extends Lexer {
     }
     // $ANTLR end "WHILE"
 
+    // $ANTLR start "T__182"
+    public final void mT__182() throws RecognitionException {
+        try {
+            int _type = T__182;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:123:8: ( 'module' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:123:10: 'module'
+            {
+            match("module"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__182"
+
     // $ANTLR start "T__183"
     public final void mT__183() throws RecognitionException {
         try {
             int _type = T__183;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:124:8: ( 'module' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:124:10: 'module'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:124:8: ( 'Token' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:124:10: 'Token'
             {
-            match("module"); 
+            match("Token"); 
 
 
             }
@@ -2323,10 +2322,10 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = T__184;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:125:8: ( 'Token' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:125:10: 'Token'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:125:8: ( 'behavior' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:125:10: 'behavior'
             {
-            match("Token"); 
+            match("behavior"); 
 
 
             }
@@ -2344,10 +2343,10 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = T__185;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:126:8: ( 'behavior' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:126:10: 'behavior'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:126:8: ( 'join' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:126:10: 'join'
             {
-            match("behavior"); 
+            match("join"); 
 
 
             }
@@ -2365,10 +2364,10 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = T__186;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:127:8: ( 'join' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:127:10: 'join'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:127:8: ( '<-' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:127:10: '<-'
             {
-            match("join"); 
+            match("<-"); 
 
 
             }
@@ -2386,29 +2385,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = T__187;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:128:8: ( '<-' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:128:10: '<-'
-            {
-            match("<-"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__187"
-
-    // $ANTLR start "T__188"
-    public final void mT__188() throws RecognitionException {
-        try {
-            int _type = T__188;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:129:8: ( 'at' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:129:10: 'at'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:128:8: ( 'at' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:128:10: 'at'
             {
             match("at"); 
 
@@ -2421,15 +2399,15 @@ public class SalsaLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__188"
+    // $ANTLR end "T__187"
 
     // $ANTLR start "HEX_LITERAL"
     public final void mHEX_LITERAL() throws RecognitionException {
         try {
             int _type = HEX_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:798:13: ( '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ ( INTEGER_TYPE_SUFFIX )? )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:798:15: '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:870:13: ( '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ ( INTEGER_TYPE_SUFFIX )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:870:15: '0' ( 'x' | 'X' ) ( HEX_DIGIT )+ ( INTEGER_TYPE_SUFFIX )?
             {
             match('0'); 
             if ( input.LA(1)=='X'||input.LA(1)=='x' ) {
@@ -2441,7 +2419,7 @@ public class SalsaLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:798:29: ( HEX_DIGIT )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:870:29: ( HEX_DIGIT )+
             int cnt1=0;
             loop1:
             do {
@@ -2455,7 +2433,7 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:798:29: HEX_DIGIT
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:870:29: HEX_DIGIT
             	    {
             	    mHEX_DIGIT(); 
 
@@ -2471,7 +2449,7 @@ public class SalsaLexer extends Lexer {
                 cnt1++;
             } while (true);
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:798:40: ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:870:40: ( INTEGER_TYPE_SUFFIX )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -2480,7 +2458,7 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:798:40: INTEGER_TYPE_SUFFIX
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:870:40: INTEGER_TYPE_SUFFIX
                     {
                     mINTEGER_TYPE_SUFFIX(); 
 
@@ -2505,10 +2483,10 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = DECIMAL_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:800:17: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( INTEGER_TYPE_SUFFIX )? )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:800:19: ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:872:17: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( INTEGER_TYPE_SUFFIX )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:872:19: ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( INTEGER_TYPE_SUFFIX )?
             {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:800:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:872:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -2526,17 +2504,17 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:800:20: '0'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:872:20: '0'
                     {
                     match('0'); 
 
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:800:26: '1' .. '9' ( '0' .. '9' )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:872:26: '1' .. '9' ( '0' .. '9' )*
                     {
                     matchRange('1','9'); 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:800:35: ( '0' .. '9' )*
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:872:35: ( '0' .. '9' )*
                     loop3:
                     do {
                         int alt3=2;
@@ -2549,7 +2527,7 @@ public class SalsaLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:800:35: '0' .. '9'
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:872:35: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -2567,7 +2545,7 @@ public class SalsaLexer extends Lexer {
 
             }
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:800:46: ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:872:46: ( INTEGER_TYPE_SUFFIX )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -2576,7 +2554,7 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:800:46: INTEGER_TYPE_SUFFIX
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:872:46: INTEGER_TYPE_SUFFIX
                     {
                     mINTEGER_TYPE_SUFFIX(); 
 
@@ -2601,11 +2579,11 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = OCTAL_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:802:15: ( '0' ( '0' .. '7' )+ ( INTEGER_TYPE_SUFFIX )? )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:802:17: '0' ( '0' .. '7' )+ ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:874:15: ( '0' ( '0' .. '7' )+ ( INTEGER_TYPE_SUFFIX )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:874:17: '0' ( '0' .. '7' )+ ( INTEGER_TYPE_SUFFIX )?
             {
             match('0'); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:802:21: ( '0' .. '7' )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:874:21: ( '0' .. '7' )+
             int cnt6=0;
             loop6:
             do {
@@ -2619,7 +2597,7 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:802:22: '0' .. '7'
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:874:22: '0' .. '7'
             	    {
             	    matchRange('0','7'); 
 
@@ -2635,7 +2613,7 @@ public class SalsaLexer extends Lexer {
                 cnt6++;
             } while (true);
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:802:33: ( INTEGER_TYPE_SUFFIX )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:874:33: ( INTEGER_TYPE_SUFFIX )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -2644,7 +2622,7 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:802:33: INTEGER_TYPE_SUFFIX
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:874:33: INTEGER_TYPE_SUFFIX
                     {
                     mINTEGER_TYPE_SUFFIX(); 
 
@@ -2667,8 +2645,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "HEX_DIGIT"
     public final void mHEX_DIGIT() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:805:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:805:13: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:877:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:877:13: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
                 input.consume();
@@ -2691,8 +2669,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "INTEGER_TYPE_SUFFIX"
     public final void mINTEGER_TYPE_SUFFIX() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:21: ( ( 'l' | 'L' ) )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:808:23: ( 'l' | 'L' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:880:21: ( ( 'l' | 'L' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:880:23: ( 'l' | 'L' )
             {
             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                 input.consume();
@@ -2717,7 +2695,7 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = FLOATING_POINT_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:811:5: ( ( '0' .. '9' )+ ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX ) | DOT ( '0' .. '9' )+ ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:883:5: ( ( '0' .. '9' )+ ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX ) | DOT ( '0' .. '9' )+ ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -2735,9 +2713,9 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt17) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:811:9: ( '0' .. '9' )+ ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:883:9: ( '0' .. '9' )+ ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX )
                     {
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:811:9: ( '0' .. '9' )+
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:883:9: ( '0' .. '9' )+
                     int cnt8=0;
                     loop8:
                     do {
@@ -2751,7 +2729,7 @@ public class SalsaLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:811:10: '0' .. '9'
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:883:10: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -2767,7 +2745,7 @@ public class SalsaLexer extends Lexer {
                         cnt8++;
                     } while (true);
 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:812:9: ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:884:9: ( DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )? | EXPONENT ( FLOAT_TYPE_SUFFIX )? | FLOAT_TYPE_SUFFIX )
                     int alt13=3;
                     switch ( input.LA(1) ) {
                     case '.':
@@ -2798,10 +2776,10 @@ public class SalsaLexer extends Lexer {
 
                     switch (alt13) {
                         case 1 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:813:13: DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )?
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:885:13: DOT ( '0' .. '9' )* ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )?
                             {
                             mDOT(); 
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:813:17: ( '0' .. '9' )*
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:885:17: ( '0' .. '9' )*
                             loop9:
                             do {
                                 int alt9=2;
@@ -2814,7 +2792,7 @@ public class SalsaLexer extends Lexer {
 
                                 switch (alt9) {
                             	case 1 :
-                            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:813:18: '0' .. '9'
+                            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:885:18: '0' .. '9'
                             	    {
                             	    matchRange('0','9'); 
 
@@ -2826,7 +2804,7 @@ public class SalsaLexer extends Lexer {
                                 }
                             } while (true);
 
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:813:29: ( EXPONENT )?
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:885:29: ( EXPONENT )?
                             int alt10=2;
                             int LA10_0 = input.LA(1);
 
@@ -2835,7 +2813,7 @@ public class SalsaLexer extends Lexer {
                             }
                             switch (alt10) {
                                 case 1 :
-                                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:813:29: EXPONENT
+                                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:885:29: EXPONENT
                                     {
                                     mEXPONENT(); 
 
@@ -2844,7 +2822,7 @@ public class SalsaLexer extends Lexer {
 
                             }
 
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:813:39: ( FLOAT_TYPE_SUFFIX )?
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:885:39: ( FLOAT_TYPE_SUFFIX )?
                             int alt11=2;
                             int LA11_0 = input.LA(1);
 
@@ -2853,7 +2831,7 @@ public class SalsaLexer extends Lexer {
                             }
                             switch (alt11) {
                                 case 1 :
-                                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:813:39: FLOAT_TYPE_SUFFIX
+                                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:885:39: FLOAT_TYPE_SUFFIX
                                     {
                                     mFLOAT_TYPE_SUFFIX(); 
 
@@ -2866,10 +2844,10 @@ public class SalsaLexer extends Lexer {
                             }
                             break;
                         case 2 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:814:13: EXPONENT ( FLOAT_TYPE_SUFFIX )?
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:886:13: EXPONENT ( FLOAT_TYPE_SUFFIX )?
                             {
                             mEXPONENT(); 
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:814:22: ( FLOAT_TYPE_SUFFIX )?
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:886:22: ( FLOAT_TYPE_SUFFIX )?
                             int alt12=2;
                             int LA12_0 = input.LA(1);
 
@@ -2878,7 +2856,7 @@ public class SalsaLexer extends Lexer {
                             }
                             switch (alt12) {
                                 case 1 :
-                                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:814:22: FLOAT_TYPE_SUFFIX
+                                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:886:22: FLOAT_TYPE_SUFFIX
                                     {
                                     mFLOAT_TYPE_SUFFIX(); 
 
@@ -2891,7 +2869,7 @@ public class SalsaLexer extends Lexer {
                             }
                             break;
                         case 3 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:815:13: FLOAT_TYPE_SUFFIX
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:887:13: FLOAT_TYPE_SUFFIX
                             {
                             mFLOAT_TYPE_SUFFIX(); 
 
@@ -2904,10 +2882,10 @@ public class SalsaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:817:9: DOT ( '0' .. '9' )+ ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:889:9: DOT ( '0' .. '9' )+ ( EXPONENT )? ( FLOAT_TYPE_SUFFIX )?
                     {
                     mDOT(); 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:817:13: ( '0' .. '9' )+
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:889:13: ( '0' .. '9' )+
                     int cnt14=0;
                     loop14:
                     do {
@@ -2921,7 +2899,7 @@ public class SalsaLexer extends Lexer {
 
                         switch (alt14) {
                     	case 1 :
-                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:817:14: '0' .. '9'
+                    	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:889:14: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -2937,7 +2915,7 @@ public class SalsaLexer extends Lexer {
                         cnt14++;
                     } while (true);
 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:817:25: ( EXPONENT )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:889:25: ( EXPONENT )?
                     int alt15=2;
                     int LA15_0 = input.LA(1);
 
@@ -2946,7 +2924,7 @@ public class SalsaLexer extends Lexer {
                     }
                     switch (alt15) {
                         case 1 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:817:25: EXPONENT
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:889:25: EXPONENT
                             {
                             mEXPONENT(); 
 
@@ -2955,7 +2933,7 @@ public class SalsaLexer extends Lexer {
 
                     }
 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:817:35: ( FLOAT_TYPE_SUFFIX )?
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:889:35: ( FLOAT_TYPE_SUFFIX )?
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
@@ -2964,7 +2942,7 @@ public class SalsaLexer extends Lexer {
                     }
                     switch (alt16) {
                         case 1 :
-                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:817:35: FLOAT_TYPE_SUFFIX
+                            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:889:35: FLOAT_TYPE_SUFFIX
                             {
                             mFLOAT_TYPE_SUFFIX(); 
 
@@ -2989,8 +2967,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "EXPONENT"
     public final void mEXPONENT() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:821:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:821:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:893:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:893:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -3001,7 +2979,7 @@ public class SalsaLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:821:22: ( '+' | '-' )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:893:22: ( '+' | '-' )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -3027,7 +3005,7 @@ public class SalsaLexer extends Lexer {
 
             }
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:821:33: ( '0' .. '9' )+
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:893:33: ( '0' .. '9' )+
             int cnt19=0;
             loop19:
             do {
@@ -3041,7 +3019,7 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt19) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:821:34: '0' .. '9'
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:893:34: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -3069,8 +3047,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "FLOAT_TYPE_SUFFIX"
     public final void mFLOAT_TYPE_SUFFIX() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:824:19: ( ( 'f' | 'F' | 'd' | 'D' ) )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:824:21: ( 'f' | 'F' | 'd' | 'D' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:896:19: ( ( 'f' | 'F' | 'd' | 'D' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:896:21: ( 'f' | 'F' | 'd' | 'D' )
             {
             if ( input.LA(1)=='D'||input.LA(1)=='F'||input.LA(1)=='d'||input.LA(1)=='f' ) {
                 input.consume();
@@ -3095,11 +3073,11 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = CHARACTER_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:827:5: ( '\\'' ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) ) '\\'' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:827:9: '\\'' ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) ) '\\''
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:899:5: ( '\\'' ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) ) '\\'' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:899:9: '\\'' ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) ) '\\''
             {
             match('\''); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:827:14: ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:899:14: ( ESCAPE_SEQUENCE | ~ ( '\\'' | '\\\\' ) )
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -3117,14 +3095,14 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt20) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:827:16: ESCAPE_SEQUENCE
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:899:16: ESCAPE_SEQUENCE
                     {
                     mESCAPE_SEQUENCE(); 
 
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:827:34: ~ ( '\\'' | '\\\\' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:899:34: ~ ( '\\'' | '\\\\' )
                     {
                     if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                         input.consume();
@@ -3158,11 +3136,11 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = STRING_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:831:5: ( '\"' ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )* '\"' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:831:8: '\"' ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )* '\"'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:903:5: ( '\"' ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )* '\"' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:903:8: '\"' ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:831:12: ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:903:12: ( ESCAPE_SEQUENCE | ~ ( '\\\\' | '\"' ) )*
             loop21:
             do {
                 int alt21=3;
@@ -3178,14 +3156,14 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt21) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:831:14: ESCAPE_SEQUENCE
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:903:14: ESCAPE_SEQUENCE
             	    {
             	    mESCAPE_SEQUENCE(); 
 
             	    }
             	    break;
             	case 2 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:831:32: ~ ( '\\\\' | '\"' )
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:903:32: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3220,7 +3198,7 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "ESCAPE_SEQUENCE"
     public final void mESCAPE_SEQUENCE() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:836:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESCAPE | OCTAL_ESCAPE )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:908:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESCAPE | OCTAL_ESCAPE )
             int alt22=3;
             int LA22_0 = input.LA(1);
 
@@ -3271,7 +3249,7 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt22) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:836:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:908:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
                     {
                     match('\\'); 
                     if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -3287,14 +3265,14 @@ public class SalsaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:837:9: UNICODE_ESCAPE
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:909:9: UNICODE_ESCAPE
                     {
                     mUNICODE_ESCAPE(); 
 
                     }
                     break;
                 case 3 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:838:9: OCTAL_ESCAPE
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:910:9: OCTAL_ESCAPE
                     {
                     mOCTAL_ESCAPE(); 
 
@@ -3311,7 +3289,7 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "OCTAL_ESCAPE"
     public final void mOCTAL_ESCAPE() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:843:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
             int alt23=3;
             int LA23_0 = input.LA(1);
 
@@ -3322,9 +3300,9 @@ public class SalsaLexer extends Lexer {
                     int LA23_2 = input.LA(3);
 
                     if ( ((LA23_2>='0' && LA23_2<='7')) ) {
-                        int LA23_4 = input.LA(4);
+                        int LA23_5 = input.LA(4);
 
-                        if ( ((LA23_4>='0' && LA23_4<='7')) ) {
+                        if ( ((LA23_5>='0' && LA23_5<='7')) ) {
                             alt23=1;
                         }
                         else {
@@ -3357,25 +3335,25 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt23) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:843:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:843:14: ( '0' .. '3' )
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:843:15: '0' .. '3'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:14: ( '0' .. '3' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:15: '0' .. '3'
                     {
                     matchRange('0','3'); 
 
                     }
 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:843:25: ( '0' .. '7' )
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:843:26: '0' .. '7'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:25: ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:26: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:843:36: ( '0' .. '7' )
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:843:37: '0' .. '7'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:36: ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:37: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -3385,18 +3363,18 @@ public class SalsaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:844:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:916:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:844:14: ( '0' .. '7' )
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:844:15: '0' .. '7'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:916:14: ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:916:15: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
                     }
 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:844:25: ( '0' .. '7' )
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:844:26: '0' .. '7'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:916:25: ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:916:26: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -3406,11 +3384,11 @@ public class SalsaLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:845:9: '\\\\' ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:917:9: '\\\\' ( '0' .. '7' )
                     {
                     match('\\'); 
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:845:14: ( '0' .. '7' )
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:845:15: '0' .. '7'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:917:14: ( '0' .. '7' )
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:917:15: '0' .. '7'
                     {
                     matchRange('0','7'); 
 
@@ -3430,8 +3408,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "UNICODE_ESCAPE"
     public final void mUNICODE_ESCAPE() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:850:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:850:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:922:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:922:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
             {
             match('\\'); 
             match('u'); 
@@ -3453,11 +3431,11 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = IDENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:857:5: ( Letter ( Letter | JavaIDDigit )* )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:857:9: Letter ( Letter | JavaIDDigit )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:929:5: ( Letter ( Letter | JavaIDDigit )* )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:929:9: Letter ( Letter | JavaIDDigit )*
             {
             mLetter(); 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:857:16: ( Letter | JavaIDDigit )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:929:16: ( Letter | JavaIDDigit )*
             loop24:
             do {
                 int alt24=2;
@@ -3504,7 +3482,7 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "Letter"
     public final void mLetter() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:865:5: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:937:5: ( '\\u0024' | '\\u0041' .. '\\u005a' | '\\u005f' | '\\u0061' .. '\\u007a' | '\\u00c0' .. '\\u00d6' | '\\u00d8' .. '\\u00f6' | '\\u00f8' .. '\\u00ff' | '\\u0100' .. '\\u1fff' | '\\u3040' .. '\\u318f' | '\\u3300' .. '\\u337f' | '\\u3400' .. '\\u3d2d' | '\\u4e00' .. '\\u9fff' | '\\uf900' .. '\\ufaff' )
             // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:
             {
             if ( input.LA(1)=='$'||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z')||(input.LA(1)>='\u00C0' && input.LA(1)<='\u00D6')||(input.LA(1)>='\u00D8' && input.LA(1)<='\u00F6')||(input.LA(1)>='\u00F8' && input.LA(1)<='\u1FFF')||(input.LA(1)>='\u3040' && input.LA(1)<='\u318F')||(input.LA(1)>='\u3300' && input.LA(1)<='\u337F')||(input.LA(1)>='\u3400' && input.LA(1)<='\u3D2D')||(input.LA(1)>='\u4E00' && input.LA(1)<='\u9FFF')||(input.LA(1)>='\uF900' && input.LA(1)<='\uFAFF') ) {
@@ -3528,7 +3506,7 @@ public class SalsaLexer extends Lexer {
     // $ANTLR start "JavaIDDigit"
     public final void mJavaIDDigit() throws RecognitionException {
         try {
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:882:5: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06f0' .. '\\u06f9' | '\\u0966' .. '\\u096f' | '\\u09e6' .. '\\u09ef' | '\\u0a66' .. '\\u0a6f' | '\\u0ae6' .. '\\u0aef' | '\\u0b66' .. '\\u0b6f' | '\\u0be7' .. '\\u0bef' | '\\u0c66' .. '\\u0c6f' | '\\u0ce6' .. '\\u0cef' | '\\u0d66' .. '\\u0d6f' | '\\u0e50' .. '\\u0e59' | '\\u0ed0' .. '\\u0ed9' | '\\u1040' .. '\\u1049' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:954:5: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06f0' .. '\\u06f9' | '\\u0966' .. '\\u096f' | '\\u09e6' .. '\\u09ef' | '\\u0a66' .. '\\u0a6f' | '\\u0ae6' .. '\\u0aef' | '\\u0b66' .. '\\u0b6f' | '\\u0be7' .. '\\u0bef' | '\\u0c66' .. '\\u0c6f' | '\\u0ce6' .. '\\u0cef' | '\\u0d66' .. '\\u0d6f' | '\\u0e50' .. '\\u0e59' | '\\u0ed0' .. '\\u0ed9' | '\\u1040' .. '\\u1049' )
             // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='\u0660' && input.LA(1)<='\u0669')||(input.LA(1)>='\u06F0' && input.LA(1)<='\u06F9')||(input.LA(1)>='\u0966' && input.LA(1)<='\u096F')||(input.LA(1)>='\u09E6' && input.LA(1)<='\u09EF')||(input.LA(1)>='\u0A66' && input.LA(1)<='\u0A6F')||(input.LA(1)>='\u0AE6' && input.LA(1)<='\u0AEF')||(input.LA(1)>='\u0B66' && input.LA(1)<='\u0B6F')||(input.LA(1)>='\u0BE7' && input.LA(1)<='\u0BEF')||(input.LA(1)>='\u0C66' && input.LA(1)<='\u0C6F')||(input.LA(1)>='\u0CE6' && input.LA(1)<='\u0CEF')||(input.LA(1)>='\u0D66' && input.LA(1)<='\u0D6F')||(input.LA(1)>='\u0E50' && input.LA(1)<='\u0E59')||(input.LA(1)>='\u0ED0' && input.LA(1)<='\u0ED9')||(input.LA(1)>='\u1040' && input.LA(1)<='\u1049') ) {
@@ -3554,8 +3532,8 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:900:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:900:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:972:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:972:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||(input.LA(1)>='\f' && input.LA(1)<='\r')||input.LA(1)==' ' ) {
                 input.consume();
@@ -3583,12 +3561,12 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:904:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:904:9: '/*' ( options {greedy=false; } : . )* '*/'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:976:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:976:9: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:904:14: ( options {greedy=false; } : . )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:976:14: ( options {greedy=false; } : . )*
             loop25:
             do {
                 int alt25=2;
@@ -3613,7 +3591,7 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt25) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:904:42: .
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:976:42: .
             	    {
             	    matchAny(); 
 
@@ -3650,12 +3628,12 @@ public class SalsaLexer extends Lexer {
         try {
             int _type = LINE_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:987:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:987:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
             {
             match("//"); 
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:12: (~ ( '\\n' | '\\r' ) )*
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:987:12: (~ ( '\\n' | '\\r' ) )*
             loop26:
             do {
                 int alt26=2;
@@ -3668,7 +3646,7 @@ public class SalsaLexer extends Lexer {
 
                 switch (alt26) {
             	case 1 :
-            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:12: ~ ( '\\n' | '\\r' )
+            	    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:987:12: ~ ( '\\n' | '\\r' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3688,7 +3666,7 @@ public class SalsaLexer extends Lexer {
                 }
             } while (true);
 
-            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:26: ( '\\r' )?
+            // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:987:26: ( '\\r' )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -3697,7 +3675,7 @@ public class SalsaLexer extends Lexer {
             }
             switch (alt27) {
                 case 1 :
-                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:915:26: '\\r'
+                    // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:987:26: '\\r'
                     {
                     match('\r'); 
 
@@ -3726,8 +3704,8 @@ public class SalsaLexer extends Lexer {
     // $ANTLR end "LINE_COMMENT"
 
     public void mTokens() throws RecognitionException {
-        // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:8: ( AND | AND_ASSIGN | ASSIGN | AT | BIT_SHIFT_RIGHT | BIT_SHIFT_RIGHT_ASSIGN | COLON | COMMA | DEC | DIV | DIV_ASSIGN | DOT | DOTSTAR | ELLIPSIS | EQUAL | GREATER_OR_EQUAL | GREATER_THAN | INC | LBRACK | LCURLY | LESS_OR_EQUAL | LESS_THAN | LOGICAL_AND | LOGICAL_NOT | LOGICAL_OR | LPAREN | MINUS | MINUS_ASSIGN | MOD | MOD_ASSIGN | NOT | NOT_EQUAL | OR | OR_ASSIGN | PLUS | PLUS_ASSIGN | QUESTION | RBRACK | RCURLY | RPAREN | SEMI | SHIFT_LEFT | SHIFT_LEFT_ASSIGN | SHIFT_RIGHT | SHIFT_RIGHT_ASSIGN | STAR | STAR_ASSIGN | XOR | XOR_ASSIGN | ABSTRACT | ASSERT | BOOLEAN | BREAK | BYTE | CASE | CATCH | CHAR | CLASS | CONTINUE | DEFAULT | DO | DOUBLE | ELSE | ENUM | EXTENDS | FALSE | FINAL | FINALLY | FLOAT | FOR | IF | IMPLEMENTS | INSTANCEOF | INTERFACE | IMPORT | INT | LONG | NATIVE | NEW | NULL | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | SHORT | STATIC | STRICTFP | SUPER | SWITCH | SYNCHRONIZED | THIS | THROW | THROWS | TRANSIENT | TRUE | TRY | VOID | VOLATILE | WHILE | T__183 | T__184 | T__185 | T__186 | T__187 | T__188 | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOATING_POINT_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | IDENT | WS | COMMENT | LINE_COMMENT )
-        int alt28=116;
+        // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:8: ( AND | AND_ASSIGN | ASSIGN | AT | BIT_SHIFT_RIGHT | BIT_SHIFT_RIGHT_ASSIGN | COLON | COMMA | DEC | DIV | DIV_ASSIGN | DOT | DOTSTAR | ELLIPSIS | EQUAL | GREATER_OR_EQUAL | GREATER_THAN | INC | LBRACK | LCURLY | LESS_OR_EQUAL | LESS_THAN | LOGICAL_AND | LOGICAL_NOT | LOGICAL_OR | LPAREN | MINUS | MINUS_ASSIGN | MOD | MOD_ASSIGN | NOT | NOT_EQUAL | OR | OR_ASSIGN | PLUS | PLUS_ASSIGN | QUESTION | RBRACK | RCURLY | RPAREN | SEMI | SHIFT_LEFT | SHIFT_LEFT_ASSIGN | SHIFT_RIGHT | SHIFT_RIGHT_ASSIGN | STAR | STAR_ASSIGN | XOR | XOR_ASSIGN | ABSTRACT | ASSERT | BOOLEAN | BREAK | BYTE | CASE | CATCH | CHAR | CLASS | CONTINUE | DEFAULT | DO | DOUBLE | ELSE | ENUM | EXTENDS | FALSE | FINAL | FINALLY | FLOAT | FOR | IF | IMPLEMENTS | INSTANCEOF | INTERFACE | IMPORT | INT | LONG | NATIVE | NEW | NULL | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | SHORT | STATIC | STRICTFP | SUPER | SWITCH | SYNCHRONIZED | THROW | THROWS | TRANSIENT | TRUE | TRY | VOID | VOLATILE | WHILE | T__182 | T__183 | T__184 | T__185 | T__186 | T__187 | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOATING_POINT_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | IDENT | WS | COMMENT | LINE_COMMENT )
+        int alt28=115;
         alt28 = dfa28.predict(input);
         switch (alt28) {
             case 1 :
@@ -4368,175 +4346,168 @@ public class SalsaLexer extends Lexer {
                 }
                 break;
             case 92 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:738: THIS
-                {
-                mTHIS(); 
-
-                }
-                break;
-            case 93 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:743: THROW
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:738: THROW
                 {
                 mTHROW(); 
 
                 }
                 break;
-            case 94 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:749: THROWS
+            case 93 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:744: THROWS
                 {
                 mTHROWS(); 
 
                 }
                 break;
-            case 95 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:756: TRANSIENT
+            case 94 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:751: TRANSIENT
                 {
                 mTRANSIENT(); 
 
                 }
                 break;
-            case 96 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:766: TRUE
+            case 95 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:761: TRUE
                 {
                 mTRUE(); 
 
                 }
                 break;
-            case 97 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:771: TRY
+            case 96 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:766: TRY
                 {
                 mTRY(); 
 
                 }
                 break;
-            case 98 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:775: VOID
+            case 97 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:770: VOID
                 {
                 mVOID(); 
 
                 }
                 break;
-            case 99 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:780: VOLATILE
+            case 98 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:775: VOLATILE
                 {
                 mVOLATILE(); 
 
                 }
                 break;
-            case 100 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:789: WHILE
+            case 99 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:784: WHILE
                 {
                 mWHILE(); 
 
                 }
                 break;
+            case 100 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:790: T__182
+                {
+                mT__182(); 
+
+                }
+                break;
             case 101 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:795: T__183
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:797: T__183
                 {
                 mT__183(); 
 
                 }
                 break;
             case 102 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:802: T__184
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:804: T__184
                 {
                 mT__184(); 
 
                 }
                 break;
             case 103 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:809: T__185
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:811: T__185
                 {
                 mT__185(); 
 
                 }
                 break;
             case 104 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:816: T__186
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:818: T__186
                 {
                 mT__186(); 
 
                 }
                 break;
             case 105 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:823: T__187
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:825: T__187
                 {
                 mT__187(); 
 
                 }
                 break;
             case 106 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:830: T__188
-                {
-                mT__188(); 
-
-                }
-                break;
-            case 107 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:837: HEX_LITERAL
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:832: HEX_LITERAL
                 {
                 mHEX_LITERAL(); 
 
                 }
                 break;
-            case 108 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:849: DECIMAL_LITERAL
+            case 107 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:844: DECIMAL_LITERAL
                 {
                 mDECIMAL_LITERAL(); 
 
                 }
                 break;
-            case 109 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:865: OCTAL_LITERAL
+            case 108 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:860: OCTAL_LITERAL
                 {
                 mOCTAL_LITERAL(); 
 
                 }
                 break;
-            case 110 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:879: FLOATING_POINT_LITERAL
+            case 109 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:874: FLOATING_POINT_LITERAL
                 {
                 mFLOATING_POINT_LITERAL(); 
 
                 }
                 break;
-            case 111 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:902: CHARACTER_LITERAL
+            case 110 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:897: CHARACTER_LITERAL
                 {
                 mCHARACTER_LITERAL(); 
 
                 }
                 break;
-            case 112 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:920: STRING_LITERAL
+            case 111 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:915: STRING_LITERAL
                 {
                 mSTRING_LITERAL(); 
 
                 }
                 break;
-            case 113 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:935: IDENT
+            case 112 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:930: IDENT
                 {
                 mIDENT(); 
 
                 }
                 break;
-            case 114 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:941: WS
+            case 113 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:936: WS
                 {
                 mWS(); 
 
                 }
                 break;
-            case 115 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:944: COMMENT
+            case 114 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:939: COMMENT
                 {
                 mCOMMENT(); 
 
                 }
                 break;
-            case 116 :
-                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:952: LINE_COMMENT
+            case 115 :
+                // /media/DEVELOP/wcl/software/salsa2/src/salsa/compiler2/Salsa.g:1:947: LINE_COMMENT
                 {
                 mLINE_COMMENT(); 
 
@@ -4553,26 +4524,26 @@ public class SalsaLexer extends Lexer {
         "\1\uffff\1\64\1\66\1\uffff\1\71\2\uffff\1\74\1\100\1\103\1\107\2"+
         "\uffff\1\113\1\115\1\120\1\uffff\1\122\6\uffff\1\124\1\126\22\60"+
         "\2\u0084\11\uffff\1\u0088\21\uffff\1\u008a\15\uffff\2\60\1\u008d"+
-        "\11\60\1\u0099\7\60\1\u00a1\26\60\1\uffff\1\u00bf\1\uffff\1\u0084"+
-        "\1\u00c1\4\uffff\2\60\1\uffff\13\60\1\uffff\6\60\1\u00d5\1\uffff"+
-        "\2\60\1\u00da\2\60\1\u00dd\20\60\1\u00ee\6\60\3\uffff\4\60\1\u00f9"+
-        "\1\60\1\u00fb\1\60\1\u00fd\4\60\1\u0102\1\u0103\4\60\1\uffff\4\60"+
-        "\1\uffff\1\u010c\1\60\1\uffff\1\u010e\13\60\1\u011a\2\60\1\u011d"+
-        "\1\uffff\1\u011e\4\60\1\u0123\3\60\1\u0127\1\uffff\1\60\1\uffff"+
-        "\1\u0129\1\uffff\1\u012a\3\60\2\uffff\1\60\1\u012f\1\u0131\1\u0132"+
-        "\4\60\1\uffff\1\60\1\uffff\5\60\1\u013d\2\60\1\u0140\2\60\1\uffff"+
-        "\1\u0144\1\60\2\uffff\1\60\1\u0147\1\60\1\u0149\1\uffff\1\60\1\u014b"+
-        "\1\60\1\uffff\1\60\2\uffff\2\60\1\u0150\1\60\1\uffff\1\60\2\uffff"+
-        "\1\60\1\u0154\2\60\1\u0157\3\60\1\u015b\1\u015c\1\uffff\1\u015d"+
-        "\1\60\1\uffff\1\u015f\1\60\1\u0161\1\uffff\2\60\1\uffff\1\u0164"+
-        "\1\uffff\1\60\1\uffff\1\u0166\2\60\1\u0169\1\uffff\1\u016a\1\u016b"+
-        "\1\60\1\uffff\2\60\1\uffff\1\u016f\1\u0170\1\60\3\uffff\1\60\1\uffff"+
-        "\1\60\1\uffff\2\60\1\uffff\1\u0176\1\uffff\1\u0177\1\u0178\3\uffff"+
-        "\3\60\2\uffff\1\60\1\u017d\2\60\1\u0180\3\uffff\2\60\1\u0183\1\u0184"+
-        "\1\uffff\1\60\1\u0186\1\uffff\1\u0187\1\u0188\2\uffff\1\60\3\uffff"+
-        "\1\60\1\u018b\1\uffff";
+        "\11\60\1\u0099\7\60\1\u00a1\26\60\1\uffff\1\u00be\1\uffff\1\u0084"+
+        "\1\u00c0\4\uffff\2\60\1\uffff\13\60\1\uffff\6\60\1\u00d4\1\uffff"+
+        "\2\60\1\u00d9\2\60\1\u00dc\17\60\1\u00ec\6\60\3\uffff\4\60\1\u00f7"+
+        "\1\60\1\u00f9\1\60\1\u00fb\4\60\1\u0100\1\u0101\4\60\1\uffff\4\60"+
+        "\1\uffff\1\u010a\1\60\1\uffff\1\u010c\15\60\1\u011a\1\uffff\1\u011b"+
+        "\4\60\1\u0120\3\60\1\u0124\1\uffff\1\60\1\uffff\1\u0126\1\uffff"+
+        "\1\u0127\3\60\2\uffff\1\60\1\u012c\1\u012e\1\u012f\4\60\1\uffff"+
+        "\1\60\1\uffff\5\60\1\u013a\2\60\1\u013d\2\60\1\u0141\1\60\2\uffff"+
+        "\1\60\1\u0144\1\60\1\u0146\1\uffff\1\60\1\u0148\1\60\1\uffff\1\60"+
+        "\2\uffff\2\60\1\u014d\1\60\1\uffff\1\60\2\uffff\1\60\1\u0151\2\60"+
+        "\1\u0154\3\60\1\u0158\1\u0159\1\uffff\1\u015a\1\60\1\uffff\1\u015c"+
+        "\1\60\1\u015e\1\uffff\2\60\1\uffff\1\u0161\1\uffff\1\60\1\uffff"+
+        "\1\u0163\2\60\1\u0166\1\uffff\1\u0167\1\u0168\1\60\1\uffff\2\60"+
+        "\1\uffff\1\u016c\1\u016d\1\60\3\uffff\1\60\1\uffff\1\60\1\uffff"+
+        "\2\60\1\uffff\1\u0173\1\uffff\1\u0174\1\u0175\3\uffff\3\60\2\uffff"+
+        "\1\60\1\u017a\2\60\1\u017d\3\uffff\2\60\1\u0180\1\u0181\1\uffff"+
+        "\1\60\1\u0183\1\uffff\1\u0184\1\u0185\2\uffff\1\60\3\uffff\1\60"+
+        "\1\u0188\1\uffff";
     static final String DFA28_eofS =
-        "\u018c\uffff";
+        "\u0189\uffff";
     static final String DFA28_minS =
         "\1\11\1\46\1\75\1\uffff\1\75\2\uffff\1\55\2\52\1\53\2\uffff\1\55"+
         "\2\75\1\uffff\1\75\6\uffff\2\75\1\142\1\145\1\141\1\145\1\154\1"+
@@ -4580,30 +4551,30 @@ public class SalsaLexer extends Lexer {
         "\1\75\21\uffff\1\75\15\uffff\2\163\1\44\1\157\1\145\1\164\1\150"+
         "\1\163\2\141\1\156\1\146\1\44\1\163\1\165\1\164\1\154\1\156\1\157"+
         "\1\162\1\44\1\160\1\163\1\156\1\164\1\167\1\154\1\143\1\151\1\142"+
-        "\1\164\1\157\1\141\1\160\1\151\1\156\1\151\1\141\2\151\1\144\1\153"+
+        "\1\164\1\157\1\141\1\160\1\151\1\156\1\162\1\141\2\151\1\144\1\153"+
         "\1\151\1\uffff\1\56\1\uffff\1\56\1\75\4\uffff\1\164\1\145\1\uffff"+
         "\1\154\1\141\1\145\1\141\1\145\1\143\1\162\1\163\1\164\1\141\1\142"+
         "\1\uffff\1\145\1\155\1\145\1\163\2\141\1\44\1\uffff\1\154\1\164"+
         "\1\44\1\147\1\151\1\44\1\154\1\153\1\166\1\164\1\154\1\165\1\162"+
-        "\1\164\1\151\1\145\1\164\1\143\1\163\1\157\1\156\1\145\1\44\1\144"+
-        "\1\141\1\154\1\165\1\145\1\156\3\uffff\2\162\1\145\1\153\1\44\1"+
-        "\166\1\44\1\150\1\44\1\163\1\151\1\165\1\154\2\44\1\156\1\145\1"+
-        "\154\1\164\1\uffff\1\145\1\162\1\141\1\162\1\uffff\1\44\1\166\1"+
-        "\uffff\1\44\2\141\1\145\1\151\1\162\1\164\1\151\1\143\1\162\1\143"+
-        "\1\150\1\44\1\167\1\163\1\44\1\uffff\1\44\1\164\1\145\1\154\1\156"+
-        "\1\44\1\141\1\164\1\141\1\44\1\uffff\1\151\1\uffff\1\44\1\uffff"+
-        "\1\44\1\156\1\154\1\145\2\uffff\1\144\3\44\1\155\1\164\1\156\1\146"+
-        "\1\uffff\1\145\1\uffff\1\147\1\164\2\143\1\156\1\44\1\143\1\164"+
-        "\1\44\1\150\1\162\1\uffff\1\44\1\151\2\uffff\1\151\1\44\1\145\1"+
-        "\44\1\uffff\1\143\1\44\1\156\1\uffff\1\157\2\uffff\1\165\1\164\1"+
-        "\44\1\163\1\uffff\1\171\2\uffff\1\145\1\44\1\143\1\141\1\44\2\145"+
-        "\1\164\2\44\1\uffff\1\44\1\146\1\uffff\1\44\1\157\1\44\1\uffff\1"+
-        "\145\1\154\1\uffff\1\44\1\uffff\1\164\1\uffff\1\44\1\162\1\145\1"+
-        "\44\1\uffff\2\44\1\156\1\uffff\1\145\1\143\1\uffff\2\44\1\145\3"+
-        "\uffff\1\160\1\uffff\1\156\1\uffff\1\156\1\145\1\uffff\1\44\1\uffff"+
-        "\2\44\3\uffff\1\164\1\157\1\145\2\uffff\1\144\1\44\1\151\1\164\1"+
-        "\44\3\uffff\1\163\1\146\2\44\1\uffff\1\172\1\44\1\uffff\2\44\2\uffff"+
-        "\1\145\3\uffff\1\144\1\44\1\uffff";
+        "\1\164\1\151\1\145\1\164\1\143\1\157\1\156\1\145\1\44\1\144\1\141"+
+        "\1\154\1\165\1\145\1\156\3\uffff\2\162\1\145\1\153\1\44\1\166\1"+
+        "\44\1\150\1\44\1\163\1\151\1\165\1\154\2\44\1\156\1\145\1\154\1"+
+        "\164\1\uffff\1\145\1\162\1\141\1\162\1\uffff\1\44\1\166\1\uffff"+
+        "\1\44\2\141\1\145\1\151\1\162\1\164\1\151\1\143\1\162\1\143\1\150"+
+        "\1\167\1\163\1\44\1\uffff\1\44\1\164\1\145\1\154\1\156\1\44\1\141"+
+        "\1\164\1\141\1\44\1\uffff\1\151\1\uffff\1\44\1\uffff\1\44\1\156"+
+        "\1\154\1\145\2\uffff\1\144\3\44\1\155\1\164\1\156\1\146\1\uffff"+
+        "\1\145\1\uffff\1\147\1\164\2\143\1\156\1\44\1\143\1\164\1\44\1\150"+
+        "\1\162\1\44\1\151\2\uffff\1\151\1\44\1\145\1\44\1\uffff\1\143\1"+
+        "\44\1\156\1\uffff\1\157\2\uffff\1\165\1\164\1\44\1\163\1\uffff\1"+
+        "\171\2\uffff\1\145\1\44\1\143\1\141\1\44\2\145\1\164\2\44\1\uffff"+
+        "\1\44\1\146\1\uffff\1\44\1\157\1\44\1\uffff\1\145\1\154\1\uffff"+
+        "\1\44\1\uffff\1\164\1\uffff\1\44\1\162\1\145\1\44\1\uffff\2\44\1"+
+        "\156\1\uffff\1\145\1\143\1\uffff\2\44\1\145\3\uffff\1\160\1\uffff"+
+        "\1\156\1\uffff\1\156\1\145\1\uffff\1\44\1\uffff\2\44\3\uffff\1\164"+
+        "\1\157\1\145\2\uffff\1\144\1\44\1\151\1\164\1\44\3\uffff\1\163\1"+
+        "\146\2\44\1\uffff\1\172\1\44\1\uffff\2\44\2\uffff\1\145\3\uffff"+
+        "\1\144\1\44\1\uffff";
     static final String DFA28_maxS =
         "\1\ufaff\2\75\1\uffff\1\76\2\uffff\2\75\1\71\1\75\2\uffff\2\75\1"+
         "\174\1\uffff\1\75\6\uffff\2\75\1\164\1\171\2\157\1\170\1\157\1\156"+
@@ -4616,47 +4587,47 @@ public class SalsaLexer extends Lexer {
         "\1\164\1\145\1\uffff\1\154\1\141\1\145\1\141\1\145\1\143\1\162\1"+
         "\163\1\164\1\141\1\142\1\uffff\1\145\1\155\1\145\1\163\2\141\1\ufaff"+
         "\1\uffff\1\157\1\164\1\ufaff\1\147\1\151\1\ufaff\1\154\1\153\1\166"+
-        "\1\164\1\154\1\165\1\162\1\164\1\151\1\145\1\164\1\143\1\163\1\157"+
-        "\1\156\1\145\1\ufaff\1\144\1\141\1\154\1\165\1\145\1\156\3\uffff"+
-        "\2\162\1\145\1\153\1\ufaff\1\166\1\ufaff\1\150\1\ufaff\1\163\1\151"+
-        "\1\165\1\154\2\ufaff\1\156\1\145\1\154\1\164\1\uffff\1\145\1\162"+
-        "\1\141\1\162\1\uffff\1\ufaff\1\166\1\uffff\1\ufaff\2\141\1\145\1"+
-        "\151\1\162\1\164\1\151\1\143\1\162\1\143\1\150\1\ufaff\1\167\1\163"+
-        "\1\ufaff\1\uffff\1\ufaff\1\164\1\145\1\154\1\156\1\ufaff\1\141\1"+
-        "\164\1\141\1\ufaff\1\uffff\1\151\1\uffff\1\ufaff\1\uffff\1\ufaff"+
-        "\1\156\1\154\1\145\2\uffff\1\144\3\ufaff\1\155\1\164\1\156\1\146"+
-        "\1\uffff\1\145\1\uffff\1\147\1\164\2\143\1\156\1\ufaff\1\143\1\164"+
-        "\1\ufaff\1\150\1\162\1\uffff\1\ufaff\1\151\2\uffff\1\151\1\ufaff"+
-        "\1\145\1\ufaff\1\uffff\1\143\1\ufaff\1\156\1\uffff\1\157\2\uffff"+
-        "\1\165\1\164\1\ufaff\1\163\1\uffff\1\171\2\uffff\1\145\1\ufaff\1"+
-        "\143\1\141\1\ufaff\2\145\1\164\2\ufaff\1\uffff\1\ufaff\1\146\1\uffff"+
-        "\1\ufaff\1\157\1\ufaff\1\uffff\1\145\1\154\1\uffff\1\ufaff\1\uffff"+
-        "\1\164\1\uffff\1\ufaff\1\162\1\145\1\ufaff\1\uffff\2\ufaff\1\156"+
-        "\1\uffff\1\145\1\143\1\uffff\2\ufaff\1\145\3\uffff\1\160\1\uffff"+
-        "\1\156\1\uffff\1\156\1\145\1\uffff\1\ufaff\1\uffff\2\ufaff\3\uffff"+
-        "\1\164\1\157\1\145\2\uffff\1\144\1\ufaff\1\151\1\164\1\ufaff\3\uffff"+
-        "\1\163\1\146\2\ufaff\1\uffff\1\172\1\ufaff\1\uffff\2\ufaff\2\uffff"+
-        "\1\145\3\uffff\1\144\1\ufaff\1\uffff";
+        "\1\164\1\154\1\165\1\162\1\164\1\151\1\145\1\164\1\143\1\157\1\156"+
+        "\1\145\1\ufaff\1\144\1\141\1\154\1\165\1\145\1\156\3\uffff\2\162"+
+        "\1\145\1\153\1\ufaff\1\166\1\ufaff\1\150\1\ufaff\1\163\1\151\1\165"+
+        "\1\154\2\ufaff\1\156\1\145\1\154\1\164\1\uffff\1\145\1\162\1\141"+
+        "\1\162\1\uffff\1\ufaff\1\166\1\uffff\1\ufaff\2\141\1\145\1\151\1"+
+        "\162\1\164\1\151\1\143\1\162\1\143\1\150\1\167\1\163\1\ufaff\1\uffff"+
+        "\1\ufaff\1\164\1\145\1\154\1\156\1\ufaff\1\141\1\164\1\141\1\ufaff"+
+        "\1\uffff\1\151\1\uffff\1\ufaff\1\uffff\1\ufaff\1\156\1\154\1\145"+
+        "\2\uffff\1\144\3\ufaff\1\155\1\164\1\156\1\146\1\uffff\1\145\1\uffff"+
+        "\1\147\1\164\2\143\1\156\1\ufaff\1\143\1\164\1\ufaff\1\150\1\162"+
+        "\1\ufaff\1\151\2\uffff\1\151\1\ufaff\1\145\1\ufaff\1\uffff\1\143"+
+        "\1\ufaff\1\156\1\uffff\1\157\2\uffff\1\165\1\164\1\ufaff\1\163\1"+
+        "\uffff\1\171\2\uffff\1\145\1\ufaff\1\143\1\141\1\ufaff\2\145\1\164"+
+        "\2\ufaff\1\uffff\1\ufaff\1\146\1\uffff\1\ufaff\1\157\1\ufaff\1\uffff"+
+        "\1\145\1\154\1\uffff\1\ufaff\1\uffff\1\164\1\uffff\1\ufaff\1\162"+
+        "\1\145\1\ufaff\1\uffff\2\ufaff\1\156\1\uffff\1\145\1\143\1\uffff"+
+        "\2\ufaff\1\145\3\uffff\1\160\1\uffff\1\156\1\uffff\1\156\1\145\1"+
+        "\uffff\1\ufaff\1\uffff\2\ufaff\3\uffff\1\164\1\157\1\145\2\uffff"+
+        "\1\144\1\ufaff\1\151\1\164\1\ufaff\3\uffff\1\163\1\146\2\ufaff\1"+
+        "\uffff\1\172\1\ufaff\1\uffff\2\ufaff\2\uffff\1\145\3\uffff\1\144"+
+        "\1\ufaff\1\uffff";
     static final String DFA28_acceptS =
         "\3\uffff\1\4\1\uffff\1\7\1\10\4\uffff\1\23\1\24\3\uffff\1\32\1\uffff"+
-        "\1\37\1\45\1\46\1\47\1\50\1\51\26\uffff\1\157\1\160\1\161\1\162"+
-        "\1\2\1\27\1\1\1\17\1\3\1\uffff\1\20\1\21\1\11\1\34\1\33\1\13\1\163"+
-        "\1\164\1\12\1\15\1\16\1\14\1\156\1\22\1\44\1\43\1\25\1\uffff\1\151"+
+        "\1\37\1\45\1\46\1\47\1\50\1\51\26\uffff\1\156\1\157\1\160\1\161"+
+        "\1\2\1\27\1\1\1\17\1\3\1\uffff\1\20\1\21\1\11\1\34\1\33\1\13\1\162"+
+        "\1\163\1\12\1\15\1\16\1\14\1\155\1\22\1\44\1\43\1\25\1\uffff\1\150"+
         "\1\26\1\40\1\30\1\31\1\42\1\41\1\36\1\35\1\57\1\56\1\61\1\60\53"+
-        "\uffff\1\153\1\uffff\1\154\2\uffff\1\55\1\54\1\53\1\52\2\uffff\1"+
-        "\152\13\uffff\1\75\7\uffff\1\107\35\uffff\1\155\1\6\1\5\23\uffff"+
-        "\1\106\4\uffff\1\114\2\uffff\1\117\20\uffff\1\141\12\uffff\1\66"+
+        "\uffff\1\152\1\uffff\1\153\2\uffff\1\55\1\54\1\53\1\52\2\uffff\1"+
+        "\151\13\uffff\1\75\7\uffff\1\107\34\uffff\1\154\1\6\1\5\23\uffff"+
+        "\1\106\4\uffff\1\114\2\uffff\1\117\17\uffff\1\140\12\uffff\1\66"+
         "\1\uffff\1\67\1\uffff\1\71\4\uffff\1\77\1\100\10\uffff\1\115\1\uffff"+
-        "\1\120\13\uffff\1\134\2\uffff\1\140\1\142\4\uffff\1\150\3\uffff"+
-        "\1\65\1\uffff\1\70\1\72\4\uffff\1\102\1\uffff\1\103\1\105\12\uffff"+
-        "\1\126\2\uffff\1\131\3\uffff\1\135\2\uffff\1\144\1\uffff\1\146\1"+
-        "\uffff\1\63\4\uffff\1\76\3\uffff\1\113\2\uffff\1\116\3\uffff\1\124"+
-        "\1\125\1\127\1\uffff\1\132\1\uffff\1\136\2\uffff\1\145\1\uffff\1"+
-        "\64\2\uffff\1\74\1\101\1\104\3\uffff\1\121\1\122\5\uffff\1\62\1"+
-        "\147\1\73\4\uffff\1\130\2\uffff\1\143\2\uffff\1\112\1\123\1\uffff"+
-        "\1\137\1\110\1\111\2\uffff\1\133";
+        "\1\120\15\uffff\1\137\1\141\4\uffff\1\147\3\uffff\1\65\1\uffff\1"+
+        "\70\1\72\4\uffff\1\102\1\uffff\1\103\1\105\12\uffff\1\126\2\uffff"+
+        "\1\131\3\uffff\1\134\2\uffff\1\143\1\uffff\1\145\1\uffff\1\63\4"+
+        "\uffff\1\76\3\uffff\1\113\2\uffff\1\116\3\uffff\1\124\1\125\1\127"+
+        "\1\uffff\1\132\1\uffff\1\135\2\uffff\1\144\1\uffff\1\64\2\uffff"+
+        "\1\74\1\101\1\104\3\uffff\1\121\1\122\5\uffff\1\62\1\146\1\73\4"+
+        "\uffff\1\130\2\uffff\1\142\2\uffff\1\112\1\123\1\uffff\1\136\1\110"+
+        "\1\111\2\uffff\1\133";
     static final String DFA28_specialS =
-        "\u018c\uffff}>";
+        "\u0189\uffff}>";
     static final String[] DFA28_transitionS = {
             "\2\61\1\uffff\2\61\22\uffff\1\61\1\16\1\57\1\uffff\1\60\1\21"+
             "\1\1\1\56\1\20\1\26\1\30\1\12\1\6\1\7\1\11\1\10\1\54\11\55\1"+
@@ -4799,25 +4770,26 @@ public class SalsaLexer extends Lexer {
             "\1\u00b1",
             "\1\u00b2",
             "\1\u00b3",
-            "\1\u00b4\10\uffff\1\u00b5",
-            "\1\u00b6\23\uffff\1\u00b7\3\uffff\1\u00b8",
-            "\1\u00b9\2\uffff\1\u00ba",
+            "\1\u00b4",
+            "\1\u00b5\23\uffff\1\u00b6\3\uffff\1\u00b7",
+            "\1\u00b8\2\uffff\1\u00b9",
+            "\1\u00ba",
             "\1\u00bb",
             "\1\u00bc",
             "\1\u00bd",
-            "\1\u00be",
             "",
             "\1\104\1\uffff\10\u0083\2\104\12\uffff\3\104\35\uffff\3\104",
             "",
             "\1\104\1\uffff\12\u0085\12\uffff\3\104\35\uffff\3\104",
-            "\1\u00c0",
+            "\1\u00bf",
             "",
             "",
             "",
             "",
+            "\1\u00c1",
             "\1\u00c2",
-            "\1\u00c3",
             "",
+            "\1\u00c3",
             "\1\u00c4",
             "\1\u00c5",
             "\1\u00c6",
@@ -4828,31 +4800,31 @@ public class SalsaLexer extends Lexer {
             "\1\u00cb",
             "\1\u00cc",
             "\1\u00cd",
-            "\1\u00ce",
             "",
+            "\1\u00ce",
             "\1\u00cf",
             "\1\u00d0",
             "\1\u00d1",
             "\1\u00d2",
             "\1\u00d3",
-            "\1\u00d4",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
             "",
-            "\1\u00d6\2\uffff\1\u00d7",
-            "\1\u00d8",
+            "\1\u00d5\2\uffff\1\u00d6",
+            "\1\u00d7",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\4\60"+
-            "\1\u00d9\25\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60"+
+            "\1\u00d8\25\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60"+
             "\u1040\uffff\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e"+
             "\60\u10d2\uffff\u5200\60\u5900\uffff\u0200\60",
+            "\1\u00da",
             "\1\u00db",
-            "\1\u00dc",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
+            "\1\u00dd",
             "\1\u00de",
             "\1\u00df",
             "\1\u00e0",
@@ -4867,24 +4839,27 @@ public class SalsaLexer extends Lexer {
             "\1\u00e9",
             "\1\u00ea",
             "\1\u00eb",
-            "\1\u00ec",
-            "\1\u00ed",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
+            "\1\u00ed",
+            "\1\u00ee",
             "\1\u00ef",
             "\1\u00f0",
             "\1\u00f1",
             "\1\u00f2",
+            "",
+            "",
+            "",
             "\1\u00f3",
             "\1\u00f4",
-            "",
-            "",
-            "",
             "\1\u00f5",
             "\1\u00f6",
-            "\1\u00f7",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
             "\1\u00f8",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
@@ -4896,14 +4871,9 @@ public class SalsaLexer extends Lexer {
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
             "\1\u00fc",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
+            "\1\u00fd",
             "\1\u00fe",
             "\1\u00ff",
-            "\1\u0100",
-            "\1\u0101",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
@@ -4912,14 +4882,20 @@ public class SalsaLexer extends Lexer {
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
+            "\1\u0102",
+            "\1\u0103",
             "\1\u0104",
             "\1\u0105",
+            "",
             "\1\u0106",
             "\1\u0107",
-            "",
             "\1\u0108",
             "\1\u0109",
-            "\1\u010a",
+            "",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
             "\1\u010b",
             "",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
@@ -4927,11 +4903,7 @@ public class SalsaLexer extends Lexer {
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
             "\1\u010d",
-            "",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
+            "\1\u010e",
             "\1\u010f",
             "\1\u0110",
             "\1\u0111",
@@ -4947,72 +4919,72 @@ public class SalsaLexer extends Lexer {
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
-            "\1\u011b",
-            "\1\u011c",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
             "",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
+            "\1\u011c",
+            "\1\u011d",
+            "\1\u011e",
             "\1\u011f",
-            "\1\u0120",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
             "\1\u0121",
             "\1\u0122",
+            "\1\u0123",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
-            "\1\u0124",
+            "",
             "\1\u0125",
-            "\1\u0126",
+            "",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
             "",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
             "\1\u0128",
+            "\1\u0129",
+            "\1\u012a",
             "",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
             "",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
             "\1\u012b",
-            "\1\u012c",
-            "\1\u012d",
-            "",
-            "",
-            "\1\u012e",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\13"+
-            "\60\1\u0130\16\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08"+
+            "\60\1\u012d\16\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08"+
             "\60\u1040\uffff\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e"+
             "\60\u10d2\uffff\u5200\60\u5900\uffff\u0200\60",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
+            "\1\u0130",
+            "\1\u0131",
+            "\1\u0132",
             "\1\u0133",
+            "",
             "\1\u0134",
+            "",
             "\1\u0135",
             "\1\u0136",
-            "",
             "\1\u0137",
-            "",
             "\1\u0138",
             "\1\u0139",
-            "\1\u013a",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
             "\1\u013b",
             "\1\u013c",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
@@ -5021,52 +4993,51 @@ public class SalsaLexer extends Lexer {
             "\u5200\60\u5900\uffff\u0200\60",
             "\1\u013e",
             "\1\u013f",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
-            "\1\u0141",
-            "\1\u0142",
-            "",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\22"+
-            "\60\1\u0143\7\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08"+
+            "\60\1\u0140\7\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08"+
             "\60\u1040\uffff\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e"+
             "\60\u10d2\uffff\u5200\60\u5900\uffff\u0200\60",
+            "\1\u0142",
+            "",
+            "",
+            "\1\u0143",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
             "\1\u0145",
-            "",
-            "",
-            "\1\u0146",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
-            "\1\u0148",
+            "",
+            "\1\u0147",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
+            "\1\u0149",
             "",
             "\1\u014a",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
+            "",
+            "",
+            "\1\u014b",
             "\1\u014c",
-            "",
-            "\1\u014d",
-            "",
-            "",
-            "\1\u014e",
-            "\1\u014f",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
-            "\1\u0151",
+            "\1\u014e",
             "",
+            "\1\u014f",
+            "",
+            "",
+            "\1\u0150",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
             "\1\u0152",
-            "",
-            "",
             "\1\u0153",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
@@ -5074,13 +5045,7 @@ public class SalsaLexer extends Lexer {
             "\u5200\60\u5900\uffff\u0200\60",
             "\1\u0155",
             "\1\u0156",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
-            "\1\u0158",
-            "\1\u0159",
-            "\1\u015a",
+            "\1\u0157",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
@@ -5094,34 +5059,34 @@ public class SalsaLexer extends Lexer {
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
-            "\1\u015e",
+            "\1\u015b",
             "",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
+            "\1\u015d",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
+            "",
+            "\1\u015f",
             "\1\u0160",
+            "",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
             "",
             "\1\u0162",
-            "\1\u0163",
             "",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
-            "",
+            "\1\u0164",
             "\1\u0165",
-            "",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
-            "\1\u0167",
-            "\1\u0168",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
@@ -5135,30 +5100,30 @@ public class SalsaLexer extends Lexer {
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
-            "\1\u016c",
+            "\1\u0169",
             "",
-            "\1\u016d",
+            "\1\u016a",
+            "\1\u016b",
+            "",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
             "\1\u016e",
             "",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
+            "",
+            "",
+            "\1\u016f",
+            "",
+            "\1\u0170",
+            "",
             "\1\u0171",
-            "",
-            "",
-            "",
             "\1\u0172",
             "",
-            "\1\u0173",
-            "",
-            "\1\u0174",
-            "\1\u0175",
-            "",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
@@ -5173,43 +5138,43 @@ public class SalsaLexer extends Lexer {
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
             "",
+            "",
+            "",
+            "\1\u0176",
+            "\1\u0177",
+            "\1\u0178",
             "",
             "",
             "\1\u0179",
-            "\1\u017a",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
             "\1\u017b",
-            "",
-            "",
             "\1\u017c",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
+            "",
+            "",
+            "",
             "\1\u017e",
             "\1\u017f",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
+            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
+            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
+            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
+            "\u5200\60\u5900\uffff\u0200\60",
             "",
-            "",
-            "",
-            "\1\u0181",
             "\1\u0182",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
             "\u5200\60\u5900\uffff\u0200\60",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
-            "",
-            "\1\u0185",
-            "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
-            "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
-            "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
-            "\u5200\60\u5900\uffff\u0200\60",
             "",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
@@ -5221,11 +5186,11 @@ public class SalsaLexer extends Lexer {
             "\u5200\60\u5900\uffff\u0200\60",
             "",
             "",
-            "\1\u0189",
+            "\1\u0186",
             "",
             "",
             "",
-            "\1\u018a",
+            "\1\u0187",
             "\1\60\13\uffff\12\60\7\uffff\32\60\4\uffff\1\60\1\uffff\32"+
             "\60\105\uffff\27\60\1\uffff\37\60\1\uffff\u1f08\60\u1040\uffff"+
             "\u0150\60\u0170\uffff\u0080\60\u0080\uffff\u092e\60\u10d2\uffff"+
@@ -5263,7 +5228,7 @@ public class SalsaLexer extends Lexer {
             this.transition = DFA28_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( AND | AND_ASSIGN | ASSIGN | AT | BIT_SHIFT_RIGHT | BIT_SHIFT_RIGHT_ASSIGN | COLON | COMMA | DEC | DIV | DIV_ASSIGN | DOT | DOTSTAR | ELLIPSIS | EQUAL | GREATER_OR_EQUAL | GREATER_THAN | INC | LBRACK | LCURLY | LESS_OR_EQUAL | LESS_THAN | LOGICAL_AND | LOGICAL_NOT | LOGICAL_OR | LPAREN | MINUS | MINUS_ASSIGN | MOD | MOD_ASSIGN | NOT | NOT_EQUAL | OR | OR_ASSIGN | PLUS | PLUS_ASSIGN | QUESTION | RBRACK | RCURLY | RPAREN | SEMI | SHIFT_LEFT | SHIFT_LEFT_ASSIGN | SHIFT_RIGHT | SHIFT_RIGHT_ASSIGN | STAR | STAR_ASSIGN | XOR | XOR_ASSIGN | ABSTRACT | ASSERT | BOOLEAN | BREAK | BYTE | CASE | CATCH | CHAR | CLASS | CONTINUE | DEFAULT | DO | DOUBLE | ELSE | ENUM | EXTENDS | FALSE | FINAL | FINALLY | FLOAT | FOR | IF | IMPLEMENTS | INSTANCEOF | INTERFACE | IMPORT | INT | LONG | NATIVE | NEW | NULL | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | SHORT | STATIC | STRICTFP | SUPER | SWITCH | SYNCHRONIZED | THIS | THROW | THROWS | TRANSIENT | TRUE | TRY | VOID | VOLATILE | WHILE | T__183 | T__184 | T__185 | T__186 | T__187 | T__188 | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOATING_POINT_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | IDENT | WS | COMMENT | LINE_COMMENT );";
+            return "1:1: Tokens : ( AND | AND_ASSIGN | ASSIGN | AT | BIT_SHIFT_RIGHT | BIT_SHIFT_RIGHT_ASSIGN | COLON | COMMA | DEC | DIV | DIV_ASSIGN | DOT | DOTSTAR | ELLIPSIS | EQUAL | GREATER_OR_EQUAL | GREATER_THAN | INC | LBRACK | LCURLY | LESS_OR_EQUAL | LESS_THAN | LOGICAL_AND | LOGICAL_NOT | LOGICAL_OR | LPAREN | MINUS | MINUS_ASSIGN | MOD | MOD_ASSIGN | NOT | NOT_EQUAL | OR | OR_ASSIGN | PLUS | PLUS_ASSIGN | QUESTION | RBRACK | RCURLY | RPAREN | SEMI | SHIFT_LEFT | SHIFT_LEFT_ASSIGN | SHIFT_RIGHT | SHIFT_RIGHT_ASSIGN | STAR | STAR_ASSIGN | XOR | XOR_ASSIGN | ABSTRACT | ASSERT | BOOLEAN | BREAK | BYTE | CASE | CATCH | CHAR | CLASS | CONTINUE | DEFAULT | DO | DOUBLE | ELSE | ENUM | EXTENDS | FALSE | FINAL | FINALLY | FLOAT | FOR | IF | IMPLEMENTS | INSTANCEOF | INTERFACE | IMPORT | INT | LONG | NATIVE | NEW | NULL | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | SHORT | STATIC | STRICTFP | SUPER | SWITCH | SYNCHRONIZED | THROW | THROWS | TRANSIENT | TRUE | TRY | VOID | VOLATILE | WHILE | T__182 | T__183 | T__184 | T__185 | T__186 | T__187 | HEX_LITERAL | DECIMAL_LITERAL | OCTAL_LITERAL | FLOATING_POINT_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | IDENT | WS | COMMENT | LINE_COMMENT );";
         }
     }
  

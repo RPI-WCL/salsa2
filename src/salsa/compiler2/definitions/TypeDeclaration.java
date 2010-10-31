@@ -5,8 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import salsa.compiler2.CompilerHelper;
 import salsa.compiler2.SalsaNode;
 import salsa.compiler2.SalsaSource;
+import salsa.compiler2.SymbolField;
 import salsa.compiler2.SymbolType;
 
 
@@ -68,9 +70,6 @@ public abstract class TypeDeclaration extends SalsaSource implements SalsaNode{
         fieldVariableDeclarations.add(sd);
     }
 
-//    private void addMessageHanderDeclaration(MessageHandlerDeclaration mh) {
-//        methodDeclaration.add(mh);
-//    }
 
     private void addConstructorDeclaration(ConstructorDeclaration c) {
         constructors.add(c);
@@ -100,5 +99,39 @@ public abstract class TypeDeclaration extends SalsaSource implements SalsaNode{
             md.analyze(this, new HashMap<String, SymbolType>(typeEnv), knownTypes);
         }
         return true;
+    }
+
+    public void analyzeMethod(Map<String, SymbolType> knownTypes) {
+        SymbolType st = CompilerHelper.getSymbolTypeByName(absoluteName);
+        for (ConstructorDeclaration cons : constructors) {
+            st.addMethod(cons.getSymbolMethod(knownTypes));
+        }
+
+        for (MethodDeclaration md : methodDeclaration) {
+            st.addMethod(md.getSymbolMethod(knownTypes));
+        }
+        //TODO need to consider if it is an object
+        String superTypeName = "salsa.wwc.lang.ActorRef";
+        if (!extendsName.equals("")) {
+            superTypeName = extendsName;
+        }
+        SymbolType superType = CompilerHelper.getSymbolTypeByName(superTypeName);
+        if (superType == null) {
+            log("Unknown type " + superTypeName);
+        } else {
+            st.setSuperType(superType);
+            st.addField(superType.getFields());
+            st.addMethod(superType.getMethods());
+        }
+        
+        for (String impl : implementNames) {
+            SymbolType interfaceType = CompilerHelper.getSymbolTypeByName(impl);
+            if (interfaceType == null)
+                log("Unknown type " + impl);
+            else 
+                st.addInterfaceType(interfaceType);
+        }
+        
+    
     }
 }

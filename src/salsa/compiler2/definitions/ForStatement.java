@@ -13,16 +13,16 @@ public class ForStatement extends Statement implements SalsaNode {
     
     private Expression incrementExpression;
     
-    private Block block;
+    private Statement statement;
 
     public ForStatement(LocalVariableDeclaration ld,
             Expression conditionExpression, Expression incrementExpression,
-            Block block) {
+            Statement block) {
         super();
         this.ld = ld;
         this.conditionExpression = conditionExpression;
         this.incrementExpression = incrementExpression;
-        this.block = block;
+        this.statement = block;
     }
     
     
@@ -44,7 +44,7 @@ public class ForStatement extends Statement implements SalsaNode {
             sb.append(incrementExpression.toJavaCode(""));
         sb.append(")");
         
-        sb.append(block.toJavaCode(identation));
+        sb.append(statement.toJavaCode(identation));
         
         return sb.toString();
     }
@@ -61,10 +61,17 @@ public class ForStatement extends Statement implements SalsaNode {
         }
         if (incrementExpression != null)
             incrementExpression.analyze(this, typeEnv, knownTypes);
-        if (block != null)
-            block.analyze(this, typeEnv, knownTypes); 
+        if (statement != null)
+            statement.analyze(this, typeEnv, knownTypes); 
         return true;
         
+    }
+
+
+    @Override
+    public void setInJoinBlock(boolean isInJoinBlock) {
+        super.setInJoinBlock(isInJoinBlock);
+        statement.setInJoinBlock(isInJoinBlock);
     }
 
 }

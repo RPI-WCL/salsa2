@@ -20,22 +20,14 @@ public class MessageHandlerDeclaration extends MethodDeclaration implements
         this.modifiers = modifiers;
     }
 
-    private SymbolMethod symbolMethod;
-
-    public SymbolMethod getSymbolMethod() {
-        return symbolMethod;
-    }
-
-    public void setSymbolMethod(SymbolMethod symbolMethod) {
-        this.symbolMethod = symbolMethod;
-    }
 
     public String toJavaCode(String identation) {
         StringBuilder sb = new StringBuilder();
 
         sb.append(identation).append(
                 "@SuppressWarnings({ \"unchecked\", \"rawtypes\" })\n");
-
+        sb.append(identation).append(
+                "@SalsaMsg\n");
         if (!isClassDefinition()) {
             sb.append(identation).append("public ")
                     .append(/* passType + */"void ").append(name + "(");

@@ -106,7 +106,7 @@ tokens {
     SUPER                   = 'super'           ;
     SWITCH                  = 'switch'          ;
     SYNCHRONIZED            = 'synchronized'    ;
-    THIS                    = 'this'            ;
+//    THIS                    = 'this'            ;
     THROW                   = 'throw'           ;
     THROWS                  = 'throws'          ;
     TRANSIENT               = 'transient'       ;
@@ -230,14 +230,6 @@ import java.util.regex.Pattern;
 
 	Stack<String> paraphrases = new Stack<String>();
 	public String getErrorMessage(RecognitionException e, String[] tokenNames) {
-		if(e instanceof FailedPredicateException){
-		  FailedPredicateException fpe = (FailedPredicateException)e;
-          if (fpe.predicateText.contains("Token"))
-            return "Returned value of a message can only be assigned to a token";
-          if (fpe.predicateText.equals("{getKnownType(moduleName + \".\" + \$IDENT.text) != null}?")) {
-            return "Duplicated type definition";          
-            }
-		}
 		return super.getErrorMessage(e, tokenNames);
 	}
     
@@ -278,8 +270,8 @@ import java.util.regex.Pattern;
         if (mMessageCollectionEnabled) {
             mMessages.add(pMessage);
         } else {
-            super.emitErrorMessage(pMessage);
         }
+        super.emitErrorMessage(pMessage);
     }
     
     /**
@@ -327,6 +319,7 @@ public boolean preserveWhitespacesAndComments = false;
 
 compilationUnit returns [CompilationUnit cu]
 @init{
+    enableErrorMessageCollection(true);
     $cu = new CompilationUnit();
 }
     :   (moduleDeclaration {$cu.setModuleName($moduleDeclaration.value); moduleName = $moduleDeclaration.value;})?
@@ -405,6 +398,7 @@ primitiveType
     
 typeDeclaration returns [TypeDeclaration td]
 scope{ SymbolType currentType;}
+@after { $td.setModuleName(moduleName);}
     :   behaviorDeclaration {$td = $behaviorDeclaration.bd;}
     |   classDeclaration {$td = $classDeclaration.cd;}
     |   interfaceDeclaration {$td = $interfaceDeclaration.in;}
@@ -462,14 +456,15 @@ behaviorDeclaration returns [BehaviorDeclaration bd]
 intefaceMethodDeclaration returns [InterfaceMethodDeclaration m] 
     :    modifiers type IDENT formalParameters ('throws' qualifiedNameList )? ';'
         {
-            List<FormalParameter> list = $formalParameters.list;
-            List<String> typeList = new ArrayList<String>();
-            for (FormalParameter fp : list) {
-                typeList.add(fp.getType());
-            }
-            SymbolMethod sm = new SymbolMethod($IDENT.text, "", typeList.toArray(new String[0]));
-//            $md.setSymbolMethod(sm);
-            $typeDeclaration::currentType.addMethod(sm);
+            $m = new InterfaceMethodDeclaration();
+//            List<FormalParameter> list = $formalParameters.list;
+//            List<String> typeList = new ArrayList<String>();
+//            for (FormalParameter fp : list) {
+//                typeList.add(fp.getType());
+//            }
+//            SymbolMethod sm = new SymbolMethod($IDENT.text, "", typeList.toArray(new String[0]));
+//            $m.setSymbolMethod(sm);
+//            $typeDeclaration::currentType.addMethod(sm);
         }                
     ;        
 
@@ -478,14 +473,14 @@ classMethodDeclaration returns [ClassMethodDeclaration cd]
         block
         {
             $cd = new ClassMethodDeclaration($modifiers.text, $type.text, $IDENT.text, $formalParameters.list, $block.b);
-            List<FormalParameter> list = $formalParameters.list;
-            List<String> typeList = new ArrayList<String>();
-            for (FormalParameter fp : list) {   
-                typeList.add(fp.getType());
-            }
-            SymbolMethod sm = new SymbolMethod($IDENT.text, $type.text, typeList.toArray(new String[0]));
-            $cd.setSymbolMethod(sm);
-            $typeDeclaration::currentType.addMethod(sm);
+//            List<FormalParameter> list = $formalParameters.list;
+//            List<String> typeList = new ArrayList<String>();
+//            for (FormalParameter fp : list) {   
+//                typeList.add(fp.getType());
+//            }
+//            SymbolMethod sm = new SymbolMethod($IDENT.text, $type.text, typeList.toArray(new String[0]));
+//            $cd.setSymbolMethod(sm);
+//            $typeDeclaration::currentType.addMethod(sm);
         }
     ;
     
@@ -493,14 +488,14 @@ constructorDeclaration returns [ConstructorDeclaration cd]
     :   modifiers IDENT {int ln = getLine(input);} formalParameters block
         {   $cd = new ConstructorDeclaration($modifiers.text, $IDENT.text, $formalParameters.list, $block.b);
             $cd.setLine(ln);
-            List<FormalParameter> list = $formalParameters.list;
-            List<String> typeList = new ArrayList<String>();
-            for (FormalParameter fp : list) {
-                typeList.add(fp.getType());
-            }
-            SymbolMethod sm = new SymbolMethod($IDENT.text, "", typeList.toArray(new String[0]));
+//            List<FormalParameter> list = $formalParameters.list;
+//            List<String> typeList = new ArrayList<String>();
+//            for (FormalParameter fp : list) {
+//                typeList.add(fp.getType());
+//            }
+//            SymbolMethod sm = new SymbolMethod($IDENT.text, "", typeList.toArray(new String[0]));
 //            $cd.setSymbolMethod(sm);
-            $typeDeclaration::currentType.addMethod(sm);            
+//            $typeDeclaration::currentType.addMethod(sm);            
         }
     ;
 
@@ -508,16 +503,16 @@ messageHandlerDeclaration returns [MessageHandlerDeclaration md]
     :   modifiers type IDENT formalParameters 
         block
         {
-            String returnType = CompilerHelper.TOKEN + " " + $type.text;
             $md = new MessageHandlerDeclaration($modifiers.text, $type.text, $IDENT.text, $formalParameters.list, $block.b);
-            List<FormalParameter> list = $formalParameters.list;
-            List<String> typeList = new ArrayList<String>();
-            for (FormalParameter fp : list) {   
-                typeList.add(fp.getType());
-            }
-            SymbolMethod sm = new SymbolMethod($IDENT.text, returnType, typeList.toArray(new String[0]));
-            $md.setSymbolMethod(sm);
-            $typeDeclaration::currentType.addMethod(sm);
+//            String returnType = CompilerHelper.TOKEN + " " + $type.text;
+//            List<FormalParameter> list = $formalParameters.list;
+//            List<String> typeList = new ArrayList<String>();
+//            for (FormalParameter fp : list) {   
+//                typeList.add(fp.getType());
+//            }
+//            SymbolMethod sm = new SymbolMethod($IDENT.text, returnType, typeList.toArray(new String[0]));
+//            $md.setSymbolMethod(sm);
+//            $typeDeclaration::currentType.addMethod(sm);
         }
     ;
 
@@ -529,9 +524,11 @@ block returns [Block b]
 }
     :   '{' (statement  
         {
-            $b.addStatement($statement.stat);
-            $statement.stat.setAfterContinuation(isPreviousLineContinuation);
-            isPreviousLineContinuation = $statement.stat.isInContinuation();
+            if ($statement.stat != null) {
+                $b.addStatement($statement.stat);
+                $statement.stat.setAfterContinuation(isPreviousLineContinuation);
+                isPreviousLineContinuation = $statement.stat.isInContinuation();
+            }
             } 
         )* 
         '}'
@@ -561,22 +558,86 @@ scope{boolean isSendMessage;}
     |   ifStatement {$stat = $ifStatement.s;}
     |   returnStatement ';' {$stat = $returnStatement.s; }
     |   forStatement {$stat = $forStatement.s; }
+    |   whileStatement {$stat = $whileStatement.s; }
+    |   doWhileStatement ';' {$stat = $doWhileStatement.s; }
+    |   breakStatement ';' {$stat = $breakStatement.s; }
+    |   continueStatement ';' {$stat = $continueStatement.s; }
+    |   tryStatement {$stat = $tryStatement.s; }
+    |   throwStatement ';' {$stat = $throwStatement.s; }
+    |   switchStatement {$stat = $switchStatement.s; }
     )
     {$stat.setLine(ln);}
     {$stat.setSalsaSource($statement.text);}
     ;
     
+doWhileStatement returns [DoWhileStatement s]
+    :   'do' st = statement 'while' '(' e = expression ')'
+        {$s = new DoWhileStatement($st.stat, $e.e);}
+    ;    
+    
+whileStatement returns [WhileStatement s] 
+    :   'while' '(' e = expression ')' st = statement
+        {$s = new WhileStatement($e.e, $st.stat);}
+    ;
+
+throwStatement returns [ThrowStatement s]    
+    :   'throw' e = expression
+        {$s = new ThrowStatement($e.e);}
+    ;
+    
+breakStatement returns [BreakStatement s]
+@init {$s = new BreakStatement();}
+    :   'break'
+    ;
+   
+    
+continueStatement returns [ContinueStatement s]
+@init {$s = new ContinueStatement();}
+    :   'continue'
+    ;
+    
+tryStatement returns [TryStatement s]
+@init {$s = new TryStatement(); }
+    :   'try'   b1 = block {$s.setTryBlock($b1.b);}
+        (   'catch' '(' fp = formalParameter ')' b2 = block
+            {$s.addCatchBlock($b2.b); $s.addCatchFP($fp.fp);}
+        )*
+        (   'finally' b3 = block 
+            {$s.setFinallyBlock($b3.b);}
+        )?
+    ;        
+    
+switchStatement returns [SwitchStatement s]
+    :   'switch' '(' expression ')'
+        '{'
+            (switchBlockStatementGroup)*
+        '}'    
+    ;        
+
+switchBlockStatementGroup 
+    :
+        switchLabel
+        (blockStatement
+        )*
+    ;
+
+switchLabel 
+    :   'case' expression ':'
+    |   'default' ':'
+    ;
+
+
 forStatement returns [ForStatement s] 
     :   'for' 
         '(' 
-            localVariableDeclaration 
+            (localVariableDeclaration)? 
             ';' 
-            e1 = expression ';' 
-            e2 = expression 
+            (e1 = expression)? ';' 
+            (e2 = expression)? 
         ')'
-        block
+        st = statement
         {
-            $s = new ForStatement($localVariableDeclaration.ld, $e1.e, $e2.e, $block.b);
+            $s = new ForStatement($localVariableDeclaration.ld, $e1.e, $e2.e, $st.stat);
         }    
     ;     
 
@@ -587,8 +648,8 @@ returnStatement returns [ReturnStatement s]
 
 ifStatement returns [IfStatement s]
 @init{$s = new IfStatement();}
-    :   'if' '(' expression ')' block {$s.setExpression($expression.e); $s.setBlock($block.b);}
-        ('else' statement {$s.setElseStatement($statement.stat);})?
+    :   'if' '(' expression ')' s1 = statement {$s.setExpression($expression.e); $s.setIfStatement($s1.stat);}
+        ('else' s2 = statement {$s.setElseStatement($s2.stat);})?
     ;
     
 joinBlockStatement returns [JoinBlockStatement s]
@@ -683,6 +744,17 @@ term returns [Term t]
 	        { $t.setVarName($v1.text); }
 	    |   allocation {$t.setAllocation($allocation.a);}
 	    )
+//	    (
+//            '.' v2 = IDENT {$t.setSelector($v2.text);} 
+//                (p1 = actualParameters {$t.setActualArguments($p1.list);})?
+//        )*
+//        (   ('<-' | '!') v3 = IDENT {$t.setMessageName($v3.text);} 
+//                p2 = actualParameters 
+//                {   $t.setActualArguments($p2.list); 
+//                    $statement::isSendMessage = true;
+//                 }
+//        )?
+             
         (
             '.' v2 = qualifiedName {$t.setSelector($v2.text);} 
                 (p1 = actualParameters {$t.setActualArguments($p1.list);})?
@@ -693,7 +765,7 @@ term returns [Term t]
                 {   $t.setActualArguments($p2.list); 
                     $statement::isSendMessage = true;
                 }
-        )?	       
+        )? 
     ;
 
 allocation returns [Allocation a]
@@ -744,7 +816,7 @@ mult returns [MultExpression e]
 @init{ $e = new MultExpression();}
     :   e1 = unary {$e.addExpression($e1.e);} 
         (
-            (op = '*' | op = '/' | op = '%') 
+            (op = '*' | op = '/' | op = '%' | op = '*=' | op = '/=') 
             e2 = unary {$e.addOperator($op.text); $e.addExpression($e2.e);}
         )*
     ;
@@ -753,7 +825,7 @@ add returns [AddExpression e]
 @init{ $e = new AddExpression(); }
     :   e1 = mult {$e.addExpression($e1.e);} 
         (
-            (op = '+' | op = '-') 
+            (op = '+' | op = '-' | op = '+=' | op = '-=') 
             e2 = mult {$e.addOperator($op.text); $e.addExpression($e2.e);}
         )*
     ;

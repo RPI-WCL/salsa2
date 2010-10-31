@@ -49,5 +49,13 @@ public class BlockStatement extends Statement {
     public String getSalsaSource() {
         return salsaSource;
     }
+
+
+
+    @Override
+    public void setInJoinBlock(boolean isInJoinBlock) {
+        // TODO Auto-generated method stub
+        
+    }
     
 }

@@ -29,7 +29,10 @@ public class LocalVariableDeclaration extends Statement implements SalsaNode {
             if (this.isInContinuation() && this.isSendMessage()) {
                 sb.append("\n");
                 sb.append(identation).append("token = ").append(vd.getName());
-            }
+            } else if (!isInContinuation() && isSendMessage() && isInJoinBlock()) {
+                sb.append(identation).append("token = ").append(vd.getName() + ";\n");
+                sb.append(identation).append("_tokenList.add(token)");
+            }           
             sb.append(";");
         }        
         return sb.toString();
@@ -44,5 +47,10 @@ public class LocalVariableDeclaration extends Statement implements SalsaNode {
             vd.analyze(this, typeEnv, knownTypes);
         }
         return true;
+    }
+
+    @Override
+    public void setInJoinBlock(boolean isInJoinBlock) {
+        super.setInJoinBlock(isInJoinBlock);
     }
 }

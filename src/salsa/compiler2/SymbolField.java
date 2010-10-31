@@ -2,11 +2,13 @@ package salsa.compiler2;
 
 public class SymbolField {
     private String name;
-    private String type;
-    public SymbolField(String name, String type) {
+    private String typeName;
+    private SymbolType symbolType;
+    
+    public SymbolField(String name, String typeName) {
         super();
         this.name = name;
-        this.type = type;
+        this.typeName = typeName;
     }
     
     
@@ -17,15 +19,32 @@ public class SymbolField {
 
 
 
-    public String getType() {
-        return type;
+    public String getTypeName() {
+        return typeName;
     }
 
 
 
+    public SymbolType getSymbolType() {
+        if (symbolType == null)
+            this.formalizeTypes();
+        return symbolType;
+    }
+
+
+
+    public void setSymbolType(SymbolType symbolType) {
+        this.symbolType = symbolType;
+    }
+
+
+    public void formalizeTypes() {
+        symbolType = CompilerHelper.getSymbolTypeByName(typeName);
+    }
+
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return type + " " + name;
+        return typeName + " " + name;
     }
 }

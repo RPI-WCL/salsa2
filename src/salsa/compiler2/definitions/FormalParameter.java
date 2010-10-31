@@ -43,6 +43,10 @@ public class FormalParameter extends SalsaSource implements SalsaNode {
     public void setName(String name) {
         this.name = name;
     }
+    @Override
+    public String toString() {
+        return type + " " + name;
+    }
     
     
 }
