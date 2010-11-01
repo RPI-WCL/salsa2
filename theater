@@ -1,0 +1,2 @@
+#!/bin/bash
+java -cp ./build/:./lib/salsa2.jar:./lib/log4j-1.2.16.jar:./lib/commons-cli-1.2.jar salsa.wwc.lang.services.Theater $*
