@@ -150,7 +150,6 @@ public class SymbolType {
                     }
                 }
             } catch (ClassNotFoundException e) {
-                // e.printStackTrace();
                 System.err.println("Cannot find " + canonicalName + ": "
                         + e.getMessage());
             }

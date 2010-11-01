@@ -8,6 +8,10 @@
 		<fileset dir="${lib.dir}" includes="*.jar" />
 		<pathelement path="${build.dir}"/>
 	</path>
+<!--    <apt srcdir="${src.dir}"-->
+<!--        destdir="${build.dir}" compile="false" >        -->
+<!--        <mkdir dir = "${build.dir}" />-->
+<!--    </apt>-->
 	<target name="clean">
 		<delete dir="${build.dir}" />
 	</target>
