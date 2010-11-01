@@ -13,7 +13,7 @@
 	</target>
 	<target name="compiler">
 		<mkdir dir="${build.dir}" />
-		<javac debug="true" srcdir="${src.dir}/salsa/compiler" destdir="${build.dir}" includeantruntime="true">
+		<javac debug="true" srcdir="${src.dir}/salsa/compiler2" destdir="${build.dir}" includeantruntime="true">
 			<classpath refid="core.classpath"/>
 		</javac>
 	</target>

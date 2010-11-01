@@ -23,10 +23,7 @@ import salsa.wwc.lang.services.ServiceFactory;
  */
 public abstract class ActorState implements Serializable {
     
-    @Retention(RetentionPolicy.RUNTIME)
-    public @interface SalsaMsg{
-        public int auxiliaryArgNum = 2;
-    }
+
 
 //    private static final long serialVersionUID = 1L;
 
