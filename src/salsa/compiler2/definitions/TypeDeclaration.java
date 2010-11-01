@@ -28,6 +28,14 @@ public abstract class TypeDeclaration extends SalsaSource implements SalsaNode{
 
     protected List<ConstructorDeclaration> constructors = new ArrayList<ConstructorDeclaration>();
     
+    private int declarationType = -1;
+    
+    public static final int ACTOR_TYPE = 1;
+    
+    public static final int CLASS_TYPE = 2;
+    
+    public static final int INTERFACE_TYPE = 3;
+    
     public String getName() {
         return name;
     }
@@ -64,6 +72,30 @@ public abstract class TypeDeclaration extends SalsaSource implements SalsaNode{
 
     public void setSymbolType(SymbolType symbolType) {
         this.symbolType = symbolType;
+    }
+
+    public String getModifiers() {
+        return modifiers;
+    }
+
+    public void setModifiers(String modifiers) {
+        this.modifiers = modifiers;
+    }
+    
+    public int getDeclarationType() {
+        return declarationType;
+    }
+
+    public void setDeclarationType(int declarationType) {
+        this.declarationType = declarationType;
+    }
+
+    public List<String> getImplementNames() {
+        return implementNames;
+    }
+
+    public void setImplementNames(List<String> implementNames) {
+        this.implementNames = implementNames;
     }
 
     public void addFieldVariableDeclaration(FieldVariableDeclaration sd) {
@@ -131,7 +163,6 @@ public abstract class TypeDeclaration extends SalsaSource implements SalsaNode{
             else 
                 st.addInterfaceType(interfaceType);
         }
-        
     
     }
 }

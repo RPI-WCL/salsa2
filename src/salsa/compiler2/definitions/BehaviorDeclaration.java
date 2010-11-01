@@ -12,7 +12,6 @@ import java.util.Map;
 
 import salsa.compiler2.CompilerHelper;
 import salsa.compiler2.SalsaNode;
-import salsa.compiler2.SymbolTable;
 import salsa.compiler2.SymbolType;
 
 
@@ -22,7 +21,7 @@ public class BehaviorDeclaration extends TypeDeclaration implements SalsaNode {
     public String toJavaRefCode(String identation) {
         StringBuilder sb = new StringBuilder();
         
-        sb.append(identation).append("public " + modifiers + "class ")
+        sb.append(identation).append(modifiers + " class ")
                 .append(name + " extends ActorRef {\n");
         
         sb.append(identation + "  ").append("public ").append(name).append("() {}\n");
@@ -79,8 +78,8 @@ public class BehaviorDeclaration extends TypeDeclaration implements SalsaNode {
     public String toJavaCode(String identation) {
         StringBuilder sb = new StringBuilder();
         
-        sb.append(identation).append("public " + modifiers 
-                + "class ").append(name + "State extends ActorState");
+        sb.append(identation).append(modifiers 
+                + " class ").append(name + "State extends ActorState");
         
         
         // Implementation

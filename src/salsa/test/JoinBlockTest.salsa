@@ -1,7 +1,7 @@
 module salsa.test;
 import java.util.Date;
 
-behavior JoinBlockTest {
+public behavior JoinBlockTest {
 
     int n = 1; 
 

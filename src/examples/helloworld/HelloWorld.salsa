@@ -9,13 +9,20 @@ behavior HelloWorld{
     
     void hello() {
         out <- print("Hello ");
+        System.out.println("Hello ");
     }
     void world() {
         out <- println("World!");
+        System.out.println("World!");
     }
     
     void act(String[] args) {
-        self <- hello();
-        self <- world();
+//        self <- hello();
+//        self <- world();
+        HelloWorld hw0 = new HelloWorld();
+        UAL ual = hw0.getUAL();
+        HelloWorld hw = new HelloWorld() at ("uan://localhost:3030/a", "localhost:4040");
+        hw <- hello();
+        hw <- world();
     }    
 }

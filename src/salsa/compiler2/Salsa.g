@@ -369,9 +369,10 @@ variableModifiers
         )*
     ;    
 
-typeList 
-    :   type
-        (',' type
+typeList returns [List<String> l]
+@init { l = new ArrayList<String>();}
+    :   t1 = type {l.add($t1.text);}
+        (',' t2 = type {l.add($t2.text);}
         )*
     ;
     
@@ -437,9 +438,10 @@ classDeclaration returns [ClassDeclaration cd]
 behaviorDeclaration returns [BehaviorDeclaration bd] 
 @init{ $bd = new BehaviorDeclaration();}
     :   modifiers 'behavior' IDENT 
-        ('extends' type)?
-        ('implements' typeList)?
+        ('extends' type {$bd.setExtendsName($type.text);})?
+        ('implements' typeList {$bd.setImplementNames($typeList.l);})?
         {   $bd.setName($IDENT.text); 
+            $bd.setModifiers($modifiers.text);
             String canonicalName = moduleName + "." + $IDENT.text;
             $typeDeclaration::currentType = new SymbolType(canonicalName, SymbolType.ACTOR_TYPE);
             CompilerHelper.addInitKnownType($typeDeclaration::currentType);

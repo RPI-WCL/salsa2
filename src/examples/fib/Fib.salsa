@@ -6,15 +6,15 @@ behavior Fib {
     int n = 2;
 
     Fib(int _n) {
-        n = _n;
+        self.n = _n;
     }
 
     int compute() {
-        if (n <= 0) {
+        if (n <= 0) 
             return 0;
-        } else if (n <= 2){
+        else if (n <= 2)
             return 1;
-        } else {
+        else {
             Fib fib1 = new Fib(n - 1);
             Fib fib2 = new Fib(n - 2);
             Token int t1 = fib1 <- compute();

@@ -61,8 +61,6 @@ public class Block extends SalsaSource implements SalsaNode {
                     .println("WARNNING: Join block has different message return types\n\t"
                             + this.getSalsaSource());
         } else if (firstSt != null) {
-//            System.out.println(CompilerHelper
-//                            .convertoObjectType(firstSt.getCanonicalName()));
             typeEnv.put("token", CompilerHelper
                     .getSymbolTypeByName(firstSt.getCanonicalName()
                             + "[]"));
